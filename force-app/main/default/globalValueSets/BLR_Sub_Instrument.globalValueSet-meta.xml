@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Term Loan</fullName>
+        <default>false</default>
+        <label>Term Loan</label>
+    </customValue>
+    <customValue>
+        <fullName>Cash Credit</fullName>
+        <default>false</default>
+        <label>Cash Credit</label>
+    </customValue>
+    <customValue>
+        <fullName>Bank Guarantee</fullName>
+        <default>false</default>
+        <label>Bank Guarantee</label>
+    </customValue>
+    <customValue>
+        <fullName>Letter of Credit</fullName>
+        <default>false</default>
+        <label>Letter of Credit</label>
+    </customValue>
+    <customValue>
+        <fullName>Export Packing Credit</fullName>
+        <default>false</default>
+        <label>Export Packing Credit</label>
+    </customValue>
+    <customValue>
+        <fullName>Export Bill Discounting</fullName>
+        <default>false</default>
+        <label>Export Bill Discounting</label>
+    </customValue>
+    <customValue>
+        <fullName>Overdraft</fullName>
+        <default>false</default>
+        <label>Overdraft</label>
+    </customValue>
+    <customValue>
+        <fullName>Proposed</fullName>
+        <default>false</default>
+        <label>Proposed</label>
+    </customValue>
+    <customValue>
+        <fullName>Unallocated</fullName>
+        <default>false</default>
+        <label>Unallocated</label>
+    </customValue>
+    <customValue>
+        <fullName>Bill Discounting (Channel Financing)</fullName>
+        <default>false</default>
+        <label>Bill Discounting (Channel Financing)</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Loan</fullName>
+        <default>false</default>
+        <label>Corporate Loan</label>
+    </customValue>
+    <customValue>
+        <fullName>Equipment Vehicle Loan</fullName>
+        <default>false</default>
+        <label>Equipment Vehicle Loan</label>
+    </customValue>
+    <customValue>
+        <fullName>Factoring</fullName>
+        <default>false</default>
+        <label>Factoring</label>
+    </customValue>
+    <customValue>
+        <fullName>Funded Interest Term Loan</fullName>
+        <default>false</default>
+        <label>Funded Interest Term Loan</label>
+    </customValue>
+    <customValue>
+        <fullName>Gold Loan</fullName>
+        <default>false</default>
+        <label>Gold Loan</label>
+    </customValue>
+    <customValue>
+        <fullName>Lease Rental Discounting (LRD)</fullName>
+        <default>false</default>
+        <label>Lease Rental Discounting (LRD)</label>
+    </customValue>
+    <customValue>
+        <fullName>Letter of Comfort</fullName>
+        <default>false</default>
+        <label>Letter of Comfort</label>
+    </customValue>
+    <customValue>
+        <fullName>Mortgage Loan (Loan against Property)</fullName>
+        <default>false</default>
+        <label>Mortgage Loan (Loan against Property)</label>
+    </customValue>
+    <customValue>
+        <fullName>Short Term Loan</fullName>
+        <default>false</default>
+        <label>Short Term Loan</label>
+    </customValue>
+    <customValue>
+        <fullName>Stand by Line of Credit</fullName>
+        <default>false</default>
+        <label>Stand by Line of Credit</label>
+    </customValue>
+    <customValue>
+        <fullName>Warehouse Receipts</fullName>
+        <default>false</default>
+        <label>Warehouse Receipts</label>
+    </customValue>
+    <customValue>
+        <fullName>Working Capital Demand Loan</fullName>
+        <default>false</default>
+        <label>Working Capital Demand Loan</label>
+    </customValue>
+    <customValue>
+        <fullName>Others</fullName>
+        <default>false</default>
+        <label>Others</label>
+    </customValue>
+    <description>BLR Split Types values</description>
+    <masterLabel>BLR Sub Instrument</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

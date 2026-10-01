@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Billing Address</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Billing Addresses</value>
+    </caseValues>
+    <layouts>
+        <layout>Billing Address Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Billing State is mandatory if the billing country is India --></errorMessage>
+        <name>Billing_State_Mandatory_for_India</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter The Correct GST As Per Regular Expression. --></errorMessage>
+        <name>GSTIN_Regular_Expression</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid GST number --></errorMessage>
+        <name>GST_Number_should_be_15_character</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- PAN number or GST number is invalid. GST number should contain PAN Number --></errorMessage>
+        <name>GST_and_PAN_should_match</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- State and GST number are not matching. Please provide correct state or GST number --></errorMessage>
+        <name>GST_and_State_Code_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Billing country cannot be India when Tax/GST Classification is Export. --></errorMessage>
+        <name>In_Export_country_cant_be_India</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please update the PAN Number on the Account to update the GSTN --></errorMessage>
+        <name>No_PAN_No_GST</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The maximum length of the pin code should be 10 characters. If the Billing Country is India, the pin code must be exactly 6 digits long and should not start with zero. --></errorMessage>
+        <name>Numeric_value_for_Zip_Postal_Code</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Billing Street must not contain line breaks, or double white spaces and must be 100 characters or less --></errorMessage>
+        <name>Restrict_Line_Breaks_and_Length</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Value for Tax/GST Classification is not opted for. Kindly select the same option. --></errorMessage>
+        <name>Tax_GST_classification_is_Mandatory</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Release Type --></label>
+    <name>Release_Type__c</name>
+    <picklistValues>
+        <masterLabel>Fresh From Fresh</masterLabel>
+        <translation><!-- Fresh From Fresh --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fresh From Poaching</masterLabel>
+        <translation><!-- Fresh From Poaching --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fresh from Enhancement</masterLabel>
+        <translation><!-- Fresh from Enhancement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Issuer Not Cooperating</masterLabel>
+        <translation><!-- Issuer Not Cooperating --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Surveillance</masterLabel>
+        <translation><!-- Surveillance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Withdrawal</masterLabel>
+        <translation><!-- Withdrawal --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_field_can_be_blank</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(ISBLANK(Business_Head__c)  ,
+ ISBLANK(ICRA_Branch__c	),
+ ISBLANK(OFAC_Approver__c),
+ ISBLANK(Opportunity_Checker__c) 
+)</errorConditionFormula>
+    <errorMessage>Kindly input the data as fields within Business Sector cannot be kept blank</errorMessage>
+</ValidationRule>

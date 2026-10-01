@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OPE</fullName>
+    <active>true</active>
+    <label>OPE</label>
+    <picklistValues>
+        <picklist>Invoice_Status__c</picklist>
+        <values>
+            <fullName>Canceled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initiate OP Tax Invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OP Tax Invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QR and IRN - Failed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QR and IRN - Generated</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

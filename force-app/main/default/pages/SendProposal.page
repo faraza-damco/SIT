@@ -1,0 +1,62 @@
+<apex:page standardController="Opportunity" showQuickActionVfHeader="True" >
+    <apex:slds />
+    <apex:form >
+        <apex:includeScript value="/soap/ajax/42.0/connection.js"/>
+        <apex:includeScript value="/soap/ajax/42.0/apex.js"/>
+        <script>
+        sforce.connection.sessionId = '{!$Api.Session_ID}';
+        
+        function ReviewDoc(){
+            var ReqId = "{!Opportunity.Id}";
+            //var ProposalContact ="{!Opportunity.Contact_for_Proposal__c}";
+            var ProposalDate ="{!Opportunity.Date_of_Proposal__c}";
+            var OOPdata ="{!Opportunity.OPE__c}";
+            // alert(ProposalContact);
+          
+            
+              if(/*ProposalContact != "" && */ProposalDate!="" && OOPdata!='' ){
+              var win = window.open("/apex/Icra_Proposal_New?id="+ReqId,"_blank");
+                win.focus();
+            } else {
+                
+                 var   resultMessage='Please fill Date of Proposal and Out of Pocket Expenses !!'; //Contact for Proposal,
+                document.getElementById("ErrorMsg").innerHTML=resultMessage;
+                //alert(resultMessage);
+              
+            		}
+            
+          
+        }
+        function SubmitReqisition(){
+            var ReqId = "{!Opportunity.Id}";
+            
+            var resultMessage = sforce.apex.execute("SendProposal","SendAttachment", {OppotunityId:ReqId});
+            
+            if (resultMessage == "SUCCESS"){
+                window.location.reload();
+                window.history.go(-1);
+            } else {
+                //alert(resultMessage);
+               
+                document.getElementById("ErrorMsg").innerHTML=resultMessage;
+              
+                
+            }
+        }
+        
+        </script>
+        <div align="center">
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            <h1 id="ErrorMsg" class="slds-text-body_regular" style=" display: block;font-size: 2em;font-weight: bold;margin-block-start: .67em;margin-block-end: .67em;">Want to Review/send proposal ?</h1><br/>
+            <h1 >
+                
+            </h1>
+            <apex:commandButton action="{!cancel}" onclick="return ReviewDoc()"  value="Review" oncomplete="Window.close();" styleClass="slds-button slds-button_brand"/>
+            <apex:commandButton action="{!cancel}" onclick="return SubmitReqisition()"  value="Send" oncomplete="Window.close();" styleClass="slds-button slds-button_brand"/>
+            <apex:commandButton action="{!cancel}" value="Close" styleClass="slds-button slds-button_brand"/>
+        </div>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Value_to_MPRA_Seq_No_on_Branch</name>
+        <label>Assign Value to MPRA Seq No on Branch</label>
+        <locationX>50</locationX>
+        <locationY>755</locationY>
+        <assignmentItems>
+            <assignToReference>Get_Branch_Record.MPRA_SoW_Reference_Number__c</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_MPRA_SoW_Seq_No_on_Branch</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_for_Changes_on_Opportunity</name>
+        <label>Check for Changes on Opportunity</label>
+        <locationX>611</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Stage_Change</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>MPRA &amp; SoW / Subscription Form Sent</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_for_the_Stage</targetReference>
+            </connector>
+            <label>Stage Change</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_for_MPRA_Number_Generated_Checkbox</name>
+        <label>Check for MPRA Number Generated Checkbox</label>
+        <locationX>182</locationX>
+        <locationY>539</locationY>
+        <defaultConnector>
+            <targetReference>Check_Name_on_Invoice_Contact_Role</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Unchecked</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.MPRA_SoW_Reference_No_Generated__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Branch_Record</targetReference>
+            </connector>
+            <label>Unchecked</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_for_the_Stage</name>
+        <label>Check for the Stage</label>
+        <locationX>380</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>MPRA_SoW_Subscription_Form_Sent</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>MPRA &amp; SoW / Subscription Form Sent</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_for_MPRA_Number_Generated_Checkbox</targetReference>
+            </connector>
+            <label>MPRA &amp; SoW / Subscription Form Sent</label>
+        </rules>
+    </decisions>
+    <description>-Generate MPRA SoW Reference Number
+-MPRA&amp; SoW Effective Dates
+-Reset the Commercial &amp; Legal Clause fields</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>MPRA_SoW_Reference_Fiscal_Year</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Account.Branch__r.Branch_Code__c}&amp;&apos;/&apos;&amp;TEXT(YEAR({!$Flow.CurrentDate})) &amp; &apos;-&apos; &amp; TEXT(MOD(YEAR({!$Flow.CurrentDate}), 100) + 1)&amp;&apos;/&apos;&amp;TEXT({!$Record.Account.Branch__r.MPRA_SoW_Reference_Number__c})</expression>
+    </formulas>
+    <interviewLabel>Generate {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Generate MPRA SoW Reference Number</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Branch_Record</name>
+        <label>Get Branch Record</label>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assign_Value_to_MPRA_Seq_No_on_Branch</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Account.Branch__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Branch__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_MPRA_SoW_Reference_Number</name>
+        <label>Update MPRA SoW Reference Number</label>
+        <locationX>50</locationX>
+        <locationY>971</locationY>
+        <connector>
+            <targetReference>Check_Name_on_Invoice_Contact_Role1</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>MPRA_SoW_Reference_No_Generated__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MPRA_SoW_Reference_Number__c</field>
+            <value>
+                <elementReference>MPRA_SoW_Reference_Fiscal_Year</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_MPRA_SoW_Seq_No_on_Branch</name>
+        <label>Update MPRA SoW Seq No. on Branch</label>
+        <locationX>50</locationX>
+        <locationY>863</locationY>
+        <connector>
+            <targetReference>Update_MPRA_SoW_Reference_Number</targetReference>
+        </connector>
+        <inputReference>Get_Branch_Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>485</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_for_Changes_on_Opportunity</targetReference>
+        </connector>
+        <filterFormula>AND( 
+ISPICKVAL({!$Record.Business_Segment__c}, &apos;Rating&apos;),
+{!$Record.RecordType.Name}=&apos;New Business&apos;
+)</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Check_Name_on_Invoice_Contact_Role</name>
+        <label>Check Name on Invoice Contact Role</label>
+        <locationX>314</locationX>
+        <locationY>647</locationY>
+        <flowName>Check_Name_on_Invoice_on_Opportunity</flowName>
+        <inputAssignments>
+            <name>accountId</name>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Check_Name_on_Invoice_Contact_Role1</name>
+        <label>Check Name on Invoice Contact Role</label>
+        <locationX>50</locationX>
+        <locationY>1079</locationY>
+        <flowName>Check_Name_on_Invoice_on_Opportunity</flowName>
+        <inputAssignments>
+            <name>accountId</name>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <triggerOrder>500</triggerOrder>
+    <variables>
+        <name>ConList</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Contact</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Contact</objectType>
+    </variables>
+    <variables>
+        <name>ContactId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

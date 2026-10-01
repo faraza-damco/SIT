@@ -1,0 +1,165 @@
+<apex:page standardController="Contact" renderAs="pdf" showHeader="false"
+           sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false" docType="html-5.0" >
+    
+    <html>
+   <head>
+     
+      <style type="text/css">@import url('https://themes.googleusercontent.com/fonts/css?kit=sDU-RIIs3Wq_4pUcDwWu-y_Mot7ZsangVLpb4IqKBZdDaYsXxksP_z5YvSvoVjGw');ol{margin:0;padding:0}table td,table th{padding:0}.c28{border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:377.4pt;border-top-color:#000000;border-bottom-style:solid}.c16{border-right-style:solid;border-bottom-color:#000000;border-top-width:1.5pt;border-right-width:1.5pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1.5pt;width:112pt;border-top-color:#000000;border-bottom-style:solid}.c26{border-right-style:solid;border-bottom-color:#000000;border-top-width:1.5pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1.5pt;width:112pt;border-top-color:#000000;border-bottom-style:solid}.c17{border-right-style:solid;border-bottom-color:#000000;border-top-width:1.5pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1.5pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1.5pt;width:242.7pt;border-top-color:#000000;border-bottom-style:solid}.c34{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-family:"Cambria";font-style:normal}.c10{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11.5pt;font-family:"Cambria";font-style:normal}.c24{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Times New Roman";font-style:normal}.c2{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Cambria";font-style:italic}.c38{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:13.5pt;font-family:"Courier New";font-style:normal}.c35{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11.5pt;font-family:"Cambria";font-style:italic}.c60{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:13.5pt;font-family:"Cambria";font-style:italic}.c15{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11.5pt;font-family:"Times New Roman";font-style:normal}.c23{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Times New Roman";font-style:normal}.c41{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:7.5pt;font-family:"Cambria";font-style:normal}.c18{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Cambria";font-style:normal}.c61{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-family:"Times New Roman";font-style:normal}.c5{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Cambria";font-style:normal}.c9{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Cambria";font-style:normal}.c46{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-family:"Cambria";font-style:normal}.c4{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:11.5pt;font-family:"Cambria";font-style:normal}.c49{margin-left:14pt;padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left;margin-right:411.8pt}.c33{margin-left:1.5pt;padding-top:0.1pt;padding-bottom:0pt;line-height:1.1666666666666667;text-align:left;margin-right:8.6pt}.c11{margin-left:14pt;padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:justify;margin-right:5.7pt}.c19{margin-left:1.5pt;padding-top:0.3pt;padding-bottom:0pt;line-height:1.1666666666666667;text-align:left;margin-right:3.2pt}.c40{margin-left:14pt;padding-top:5pt;padding-bottom:0pt;line-height:1.0;text-align:justify;margin-right:5.7pt}.c1{margin-left:14pt;padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:justify;margin-right:5.8pt}.c39{margin-left:14pt;padding-top:3.7pt;padding-bottom:0pt;line-height:1.0;text-align:left;margin-right:279.9pt}.c51{margin-left:0.1pt;padding-top:0.1pt;padding-bottom:0pt;line-height:2.1166666666666667;text-align:center;height:11pt}.c6{margin-left:14pt;padding-top:0.1pt;padding-bottom:0pt;line-height:1.0;text-align:justify;margin-right:5.7pt}.c8{margin-left:1.5pt;padding-top:0.1pt;padding-bottom:0pt;line-height:1.1666666666666667;text-align:left;margin-right:1.1pt}.c56{margin-left:1.5pt;padding-top:0.1pt;padding-bottom:0pt;line-height:1.175;text-align:left;margin-right:1.1pt}.c62{margin-left:14pt;padding-top:5pt;padding-bottom:0pt;line-height:1.1708333333333334;text-align:left}.c59{margin-left:1.5pt;padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;text-align:left}.c53{margin-left:14pt;padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left}.c57{margin-left:14pt;padding-top:5pt;padding-bottom:0pt;line-height:1.0;text-align:left}.c22{margin-left:2pt;padding-top:0pt;padding-bottom:0pt;line-height:1.1708333333333334;text-align:left}.c7{margin-left:1.5pt;padding-top:0pt;padding-bottom:0pt;line-height:1.1458333333333333;text-align:left}.c45{margin-left:9.4pt;padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left}.c37{margin-left:14pt;padding-top:0pt;padding-bottom:0pt;line-height:1.1708333333333334;text-align:left}.c55{padding-top:0.6pt;padding-bottom:0pt;line-height:1.0;text-align:left;height:11pt}.c50{margin-left:14pt;padding-top:9.8pt;padding-bottom:0pt;line-height:1.0;text-align:left}.c52{padding-top:0.3pt;padding-bottom:0pt;line-height:1.0;text-align:left;height:11pt}.c48{padding-top:0.5pt;padding-bottom:0pt;line-height:1.0;text-align:left;height:11pt}.c0{margin-left:5.3pt;padding-top:0pt;padding-bottom:0pt;line-height:1.1708333333333334;text-align:left}.c20{padding-top:0.1pt;padding-bottom:0pt;line-height:1.0;text-align:left;height:11pt}.c31{margin-left:14pt;padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:justify}.c30{padding-top:0pt;padding-bottom:0pt;line-height:1.1708333333333334;text-align:left;height:11pt}.c54{padding-top:0.1pt;padding-bottom:0.1pt;line-height:1.0;text-align:left;height:11pt}.c12{padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left;height:11pt}.c13{margin-left:5.8pt;padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left}.c3{margin-left:2pt;padding-top:0.1pt;padding-bottom:0pt;line-height:1.0;text-align:left}.c32{margin-left:14.5pt;border-spacing:0;border-collapse:collapse;margin-right:auto}.c36{margin-left:15.5pt;border-spacing:0;border-collapse:collapse;margin-right:auto}.c43{text-decoration-skip-ink:none;-webkit-text-decoration-skip:none;text-decoration:underline}.c29{background-color:#ffffff;max-width:468pt;padding:72pt 72pt 72pt 0pt}.c47{height:37.5pt}.c42{height:33.5pt}.c21{height:14.7pt}.c25{height:67.5pt}.c58{height:11pt}.c27{height:28.1pt}.c44{height:27.9pt}.c14{height:14.8pt}.title{padding-top:24pt;color:#000000;font-weight:700;font-size:36pt;padding-bottom:6pt;font-family:"Cambria";line-height:1.0;page-break-after:avoid;text-align:left}.subtitle{padding-top:18pt;color:#666666;font-size:24pt;padding-bottom:4pt;font-family:"Georgia";line-height:1.0;page-break-after:avoid;font-style:italic;text-align:left}li{color:#000000;font-size:11pt;font-family:"Cambria"}p{margin:0;color:#000000;font-size:11pt;font-family:"Cambria"}h1{padding-top:0pt;color:#000000;font-size:17.5pt;padding-bottom:0pt;font-family:"Lucida Sans";line-height:1.0;text-align:left}h2{padding-top:0pt;color:#000000;font-weight:700;font-size:12pt;padding-bottom:0pt;font-family:"Cambria";line-height:1.0;text-align:left}h3{padding-top:14pt;color:#000000;font-weight:700;font-size:14pt;padding-bottom:4pt;font-family:"Cambria";line-height:1.0;page-break-after:avoid;text-align:left}h4{padding-top:12pt;color:#000000;font-weight:700;font-size:12pt;padding-bottom:2pt;font-family:"Cambria";line-height:1.0;page-break-after:avoid;text-align:left}h5{padding-top:11pt;color:#000000;font-weight:700;font-size:11pt;padding-bottom:2pt;font-family:"Cambria";line-height:1.0;page-break-after:avoid;text-align:left}h6{padding-top:10pt;color:#000000;font-weight:700;font-size:10pt;padding-bottom:2pt;font-family:"Cambria";line-height:1.0;page-break-after:avoid;text-align:left}</style>
+   </head>
+   <body class="">
+       <p class="c45"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 182.29px; height: 85.36px;"><img alt="" src="{!URLFOR($Resource.Addendum_Sign,
+                  'Signature/image2.jpg')}" style="width: 182.29px; height: 85.36px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""/></span></p>
+      <p class="c12"><span class="c61"></span></p>
+      <p class="c48"><span class="c15"></span></p>
+      <p class="c57"><span class="c5">Date:&nbsp; <apex:outputText value="{0,date,MMMM d','  yyyy}"  ><apex:param value="{!today()}"/> </apex:outputText></span></p>
+      <p class="c55"><span class="c10"></span></p>
+      <p class="c57"><span class="c5">{!Contact.Salutation} {!Contact.Name}</span></p>
+      <p class="c57"><span class="c5">{!Contact.Designation__C}</span></p>
+      <p class="c57"><span class="c5">{!Contact.Account.Name}</span></p>
+      <p class="c57"><span class="c5">{!Contact.Account.Primary_Street__c+', '}</span></p>
+      <p class="c57"><span class="c5">{!Contact.Account.Primary_City__c+', '+Contact.Account.Primary_State__c+', '}</span></p>
+      <p class="c57"><span class="c5">{!Contact.Account.Primary_Zip_Postal_Code__c+', '+Contact.Account.Primary_Country__c}</span></p>
+      <p class="c12"><span class="c18"></span></p>
+      <h2 class="c50"><span class="c9">Sub.: Consent to publish the name of the banker(s) and the details of credit facilities rated in the press release.</span></h2>
+      <p class="c55"><span class="c4"></span></p>
+      <p class="c53"><span class="c9">Dear {!Contact.Salutation} {!Contact.LastName},</span></p>
+      <p class="c20"><span class="c9"></span></p>
+      <p class="c1"><span class="c5">We wish to draw your attention to the guidelines issued by the Reserve Bank of India (</span><span class="c9">&ldquo;RBI&rdquo;</span><span class="c5">) vide letter dated June 4, 2021 wherein RBI has directed all credit rating agencies(</span><span class="c9">&ldquo;CRAs&rdquo;</span><span class="c5">) to disclose the names of the specific banks and their credit facilities rated in the press release. Further, RBI has directed CRAs to take a consent from the rated entities.</span></p>
+      <p class="c55"><span class="c10"></span></p>
+      <p class="c1"><span class="c5">Reference is also made to the existing rating agreement(s) between your Company and ICRA Limited (&ldquo;</span><span class="c9">ICRA</span><span class="c5">&rdquo;) with respect to the rating(s) provided to you (&ldquo;</span><span class="c9">Rating Agreement(s)</span><span class="c5">&rdquo;). Accordingly, ICRA has made necessary changes to the Rating Agreement(s) through this addendum (&ldquo;</span><span class="c9">Addendum</span><span class="c5">&rdquo;).</span></p>
+      <p class="c12"><span class="c5"></span></p>
+      <p class="c1"><span class="c5">Notwithstanding anything to the contrary contained in the Rating Agreement(s), you hereby agree to the following modification to the Rating Agreement(s):</span></p>
+      <p class="c12"><span class="c5"></span></p>
+      <p class="c6"><span class="c2">&ldquo;The Company shall provide the names of the specific banks along with the type and amounts of the Bank Facility(s) rated / to be rated by ICRA in the following format &ndash;</span></p>
+      <p class="c12"><span class="c2"></span></p>
+      <a id="t.cd7a63b67c0d9474a29d874ce3b16f08d9ee6ade"></a><a id="t.0"></a>
+      <table class="c36">
+         <tbody>
+            <tr class="c27">
+               <td class="c17" colspan="1" rowspan="1">
+                  <p class="c33"><span class="c9">Details of bank limits rated by ICRA (long- term limits)</span></p>
+               </td>
+               <td class="c26" colspan="1" rowspan="1">
+                  <p class="c22"><span class="c9">Name of the bank</span></p>
+               </td>
+               <td class="c16" colspan="1" rowspan="1">
+                  <p class="c22"><span class="c9">Amount (Rs. crore)</span></p>
+               </td>
+            </tr>
+            <tr class="c27">
+               <td class="c17" colspan="1" rowspan="1">
+                  <p class="c56"><span class="c2">Mention type of instrument here (e.g. term loan, cash credit, proposed, etc.)</span></p>
+               </td>
+               <td class="c26" colspan="1" rowspan="1">
+                  <p class="c12"><span class="c24"></span></p>
+               </td>
+               <td class="c16" colspan="1" rowspan="1">
+                  <p class="c12"><span class="c24"></span></p>
+               </td>
+            </tr>
+            <tr class="c21">
+               <td class="c17" colspan="1" rowspan="1">
+                  <p class="c7"><span class="c9">Total</span></p>
+               </td>
+               <td class="c26" colspan="1" rowspan="1">
+                  <p class="c12"><span class="c23"></span></p>
+               </td>
+               <td class="c16" colspan="1" rowspan="1">
+                  <p class="c12"><span class="c23"></span></p>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <p class="c54"><span class="c2"></span></p>
+      <a id="t.4d5a350f26d91f60f80632a8656befda557da332"></a><a id="t.1"></a>
+      <table class="c36">
+         <tbody>
+            <tr class="c27">
+               <td class="c17" colspan="1" rowspan="1">
+                  <p class="c19"><span class="c9">Details of bank limits rated by ICRA (short- term limits)</span></p>
+               </td>
+               <td class="c26" colspan="1" rowspan="1">
+                  <p class="c3"><span class="c9">Name of the bank</span></p>
+               </td>
+               <td class="c16" colspan="1" rowspan="1">
+                  <p class="c3"><span class="c9">Amount (Rs. crore)</span></p>
+               </td>
+            </tr>
+            <tr class="c44">
+               <td class="c17" colspan="1" rowspan="1">
+                  <p class="c8"><span class="c2">Mention type of instrument here (e.g. term loan, cash credit, proposed, etc.)</span></p>
+               </td>
+               <td class="c26" colspan="1" rowspan="1">
+                  <p class="c12"><span class="c24"></span></p>
+               </td>
+               <td class="c16" colspan="1" rowspan="1">
+                  <p class="c12"><span class="c24"></span></p>
+               </td>
+            </tr>
+            <tr class="c14">
+               <td class="c17" colspan="1" rowspan="1">
+                  <p class="c59"><span class="c9">Total</span></p>
+               </td>
+               <td class="c26" colspan="1" rowspan="1">
+                  <p class="c12"><span class="c23"></span></p>
+               </td>
+               <td class="c16" colspan="1" rowspan="1">
+                  <p class="c12"><span class="c23"></span></p>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <p class="c12"><span class="c23"></span></p>
+       <p class="c13"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 182.29px; height: 85.36px;"><img alt="" src="{!URLFOR($Resource.Addendum_Sign,
+                  'Signature/image2.jpg')}" style="width: 182.29px; height: 85.36px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""/></span></p>
+      <p class="c52"><span class="c60"></span></p>
+      <p class="c40"><span class="c2">The Company shall immediately intimate ICRA of any changes in the names of the specific banks and / or changes in the type and amounts of the Bank Facility(s) rated. In case of unallocated limits, the Company shall inform ICRA of the name of the specific banks immediately on allocation of the limits. The Company hereby provides its consent and authorizes ICRA to publish the name of the bank(s) along with the type and amount of the Bank Facility(s) rated in the press release.&rdquo;</span></p>
+      <p class="c48"><span class="c35"></span></p>
+      <p class="c1"><span class="c5">This Addendum supplements the Rating Agreement(s) and all of the terms and conditions of the Rating Agreement(s) apply to this Addendum with effect from &nbsp; <apex:outputText value="{0,date,MMMM d','  yyyy}"  ><apex:param value="{!today()}"/> </apex:outputText>; provided that to the extent there is a conflict between this Addendum and the Rating Agreement(s), the terms of this Addendum shall control.</span></p>
+      <p class="c20"><span class="c5"></span></p>
+      <p class="c11"><span class="c5">Please share this signed Addendum within 7 (seven) days of receipt. The Company undertakes to intimate ICRA immediately in case if there is any change in the bankers(s), type and amount of Bank Facility(s) rated.</span></p>
+      <p class="c48"><span class="c10"></span></p>
+      <p class="c31"><span class="c5">Should you have questions, please do not hesitate to contact us.</span></p>
+      <p class="c52"><span class="c41"></span></p>
+      <p class="c62"><span class="c5">Regards,</span></p>
+      <p class="c37"><span class="c5">Yours sincerely</span></p>
+  
+      <p class="c37 c58"><span class="c5"></span></p>
+        <p class="c37 c58"><span class="c5"></span></p>
+        <p class="c37 c58"><span class="c5"></span></p>
+        <p class="c37 c58"><span class="c5"></span></p>
+        <p class="c37 c58"><span class="c5"></span></p>
+      <p class="c39"><span class="c5">Authorized Signatory</span></p>
+      <p class="c39" style="margin-right:0pt"><span class="c5">ICRA Limited</span></p>
+      <p class="c48"><span class="c10"></span></p>
+      <h2 class="c53"><span class="c43">ACCEPTED ALL TERMS &amp; CONDITIONS as mentioned above:</span></h2>
+      <p class="c20"><span class="c9"></span></p>
+      <a id="t.afb3d60dbf3eadea5c3306b494dcbfff82dfc45d"></a><a id="t.2"></a>
+      <table class="c32">
+         <tbody>
+            <tr class="c25">
+               <td class="c28" colspan="1" rowspan="1">
+                  <p class="c0"><span class="c5">Signature:</span></p>
+               </td>
+            </tr>
+            <tr class="c42">
+               <td class="c28" colspan="1" rowspan="1">
+                  <p class="c0"><span class="c5">Name of Authorized Signatory:</span></p>
+               </td>
+            </tr>
+            <tr class="c47">
+               <td class="c28" colspan="1" rowspan="1">
+                  <p class="c0"><span class="c5">Designation:</span></p>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <p class="c30"><span class="c5"></span></p>
+      <p class="c12"><span class="c34"></span></p>
+      <p class="c12"><span class="c34"></span></p>
+      <p class="c12"><span class="c34"></span></p>
+      <p class="c12"><span class="c34"></span></p>
+      <p class="c51"><span class="c38"></span></p>
+   </body>
+</html>
+</apex:page>

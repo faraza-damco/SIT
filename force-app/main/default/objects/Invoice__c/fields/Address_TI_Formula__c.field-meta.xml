@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Address_TI_Formula__c</fullName>
+    <externalId>false</externalId>
+    <formula>SUBSTITUTE(Address_TI__c, &quot;&lt;br&gt;&quot;, &quot; &quot;)</formula>
+    <label>Address (Locked)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

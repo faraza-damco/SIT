@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deferred_Opportunity_is_true</fullName>
+    <active>true</active>
+    <description>When Deferred Opportunity checkbox is true no Invoice Line Item can be generated</description>
+    <errorConditionFormula>IF( isFirst_InvoiceLine_Item__c ,
+IF( Deferred_Opportunity__c ,true,false)
+,false)</errorConditionFormula>
+    <errorMessage>Invoice Line Item Cannot be Generated when Opportunity Billing Status is Deferred or Hold or INC or Exit</errorMessage>
+</ValidationRule>

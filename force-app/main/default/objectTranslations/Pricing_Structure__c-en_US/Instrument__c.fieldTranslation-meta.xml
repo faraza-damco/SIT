@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Instrument --></label>
+    <name>Instrument__c</name>
+    <picklistValues>
+        <masterLabel>Others</masterLabel>
+        <translation><!-- Others --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rating - Bank Loan Rating</masterLabel>
+        <translation><!-- Rating - Bank Loan Rating --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rating - Money Market (Non-SF)</masterLabel>
+        <translation><!-- Rating - Money Market (Non-SF) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rating - Money Market (SF)</masterLabel>
+        <translation><!-- Rating - Money Market (SF) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

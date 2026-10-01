@@ -1,0 +1,2263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Email Notification to Opportunity Owner, Team Lead, Finance Team and BD-MIS</description>
+        <name>Copy_1_of_Email_Notification</name>
+        <label>Email Notification: Generate Invoice- PDF</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>recipientAddresses</name>
+            <value/>
+        </inputParameters>
+        <inputParameters>
+            <name>ccAddresses</name>
+            <value/>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>sales@icraindia.info</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>subject</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>body</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>useLineBreaks</name>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionString>2.0.1</versionString>
+    </actionCalls>
+    <actionCalls>
+        <description>Email Notification to Opportunity Owner, Team Lead, Finance Team and BD-MIS</description>
+        <name>Copy_2_of_Email_Notification</name>
+        <label>Email Notification for Tax Invoice</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>recipientAddresses</name>
+            <value/>
+        </inputParameters>
+        <inputParameters>
+            <name>ccAddresses</name>
+            <value/>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>sales@icraindia.info</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>subject_Tax_Invoice</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>body_Tax_Invoice</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>useLineBreaks</name>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionString>2.0.1</versionString>
+    </actionCalls>
+    <actionCalls>
+        <description>Email Notification to Opportunity Owner, Team Lead, Finance Team and BD-MIS</description>
+        <name>Copy_3_of_Email_Notification</name>
+        <label>Email Notification</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>recipientAddresses</name>
+            <value/>
+        </inputParameters>
+        <inputParameters>
+            <name>ccAddresses</name>
+            <value/>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>sales@icraindia.info</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>subject_Rejected</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>body_Rejected</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>useLineBreaks</name>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionString>2.0.1</versionString>
+    </actionCalls>
+    <actionCalls>
+        <description>Email Notification to Opportunity Owner, Team Lead, Finance Team and BD-MIS</description>
+        <name>Email_Notification</name>
+        <label>Email Notification</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>recipientAddresses</name>
+            <value/>
+        </inputParameters>
+        <inputParameters>
+            <name>ccAddresses</name>
+            <value/>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>sales@icraindia.info</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>subject</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>body</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>useLineBreaks</name>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionString>2.0.1</versionString>
+    </actionCalls>
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Add_to_List</name>
+        <label>Add to List</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>optyRecords</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>singleOpty</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Iterate_through_opportunity_records</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Credit_Note</name>
+        <label>Assign Credit Note</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>totalCreditNoteAmount</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Iterate_Over_Credit_Notes.Credit_Note__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Iterate_Over_Credit_Notes</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>-to update opportunity</description>
+        <name>Assign_Opportunity</name>
+        <label>Assign Opportunity</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>singleOpty.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Iterate_through_opportunity_records.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>singleOpty.Defer_Billing_or_Exit_Case__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Iterate_through_opportunity_records.Defer_Billing_or_Exit_Case__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>singleOpty.Initiate_Tax_Invoice_Generated__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Iterate_through_opportunity_records.Initiate_Tax_Invoice_Generated__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_Invoice_Status1</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>-to update opportunity</description>
+        <name>Assign_Opportunity2</name>
+        <label>Assign Opportunity</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>singleOpty.Defer_Billing_or_Exit_Case__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>To Be Billed</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Add_to_List</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>-to update opportunity</description>
+        <name>Assign_Opportunity5</name>
+        <label>Assign Opportunity</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>singleOpty.Initiate_Tax_Invoice_Generated__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_Billing_Status</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Opportunity_records</name>
+        <label>Assign Opportunity records</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>optyIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Iterate_Through_INVLI_records.Opportunity_Name__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>totalVoD</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Iterate_Through_INVLI_records.Rated_Amount__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Iterate_Through_INVLI_records</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>assign values to a variable</description>
+        <name>Assign_Values6</name>
+        <label>Assign Values</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>singleOpty.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Opportunity_Name__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>singleOpty.Defer_Billing_or_Exit_Case__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>To Be Billed</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_Invoice_Type</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>assign values to a variable</description>
+        <name>Assign_Values7</name>
+        <label>Assign Values</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>singleOpty.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Opportunity_Name__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>singleOpty.Defer_Billing_or_Exit_Case__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>To Be Billed</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_Invoice_Type1</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>assign values to a variable</description>
+        <name>Assign_Values8</name>
+        <label>Assign Values</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>singleOpty.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Opportunity_Name__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>singleOpty.Initiate_Tax_Invoice_Generated__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Copy_1_of_Update_Opportunity</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>assign values to a variable</description>
+        <name>Copy_1_of_Assign_Values</name>
+        <label>Assign Values</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>singleOpty.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Opportunity_Name__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>singleOpty.Proforma_Invoice_Generated__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Opportunity</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Copy_1_of_Total_VoD</name>
+        <label>Total VoD</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>totalVoD</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Copy_1_of_Iterate_INVLI.Rated_Amount__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Copy_1_of_Iterate_INVLI</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Copy_2_of_Total_VoD</name>
+        <label>Total VoD</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>totalVoD</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Copy_2_of_Iterate_INVLI.Rated_Amount__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Copy_2_of_Iterate_INVLI</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Total_VoD</name>
+        <label>Total VoD</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>totalVoD</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Iterate_INVLI.Rated_Amount__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Iterate_INVLI</targetReference>
+        </connector>
+    </assignments>
+    <customErrors>
+        <name>Credit_Note_Amount_is_greater_than_Invoice_Amount</name>
+        <label>Credit Note Amount is greater than Invoice Amount</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>Credit Note amount exceeds the base amount of the invoice. Please review existing credit notes.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Error</name>
+        <label>Error</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>{!$Flow.FaultMessage}</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Error2</name>
+        <label>Error</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>{!$Flow.FaultMessage}</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Error_Message</name>
+        <label>Error Message</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>{!$Flow.FaultMessage}</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>Check_Billing_Status</name>
+        <label>Check Billing Status</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Add_to_List</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Check_Billing_Status1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>singleOpty.Defer_Billing_or_Exit_Case__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>To Be Billed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Opportunity2</targetReference>
+            </connector>
+            <label>Check Billing Status</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Billing_Status5</name>
+        <label>Check Billing Status</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Check_Invoice_Type</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Not_Already_Billed_To_Be_Billed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Opportunity_Name__r.Defer_Billing_or_Exit_Case__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>To Be Billed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Opportunity_Name__r.Defer_Billing_or_Exit_Case__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Already Billed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Values6</targetReference>
+            </connector>
+            <label>Not &apos;Already Billed&apos; &amp; &apos;To Be Billed&apos;</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Billing_Status6</name>
+        <label>Check Billing Status</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Check_Invoice_Type1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Not_Already_Billed_To_Be_Billed6</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Opportunity_Name__r.Defer_Billing_or_Exit_Case__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>To Be Billed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Opportunity_Name__r.Defer_Billing_or_Exit_Case__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Already Billed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Values7</targetReference>
+            </connector>
+            <label>Not &apos;Already Billed&apos; &amp; &apos;To Be Billed&apos;</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Client_Name_Correct_on_Invoice_Opportunity</name>
+        <label>Check &apos;Client Name Correct&apos; on Invoice Opportunity</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Check_for_Tax_Invoice</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_Checked</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Opportunity_Name__r.Client_Name_Correct__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Canceled</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cancel Due to Credit Note</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Opportunity22</targetReference>
+            </connector>
+            <label>If Checked</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Client_Name_Correct_on_Opportunity</name>
+        <label>Check &apos;Client Name Correct&apos; on Opportunity</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>True</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Opportunity_Name__r.Client_Name_Correct__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Invoice5</targetReference>
+            </connector>
+            <label>True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Client_Name_Correct_on_Opportunity6</name>
+        <label>Check &apos;Client Name Correct&apos; on Opportunity</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>True6</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Opportunity_Name__r.Client_Name_Correct__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Invoice6</targetReference>
+            </connector>
+            <label>True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Condition</name>
+        <label>Check Condition</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Create</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>isNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Initiate Tax Invoice</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Proforma Invoice</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Invoice_Status</targetReference>
+            </connector>
+            <label>Create</label>
+        </rules>
+        <rules>
+            <name>Proforma_Invoice_Generate_Invoice</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Proforma Invoice</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Send_Confirmation_Email__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Send_Confirmation_Email__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Auto_Generated_Proforma_Invoice__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_2_of_Get_INVLI</targetReference>
+            </connector>
+            <label>Proforma Invoice: Generate Invoice</label>
+        </rules>
+        <rules>
+            <name>Invoice_Status_Update</name>
+            <conditionLogic>1 AND (2 OR 3 OR 4 OR 5 OR 6 OR 7)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Status__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Initiate Tax Invoice</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>QR-IRN-Generated</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>QR and IRN - Failed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Canceled</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cancel Due to Credit Note</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Tax Invoice</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_the_INVLI_records</targetReference>
+            </connector>
+            <label>Invoice Status Update</label>
+        </rules>
+        <rules>
+            <name>Proforma_Invoice_Status</name>
+            <conditionLogic>1 AND (2 OR 3) AND 4</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Proforma_Invoice_Status__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Proforma_Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PI Approved</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Proforma_Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PI Rejected</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Proforma Invoice</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Proforma_Invoice_Status1</targetReference>
+            </connector>
+            <label>Proforma Invoice Status</label>
+        </rules>
+        <rules>
+            <name>Initiate_Tax_Invoice_Status</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Initiate_Tax_Invoice_Status__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Initiate_Tax_Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ITI Rejected</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_2_of_Get_ProcessInstance</targetReference>
+            </connector>
+            <label>Initiate Tax Invoice Status</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_for_Tax_Invoice</name>
+        <label>Check for Tax Invoice</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Tax_Invoice</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Status__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Tax Invoice</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_2_of_Email_Notification</targetReference>
+            </connector>
+            <label>Tax Invoice</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Invoice_Status</name>
+        <label>Check Invoice Status</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Proforma_Invoice</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Proforma Invoice</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Billing_Status5</targetReference>
+            </connector>
+            <label>Proforma Invoice</label>
+        </rules>
+        <rules>
+            <name>Initiate_Tax_Invoice</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Initiate Tax Invoice</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Billing_Status6</targetReference>
+            </connector>
+            <label>Initiate Tax Invoice</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Invoice_Status1</name>
+        <label>Check Invoice Status</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Check_Billing_Status</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Check_Invoice_Status11</name>
+            <conditionLogic>(1 OR 2) AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Initiate Tax Invoice</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Tax Invoice</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>singleOpty.Initiate_Tax_Invoice_Generated__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Opportunity5</targetReference>
+            </connector>
+            <label>Check Invoice Status</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Invoice_Type</name>
+        <label>Check Invoice Type</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Update_Opportunity</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Manual</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Auto_Generated_Proforma_Invoice__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Opportunity_Name__r.Proforma_Invoice_Generated__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Assign_Values</targetReference>
+            </connector>
+            <label>Manual</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Invoice_Type1</name>
+        <label>Check Invoice Type</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Copy_1_of_Update_Opportunity</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Manual1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Auto_Generated_Tax_Invoice__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Opportunity_Name__r.Initiate_Tax_Invoice_Generated__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Values8</targetReference>
+            </connector>
+            <label>Manual</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Process_Instance_Step</name>
+        <label>Check Process Instance Step</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Update_Invoice55</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Present52</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_ProcessInstanceStep</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Rejection_Reason</targetReference>
+            </connector>
+            <label>Present</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_RecordType</name>
+        <label>Check RecordType</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Invoice</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Invoice</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Condition</targetReference>
+            </connector>
+            <label>Invoice</label>
+        </rules>
+        <rules>
+            <name>Credit_Note</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Credit_Note</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Credit_RecordType</targetReference>
+            </connector>
+            <label>Credit Note</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Total_Credit_Note_Amount</name>
+        <label>Check Total Credit Note Amount</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>More_than_Invoice_Amount</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>totalCreditNoteAmount</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Record.Invoice_No__r.Total_Invoice_Taxable_Amount__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Credit_Note_Amount_is_greater_than_Invoice_Amount</targetReference>
+            </connector>
+            <label>More than Invoice Amount</label>
+        </rules>
+        <rules>
+            <name>Equal</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>totalCreditNoteAmount</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Invoice_No__r.Total_Invoice_Taxable_Amount__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Invoice_Status</targetReference>
+            </connector>
+            <label>Equal</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Copy_1_of_Check_Process_Instance_Step</name>
+        <label>Check Process Instance Step</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Present5</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Copy_1_of_Get_ProcessInstanceStep</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_2_of_Update_Rejection_Reason</targetReference>
+            </connector>
+            <label>Present</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Null_Check</name>
+        <label>Null Check</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Null</defaultConnectorLabel>
+        <rules>
+            <name>Present</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_the_INVLI_records</leftValueReference>
+                <operator>IsEmpty</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Iterate_Through_INVLI_records</targetReference>
+            </connector>
+            <label>Present</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Proforma_Invoice_Status1</name>
+        <label>Proforma Invoice Status</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>PI_Approved</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Proforma_Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PI Approved</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.No_Client_Confirmation_Email__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_INVLI</targetReference>
+            </connector>
+            <label>PI Approved</label>
+        </rules>
+        <rules>
+            <name>PI_Rejected</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Proforma_Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PI Rejected</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Get_INVLI</targetReference>
+            </connector>
+            <label>PI Rejected</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>creditNoteAmount</name>
+        <dataType>Currency</dataType>
+        <expression>{!$Record.Credit_Note__c}</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>isNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <name>opportunity_URL</name>
+        <dataType>String</dataType>
+        <expression>LEFT($Api.Partner_Server_URL_260 , FIND(&apos;/services&apos;,$Api.Partner_Server_URL_260))
+&amp; &apos;/lightning/r/Opportunity/&apos; &amp;
+$Record.Opportunity_Name__c &amp;
+&apos;/view&apos;</expression>
+    </formulas>
+    <interviewLabel>After Create and Update on Invoice {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>After Create and Update on Invoice</label>
+    <loops>
+        <description>to add the value of &apos;Rated Amount&apos; on each INVLI and display under the &apos;Total VoD&apos;</description>
+        <name>Copy_1_of_Iterate_INVLI</name>
+        <label>Iterate INVLI</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>Copy_1_of_Get_INVLI</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Copy_1_of_Total_VoD</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Get_ProcessInstance</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <description>to add the value of &apos;Rated Amount&apos; on each INVLI and display under the &apos;Total VoD&apos;</description>
+        <name>Copy_2_of_Iterate_INVLI</name>
+        <label>Iterate INVLI</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>Copy_2_of_Get_INVLI</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Copy_2_of_Total_VoD</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Update_Invoice</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <description>to add the value of &apos;Rated Amount&apos; on each INVLI and display under the &apos;Total VoD&apos;</description>
+        <name>Iterate_INVLI</name>
+        <label>Iterate INVLI</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>Get_INVLI</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Total_VoD</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Email_Notification</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <name>Iterate_Over_Credit_Notes</name>
+        <label>Iterate Over Credit Notes</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>Get_Credit_Note_Records</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Assign_Credit_Note</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Check_Total_Credit_Note_Amount</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <name>Iterate_Through_INVLI_records</name>
+        <label>Iterate Through INVLI records</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>Get_the_INVLI_records</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Assign_Opportunity_records</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Get_Opportunity_Records</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <name>Iterate_through_opportunity_records</name>
+        <label>Iterate through opportunity records</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>Get_Opportunity_Records</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Assign_Opportunity</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Update_Opportunity3</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>to add the value of &apos;Rated Amount&apos; on each INVLI and display under the &apos;Total VoD&apos;</description>
+        <name>Copy_1_of_Get_INVLI</name>
+        <label>Get INVLI</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Copy_1_of_Iterate_INVLI</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Invoice_No__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Invoice_Line_Item__c</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Rated_Amount__c</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Copy_1_of_Get_ProcessInstanceStep</name>
+        <label>Get ProcessInstanceStep</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Copy_1_of_Check_Process_Instance_Step</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ProcessInstanceId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Copy_2_of_Get_ProcessInstance.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>StepStatus</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Rejected</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ProcessInstanceStep</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Comments</queriedFields>
+        <queriedFields>StepStatus</queriedFields>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>to add the value of &apos;Rated Amount&apos; on each INVLI and display under the &apos;Total VoD&apos;</description>
+        <name>Copy_2_of_Get_INVLI</name>
+        <label>Get INVLI</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Copy_2_of_Iterate_INVLI</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Invoice_No__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Invoice_Line_Item__c</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Rated_Amount__c</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Copy_2_of_Get_ProcessInstance</name>
+        <label>Get ProcessInstance</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Copy_1_of_Get_ProcessInstanceStep</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>TargetObjectId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Rejected</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ProcessInstance</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Status</queriedFields>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Credit_Note_Records</name>
+        <label>Get Credit Note Records</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Iterate_Over_Credit_Notes</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Invoice_No__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Invoice_No__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Credit_RecordType.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Invoice_No__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Invoice_Status__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Canceled</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Invoice__c</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Credit_Note__c</queriedFields>
+        <queriedFields>Revised_agreed_amount__c</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Credit_RecordType</name>
+        <label>Get Credit RecordType</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Credit_Note_Records</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Credit_Note</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <queriedFields>Id</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>to add the value of &apos;Rated Amount&apos; on each INVLI and display under the &apos;Total VoD&apos;</description>
+        <name>Get_INVLI</name>
+        <label>Get INVLI</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Iterate_INVLI</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Invoice_No__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Invoice_Line_Item__c</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Rated_Amount__c</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Opportunity_Records</name>
+        <label>Get Opportunity Records</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Iterate_through_opportunity_records</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>In</operator>
+            <value>
+                <elementReference>optyIds</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_ProcessInstance</name>
+        <label>Get ProcessInstance</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_ProcessInstanceStep</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>TargetObjectId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Rejected</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ProcessInstance</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Status</queriedFields>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_ProcessInstanceStep</name>
+        <label>Get ProcessInstanceStep</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_Process_Instance_Step</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ProcessInstanceId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_ProcessInstance.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>StepStatus</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Rejected</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ProcessInstanceStep</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Comments</queriedFields>
+        <queriedFields>StepStatus</queriedFields>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>-Get the INVLI records linked with the triggering Invoice</description>
+        <name>Get_the_INVLI_records</name>
+        <label>Get the INVLI records</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Null_Check</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Invoice_No__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Invoice_Line_Item__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Copy_1_of_Update_Opportunity</name>
+        <label>Update Opportunity</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Client_Name_Correct_on_Opportunity6</targetReference>
+        </connector>
+        <inputReference>singleOpty</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Copy_2_of_Update_Rejection_Reason</name>
+        <label>Update Rejection Reason</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <faultConnector>
+            <targetReference>Error2</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Rejection_Reason__c</field>
+            <value>
+                <elementReference>Copy_1_of_Get_ProcessInstanceStep.Comments</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update the reset checkbox to send email</description>
+        <name>Update_Invoice</name>
+        <label>Update Invoice</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Copy_1_of_Email_Notification</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Error_Message</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Send_Confirmation_Email__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Send_Confirmation_Email__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update the &apos;Contact Name Verified&apos; on the Invoice to &apos;Yes&apos;</description>
+        <name>Update_Invoice5</name>
+        <label>Update Invoice</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Contact_Name_Verified__c</field>
+            <value>
+                <stringValue>Yes</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Invoice55</name>
+        <label>Update Invoice</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>No_Client_Confirmation_Email__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>No_Client_Confirmation_Email__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update the &apos;Contact Name Verified&apos; on the Invoice to &apos;Yes&apos;</description>
+        <name>Update_Invoice6</name>
+        <label>Update Invoice</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Contact_Name_Verified__c</field>
+            <value>
+                <stringValue>Yes</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Invoice_Status</name>
+        <label>Update Invoice Status</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Invoice_Status__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Cancel Due to Credit Note</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Bypass_Validation__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Invoice_Status__c</field>
+            <value>
+                <stringValue>Cancel Due to Credit Note</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Invoice_No__r</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Opportunity</name>
+        <label>Update Opportunity</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Client_Name_Correct_on_Opportunity</targetReference>
+        </connector>
+        <inputReference>singleOpty</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Opportunity22</name>
+        <label>Update Opportunity</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_for_Tax_Invoice</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Client_Name_Correct__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Client_Name_Correct__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Opportunity_Name__r</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>-Update Billing Status on Opportunity</description>
+        <name>Update_Opportunity3</name>
+        <label>Update Opportunity</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Client_Name_Correct_on_Invoice_Opportunity</targetReference>
+        </connector>
+        <inputReference>optyRecords</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Rejection_Reason</name>
+        <label>Update Rejection Reason</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Copy_3_of_Email_Notification</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Error</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>No_Client_Confirmation_Email__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Rejection_Reason__c</field>
+            <value>
+                <elementReference>Get_ProcessInstanceStep.Comments</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_RecordType</targetReference>
+        </connector>
+        <filterFormula>OR(
+AND(
+{!$Record.RecordType.DeveloperName}==&apos;Invoice&apos;,
+OR(	ISNEW(),
+	ISCHANGED({!$Record.Invoice_Status__c}),
+	ISCHANGED({!$Record.Proforma_Invoice_Status__c}),
+        ISCHANGED({!$Record.Initiate_Tax_Invoice_Status__c}),
+        ISCHANGED({!$Record.Send_Confirmation_Email__c})
+)
+),
+AND(
+{!$Record.RecordType.DeveloperName}==&apos;Credit_Note&apos;,
+OR(
+	ISCHANGED({!$Record.Revised_agreed_amount__c}),
+        ISCHANGED({!$Record.Credit_Note_TI__c})
+)
+)
+)</filterFormula>
+        <object>Invoice__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>body</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;div style=&quot;font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 700px;&quot;&gt;
+  
+  &lt;p&gt;Dear {!$Record.Opportunity_Owner__c},&lt;/p&gt;
+  
+  &lt;p&gt;Finance Team has approved / manually created the Proforma Invoice pertaining to the said opportunity(s).&lt;/p&gt;
+  
+  &lt;p&gt;&lt;strong&gt;Please find below the Invoice Details:&lt;/strong&gt;&lt;/p&gt;
+  
+  &lt;!-- Invoice Details Table --&gt;
+  &lt;table style=&quot;border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 12px;&quot;&gt;
+    &lt;tr style=&quot;background-color: #000080; color: white;&quot;&gt;
+      &lt;th style=&quot;text-align: center; padding: 10px; border: 1px solid #dddddd;&quot;&gt;Invoice Name&lt;/th&gt;
+      &lt;th style=&quot;text-align: center; padding: 10px; border: 1px solid #dddddd;&quot;&gt;Customer Name&lt;/th&gt;
+      &lt;th style=&quot;text-align: center; padding: 10px; border: 1px solid #dddddd;&quot;&gt;Total Invoice VoD&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr style=&quot;background-color: #FFFFFF;&quot;&gt;
+      &lt;td style=&quot;padding: 10px; border: 1px solid #dddddd; text-align: center;&quot;&gt;
+        {!$Record.Name}
+      &lt;/td&gt;
+      &lt;td style=&quot;padding: 10px; border: 1px solid #dddddd; text-align: center;&quot;&gt;
+        {!$Record.Customer_Name__c}
+      &lt;/td&gt;
+      &lt;td style=&quot;padding: 10px; border: 1px solid #dddddd; text-align: center;&quot;&gt;
+         {!totalVoD}
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+  
+  &lt;p&gt;If a Proforma Invoice is unnecessary, kindly deselect the &quot;Proforma Invoice required&quot; option within the Opportunity.&lt;/p&gt;
+  
+  &lt;p&gt;If a Proforma Invoice is needed, kindly confirm the name of the client to whom the invoice should be addressed. &lt;strong&gt;Opportunity Level Details&lt;/strong&gt; are as follows:&lt;/p&gt;
+  
+ &lt;!-- Opportunity Details Table - RESPONSIVE --&gt;
+&lt;div style=&quot;overflow-x: auto; margin: 16px 0;&quot;&gt;
+  &lt;table style=&quot;border-collapse: collapse; width: 100%; font-size: 12px;&quot;&gt;
+    &lt;tr style=&quot;background-color: #000080; color: white;&quot;&gt;
+      &lt;th style=&quot;text-align: center; width:20%; padding: 8px 6px; border: 1px solid #34495e; font-size: 10px;&quot;&gt;Opportunity Name&lt;/th&gt;
+      &lt;th style=&quot;text-align: center; width:20%; padding: 8px 6px; border: 1px solid #34495e; font-size: 10px;&quot;&gt;Opportunity Link&lt;/th&gt;
+      &lt;th style=&quot;text-align: center; width:20%; padding: 8px 6px; border: 1px solid #34495e; font-size: 10px;&quot;&gt;Client Name&lt;/th&gt;
+      &lt;th style=&quot;text-align: center; width:20%; padding: 8px 6px; border: 1px solid #34495e; font-size: 10px;&quot;&gt;Client Email&lt;/th&gt;
+      &lt;th style=&quot;text-align: center; width:20%; padding: 8px 6px; border: 1px solid #34495e; font-size: 10px;&quot;&gt;Client Mail Address (To)&lt;/th&gt;
+      &lt;th style=&quot;text-align: center; width:20%; padding: 8px 6px; border: 1px solid #34495e; font-size: 10px;&quot;&gt;Client Mail Address (CC)&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr style=&quot;background-color: #FFFFFF;&quot;&gt;
+      &lt;td style=&quot;padding: 8px 6px; border: 1px solid #bdc3c7; font-size: 10px; text-align: center;&quot;&gt;
+          {!$Record.Opportunity_Name__r.Name}
+        &lt;/a&gt;
+      &lt;/td&gt;
+&lt;td style=&quot;padding: 8px 6px; border: 1px solid #bdc3c7;&quot;&gt;
+   &lt;a href=&quot;{!opportunity_URL}&quot;&gt;View Opportunity&lt;/a&gt; 
+  &lt;/a&gt;
+&lt;/td&gt;
+
+      &lt;td style=&quot;padding: 8px 6px; border: 1px solid #bdc3c7;font-size: 10px; text-align: center;&quot;&gt;
+        {!$Record.Customer_Name__c}
+      &lt;/td&gt;
+      &lt;td style=&quot;padding: 8px 6px; border: 1px solid #bdc3c7; font-size: 10px; text-align: center;&quot;&gt;
+        {!$Record.Contact_Name__r.Email}
+      &lt;/td&gt;
+      &lt;td style=&quot;padding: 8px 6px; border: 1px solid #bdc3c7; font-size: 10px; text-align: center;&quot;&gt;
+        {!$Record.Client_Mail_Address_To__c}
+      &lt;/td&gt;
+      &lt;td style=&quot;padding: 8px 6px; border: 1px solid #bdc3c7; font-size: 10px; text-align: center;&quot;&gt;
+        {!$Record.Client_Mail_Address_CC__c}
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+ 
+  &lt;p style=&quot;margin-top: 24px;&quot;&gt;
+    If the client information is verified as accurate, kindly mark the &apos;Client Name Correct&apos; checkbox within the Opportunity.
+  &lt;/p&gt;
+  
+  &lt;p&gt;Please review and update the client details in the opportunity if any information is inaccurate.&lt;/p&gt;
+  
+  &lt;p style=&quot;margin-top: 32px; padding-top: 20px; border-top: 2px solid #ecf0f1; font-size: 12px; color: #7f8c8d;&quot;&gt;
+    Thank you,&lt;br&gt;
+    &lt;strong&gt;ICRA Limited&lt;/strong&gt;
+  &lt;/p&gt;
+  
+&lt;/div&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>body_Rejected</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;div style=&quot;font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 700px;&quot;&gt;
+  
+  &lt;p&gt;Dear {!$Record.Opportunity_Owner__c},&lt;/p&gt;
+  
+  &lt;p&gt;The Finance Team has rejected the following surveillance opportunity for the following reason: &lt;/p&gt;
+  {!Get_ProcessInstanceStep.Comments}
+ 
+  &lt;!-- Invoice Details Table --&gt;
+  &lt;table style=&quot;border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 12px;&quot;&gt;
+    &lt;tr style=&quot;background-color: #000080; color: white;&quot;&gt;
+      &lt;th style=&quot;text-align: center; padding: 10px; border: 1px solid #dddddd;&quot;&gt;Opportunity Name (link)&lt;/th&gt;
+      &lt;th style=&quot;text-align: center; padding: 10px; border: 1px solid #dddddd;&quot;&gt;Billing Start Date&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr style=&quot;background-color: #FFFFFF;&quot;&gt;
+      &lt;td style=&quot;padding: 10px; border: 1px solid #dddddd; text-align: center;&quot;&gt;
+       &lt;a href=&quot;{!opportunity_URL}&quot;&gt;{!$Record.Opportunity_Name__r.Name}&lt;/a&gt; 
+      &lt;/td&gt;
+      &lt;td style=&quot;padding: 10px; border: 1px solid #dddddd; text-align: center;&quot;&gt;
+        {!$Record.Opportunity_Name__r.Billing_Start_Date__c}
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+  
+  &lt;p&gt;However, if a Proforma Invoice is unnecessary, kindly deselect the &quot;Proforma Invoice required&quot; option within the Opportunity.&lt;/p&gt;
+  
+  &lt;p&gt;If a Proforma Invoice is needed, kindly confirm the name of the client to whom the invoice should be addressed. &lt;strong&gt;Opportunity Level Details&lt;/strong&gt; are as follows:&lt;/p&gt;
+  
+ &lt;!-- Opportunity Details Table - RESPONSIVE --&gt;
+&lt;div style=&quot;overflow-x: auto; margin: 16px 0;&quot;&gt;
+  &lt;table style=&quot;border-collapse: collapse; width: 100%; font-size: 12px;&quot;&gt;
+    &lt;tr style=&quot;background-color: #000080; color: white;&quot;&gt;
+      &lt;th style=&quot;text-align: center; width:20%; padding: 8px 6px; border: 1px solid #34495e; font-size: 10px;&quot;&gt;Opportunity Name&lt;/th&gt;
+      &lt;th style=&quot;text-align: center; width:20%; padding: 8px 6px; border: 1px solid #34495e; font-size: 10px;&quot;&gt;Opportunity Link&lt;/th&gt;
+      &lt;th style=&quot;text-align: center; width:20%; padding: 8px 6px; border: 1px solid #34495e; font-size: 10px;&quot;&gt;Client Name&lt;/th&gt;
+      &lt;th style=&quot;text-align: center; width:20%; padding: 8px 6px; border: 1px solid #34495e; font-size: 10px;&quot;&gt;Client Email&lt;/th&gt;
+      &lt;th style=&quot;text-align: center; width:20%; padding: 8px 6px; border: 1px solid #34495e; font-size: 10px;&quot;&gt;Client Mail Address (To)&lt;/th&gt;
+      &lt;th style=&quot;text-align: center; width:20%; padding: 8px 6px; border: 1px solid #34495e; font-size: 10px;&quot;&gt;Client Mail Address (CC)&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr style=&quot;background-color: #FFFFFF;&quot;&gt;
+      &lt;td style=&quot;padding: 8px 6px; border: 1px solid #bdc3c7; font-size: 10px; text-align: center;&quot;&gt;
+          {!$Record.Opportunity_Name__r.Name}
+        &lt;/a&gt;
+      &lt;/td&gt;
+&lt;td style=&quot;padding: 8px 6px; border: 1px solid #bdc3c7;&quot;&gt;
+   &lt;a href=&quot;{!opportunity_URL}&quot;&gt;View Opportunity&lt;/a&gt; 
+  &lt;/a&gt;
+&lt;/td&gt;
+
+      &lt;td style=&quot;padding: 8px 6px; border: 1px solid #bdc3c7;font-size: 10px; text-align: center;&quot;&gt;
+        {!$Record.Customer_Name__c}
+      &lt;/td&gt;
+      &lt;td style=&quot;padding: 8px 6px; border: 1px solid #bdc3c7; font-size: 10px; text-align: center;&quot;&gt;
+        {!$Record.Contact_Name__r.Email}
+      &lt;/td&gt;
+      &lt;td style=&quot;padding: 8px 6px; border: 1px solid #bdc3c7; font-size: 10px; text-align: center;&quot;&gt;
+        {!$Record.Client_Mail_Address_To__c}
+      &lt;/td&gt;
+      &lt;td style=&quot;padding: 8px 6px; border: 1px solid #bdc3c7; font-size: 10px; text-align: center;&quot;&gt;
+        {!$Record.Client_Mail_Address_CC__c}
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+ 
+  &lt;p style=&quot;margin-top: 24px;&quot;&gt;
+    If the client information is verified as accurate, kindly mark the &apos;Client Name Correct&apos; checkbox within the Opportunity.
+  &lt;/p&gt;
+    &lt;p&gt;Please review and update the client details in the opportunity if any information is inaccurate.&lt;/p&gt;
+  &lt;p&gt;Additionally, please address the feedback provided by the Finance team and notify them by selecting the &lt;strong&gt;‘Send to Finance’&lt;/strong&gt; button.&lt;/p&gt;
+
+  &lt;p style=&quot;margin-top: 32px; padding-top: 20px; border-top: 2px solid #ecf0f1; font-size: 12px; color: #7f8c8d;&quot;&gt;
+    Thank you,&lt;br&gt;
+    &lt;strong&gt;ICRA Limited&lt;/strong&gt;
+  &lt;/p&gt;
+  
+&lt;/div&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>body_Tax_Invoice</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;div style=&quot;font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 700px;&quot;&gt;
+  
+  &lt;p&gt;Dear {!$Record.Opportunity_Owner__c},&lt;/p&gt;
+  
+  &lt;p&gt;The System / Finance Team has created the following Tax Invoice. &lt;/p&gt;
+  
+  &lt;p&gt;&lt;strong&gt;Please find below the Invoice Details:&lt;/strong&gt;&lt;/p&gt;
+  
+  &lt;!-- Invoice Details Table --&gt;
+  &lt;table style=&quot;border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 12px;&quot;&gt;
+    &lt;tr style=&quot;background-color: #000080; color: white;&quot;&gt;
+      &lt;th style=&quot;text-align: center; padding: 10px; border: 1px solid #dddddd;&quot;&gt;Invoice Name&lt;/th&gt;
+      &lt;th style=&quot;text-align: center; padding: 10px; border: 1px solid #dddddd;&quot;&gt;Customer Name&lt;/th&gt;
+      &lt;th style=&quot;text-align: center; padding: 10px; border: 1px solid #dddddd;&quot;&gt;Total Invoice VoD&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr style=&quot;background-color: #FFFFFF;&quot;&gt;
+      &lt;td style=&quot;padding: 10px; border: 1px solid #dddddd; text-align: center;&quot;&gt;
+        {!$Record.Name}
+      &lt;/td&gt;
+      &lt;td style=&quot;padding: 10px; border: 1px solid #dddddd; text-align: center;&quot;&gt;
+        {!$Record.Customer_Name__c}
+      &lt;/td&gt;
+      &lt;td style=&quot;padding: 10px; border: 1px solid #dddddd; text-align: center;&quot;&gt;
+         {!totalVoD}
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+  
+  &lt;p&gt;Please verify the Client Name to whom the said Invoice should be addressed.&lt;/p&gt;
+  
+  &lt;p&gt;&lt;strong&gt;Opportunity Level Details&lt;/strong&gt; are as follows:&lt;/p&gt;
+  
+ &lt;!-- Opportunity Details Table - RESPONSIVE --&gt;
+&lt;div style=&quot;overflow-x: auto; margin: 16px 0;&quot;&gt;
+  &lt;table style=&quot;border-collapse: collapse; width: 100%; font-size: 12px;&quot;&gt;
+    &lt;tr style=&quot;background-color: #000080; color: white;&quot;&gt;
+      &lt;th style=&quot;text-align: center; width:20%; padding: 8px 6px; border: 1px solid #34495e; font-size: 10px;&quot;&gt;Opportunity Name&lt;/th&gt;
+      &lt;th style=&quot;text-align: center; width:20%; padding: 8px 6px; border: 1px solid #34495e; font-size: 10px;&quot;&gt;Opportunity Link&lt;/th&gt;
+      &lt;th style=&quot;text-align: center; width:20%; padding: 8px 6px; border: 1px solid #34495e; font-size: 10px;&quot;&gt;Client Name&lt;/th&gt;
+      &lt;th style=&quot;text-align: center; width:20%; padding: 8px 6px; border: 1px solid #34495e; font-size: 10px;&quot;&gt;Client Email&lt;/th&gt;
+      &lt;th style=&quot;text-align: center; width:20%; padding: 8px 6px; border: 1px solid #34495e; font-size: 10px;&quot;&gt;Client Mail Address (To)&lt;/th&gt;
+      &lt;th style=&quot;text-align: center; width:20%; padding: 8px 6px; border: 1px solid #34495e; font-size: 10px;&quot;&gt;Client Mail Address (CC)&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr style=&quot;background-color: #FFFFFF;&quot;&gt;
+      &lt;td style=&quot;padding: 8px 6px; border: 1px solid #bdc3c7; font-size: 10px; text-align: center;&quot;&gt;
+          {!$Record.Opportunity_Name__r.Name}
+        &lt;/a&gt;
+      &lt;/td&gt;
+&lt;td style=&quot;padding: 8px 6px; border: 1px solid #bdc3c7;&quot;&gt;
+&lt;a href=&quot;{!opportunity_URL}&quot;&gt;View Opportunity&lt;/a&gt;
+&lt;/td&gt;
+
+      &lt;td style=&quot;padding: 8px 6px; border: 1px solid #bdc3c7;font-size: 10px; text-align: center;&quot;&gt;
+        {!$Record.Customer_Name__c}
+      &lt;/td&gt;
+      &lt;td style=&quot;padding: 8px 6px; border: 1px solid #bdc3c7; font-size: 10px; text-align: center;&quot;&gt;
+        {!$Record.Contact_Name__r.Email}
+      &lt;/td&gt;
+      &lt;td style=&quot;padding: 8px 6px; border: 1px solid #bdc3c7; font-size: 10px; text-align: center;&quot;&gt;
+        {!$Record.Client_Mail_Address_To__c}
+      &lt;/td&gt;
+      &lt;td style=&quot;padding: 8px 6px; border: 1px solid #bdc3c7; font-size: 10px; text-align: center;&quot;&gt;
+        {!$Record.Client_Mail_Address_CC__c}
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+ 
+  &lt;p style=&quot;margin-top: 24px;&quot;&gt;
+    If the client information is verified as accurate, kindly mark the &apos;Client Name Correct&apos; checkbox within the Opportunity.
+  &lt;/p&gt;
+  
+  &lt;p&gt;Please review and update the client details in the opportunity if any information is inaccurate.&lt;/p&gt;
+  
+  &lt;p style=&quot;margin-top: 32px; padding-top: 20px; border-top: 2px solid #ecf0f1; font-size: 12px; color: #7f8c8d;&quot;&gt;
+    Thank you,&lt;br&gt;
+    &lt;strong&gt;ICRA Limited&lt;/strong&gt;
+  &lt;/p&gt;
+  
+&lt;/div&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>subject</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Confirmation of Client Name for Proforma Invoice of {!$Record.Customer_Name__c}</text>
+    </textTemplates>
+    <textTemplates>
+        <name>subject_Rejected</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Notification of Rejection of Proforma Invoice for Surveillance Opportunities.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>subject_Tax_Invoice</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Confirmation of Client Name for Tax Invoice of {!$Record.Customer_Name__c}</text>
+    </textTemplates>
+    <variables>
+        <name>optyIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>optyRecords</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <name>singleInvoiceOpty</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <name>singleOpty</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <name>totalCreditNoteAmount</name>
+        <dataType>Currency</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <name>totalVoD</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <scale>2</scale>
+    </variables>
+    <variables>
+        <name>userEmail</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

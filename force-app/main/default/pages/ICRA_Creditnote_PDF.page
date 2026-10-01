@@ -1,0 +1,667 @@
+<!--
+  @description       : Invoice PDF documnet 
+  @author            : ChangeMeIn@UserSettingsUnder.Ritesh Kumar
+  @group             : 
+  @last modified on  : 05-18-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                               Modification
+  1.0   01-29-2021   Ritesh Kumar   Initial Version
+   
+-->
+<apex:page renderAs="pdf" standardController="Invoice__c" extensions="ICRA_Controller_CreditNote"  showHeader="false" sidebar="false"
+    standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false" docType="html-5.0">
+    <html>
+        <head>
+            <style type="text/css" media="print">
+            @font-face {
+                font-family: 'myarial';
+                src: url("{!$Resource.ICRA}");
+
+            }
+
+            @page {
+                size: 8.6in 12.5in;
+                margin-top: 3.5cm;
+                margin-bottom: 4.5cm;
+
+                @top-center {
+                    content: element(header);
+                }
+
+                @bottom-center {
+                    content: element(footer);
+                }
+
+            }
+
+            div.header {
+                margin: 30px 0px 20px 0px;
+                height: 130px;
+                width: 715px;
+                text-align: right;
+                position: running(header);
+
+            }
+
+            div.footer {
+                width: 715px;
+                border-top: 2px solid #0027A0;
+                position: running(footer);
+
+            }
+
+            body {
+                font-family: 'myarial';
+                font-size: 8.5pt;
+                word-wrap: break-word;
+                padding: 0px;
+                margin: 0px;
+            }
+
+            table {
+                word-wrap: break-word;
+                font-family: 'myarial';
+                border-collapse: collapse;
+                table-layout: auto;
+                width: 100%;
+
+            }
+
+            td,
+            tr {
+                word-wrap: break-word;
+                padding: 0px 3px 0px 3px;
+            }
+
+            .text-label {
+                font-weight: bolder !important;
+            }
+
+            p {
+                padding: 0px;
+                margin: 0px;
+                line-height: 1.5;
+            }
+
+            .custom-border td {
+                border: 0.2px solid #aaa9a9;
+
+            }
+
+            .custom-border-table {
+                border: 0.2px solid #aaa9a9;
+
+            }
+
+            .text-align {
+                text-align: center;
+            }
+        </style>
+        </head>
+        <body>
+            <div class="header">
+                <apex:image value="{!$Resource.ICRA}" width="210px" height="85px" style="float: left;" />
+                <!--<p style="text-align: left; color:#0060AA; font-size: 24pt; width: 150px; float: left; margin: 21px 0px 0px 10px;font-weight: 500">
+                ICRA
+            </p>-->
+                <p style="text-align: right; color:#0060AA; font-size: 24pt; width: 350px; float: right; margin: 21px 0px 0px 0px;font-weight: 500">
+                ICRA Limited
+            </p>
+            </div>
+            <div class="footer ">
+                <table cellspacing="0 " cellpadding="0 " style=" table-layout: fixed; ">
+                    <tr>
+                        <td style="text-align: left;color:#0060AA;font-size:10pt;font-weight: 500; ">
+                            <p style="width: 80%; text-overflow: hidden !important; height: 100px  !important;">
+                            {!invPage.invRecord.Opportunity_Name__r.Opp_ICRA_Branch__r.Street__c}, {!invPage.invRecord.Opportunity_Name__r.Opp_ICRA_Branch__r.City__c}
+                            {!invPage.invRecord.Opportunity_Name__r.Opp_ICRA_Branch__r.State__c} - {!invPage.invRecord.Opportunity_Name__r.Opp_ICRA_Branch__r.Zip_Postal_Code__c},
+                            {!invPage.invRecord.Opportunity_Name__r.Opp_ICRA_Branch__r.Country__c}
+
+                        </p>
+                        </td>
+                        <td style="text-align: left;color:#0060AA;font-size:10pt;font-weight: 500; ">
+                            <p style="width: 80%; ">Tel : {!invPage.invoiceFooter.Telephone__c}</p>
+                            <p style="width: 80%; ">CIN : {!invPage.invoiceFooter.CIN__c}</p>
+                        </td>
+                        <td style="text-align: left;color:#0060AA;font-size:10pt;font-weight: 500; ">
+                            <p style="width: 80%; float: right ">Website : {!invPage.invoiceFooter.Website__c}</p>
+                            <p style="width: 80%;float: right ">Email : {!invPage.invoiceFooter.Email__c}</p>
+                            <p style="width: 80%;float: right ">Helpdesk : {!invPage.invoiceFooter.HelpDesk__c}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3 " style="text-align: left;color:#0060AA;font-size:10pt;font-weight: 500; ">
+                            <p> Registered Office:
+                            
+                                <apex:outputText value="{!invPage.invoiceFooter.Registered_Office__c}" />
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3 " style="text-align: center;color:#0060AA;font-size:18pt;font-weight: 800 !important;letter-spacing: 5px; !important! ">
+                            <p> RATING &nbsp;&nbsp;&#8226;&nbsp;&nbsp; RESEARCH &nbsp;&nbsp;&#8226;&nbsp;&nbsp; INFORMATION</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="content">
+            <apex:outputPanel >
+            
+            <table cellspacing="0" cellpadding="0" >
+                <tbody>
+                    <tr>
+                        <td colspan="3" style="text-align: right; padding: 0px;margin:0px;">Original for Recipient</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="text-align: center;font-size: 20pt;font-weight: 600"> 
+                        {!IF(invPage.invRecord.Credit_Note_Type__c =='Commercial','Commercial Credit Note','Credit Note')}
+                    </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top; width:215px;overflow:hidden;" cellspacing="0" cellpadding="0">
+                            <table cellspacing="0" cellpadding="0" class="text-label">
+                                 <tr>
+                                    <td colspan="2" class="text-label" style="word-wrap:break-word;">
+                                        <!--p style="width:260px;"-->
+
+                                        {!invPage.invRecord.Customer_Name__c}
+                                        <br/>
+                                        <apex:outputField value="{!invPage.invRecord.Address__c}" style="width:100px;" />
+                                        <br/> &nbsp;
+                                        <!--/p-->
+                                    </td>
+                                </tr> 
+                                
+                                <tr>
+                                    <td class="text-label" style="width:80px; vertical-align:top;">
+                                        <p style="padding:0px;margin:0px;">State</p>
+                                    </td>
+                                    <td class="text-label">
+                                        <p style="float: left; ">:&nbsp;</p>
+                                        <p style="float: left; width: 70%; padding: 0px; margin: 0px;"> {!invPage.invRecord.Customer_State__c}
+                                            <br/>(Place of Supply)</p>
+                                    </td>
+                                </tr>
+                                
+                                 
+                                <tr>
+                                    <td class="text-label">
+                                        <p style="padding:0px;margin:0px;">State Code </p>
+                                    </td>
+                                    <td class="text-label">:&nbsp;{!invPage.invRecord.Customer_State_Code__c}</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="text-label">
+                                        <p style="padding:0px;margin:0px;">GSTIN </p>
+                                    </td>
+                                    <td class="text-label" style="text-transform: uppercase;">:&nbsp;{!invPage.invRecord.Customer_GSTIN__c}</td>
+                                </tr>
+                                
+            <!--                    <tr>
+                                    <td class="text-label">
+                                        <p style="padding:0px;margin:0px;">Kind Attn.&nbsp;:- </p>
+                                    </td>
+                                    <td class="text-label">
+                                        <p>
+                                            &nbsp;{!invPage.invRecord.Contact_Name__r.Name}
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-label">
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                                    </td>
+                                    <td class="text-label">
+                                        <p>
+                                            &nbsp;{!invPage.invRecord.Contact_Designation__c}
+                                        </p>
+                                    </td>
+                                </tr> 
+                                 
+                                <tr>
+                                    <td class="text-label">
+                                        <p style="padding:0px;margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                                    </td>
+                                    <td class="text-label">&nbsp;{!invPage.invRecord.Contact_Designation__c}</td>
+                                </tr>       -->
+                            </table>
+                        </td>
+                        <td style="width: 250px; " cellspacing="0" cellpadding="0"> 
+                            <apex:outputField value="{!invPage.invRecord.QR_Code__c}" style="width: 250px; height: 250px;" /> 
+                        </td>
+                        
+                        <td style="vertical-align: top;">
+                            <table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed;">
+                                <tr>
+                                    <td class="text-label" style="vertical-align: text-top; width: 115px !important;">
+                                        <p style="padding:0px;margin:0px;">Credit Note No</p>
+                                    </td>
+                                    <td class="text-label">:&nbsp;{!invPage.invRecord.Credit_Note_No__c}</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-label">
+                                        <p style="padding:0px;margin:0px;">Dated</p>
+                                    </td>
+                                    <td class="text-label">:&nbsp;
+                                        <apex:outputField value="{!invPage.invRecord.Created_Date__c}" />
+                                    </td>
+
+                                </tr>
+                                
+                                 <tr>
+                                    <td class="text-label">
+                                        <p style="padding:0px;margin:0px;">Location of supplier</p>
+                                    </td>
+                                    <td class="text-label">:&nbsp;{!invPage.invRecord.Location_of_Supplier__c}</td>
+                                </tr> 
+                                <tr>
+                                    <td class="text-label">
+                                        <p style="padding:0px;margin:0px;">State</p>
+                                    </td>
+                                    <td class="text-label" style="vertical-align:top;">:&nbsp;{!invPage.invRecord.Supplier_State__c}</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="text-label">
+                                        <p style="padding:0px;margin:0px;"> State Code</p>
+                                    </td>
+                                    <td class="text-label">:&nbsp;{!invPage.invRecord.Supplier_State_Code__c}</td>
+                                </tr>
+                                 <tr>
+                                    <td class="text-label">
+                                        <p style="padding:0px;margin:0px;">GSTIN</p>
+                                    </td>
+                                    <td class="text-label" style="text-transform: uppercase;">:&nbsp;{!invPage.invRecord.Supplier_GSTIN__c}</td>
+                                </tr> 
+                                
+                                <tr>
+                                    <td class="text-label" style="vertical-align:top;">
+                                        <p style="padding:0px;margin:0px;">Description</p>
+                                    </td>
+                                    <td class="text-label" style="vertical-align:top;">
+                                        <p style="float: left; ">:&nbsp;</p>
+                                        <p style="float: left; width: 90%; padding: 0px; margin: 0px;">
+                                        {!IF(invPage.invRecord.Opportunity_Name__r.Instrument_type_4__c='Monitoring Activity',$Label.IPO_Invoice_Description, 
+                                        IF(invPage.invRecord.Opportunity_Name__r.Business_Segment__c='Rating',$Label.Credit_Note_Description, $Label.Credit_Note_Research_Description))}</p>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="text-label">
+                                        <p style="padding:0px;margin:0px;">SAC/HSN</p>
+                                    </td>
+                                    <td class="text-label">:&nbsp;{!invPage.invRecord.SAC_HSN__c}</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-label" style="vertical-align:top;">
+                                        <p style="padding:0px;margin:0px;">Tax Subject Reverse Charge </p>
+                                    </td>
+                                    <td class="text-label" style="vertical-align:top;">
+                                        <p style="float: left; ">:&nbsp;</p>
+                                        <p style="float: left; width: 90%; ">No</p>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="text-label">
+                                        <p style="padding:0px;margin:0px;text-transform: uppercase;">Pan</p>
+                                    </td>
+                                    <td class="text-label" style="text-transform: uppercase;">:&nbsp;{!invPage.invRecord.Supplier_PAN__c} </td>
+                                </tr> 
+                            </table>
+                        </td>
+                    </tr>
+                    
+                     <tr>
+                        <td colspan="3">
+                            <span style="margin-right:60px;font-weight:bolder;">&nbsp;IRN</span>
+                            <b>:</b>&nbsp;{!invPage.invRecord.IRN_Number__c}
+                        </td>
+                    </tr>
+                     
+                    <tr>
+                        <td colspan="3">
+                        &nbsp;
+                        
+                            <br/> We credit your account on account of following:
+                        
+                            <br/> &nbsp;
+                    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <table cellspacing="0" cellpadding="0" class="custom-border" width="100%" style=" table-layout: fixed;">
+                            <!--table cellspacing="0" cellpadding="0" class="custom-border" style=" table-layout: auto;"-->
+                                <tr class="custom-border">
+                                    <td colspan="8" style="text-align: center;" class="text-label">PARTICULARS</td>
+                                    <td style="text-align: center;" class="text-label">Amount ({!invPage.invRecord.CurrencyIsoCode})</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="8" style="border-bottom: none;">
+                                    &nbsp;
+                                    
+                                        <br/> Reversal of fees as per following detail:
+                                    
+                                        <br/> &nbsp;
+
+                                
+                                    </td>
+                                    <td style="border-bottom: none; border-top: none;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="border-bottom: none; border-top: none; border-right: none;">Invoice Number</td>
+                                    <td style="border: none;">:&nbsp;{!invPage.invRecord.Invoice_No__r.Bill_No__c}</td>
+                                    <td colspan="5" style="border: none;">&nbsp;</td>
+                                    <td style="border-bottom: none; border-top: none;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="border-bottom: none; border-top: none; border-right: none;">Invoice Date</td>
+                                    <td style="border: none;">
+                                    :&nbsp;
+                                    
+                                        <apex:outputField Value="{!invPage.invRecord.Invoice_Date__c}" />
+                                    </td>
+                                    <td colspan="5" style="border: none;">&nbsp;</td>
+                                    <td style="border-bottom: none; border-top: none;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="border-bottom: none; border-top: none; border-right: none;vertical-align: top;">Instrument</td>
+                                    <td style="border: none;vertical-align: top;">
+                                        <div style="float: left; width: 300px; padding: 0px; margin: 0px;">
+                                            <p style="float: left;width: 8px;">:&nbsp;</p>
+                                            <p style="float: left;width: 292px;">
+                                            {!IF( AND(invPage.invRecord.Opportunity_Name__r.RecordType.Name =='New Business',invPage.invRecord.Opportunity_Name__r.Business_Segment__c=='Research'),
+                                            invPage.invRecord.Opportunity_Name__r.Instrument_Type_5__c, invPage.invRecord.Instrument__c)}
+
+                                        </p>
+                                            <p style="float:left;">
+                                            {!IF( AND(invPage.invRecord.Opportunity_Name__r.Narration_for_Invoice__c !=null,invPage.invRecord.Opportunity_Name__r.Narration_for_Invoice__c
+                                            !=''),'( '+invPage.invRecord.Opportunity_Name__r.Narration_for_Invoice__c+' )','')
+                                            }
+                                        
+                                            </P>
+                                        </div>
+                                    </td>
+                                    <td style="border: none;" colspan="5">&nbsp;</td>
+                                    <td style="border-bottom: none; border-top: none;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom: none; border-top: none; border-right: none;" colspan="2">Invoice Amount</td>
+                                    <td style="border: none;">
+                                        <p style="{! IF(invPage.invRecord.Invoice_Amount__c > 0 ,'display: block;','display: none;')}">
+                                        :&nbsp;
+                                        
+                                            <apex:outputText value="{0, number, integer}">
+                                                <apex:param value="{!invPage.invRecord.Invoice_Amount__c}" />
+                                            </apex:outputText>
+                                        </p>
+                                        <p style="{! IF(invPage.invRecord.Invoice_Amount__c <= 0 ,'display: block;','display: none;')}">-
+                                        </p>
+                                    </td>
+                                    <td style="border: none;" colspan="5">&nbsp;</td>
+                                    <td style="border-bottom: none; border-top: none;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom: none; border-top: none; border-right: none;" colspan="2">Revised Agreed Amount</td>
+                                    <td style="border: none;">
+                                        <p style="{! IF(invPage.invRecord.Revised_agreed_amount__c > 0 ,'display: block;','display: none;')}">
+                                        :&nbsp;
+                                        
+                                            <apex:outputText value="{0, number, integer}">
+                                                <apex:param value="{!invPage.invRecord.Revised_agreed_amount__c}" />
+                                            </apex:outputText>
+                                        </p>
+                                        <p style="{! IF(invPage.invRecord.Revised_agreed_amount__c <= 0 ,'display: block;','display: none;')}">-
+                                        </p>
+                                    </td>
+                                    <td style="border: none;" colspan="5">&nbsp;</td>
+                                    <td style="border-bottom: none; border-top: none;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom: none; border-top: none; border-right: none;" colspan="2">Credit Note</td>
+                                    <td style="border: none;">
+                                        <p style="{! IF(invPage.invRecord.Credit_Note__c > 0 ,'display: block;','display: none;')}">
+                                        :&nbsp;
+                                        
+                                            <apex:outputText value="{0, number, integer}">
+                                                <apex:param value="{!invPage.invRecord.Credit_Note__c}" />
+                                            </apex:outputText>
+                                        </p>
+                                        <p style="{! IF(invPage.invRecord.Credit_Note__c <= 0 ,'display: block;','display: none;')}">-
+                                        </p>
+                                    </td>
+                                    <td style="border: none;" colspan="5">&nbsp;</td>
+                                    <td class="text-align" style="border-bottom: none; border-top: none;">
+                                        <p style="{! IF(invPage.invRecord.Credit_Note__c > 0 ,'display: block;','display: none;')}">
+                                            <apex:outputText value="{0, number, integer}">
+                                                <apex:param value="{!invPage.invRecord.Credit_Note__c}" />
+                                            </apex:outputText>
+                                        </p>
+                                        <p style="{! IF(invPage.invRecord.Credit_Note__c<= 0 ,'display: block;','display: none;')}">-
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom: none; border-top: none; border-right: none;" colspan="2">Reason for Credit Note</td>
+                                    <td style="border: none;">:&nbsp;{!invPage.invRecord.Reason_for_Credit_Note__c}</td>
+                                    <td style="border: none;" colspan="5">&nbsp;</td>
+                                    <td class="text-align" style="border-bottom: none; border-top: none;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom: none; border-top: none;" colspan="8">
+                                    &nbsp;
+                                    
+                                        <br/> &nbsp;
+                                
+                                    </td>
+                                    <td style="border-bottom: none; border-top: none;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom: none; border-top: none; border-right: none;" colspan="6">
+                                    &nbsp;
+                                    
+                                        <br/> &nbsp;
+                                
+                                    </td>
+                                    <td class="text-align" style="border: none; text-decoration: underline">Rate</td>
+                                    <td class="text-align" style="border: none; text-decoration: underline">Amount</td>
+                                    <td class="text-align" style="border-bottom: none; ">
+                                        <p style="{! IF(invPage.invRecord.Credit_Note__c > 0 ,'display: block;','display: none;')}">
+                                            <apex:outputText value="{0, number, integer}">
+                                                <apex:param value="{!invPage.invRecord.Credit_Note__c}" />
+                                            </apex:outputText>
+                                        </p>
+                                        <p style="{! IF(invPage.invRecord.Credit_Note__c <= 0 ,'display: block;','display: none;')}">-
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom: none; border-top: none; border-right: none;" rowspan="4" colspan="5">
+                                    &nbsp;
+                                    
+                                        <br/> &nbsp;
+                                
+                                    </td>
+                                    <td class="text-align" style="border: none;">CGST</td>
+                                    <td class="text-align" style="border: none;">
+                                        <p style="{! IF(AND(invPage.invRecord.CGST_Rate_for_Invoice_Amount__c > 0,invPage.invRecord.Credit_Note_Type__c != 'Commercial' ),'display: block;','display: none;')}">
+                                            <apex:outputText value="{0, number, integer}">
+                                                <apex:param value="{!invPage.invRecord.CGST_Rate_for_Invoice_Amount__c}" />
+                                            </apex:outputText>%
+                                    
+                                        </p>
+                                        <p style="{! IF( NOT(AND(invPage.invRecord.CGST_Rate_for_Invoice_Amount__c > 0,invPage.invRecord.Credit_Note_Type__c != 'Commercial' )),'display: block;','display: none;')}">-</p>
+                                    </td>
+                                    <td class="text-align" style="border: none;">
+                                        <p style="{! IF(invPage.invRecord.CGST_Amount_on_Credit_Note__c > 0 ,'display: block;','display: none;')}">
+                                            <apex:outputText value="{0, number, integer}">
+                                                <apex:param value="{!invPage.invRecord.CGST_Amount_on_Credit_Note__c}" />
+                                            </apex:outputText>
+                                        </p>
+                                        <p style="{! IF(invPage.invRecord.CGST_Amount_on_Credit_Note__c<= 0 ,'display: block;','display: none;')}">-
+                                        </p>
+                                    </td>
+                                    <td class="text-align" style="border-bottom: none; border-top: none;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-align" style="border: none;">SGST</td>
+                                    <td class="text-align" style="border: none;">
+                                        <p style="{! IF(AND(invPage.invRecord.SGST_UTGST_Rate_for_Invoice_Amount__c > 0,invPage.invRecord.Credit_Note_Type__c != 'Commercial' ),'display: block;','display: none;')}">
+                                            <apex:outputText value="{0, number, integer}">
+                                                <apex:param value="{!invPage.invRecord.SGST_UTGST_Rate_for_Invoice_Amount__c}" />
+                                            </apex:outputText>%
+                                    
+                                        </p>
+                                        <p style="{! IF(NOT(AND(invPage.invRecord.SGST_UTGST_Rate_for_Invoice_Amount__c > 0,invPage.invRecord.Credit_Note_Type__c != 'Commercial' )),'display: block;','display: none;')}">-</p>
+                                    </td>
+                                    <td class="text-align" style="border: none;">
+                                        <p style="{! IF(invPage.invRecord.SGST_UTGST_Amount_on_Credit_Note__c > 0 ,'display: block;','display: none;')}">
+                                            <apex:outputText value="{0, number, integer}">
+                                                <apex:param value="{!invPage.invRecord.SGST_UTGST_Amount_on_Credit_Note__c}" />
+                                            </apex:outputText>
+                                        </p>
+                                        <p style="{! IF(invPage.invRecord.SGST_UTGST_Amount_on_Credit_Note__c <= 0 ,'display: block;','display: none;')}">-
+                                        </p>
+                                    </td>
+                                    <td class="text-align" style="border-bottom: none; border-top: none;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-align" style="border: none;">IGST</td>
+                                    <td class="text-align" style="border: none;">
+                                        <p style="{! IF( AND(invPage.invRecord.IGST_Rate_for_Invoice_Amount__c > 0,invPage.invRecord.Credit_Note_Type__c != 'Commercial' ),'display: block;','display: none;')}">
+                                            <apex:outputText value="{0, number, integer}">
+                                                <apex:param value="{!invPage.invRecord.IGST_Rate_for_Invoice_Amount__c}" />
+                                            </apex:outputText>%
+                                    
+                                        </p>
+                                        <p style="{! IF( NOT(AND(invPage.invRecord.IGST_Rate_for_Invoice_Amount__c > 0,invPage.invRecord.Credit_Note_Type__c != 'Commercial' )),'display: block;','display: none;')}">-</p>
+                                    </td>
+                                    <td class="text-align" style="border: none; border-bottom: 0.2px solid #aaa9a9;;">
+                                        <p style="{! IF(invPage.invRecord.IGST_Amount_on_Credit_Note__c > 0 ,'display: block;','display: none;')}">
+                                            <apex:outputText value="{0, number, integer}">
+                                                <apex:param value="{!invPage.invRecord.IGST_Amount_on_Credit_Note__c}" />
+                                            </apex:outputText>
+                                        </p>
+                                        <p style="{! IF(invPage.invRecord.IGST_Amount_on_Credit_Note__c <= 0 ,'display: block;','display: none;')}">-
+                                        </p>
+                                    </td>
+                                    <td style="border-bottom: none; border-top: none;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-align text-label" style="border: none;">Total</td>
+                                    <td style="border: none;">&nbsp;</td>
+                                    <td style="border: none;">&nbsp;</td>
+                                    <td class="text-align">
+                                        <p style="{! IF(invPage.invRecord.Total_Credit_Amount__c > 0 ,'display: block;','display: none;')}">
+                                            <apex:outputText value="{0, number, integer}">
+                                                <apex:param value="{!invPage.invRecord.Total_Credit_Amount__c}" />
+                                            </apex:outputText>
+                                        </p>
+                                        <p style="{! IF(invPage.invRecord.Total_Credit_Amount__c <= 0 ,'display: block;','display: none;')}">-
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="text-label">
+                                    <td colspan="8" style="border-top: none;">&nbsp;</td>
+                                    <td style="border-top: none;">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-label">
+                        &nbsp;
+                    </td>
+                        <td colspan="3">
+                        &nbsp;
+                    </td>
+                    </tr>
+                    <tr>
+                        <td class="text-label">
+                            <p style="text-decoration:underline; line-height: 1.5"> Bank Account Details :-</p>
+                        </td>
+                        <td colspan="3">
+                        &nbsp;
+                    </td>
+                    </tr>
+                    <tr>
+                        <td class="text-label">
+                        &nbsp;
+                    </td>
+                        <td colspan="3">
+                        &nbsp;
+                    </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <table cellspacing="0" cellpadding="0" width="100%">
+                                <apex:repeat value="{!InvPage.bankAccountDetails}" var="bank">
+                                <!--tr class="text-label"><td style="width: 120px;">Account Name </td><td> :&nbsp;{!InvPage.bankAccountDetails[0].Account_Name__c}</td></tr-->
+                                <tr class="text-label">
+                                    <td style="width: 160px;">Account Name </td>
+                                    <td> :&nbsp;{!bank.Account_Name__c}</td>
+                                </tr>
+                                <tr class="text-label">
+                                    <td style="width: 160px;">Current Account No.*</td>
+                                    <td> :&nbsp;{!bank.Current_Account_No__c}</td> 
+                                </tr>
+                                <tr class="text-label">
+                                    <td style="width: 160px;">RTGS/IFSC Code</td>
+                                    <td> :&nbsp;{!bank.RTGS_IFSC_Code__c}</td> 
+                                </tr>                                
+                                <tr class="text-label">
+                                    <td style="width: 160px;">Virtual Account No.*</td>
+                                    <td> :&nbsp;{!invPage.invRecord.Opportunity_Name__r.Account.Customer_Number__c}</td>
+                                </tr>
+
+                                    <!--tr class="text-label"><td> Current Account No. </td><td>:&nbsp;{!bank.Current_Account_No__c}</td></tr-->
+                                    <tr class="text-label ">
+                                        <td>RTGS/IFSC of Virtual Account</td>
+                                        <td>:&nbsp;{!bank.RTGS_IFSC__c}</td>
+                                    </tr>
+                                    <tr class="text-label">
+                                        <td style="vertical-align: top;text-align: left;">
+                                            <p>Bank Name &amp; Address</p>
+                                        </td>
+                                        <td style="vertical-align: top;text-align: left; ">
+                                            <p style="float: left; ">:&nbsp;</p>
+                                            <p style="float: left; width: 90%; padding: 0px; margin: 0px; ">{!bank.Bank_Name__c}&nbsp;{!bank.Bank_Address__c}</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-label ">
+                                        <td colspan="2 " class="text-label ">&nbsp;</td>
+                                    </tr>
+                                </apex:repeat>
+                            </table>
+                            *<i>Payment can be made with any of the above accounts of the Company.</i>
+                        </td>
+                        <td style="text-align: center ">
+                        for and on behalf of ICRA Limited
+                        
+                            <br/>&nbsp;
+                        
+                            <br/>&nbsp;
+                        
+                            <br/>&nbsp;
+                        
+                            <br/>&nbsp;
+                        
+                            <br/>&nbsp;
+                        
+                            <br/>&nbsp;
+                        
+                            <br/>(Authorised Signatory)
+
+                    
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </apex:outputPanel>
+            </div>
+        </body>
+    </html>
+</apex:page>

@@ -1,0 +1,23 @@
+.card-container{
+    width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+    border: 1px solid #c9c9c9;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 12px 0;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --slds-c-card-heading-font-size: 1rem;
+    --slds-c-card-heading-font-weight: 500;  
+    --slds-c-card-header-spacing-block-start: 1rem;
+    --slds-c-card-header-spacing-block-end: 1rem;
+}
+
+.card-container lightning-card{
+    width: 100%;
+}
+
+lightning-datatable {
+    width: 100%;
+}

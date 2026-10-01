@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Status__c</fullName>
+    <label>Invoice Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+                <label>Canceled</label>
+            </value>
+            <value>
+                <fullName>Proforma Invoice</fullName>
+                <default>true</default>
+                <label>Proforma Invoice</label>
+            </value>
+            <value>
+                <fullName>Tax Invoice</fullName>
+                <default>false</default>
+                <label>Tax Invoice</label>
+            </value>
+            <value>
+                <fullName>QR-IRN-Generated</fullName>
+                <default>false</default>
+                <label>QR and IRN - Generated</label>
+            </value>
+            <value>
+                <fullName>QR and IRN - Failed</fullName>
+                <default>false</default>
+                <label>QR and IRN - Failed</label>
+            </value>
+            <value>
+                <fullName>Initiate Tax Invoice</fullName>
+                <default>false</default>
+                <label>Initiate Tax Invoice</label>
+            </value>
+            <value>
+                <fullName>GST Credit Note</fullName>
+                <default>false</default>
+                <label>GST Credit Note</label>
+            </value>
+            <value>
+                <fullName>Initiate GST Credit Note</fullName>
+                <default>false</default>
+                <label>Initiate GST Credit Note</label>
+            </value>
+            <value>
+                <fullName>Cancel Due to Credit Note</fullName>
+                <default>false</default>
+                <label>Cancel Due to Credit Note</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

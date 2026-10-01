@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SGST_Rate__c</fullName>
+    <formula>IF( Account_Classification__c == &apos;Non-SEZ&apos;,
+IF( AND(Opportunity__r.Account.RecordType.Name ==&apos;Issuer&apos;,
+TEXT(Opportunity__r.BillingAddress__r.BillingState__c) == TEXT(Opportunity__r.Account.Branch__r.State__c)
+) , 0.09,
+IF(AND(Opportunity__r.Account.RecordType.Name ==&apos;Investors &amp; Intermediary&apos;,
+Opportunity__r.Account.ShippingState == TEXT(Opportunity__r.Account.Branch__r.State__c))
+, 0.09,
+0)),0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SGST Rate</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

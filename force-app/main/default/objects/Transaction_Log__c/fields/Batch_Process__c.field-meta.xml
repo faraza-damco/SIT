@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Batch_Process__c</fullName>
+    <label>Batch Process</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ICRA_Generate_Proforma_Invoice_Batch</fullName>
+                <default>false</default>
+                <label>ICRA_Generate_Proforma_Invoice_Batch</label>
+            </value>
+            <value>
+                <fullName>ICRA_Generate_Tax_Invoice_Batch</fullName>
+                <default>false</default>
+                <label>ICRA_Generate_Tax_Invoice_Batch</label>
+            </value>
+            <value>
+                <fullName>ICRA_CreateRollover_T_Logic</fullName>
+                <default>false</default>
+                <label>ICRA_CreateRollover_T_Logic</label>
+            </value>
+            <value>
+                <fullName>ICRA_CreateRollover_T_Logic_Manual</fullName>
+                <default>false</default>
+                <label>ICRA_CreateRollover_T_Logic_Manual</label>
+            </value>
+            <value>
+                <fullName>ICRA_Invoice_Status_Update_Batch</fullName>
+                <default>false</default>
+                <label>ICRA_Invoice_Status_Update_Batch</label>
+            </value>
+            <value>
+                <fullName>ICRA CreateRollover T Logic</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ICRA CreateRollover T Logic</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

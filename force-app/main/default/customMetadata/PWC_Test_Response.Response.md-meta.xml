@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Response</label>
+    <protected>false</protected>
+    <values>
+        <field>Error_Response__c</field>
+        <value xsi:type="xsd:string">[{&quot;pwc_response&quot;: {&quot;invoice_number&quot;: &quot;RF/MU/2122/1001&quot;, &quot;source_system&quot;: &quot;&quot;, &quot;gstin&quot;: &quot;27AAACI0218B2ZB&quot;, &quot;document_date&quot;: &quot;03/08/2021&quot;, &quot;document_type&quot;: &quot;INV&quot;, &quot;status&quot;: 707, &quot;message&quot;: &quot;PwC Authentication Passed, IRN Receive(Y), EWB Receive(N), PwC IRN Schema Validation Failed, PwC Business Validation Not Required&quot;, &quot;validation_status&quot;: &quot;Error&quot;, &quot;validation_remarks&quot;: {&quot;irn_schema_validation&quot;: [{&quot;remark&quot;: &quot;The field Gstin must match the regular expression &apos;^([0-9]{2}[0-9A-Z]{13}|URP)$&apos;.&quot;, &quot;field_name&quot;: &quot;BuyerDtls.Gstin&quot;, &quot;validation_status&quot;: &quot;Error&quot;, &quot;field_value&quot;: &quot;IHIBY7799&quot;, &quot;error_code&quot;: 10000}]}, &quot;irn_configuration&quot;: {&quot;customer_id&quot;: &quot;159&quot;, &quot;customer_name&quot;: &quot;icralimited&quot;, &quot;push_to_return&quot;: &quot;Y&quot;, &quot;push_to_ewb&quot;: &quot;N&quot;, &quot;auto_exclude_irn&quot;: &quot;N&quot;, &quot;auto_exclude_ewb&quot;: &quot;N&quot;, &quot;auto_irn_generation&quot;: &quot;Y&quot;, &quot;push_to_db&quot;: &quot;Y&quot;, &quot;validation&quot;: &quot;N&quot;, &quot;vldtn_sts_fr_auto_generate&quot;: &quot;Alert&quot;, &quot;valdtls_transformation&quot;: &quot;Y&quot;, &quot;bu&quot;: &quot;&quot;, &quot;sbu&quot;: &quot;&quot;, &quot;location&quot;: &quot;&quot;, &quot;companyname&quot;: &quot;&quot;, &quot;version&quot;: &quot;1619509536&quot;}, &quot;udid&quot;: &quot;27AAACI0218B2ZB2021-22INVRF/MU/2122/1001&quot;, &quot;is_irn&quot;: &quot;Y&quot;, &quot;is_exclude&quot;: &quot;N&quot;, &quot;load_id&quot;: 3094, &quot;is_ewb&quot;: &quot;N&quot;, &quot;created_date&quot;: &quot;2021-08-03 09:12:09.258158&quot;}, &quot;irp_response&quot;: {}, &quot;qr_b64_encoded&quot;: &quot;&quot;}]</value>
+    </values>
+    <values>
+        <field>Response__c</field>
+        <value xsi:type="xsd:string">[
+    {
+        &quot;pwc_response&quot;: {
+            &quot;invoice_number&quot;: &quot;IRN2-330-1-280&quot;,
+            &quot;source_system&quot;: &quot;SAP&quot;,
+            &quot;gstin&quot;: &quot;27AAAPI3182M002&quot;,
+            &quot;document_date&quot;: &quot;31/08/2020&quot;,
+            &quot;document_type&quot;: &quot;INV&quot;,
+            &quot;status&quot;: 700,
+            &quot;message&quot;: &quot;PwC Authentication Passed, IRN Receive(Y), EWB Receive(Y), PwC IRN &amp; EWB Schema Validation Passed, PwC Business Validation Not Required, IRN Generated&quot;,
+            &quot;validation_status&quot;: &quot;Success&quot;,
+            &quot;validation_remarks&quot;: {},
+            &quot;irn_configuration&quot;: {
+                &quot;push_to_return&quot;: &quot;Y&quot;,
+                &quot;push_to_ewb&quot;: &quot;Y&quot;,
+                &quot;auto_exclude_irn&quot;: &quot;Y&quot;,
+                &quot;auto_exclude_ewb&quot;: &quot;Y&quot;,
+                &quot;auto_irn_generation&quot;: &quot;Y&quot;,
+                &quot;push_to_db&quot;: &quot;Y&quot;,
+                &quot;validation&quot;: &quot;N&quot;,
+                &quot;vldtn_sts_fr_auto_generate&quot;: &quot;Alert&quot;,
+                &quot;version&quot;: &quot;1599159234&quot;
+            },
+            &quot;udid&quot;: &quot;27AAAPI3182M0022020-21INVIRN2-330-1-280&quot;,
+            &quot;is_irn&quot;: &quot;Y&quot;,
+            &quot;is_exclude&quot;: &quot;N&quot;,
+            &quot;load_id&quot;: 67642,
+            &quot;is_ewb&quot;: &quot;Y&quot;,
+            &quot;created_date&quot;: &quot;2020-09-04 00:24:06.498056&quot;
+        },
+        &quot;irp_response&quot;: {
+            &quot;data&quot;: {
+                &quot;nic_request_payload&quot;: {
+                    &quot;TranDtls&quot;: {
+                        &quot;TaxSch&quot;: &quot;GST&quot;,
+                        &quot;SupTyp&quot;: &quot;B2B&quot;,
+                        &quot;RegRev&quot;: &quot;N&quot;,
+                        &quot;SubTypeDescription&quot;: &quot;OTHERS&quot;,
+                        &quot;SubType&quot;: &quot;SUPPLY&quot;,
+                        &quot;Typ&quot;: &quot;REG&quot;
+                    },
+                    &quot;DocDtls&quot;: {
+                        &quot;Typ&quot;: &quot;INV&quot;,
+                        &quot;No&quot;: &quot;IRN2-330-1-280&quot;,
+                        &quot;Dt&quot;: &quot;31/08/2020&quot;
+                    },
+                    &quot;SellerDtls&quot;: {
+                        &quot;Gstin&quot;: &quot;27AAAPI3182M002&quot;,
+                        &quot;LglNm&quot;: &quot;SELLER COMPANY PVT LTD&quot;,
+                        &quot;Addr1&quot;: &quot;SELLER 5TH BLOCK, LAYOUT&quot;,
+                        &quot;Loc&quot;: &quot;GOWALIA&quot;,
+                        &quot;Pin&quot;: 400026,
+                        &quot;Stcd&quot;: &quot;27&quot;,
+                        &quot;TrdNm&quot;: &quot;SELLER COMPANY PVT LTD, GURUGRAM&quot;,
+                        &quot;Addr2&quot;: &quot;SELLER SOUTH WEST AREA&quot;,
+                        &quot;Ph&quot;: &quot;9998887776&quot;,
+                        &quot;Em&quot;: &quot;SUPPLIER@INV.COM&quot;
+                    },
+                    &quot;BuyerDtls&quot;: {
+                        &quot;Gstin&quot;: &quot;29AACCR7832C1ZD&quot;,
+                        &quot;LglNm&quot;: &quot;BUYER COMPANY PVT LTD&quot;,
+                        &quot;Pos&quot;: &quot;29&quot;,
+                        &quot;Addr1&quot;: &quot;BUYER 7TH BLOCK, LAYOUT&quot;,
+                        &quot;Loc&quot;: &quot;GANDHINAGAR&quot;,
+                        &quot;Stcd&quot;: &quot;29&quot;,
+                        &quot;TrdNm&quot;: &quot;BUYER COMPANY PVT LTD, GURUGRAM&quot;,
+                        &quot;Addr2&quot;: &quot;BUYER SOUTH WEST AREA&quot;,
+                        &quot;Pin&quot;: 560087,
+                        &quot;Ph&quot;: &quot;9998887776&quot;,
+                        &quot;Em&quot;: &quot;BUYER@INV.COM&quot;
+                    },
+                    &quot;ValDtls&quot;: {
+                        &quot;AssVal&quot;: 100.0,
+                        &quot;TotInvVal&quot;: 118.0,
+                        &quot;IgstVal&quot;: 18.0,
+                        &quot;TotInvValFc&quot;: 118.0
+                    },
+                    &quot;DispDtls&quot;: {
+                        &quot;Addr2&quot;: &quot;DISP SOUTH WEST AREA&quot;,
+                        &quot;Nm&quot;: &quot;DISP COMPANY PVT LTD&quot;,
+                        &quot;Addr1&quot;: &quot;DISP 7TH BLOCK, KUVEMPU LAYOUT&quot;,
+                        &quot;Loc&quot;: &quot;MYSORE&quot;,
+                        &quot;Pin&quot;: 515001,
+                        &quot;Stcd&quot;: &quot;37&quot;
+                    },
+                    &quot;ShipDtls&quot;: {
+                        &quot;Gstin&quot;: &quot;37BCHPP8878F1ZV&quot;,
+                        &quot;TrdNm&quot;: &quot;SHIP COMPANY PVT LTD, GURGAON&quot;,
+                        &quot;Addr2&quot;: &quot;SHIP SOUTH WEST AREA&quot;,
+                        &quot;LglNm&quot;: &quot;SHIP COMPANY PVT LTD&quot;,
+                        &quot;Addr1&quot;: &quot;SHIP 7TH BLOCK, KUVEMPU LAYOUT&quot;,
+                        &quot;Loc&quot;: &quot;MYSORE&quot;,
+                        &quot;Pin&quot;: 515001,
+                        &quot;Stcd&quot;: &quot;37&quot;
+                    },
+                    &quot;PayDtls&quot;: {
+                        &quot;Nm&quot;: &quot;PAYEE NAME&quot;,
+                        &quot;AccDet&quot;: &quot;23807238078320&quot;,
+                        &quot;Mode&quot;: &quot;CASH&quot;,
+                        &quot;FinInsBr&quot;: &quot;ABCD1234567&quot;,
+                        &quot;PayTerm&quot;: &quot;DEBIT&quot;,
+                        &quot;PayInstr&quot;: &quot;RECEIVE ON PAYEE BEHALF&quot;,
+                        &quot;CrTrn&quot;: &quot;CREDIT TRANSFER FOR PAYEE&quot;,
+                        &quot;DirDr&quot;: &quot;DEBIT TRANSFER FOR PAYEE&quot;,
+                        &quot;CrDay&quot;: 110,
+                        &quot;PaidAmt&quot;: 9999999999.99,
+                        &quot;PaymtDue&quot;: 9999999999.99
+                    },
+                    &quot;RefDtls&quot;: {
+                        &quot;InvRm&quot;: &quot;ANDLJNSJEJLN0-9//DSJ&quot;,
+                        &quot;PrecDocDtls&quot;: [
+                            {
+                                &quot;OthRefNo&quot;: &quot;REFERENCE NO&quot;,
+                                &quot;InvNo&quot;: &quot;SKJAJNS&quot;,
+                                &quot;InvDt&quot;: &quot;03/03/2020&quot;
+                            }
+                        ],
+                        &quot;ContrDtls&quot;: [
+                            {
+                                &quot;RecAdvRefr&quot;: &quot;SAKJN9230UJ&quot;,
+                                &quot;RecAdvDt&quot;: &quot;03/03/2020&quot;,
+                                &quot;TendRefr&quot;: &quot;SKJN30902&quot;,
+                                &quot;ContrRefr&quot;: &quot;SJKSLK99890&quot;,
+                                &quot;ExtRefr&quot;: &quot;SJLS973820&quot;,
+                                &quot;ProjRefr&quot;: &quot;SHKKS9738222&quot;,
+                                &quot;PORefr&quot;: &quot;SLJK982820&quot;,
+                                &quot;PORefDt&quot;: &quot;03/03/2020&quot;
+                            }
+                        ],
+                        &quot;DocPerdDtls&quot;: {
+                            &quot;InvStDt&quot;: &quot;02/08/2020&quot;,
+                            &quot;InvEndDt&quot;: &quot;03/08/2020&quot;
+                        }
+                    },
+                    &quot;ExpDtls&quot;: {
+                        &quot;ShipBNo&quot;: &quot;BLNO932083&quot;,
+                        &quot;ShipBDt&quot;: &quot;11/11/2020&quot;,
+                        &quot;Port&quot;: &quot;INABG1&quot;,
+                        &quot;RefClm&quot;: &quot;Y&quot;,
+                        &quot;ForCur&quot;: &quot;USD&quot;,
+                        &quot;CntCode&quot;: &quot;IN&quot;,
+                        &quot;ExpDuty&quot;: 1
+                    },
+                    &quot;EwbDtls&quot;: {
+                        &quot;TransId&quot;: &quot;37BCHPP8878F1ZV&quot;,
+                        &quot;TransName&quot;: &quot;ANKIT&quot;,
+                        &quot;TransDocNo&quot;: &quot;111A&quot;,
+                        &quot;TransDocDt&quot;: &quot;08/08/2020&quot;,
+                        &quot;VehNo&quot;: &quot;HR87A2929&quot;,
+                        &quot;VehType&quot;: &quot;R&quot;,
+                        &quot;Distance&quot;: 100,
+                        &quot;TransMode&quot;: &quot;1&quot;
+                    },
+                    &quot;ItemList&quot;: [
+                        {
+                            &quot;SlNo&quot;: &quot;1&quot;,
+                            &quot;IsServc&quot;: &quot;N&quot;,
+                            &quot;HsnCd&quot;: &quot;3214&quot;,
+                            &quot;UnitPrice&quot;: 10,
+                            &quot;TotAmt&quot;: 100,
+                            &quot;AssAmt&quot;: 100.0,
+                            &quot;GstRt&quot;: 18,
+                            &quot;TotItemVal&quot;: 118.0,
+                            &quot;PrdNm&quot;: &quot;DFASF&quot;,
+                            &quot;PrdDesc&quot;: &quot;SAMPLE PRODUCT DESCRIPTION&quot;,
+                            &quot;Barcde&quot;: &quot;BAR93983&quot;,
+                            &quot;Qty&quot;: 10,
+                            &quot;FreeQty&quot;: 1,
+                            &quot;Unit&quot;: &quot;BAG&quot;,
+                            &quot;IgstAmt&quot;: 18.0,
+                            &quot;OrdLineRef&quot;: &quot;ORDER_LINE_REF&quot;,
+                            &quot;OrgCntry&quot;: &quot;IN&quot;,
+                            &quot;PrdSlNo&quot;: &quot;PDSL0001&quot;,
+                            &quot;BchDtls&quot;: {
+                                &quot;Nm&quot;: &quot;BTCHNAMEJANS&quot;,
+                                &quot;ExpDt&quot;: &quot;06/03/2020&quot;,
+                                &quot;WrDt&quot;: &quot;06/03/2020&quot;
+                            },
+                            &quot;AttribDtls&quot;: [
+                                {
+                                    &quot;Nm&quot;: &quot;SDSD&quot;,
+                                    &quot;Val&quot;: &quot;SSS&quot;
+                                }
+                            ]
+                        }
+                    ],
+                    &quot;User_GSTIN&quot;: &quot;27AAAPI3182M002&quot;,
+                    &quot;Version&quot;: &quot;1.01&quot;,
+                    &quot;is_irn&quot;: &quot;Y&quot;,
+                    &quot;is_ewb&quot;: &quot;Y&quot;,
+                    &quot;email&quot;: &quot;JAYESH.JACOB1@PWC.COM&quot;,
+                    &quot;udid&quot;: &quot;27AAAPI3182M0022020-21INVIRN2-330-1-280&quot;,
+                    &quot;load_id&quot;: 67642,
+                    &quot;AddlDocDtls&quot;: [
+                        {
+                            &quot;Url&quot;: &quot;HTTP://GOOGLE.COM&quot;,
+                            &quot;Docs&quot;: &quot;DLJSHDIUEWHJKDSJHDUSOHDSAUOHAJK&quot;,
+                            &quot;Info&quot;: &quot;DLJSHDUIHUE480U042OH2OUODN984IO2OUH9823H0UH32&quot;
+                        }
+                    ]
+                },
+                &quot;nic_document_status_created_date&quot;: &quot;2020-09-04 00:24:05.654198&quot;,
+                &quot;nic_gen_mode&quot;: &quot;API&quot;,
+                &quot;nic_response_created_date&quot;: &quot;2020-09-04 00:24:06.104071&quot;,
+                &quot;nic_response_status&quot;: &quot;1&quot;,
+                &quot;InfoDtls&quot;: [
+                    {
+                        &quot;InfCd&quot;: &quot;EWBERR&quot;,
+                        &quot;Desc&quot;: [
+                            {
+                                &quot;ErrorCode&quot;: &quot;4021&quot;,
+                                &quot;ErrorMessage&quot;: &quot;Transporter document date cannot be earlier than the invoice date.&quot;
+                            }
+                        ]
+                    }
+                ],
+                &quot;nic_response_data&quot;: {
+                    &quot;AckNo&quot;: 122010013780485,
+                    &quot;AckDt&quot;: &quot;2020-09-04 00:25:00&quot;,
+                    &quot;Irn&quot;: &quot;0a0b7b8f0f6db4a7025dcfde4b9b02a106cc8d602b68b8ba637c8baed72f4cad&quot;,
+                    &quot;SignedInvoice&quot;: &quot;eyJhbGciOiJSUzI1NiIsImtpZCI6IjExNUY0NDI2NjE3QTc5MzhCRTFCQTA2REJFRTkxQTQyNzU4NEVEQUIiLCJ0eXAiOiJKV1QiLCJ4NXQiOiJFVjlFSm1GNmVUaS1HNkJ0dnVrYVFuV0U3YXMifQ.eyJkYXRhIjoie1wiQWNrTm9cIjoxMjIwMTAwMTM3ODA0ODUsXCJBY2tEdFwiOlwiMjAyMC0wOS0wNCAwMDoyNTowMFwiLFwiSXJuXCI6XCIwYTBiN2I4ZjBmNmRiNGE3MDI1ZGNmZGU0YjliMDJhMTA2Y2M4ZDYwMmI2OGI4YmE2MzdjOGJhZWQ3MmY0Y2FkXCIsXCJWZXJzaW9uXCI6XCIxLjAxXCIsXCJUcmFuRHRsc1wiOntcIlRheFNjaFwiOlwiR1NUXCIsXCJTdXBUeXBcIjpcIkIyQlwiLFwiUmVnUmV2XCI6XCJOXCJ9LFwiRG9jRHRsc1wiOntcIlR5cFwiOlwiSU5WXCIsXCJOb1wiOlwiSVJOMi0zMzAtMS0yODBcIixcIkR0XCI6XCIzMS8wOC8yMDIwXCJ9LFwiU2VsbGVyRHRsc1wiOntcIkdzdGluXCI6XCIyN0FBQVBJMzE4Mk0wMDJcIixcIkxnbE5tXCI6XCJTRUxMRVIgQ09NUEFOWSBQVlQgTFREXCIsXCJUcmRObVwiOlwiU0VMTEVSIENPTVBBTlkgUFZUIExURCwgR1VSVUdSQU1cIixcIkFkZHIxXCI6XCJTRUxMRVIgNVRIIEJMT0NLLCBMQVlPVVRcIixcIkFkZHIyXCI6XCJTRUxMRVIgU09VVEggV0VTVCBBUkVBXCIsXCJMb2NcIjpcIkdPV0FMSUFcIixcIlBpblwiOjQwMDAyNixcIlN0Y2RcIjpcIjI3XCIsXCJQaFwiOlwiOTk5ODg4Nzc3NlwiLFwiRW1cIjpcIlNVUFBMSUVSQElOVi5DT01cIn0sXCJCdXllckR0bHNcIjp7XCJHc3RpblwiOlwiMjlBQUNDUjc4MzJDMVpEXCIsXCJMZ2xObVwiOlwiQlVZRVIgQ09NUEFOWSBQVlQgTFREXCIsXCJUcmRObVwiOlwiQlVZRVIgQ09NUEFOWSBQVlQgTFRELCBHVVJVR1JBTVwiLFwiUG9zXCI6XCIyOVwiLFwiQWRkcjFcIjpcIkJVWUVSIDdUSCBCTE9DSywgTEFZT1VUXCIsXCJBZGRyMlwiOlwiQlVZRVIgU09VVEggV0VTVCBBUkVBXCIsXCJMb2NcIjpcIkdBTkRISU5BR0FSXCIsXCJQaW5cIjo1NjAwODcsXCJQaFwiOlwiOTk5ODg4Nzc3NlwiLFwiRW1cIjpcIkJVWUVSQElOVi5DT01cIixcIlN0Y2RcIjpcIjI5XCJ9LFwiRGlzcER0bHNcIjp7XCJObVwiOlwiRElTUCBDT01QQU5ZIFBWVCBMVERcIixcIkFkZHIxXCI6XCJESVNQIDdUSCBCTE9DSywgS1VWRU1QVSBMQVlPVVRcIixcIkFkZHIyXCI6XCJESVNQIFNPVVRIIFdFU1QgQVJFQVwiLFwiTG9jXCI6XCJNWVNPUkVcIixcIlBpblwiOjUxNTAwMSxcIlN0Y2RcIjpcIjM3XCJ9LFwiU2hpcER0bHNcIjp7XCJHc3RpblwiOlwiMzdCQ0hQUDg4NzhGMVpWXCIsXCJMZ2xObVwiOlwiU0hJUCBDT01QQU5ZIFBWVCBMVERcIixcIlRyZE5tXCI6XCJTSElQIENPTVBBTlkgUFZUIExURCwgR1VSR0FPTlwiLFwiQWRkcjFcIjpcIlNISVAgN1RIIEJMT0NLLCBLVVZFTVBVIExBWU9VVFwiLFwiQWRkcjJcIjpcIlNISVAgU09VVEggV0VTVCBBUkVBXCIsXCJMb2NcIjpcIk1ZU09SRVwiLFwiUGluXCI6NTE1MDAxLFwiU3RjZFwiOlwiMzdcIn0sXCJJdGVtTGlzdFwiOlt7XCJJdGVtTm9cIjoxLFwiU2xOb1wiOlwiMVwiLFwiSXNTZXJ2Y1wiOlwiTlwiLFwiUHJkRGVzY1wiOlwiU0FNUExFIFBST0RVQ1QgREVTQ1JJUFRJT05cIixcIkhzbkNkXCI6XCIzMjE0XCIsXCJCYXJjZGVcIjpcIkJBUjkzOTgzXCIsXCJRdHlcIjoxMCxcIkZyZWVRdHlcIjoxLFwiVW5pdFwiOlwiQkFHXCIsXCJVbml0UHJpY2VcIjoxMCxcIlRvdEFtdFwiOjEwMCxcIkFzc0FtdFwiOjEwMC4wLFwiR3N0UnRcIjoxOCxcIklnc3RBbXRcIjoxOC4wLFwiVG90SXRlbVZhbFwiOjExOC4wLFwiT3JkTGluZVJlZlwiOlwiT1JERVJfTElORV9SRUZcIixcIk9yZ0NudHJ5XCI6XCJJTlwiLFwiUHJkU2xOb1wiOlwiUERTTDAwMDFcIixcIkJjaER0bHNcIjp7XCJObVwiOlwiQlRDSE5BTUVKQU5TXCIsXCJFeHBEdFwiOlwiMDYvMDMvMjAyMFwiLFwiV3JEdFwiOlwiMDYvMDMvMjAyMFwifSxcIkF0dHJpYkR0bHNcIjpbe1wiTm1cIjpcIlNEU0RcIixcIlZhbFwiOlwiU1NTXCJ9XX1dLFwiVmFsRHRsc1wiOntcIkFzc1ZhbFwiOjEwMC4wLFwiSWdzdFZhbFwiOjE4LjAsXCJUb3RJbnZWYWxcIjoxMTguMCxcIlRvdEludlZhbEZjXCI6MTE4LjB9LFwiUGF5RHRsc1wiOntcIk5tXCI6XCJQQVlFRSBOQU1FXCIsXCJBY2NEZXRcIjpcIjIzODA3MjM4MDc4MzIwXCIsXCJNb2RlXCI6XCJDQVNIXCIsXCJGaW5JbnNCclwiOlwiQUJDRDEyMzQ1NjdcIixcIlBheVRlcm1cIjpcIkRFQklUXCIsXCJQYXlJbnN0clwiOlwiUkVDRUlWRSBPTiBQQVlFRSBCRUhBTEZcIixcIkNyVHJuXCI6XCJDUkVESVQgVFJBTlNGRVIgRk9SIFBBWUVFXCIsXCJEaXJEclwiOlwiREVCSVQgVFJBTlNGRVIgRk9SIFBBWUVFXCIsXCJDckRheVwiOjExMCxcIlBhaWRBbXRcIjo5OTk5OTk5OTk5Ljk5LFwiUGF5bXREdWVcIjo5OTk5OTk5OTk5Ljk5fSxcIlJlZkR0bHNcIjp7XCJJbnZSbVwiOlwiQU5ETEpOU0pFSkxOMC05Ly9EU0pcIixcIkRvY1BlcmREdGxzXCI6e1wiSW52U3REdFwiOlwiMDIvMDgvMjAyMFwiLFwiSW52RW5kRHRcIjpcIjAzLzA4LzIwMjBcIn0sXCJQcmVjRG9jRHRsc1wiOlt7XCJJbnZOb1wiOlwiU0tKQUpOU1wiLFwiSW52RHRcIjpcIjAzLzAzLzIwMjBcIixcIk90aFJlZk5vXCI6XCJSRUZFUkVOQ0UgTk9cIn1dLFwiQ29udHJEdGxzXCI6W3tcIlJlY0FkdlJlZnJcIjpcIlNBS0pOOTIzMFVKXCIsXCJSZWNBZHZEdFwiOlwiMDMvMDMvMjAyMFwiLFwiVGVuZFJlZnJcIjpcIlNLSk4zMDkwMlwiLFwiQ29udHJSZWZyXCI6XCJTSktTTEs5OTg5MFwiLFwiRXh0UmVmclwiOlwiU0pMUzk3MzgyMFwiLFwiUHJvalJlZnJcIjpcIlNIS0tTOTczODIyMlwiLFwiUE9SZWZyXCI6XCJTTEpLOTgyODIwXCIsXCJQT1JlZkR0XCI6XCIwMy8wMy8yMDIwXCJ9XX0sXCJBZGRsRG9jRHRsc1wiOlt7XCJVcmxcIjpcIkhUVFA6Ly9HT09HTEUuQ09NXCIsXCJEb2NzXCI6XCJETEpTSERJVUVXSEpLRFNKSERVU09IRFNBVU9IQUpLXCIsXCJJbmZvXCI6XCJETEpTSERVSUhVRTQ4MFUwNDJPSDJPVU9ETjk4NElPMk9VSDk4MjNIMFVIMzJcIn1dLFwiRXhwRHRsc1wiOntcIlNoaXBCTm9cIjpcIkJMTk85MzIwODNcIixcIlNoaXBCRHRcIjpcIjExLzExLzIwMjBcIixcIlBvcnRcIjpcIklOQUJHMVwiLFwiUmVmQ2xtXCI6XCJZXCIsXCJGb3JDdXJcIjpcIlVTRFwiLFwiQ250Q29kZVwiOlwiSU5cIixcIkV4cER1dHlcIjoxfSxcIkV3YkR0bHNcIjp7XCJUcmFuc0lkXCI6XCIzN0JDSFBQODg3OEYxWlZcIixcIlRyYW5zTmFtZVwiOlwiQU5LSVRcIixcIlRyYW5zTW9kZVwiOlwiMVwiLFwiRGlzdGFuY2VcIjoxMDAsXCJUcmFuc0RvY05vXCI6XCIxMTFBXCIsXCJUcmFuc0RvY0R0XCI6XCIwOC8wOC8yMDIwXCIsXCJWZWhOb1wiOlwiSFI4N0EyOTI5XCIsXCJWZWhUeXBlXCI6XCJSXCJ9fSIsImlzcyI6Ik5JQyJ9.UaKGziPsoasNwvdAOkJ-eGuT534EfBp1TejXTr7KW90WzBmBBavif9s-Sc152AQ3MU_nUCqG2wrRoYFa3iXgtT1qNpgwT-oeRyymlvX2IaQ26Emp4KzvF_DnmZvEN4e0kMsuFiTcFwdKA6YgJbokUNwowHLFW8Gt_uIAoGJ61ox4tv0WxoNZvjAtdVn7aeMLgCjpifb-45X5gXldKjrGv5XlyO10ybxhoGcQL_o7J8wEA2U28RaiBo9ZCHshmPomgN0JxOTpw5J_TAP-02L36CgiP75ophLXpqbGtD8ekZcfB9ZCetA-ZCWq7TxiH1Qm-SYYQFA6NUsvzSFtTg_pNA&quot;,
+                    &quot;SignedQRCode&quot;: &quot;eyJhbGciOiJSUzI1NiIsImtpZCI6IjExNUY0NDI2NjE3QTc5MzhCRTFCQTA2REJFRTkxQTQyNzU4NEVEQUIiLCJ0eXAiOiJKV1QiLCJ4NXQiOiJFVjlFSm1GNmVUaS1HNkJ0dnVrYVFuV0U3YXMifQ.eyJkYXRhIjoie1wiU2VsbGVyR3N0aW5cIjpcIjI3QUFBUEkzMTgyTTAwMlwiLFwiQnV5ZXJHc3RpblwiOlwiMjlBQUNDUjc4MzJDMVpEXCIsXCJEb2NOb1wiOlwiSVJOMi0zMzAtMS0yODBcIixcIkRvY1R5cFwiOlwiSU5WXCIsXCJEb2NEdFwiOlwiMzEvMDgvMjAyMFwiLFwiVG90SW52VmFsXCI6MTE4LjAsXCJJdGVtQ250XCI6MSxcIk1haW5Ic25Db2RlXCI6XCIzMjE0XCIsXCJJcm5cIjpcIjBhMGI3YjhmMGY2ZGI0YTcwMjVkY2ZkZTRiOWIwMmExMDZjYzhkNjAyYjY4YjhiYTYzN2M4YmFlZDcyZjRjYWRcIn0iLCJpc3MiOiJOSUMifQ.GSuEuPpEDJYIkJUQEIq_GpQD4uISuQntEUwIWu8HJnyjUy2_azgEAgkNFX86gqSiQ1g6HKtZ4SYslVZskpWgpypORBmrBOTo6zAK1S44W4DsiHfRJ3xlgE30D-9FFv4KgMZ3O2Ovv38U5AeyfPKKHimLcUzpz715amLW2bUzFdQvmcD17htqfdz_2JAeb8wmknbXHVfTF1yH8-EoKTJFY6UDvxP2B1DcFjyEiSY1V-0PF8d-anMfdlj64UVFYHfaaDBzLobtRJYVaP0xmkHq2Ok8cZV4NYokJYkYM_bCEJ4g5vlojc7j25h7X97tNARL8Y8VhUb0ykzhTgH7sW8lFw&quot;,
+                    &quot;Status&quot;: &quot;ACT&quot;,
+                    &quot;EwbNo&quot;: null,
+                    &quot;EwbDt&quot;: null,
+                    &quot;EwbValidTill&quot;: null,
+                    &quot;Remarks&quot;: null
+                },
+                &quot;nic_status&quot;: &quot;ACT&quot;,
+                &quot;report_url&quot;: &quot;http://qa-irn-1301164998.ap-south-1.elb.amazonaws.com/eweb/report/EnvoiceReports?irnno=0a0b7b8f0f6db4a7025dcfde4b9b02a106cc8d602b68b8ba637c8baed72f4cad&amp;ackno=122010013780485&amp;customerid=1&quot;,
+                &quot;nic_response_plaintext_json&quot;: {
+                    &quot;AckNo&quot;: 122010013780485,
+                    &quot;AckDt&quot;: &quot;2020-09-04 00:25:00&quot;,
+                    &quot;Irn&quot;: &quot;0a0b7b8f0f6db4a7025dcfde4b9b02a106cc8d602b68b8ba637c8baed72f4cad&quot;,
+                    &quot;SignedInvoice&quot;: {
+                        &quot;data&quot;: &quot;{\&quot;AckNo\&quot;:122010013780485,\&quot;AckDt\&quot;:\&quot;2020-09-04 00:25:00\&quot;,\&quot;Irn\&quot;:\&quot;0a0b7b8f0f6db4a7025dcfde4b9b02a106cc8d602b68b8ba637c8baed72f4cad\&quot;,\&quot;Version\&quot;:\&quot;1.01\&quot;,\&quot;TranDtls\&quot;:{\&quot;TaxSch\&quot;:\&quot;GST\&quot;,\&quot;SupTyp\&quot;:\&quot;B2B\&quot;,\&quot;RegRev\&quot;:\&quot;N\&quot;},\&quot;DocDtls\&quot;:{\&quot;Typ\&quot;:\&quot;INV\&quot;,\&quot;No\&quot;:\&quot;IRN2-330-1-280\&quot;,\&quot;Dt\&quot;:\&quot;31/08/2020\&quot;},\&quot;SellerDtls\&quot;:{\&quot;Gstin\&quot;:\&quot;27AAAPI3182M002\&quot;,\&quot;LglNm\&quot;:\&quot;SELLER COMPANY PVT LTD\&quot;,\&quot;TrdNm\&quot;:\&quot;SELLER COMPANY PVT LTD, GURUGRAM\&quot;,\&quot;Addr1\&quot;:\&quot;SELLER 5TH BLOCK, LAYOUT\&quot;,\&quot;Addr2\&quot;:\&quot;SELLER SOUTH WEST AREA\&quot;,\&quot;Loc\&quot;:\&quot;GOWALIA\&quot;,\&quot;Pin\&quot;:400026,\&quot;Stcd\&quot;:\&quot;27\&quot;,\&quot;Ph\&quot;:\&quot;9998887776\&quot;,\&quot;Em\&quot;:\&quot;SUPPLIER@INV.COM\&quot;},\&quot;BuyerDtls\&quot;:{\&quot;Gstin\&quot;:\&quot;29AACCR7832C1ZD\&quot;,\&quot;LglNm\&quot;:\&quot;BUYER COMPANY PVT LTD\&quot;,\&quot;TrdNm\&quot;:\&quot;BUYER COMPANY PVT LTD, GURUGRAM\&quot;,\&quot;Pos\&quot;:\&quot;29\&quot;,\&quot;Addr1\&quot;:\&quot;BUYER 7TH BLOCK, LAYOUT\&quot;,\&quot;Addr2\&quot;:\&quot;BUYER SOUTH WEST AREA\&quot;,\&quot;Loc\&quot;:\&quot;GANDHINAGAR\&quot;,\&quot;Pin\&quot;:560087,\&quot;Ph\&quot;:\&quot;9998887776\&quot;,\&quot;Em\&quot;:\&quot;BUYER@INV.COM\&quot;,\&quot;Stcd\&quot;:\&quot;29\&quot;},\&quot;DispDtls\&quot;:{\&quot;Nm\&quot;:\&quot;DISP COMPANY PVT LTD\&quot;,\&quot;Addr1\&quot;:\&quot;DISP 7TH BLOCK, KUVEMPU LAYOUT\&quot;,\&quot;Addr2\&quot;:\&quot;DISP SOUTH WEST AREA\&quot;,\&quot;Loc\&quot;:\&quot;MYSORE\&quot;,\&quot;Pin\&quot;:515001,\&quot;Stcd\&quot;:\&quot;37\&quot;},\&quot;ShipDtls\&quot;:{\&quot;Gstin\&quot;:\&quot;37BCHPP8878F1ZV\&quot;,\&quot;LglNm\&quot;:\&quot;SHIP COMPANY PVT LTD\&quot;,\&quot;TrdNm\&quot;:\&quot;SHIP COMPANY PVT LTD, GURGAON\&quot;,\&quot;Addr1\&quot;:\&quot;SHIP 7TH BLOCK, KUVEMPU LAYOUT\&quot;,\&quot;Addr2\&quot;:\&quot;SHIP SOUTH WEST AREA\&quot;,\&quot;Loc\&quot;:\&quot;MYSORE\&quot;,\&quot;Pin\&quot;:515001,\&quot;Stcd\&quot;:\&quot;37\&quot;},\&quot;ItemList\&quot;:[{\&quot;ItemNo\&quot;:1,\&quot;SlNo\&quot;:\&quot;1\&quot;,\&quot;IsServc\&quot;:\&quot;N\&quot;,\&quot;PrdDesc\&quot;:\&quot;SAMPLE PRODUCT DESCRIPTION\&quot;,\&quot;HsnCd\&quot;:\&quot;3214\&quot;,\&quot;Barcde\&quot;:\&quot;BAR93983\&quot;,\&quot;Qty\&quot;:10,\&quot;FreeQty\&quot;:1,\&quot;Unit\&quot;:\&quot;BAG\&quot;,\&quot;UnitPrice\&quot;:10,\&quot;TotAmt\&quot;:100,\&quot;AssAmt\&quot;:100.0,\&quot;GstRt\&quot;:18,\&quot;IgstAmt\&quot;:18.0,\&quot;TotItemVal\&quot;:118.0,\&quot;OrdLineRef\&quot;:\&quot;ORDER_LINE_REF\&quot;,\&quot;OrgCntry\&quot;:\&quot;IN\&quot;,\&quot;PrdSlNo\&quot;:\&quot;PDSL0001\&quot;,\&quot;BchDtls\&quot;:{\&quot;Nm\&quot;:\&quot;BTCHNAMEJANS\&quot;,\&quot;ExpDt\&quot;:\&quot;06/03/2020\&quot;,\&quot;WrDt\&quot;:\&quot;06/03/2020\&quot;},\&quot;AttribDtls\&quot;:[{\&quot;Nm\&quot;:\&quot;SDSD\&quot;,\&quot;Val\&quot;:\&quot;SSS\&quot;}]}],\&quot;ValDtls\&quot;:{\&quot;AssVal\&quot;:100.0,\&quot;IgstVal\&quot;:18.0,\&quot;TotInvVal\&quot;:118.0,\&quot;TotInvValFc\&quot;:118.0},\&quot;PayDtls\&quot;:{\&quot;Nm\&quot;:\&quot;PAYEE NAME\&quot;,\&quot;AccDet\&quot;:\&quot;23807238078320\&quot;,\&quot;Mode\&quot;:\&quot;CASH\&quot;,\&quot;FinInsBr\&quot;:\&quot;ABCD1234567\&quot;,\&quot;PayTerm\&quot;:\&quot;DEBIT\&quot;,\&quot;PayInstr\&quot;:\&quot;RECEIVE ON PAYEE BEHALF\&quot;,\&quot;CrTrn\&quot;:\&quot;CREDIT TRANSFER FOR PAYEE\&quot;,\&quot;DirDr\&quot;:\&quot;DEBIT TRANSFER FOR PAYEE\&quot;,\&quot;CrDay\&quot;:110,\&quot;PaidAmt\&quot;:9999999999.99,\&quot;PaymtDue\&quot;:9999999999.99},\&quot;RefDtls\&quot;:{\&quot;InvRm\&quot;:\&quot;ANDLJNSJEJLN0-9//DSJ\&quot;,\&quot;DocPerdDtls\&quot;:{\&quot;InvStDt\&quot;:\&quot;02/08/2020\&quot;,\&quot;InvEndDt\&quot;:\&quot;03/08/2020\&quot;},\&quot;PrecDocDtls\&quot;:[{\&quot;InvNo\&quot;:\&quot;SKJAJNS\&quot;,\&quot;InvDt\&quot;:\&quot;03/03/2020\&quot;,\&quot;OthRefNo\&quot;:\&quot;REFERENCE NO\&quot;}],\&quot;ContrDtls\&quot;:[{\&quot;RecAdvRefr\&quot;:\&quot;SAKJN9230UJ\&quot;,\&quot;RecAdvDt\&quot;:\&quot;03/03/2020\&quot;,\&quot;TendRefr\&quot;:\&quot;SKJN30902\&quot;,\&quot;ContrRefr\&quot;:\&quot;SJKSLK99890\&quot;,\&quot;ExtRefr\&quot;:\&quot;SJLS973820\&quot;,\&quot;ProjRefr\&quot;:\&quot;SHKKS9738222\&quot;,\&quot;PORefr\&quot;:\&quot;SLJK982820\&quot;,\&quot;PORefDt\&quot;:\&quot;03/03/2020\&quot;}]},\&quot;AddlDocDtls\&quot;:[{\&quot;Url\&quot;:\&quot;HTTP://GOOGLE.COM\&quot;,\&quot;Docs\&quot;:\&quot;DLJSHDIUEWHJKDSJHDUSOHDSAUOHAJK\&quot;,\&quot;Info\&quot;:\&quot;DLJSHDUIHUE480U042OH2OUODN984IO2OUH9823H0UH32\&quot;}],\&quot;ExpDtls\&quot;:{\&quot;ShipBNo\&quot;:\&quot;BLNO932083\&quot;,\&quot;ShipBDt\&quot;:\&quot;11/11/2020\&quot;,\&quot;Port\&quot;:\&quot;INABG1\&quot;,\&quot;RefClm\&quot;:\&quot;Y\&quot;,\&quot;ForCur\&quot;:\&quot;USD\&quot;,\&quot;CntCode\&quot;:\&quot;IN\&quot;,\&quot;ExpDuty\&quot;:1},\&quot;EwbDtls\&quot;:{\&quot;TransId\&quot;:\&quot;37BCHPP8878F1ZV\&quot;,\&quot;TransName\&quot;:\&quot;ANKIT\&quot;,\&quot;TransMode\&quot;:\&quot;1\&quot;,\&quot;Distance\&quot;:100,\&quot;TransDocNo\&quot;:\&quot;111A\&quot;,\&quot;TransDocDt\&quot;:\&quot;08/08/2020\&quot;,\&quot;VehNo\&quot;:\&quot;HR87A2929\&quot;,\&quot;VehType\&quot;:\&quot;R\&quot;}}&quot;,
+                        &quot;iss&quot;: &quot;NIC&quot;
+                    },
+                    &quot;SignedQRCode&quot;: {
+                        &quot;data&quot;: &quot;{\&quot;SellerGstin\&quot;:\&quot;27AAAPI3182M002\&quot;,\&quot;BuyerGstin\&quot;:\&quot;29AACCR7832C1ZD\&quot;,\&quot;DocNo\&quot;:\&quot;IRN2-330-1-280\&quot;,\&quot;DocTyp\&quot;:\&quot;INV\&quot;,\&quot;DocDt\&quot;:\&quot;31/08/2020\&quot;,\&quot;TotInvVal\&quot;:118.0,\&quot;ItemCnt\&quot;:1,\&quot;MainHsnCode\&quot;:\&quot;3214\&quot;,\&quot;Irn\&quot;:\&quot;0a0b7b8f0f6db4a7025dcfde4b9b02a106cc8d602b68b8ba637c8baed72f4cad\&quot;}&quot;,
+                        &quot;iss&quot;: &quot;NIC&quot;
+                    },
+                    &quot;Status&quot;: &quot;ACT&quot;,
+                    &quot;EwbNo&quot;: null,
+                    &quot;EwbDt&quot;: null,
+                    &quot;EwbValidTill&quot;: null,
+                    &quot;Remarks&quot;: null
+                }
+            },
+            &quot;message&quot;: &quot;IRN Generated&quot;,
+            &quot;error&quot;: false
+        },
+        &quot;qr_b64_encoded&quot;: &quot;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&quot;
+    }
+]</value>
+    </values>
+</CustomMetadata>

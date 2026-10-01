@@ -1,0 +1,13 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 02-18-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                               Modification
+  1.0   02-18-2021   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+-->
+<apex:page renderAs="pdf" standardController="Payment_Receipt__c" extensions="ICRA_PaymentReceiptPdfController" showHeader="false"
+    sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false" docType="html-5.0" action="{!savePDF}">
+</apex:page>

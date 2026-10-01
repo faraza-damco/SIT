@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Invoice Status --></label>
+    <name>Invoice_Status__c</name>
+    <picklistValues>
+        <masterLabel>Canceled</masterLabel>
+        <translation><!-- Canceled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IB Tax Invoice</masterLabel>
+        <translation><!-- IB Tax Invoice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Initiate IB Tax Invoice</masterLabel>
+        <translation><!-- Initiate IB Tax Invoice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Initiate OP Tax Invoice</masterLabel>
+        <translation><!-- Initiate OP Tax Invoice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Initiate OT Tax Invoice</masterLabel>
+        <translation><!-- Initiate OT Tax Invoice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OP Tax Invoice</masterLabel>
+        <translation><!-- OP Tax Invoice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OT Tax Invoice</masterLabel>
+        <translation><!-- OT Tax Invoice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>QR and IRN - Failed</masterLabel>
+        <translation><!-- QR and IRN - Failed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>QR and IRN - Generated</masterLabel>
+        <translation><!-- QR and IRN - Generated --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

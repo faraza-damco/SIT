@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BLR_Sub_Instrument_4__c</fullName>
+    <label>BLR - Sub Instrument 4</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Instrument_Type_3__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>BLR_Sub_Instrument</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Term Loan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Cash Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Bank Guarantee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Letter of Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Export Packing Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Export Bill Discounting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Overdraft</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Proposed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Unallocated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Bill Discounting (Channel Financing)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Corporate Loan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Equipment Vehicle Loan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Factoring</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Funded Interest Term Loan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Gold Loan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Lease Rental Discounting (LRD)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Letter of Comfort</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Mortgage Loan (Loan against Property)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Short Term Loan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Stand by Line of Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Warehouse Receipts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Working Capital Demand Loan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Others</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

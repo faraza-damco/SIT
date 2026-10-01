@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_Conditions</name>
+        <label>Check Conditions</label>
+        <locationX>446</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>Default</defaultConnectorLabel>
+        <rules>
+            <name>Non_IPO_Monitoring</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Instrument_type_4__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Monitoring Activity</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Executive Meeting</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.IRF_Final_Amount__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Amount_to_be_Billed_for_New_Business</targetReference>
+            </connector>
+            <label>Non-IPO Monitoring</label>
+        </rules>
+        <rules>
+            <name>IPO_Monitoring</name>
+            <conditionLogic>(1 AND 2) AND (3 OR 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.IRF_Final_Amount__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Billing_Duration__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.IRF_Final_Amount__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Billing_Duration__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Opportunity_1</targetReference>
+            </connector>
+            <label>IPO Monitoring</label>
+        </rules>
+        <rules>
+            <name>Check_Reset_on_Rejection</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Reset_on_Rejection__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Reset_on_Rejection__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Opportunity</targetReference>
+            </connector>
+            <label>Check Reset_on_Rejection</label>
+        </rules>
+    </decisions>
+    <description>changing it to only for creation from creation &amp; updation
+[v6]==&gt; To calculate the Amount to Be Billed for the IPO Monitoring Cases based on the Billing Duration
+[v7]==&gt; IPO: Amount to Be Billed</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Since both the Revised ASF/IRF are not present on the New Business opportunity</description>
+        <name>amountToBeBilled_IPO</name>
+        <dataType>Currency</dataType>
+        <expression>IF(ISPICKVAL({!$Record.Billing_Duration__c}, &apos;Yearly&apos;), 
+{!$Record.IRF_Final_Amount__c},
+IF(ISPICKVAL({!$Record.Billing_Duration__c}, &apos;Half-Yearly&apos;), 
+ROUND({!$Record.IRF_Final_Amount__c}/2,0),
+IF(ISPICKVAL({!$Record.Billing_Duration__c}, &apos;Quarterly&apos;), 
+ROUND({!$Record.IRF_Final_Amount__c}/4,0),
+0)))</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>Update Amount to be Billed {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Amount to be Billed</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Amount_to_be_Billed_for_New_Business</name>
+        <label>Update Amount to be Billed for New Business</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Amount_to_Be_Billed__c</field>
+            <value>
+                <elementReference>$Record.IRF_Final_Amount__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Opportunity</name>
+        <label>Update Opportunity</label>
+        <locationX>578</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>BD_Head_Approval_PA__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CBO_Approval_PA__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MD_CEO_Approval_PA__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Maximum_Deviation_PA__c</field>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Minimum_Deviation_PA__c</field>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>-Amount to Be Billed</description>
+        <name>Update_Opportunity_1</name>
+        <label>Update Opportunity</label>
+        <locationX>314</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>Amount_to_Be_Billed__c</field>
+            <value>
+                <elementReference>amountToBeBilled_IPO</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Bypass_Validation__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>320</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Conditions</targetReference>
+        </connector>
+        <filterFormula>{!$Record.RecordType.DeveloperName}=&apos;New_Business&apos;</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice</fullName>
+    <columns>NAME</columns>
+    <columns>Opportunity_Name__c</columns>
+    <columns>Bill_No__c</columns>
+    <columns>Instrument__c</columns>
+    <columns>IRN_Number__c</columns>
+    <columns>Total_Invoice_Amount__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Invoice__c.Invoice</value>
+    </filters>
+    <label>Invoice</label>
+</ListView>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Email Send at --></label>
+    <name>Email_Send_at__c</name>
+    <picklistValues>
+        <masterLabel>180Days</masterLabel>
+        <translation><!-- 180Days --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1year</masterLabel>
+        <translation><!-- 1year --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>90Days</masterLabel>
+        <translation><!-- 90Days --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>After 1year</masterLabel>
+        <translation><!-- After 1year --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

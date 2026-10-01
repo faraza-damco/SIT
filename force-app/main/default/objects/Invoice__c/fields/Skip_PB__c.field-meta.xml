@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Skip_PB__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>to skip the process builder &apos;Genrate_Billing_Number_on_Invoice&apos;</description>
+    <label>Skip_PB</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

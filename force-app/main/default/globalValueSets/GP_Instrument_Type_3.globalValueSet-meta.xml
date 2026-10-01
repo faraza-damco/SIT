@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Annual</fullName>
+        <default>false</default>
+        <label>Annual</label>
+    </customValue>
+    <customValue>
+        <fullName>Asset Backed Security</fullName>
+        <default>false</default>
+        <label>Asset Backed Security</label>
+    </customValue>
+    <customValue>
+        <fullName>Bank Loan Rating</fullName>
+        <default>false</default>
+        <label>Bank Loan Rating</label>
+    </customValue>
+    <customValue>
+        <fullName>Bonds</fullName>
+        <default>false</default>
+        <label>Bonds</label>
+    </customValue>
+    <customValue>
+        <fullName>Collateralized Debt Obligation/Collateralized Loan Obligation</fullName>
+        <default>false</default>
+        <label>Collateralized Debt Obligation/Collateralized Loan Obligation</label>
+    </customValue>
+    <customValue>
+        <fullName>Commercial Paper/Certificate of Deposit/Short-term Debt</fullName>
+        <default>false</default>
+        <label>Commercial Paper/Certificate of Deposit/Short-term Debt</label>
+    </customValue>
+    <customValue>
+        <fullName>Fixed Deposits</fullName>
+        <default>false</default>
+        <label>Fixed Deposits</label>
+    </customValue>
+    <customValue>
+        <fullName>Loan Sell-Off</fullName>
+        <default>false</default>
+        <label>Loan Sell-Off</label>
+    </customValue>
+    <customValue>
+        <fullName>Long Term Borrowing Programme</fullName>
+        <default>false</default>
+        <label>Long Term Borrowing Programme</label>
+    </customValue>
+    <customValue>
+        <fullName>Mortgage Backed Security</fullName>
+        <default>false</default>
+        <label>Mortgage Backed Security</label>
+    </customValue>
+    <customValue>
+        <fullName>Mutual Fund</fullName>
+        <default>false</default>
+        <label>Mutual Fund</label>
+    </customValue>
+    <customValue>
+        <fullName>NCD/Debt</fullName>
+        <default>false</default>
+        <label>NCD/Debt</label>
+    </customValue>
+    <customValue>
+        <fullName>One-Time</fullName>
+        <default>false</default>
+        <label>One-Time</label>
+    </customValue>
+    <customValue>
+        <fullName>One-Time Royalty</fullName>
+        <default>false</default>
+        <label>One-Time Royalty</label>
+    </customValue>
+    <customValue>
+        <fullName>Others</fullName>
+        <default>false</default>
+        <label>Others</label>
+    </customValue>
+    <customValue>
+        <fullName>Security Receipts</fullName>
+        <default>false</default>
+        <label>Security Receipts</label>
+    </customValue>
+    <customValue>
+        <fullName>Short Term Borrowing Programme</fullName>
+        <default>false</default>
+        <label>Short Term Borrowing Programme</label>
+    </customValue>
+    <customValue>
+        <fullName>Various Debt Instruments</fullName>
+        <default>false</default>
+        <label>Various Debt Instruments</label>
+    </customValue>
+    <customValue>
+        <fullName>Others-SF</fullName>
+        <default>false</default>
+        <label>Others-SF</label>
+    </customValue>
+    <customValue>
+        <fullName>CP/CD/STD</fullName>
+        <default>false</default>
+        <label>CP/CD/STD</label>
+    </customValue>
+    <customValue>
+        <fullName>Long-term/Short-term borrowing programme</fullName>
+        <default>false</default>
+        <label>Long-term/Short-term borrowing programme</label>
+    </customValue>
+    <customValue>
+        <fullName>BLR/CP</fullName>
+        <default>false</default>
+        <label>BLR/CP</label>
+    </customValue>
+    <customValue>
+        <fullName>Borrowing programme</fullName>
+        <default>false</default>
+        <label>Borrowing programme</label>
+    </customValue>
+    <customValue>
+        <fullName>NCD/Debt - Publicly Placed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>NCD/Debt - Publicly Placed</label>
+    </customValue>
+    <masterLabel>Instrument Type 3</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

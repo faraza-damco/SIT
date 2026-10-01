@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Cap</fullName>
+        <default>false</default>
+        <label>Cap</label>
+    </customValue>
+    <customValue>
+        <fullName>Non - Cap</fullName>
+        <default>false</default>
+        <label>Non - Cap</label>
+    </customValue>
+    <customValue>
+        <fullName>Structured Finance</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Structured Finance</label>
+    </customValue>
+    <masterLabel>Customer Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

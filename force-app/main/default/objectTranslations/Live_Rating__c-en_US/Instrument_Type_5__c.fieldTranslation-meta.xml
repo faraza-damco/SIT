@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Instrument Type 5 --></label>
+    <name>Instrument_Type_5__c</name>
+    <picklistValues>
+        <masterLabel>Affordable Housing Finance</masterLabel>
+        <translation><!-- Affordable Housing Finance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Airlines</masterLabel>
+        <translation><!-- Airlines --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Airport Infrastructure</masterLabel>
+        <translation><!-- Airport Infrastructure --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Apparel &amp; Fabric</masterLabel>
+        <translation><!-- Apparel &amp; Fabric --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Asset Backed Security</masterLabel>
+        <translation><!-- Asset Backed Security --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Auto Components</masterLabel>
+        <translation><!-- Auto Components --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Automobile</masterLabel>
+        <translation><!-- Automobile --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Banking</masterLabel>
+        <translation><!-- Banking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Banking Statistics</masterLabel>
+        <translation><!-- Banking Statistics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Basmati Rice</masterLabel>
+        <translation><!-- Basmati Rice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bearing</masterLabel>
+        <translation><!-- Bearing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brokerages</masterLabel>
+        <translation><!-- Brokerages --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Buffalo Meat</masterLabel>
+        <translation><!-- Buffalo Meat --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bulk Tea</masterLabel>
+        <translation><!-- Bulk Tea --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cashew</masterLabel>
+        <translation><!-- Cashew --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cement</masterLabel>
+        <translation><!-- Cement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chemicals - Basic Chemicals</masterLabel>
+        <translation><!-- Chemicals - Basic Chemicals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chemicals - Petrochemicals</masterLabel>
+        <translation><!-- Chemicals - Petrochemicals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chemicals - Speciality Chemicals</masterLabel>
+        <translation><!-- Chemicals - Speciality Chemicals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Commercial Vehicles</masterLabel>
+        <translation><!-- Commercial Vehicles --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Construction</masterLabel>
+        <translation><!-- Construction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Construction Equipment</masterLabel>
+        <translation><!-- Construction Equipment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Corporate Sector</masterLabel>
+        <translation><!-- Corporate Sector --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cotton &amp; Manmade Yarns</masterLabel>
+        <translation><!-- Cotton &amp; Manmade Yarns --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit Quality Trends</masterLabel>
+        <translation><!-- Credit Quality Trends --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dairy</masterLabel>
+        <translation><!-- Dairy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Economic Outlook &amp; Macro Trends</masterLabel>
+        <translation><!-- Economic Outlook &amp; Macro Trends --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ferrous Metals</masterLabel>
+        <translation><!-- Ferrous Metals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fertilizers</masterLabel>
+        <translation><!-- Fertilizers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financial Markets &amp; Banking Update</masterLabel>
+        <translation><!-- Financial Markets &amp; Banking Update --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Footwear</masterLabel>
+        <translation><!-- Footwear --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gas Utilities</masterLabel>
+        <translation><!-- Gas Utilities --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>General Insurance</masterLabel>
+        <translation><!-- General Insurance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hospitals</masterLabel>
+        <translation><!-- Hospitals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hotels</masterLabel>
+        <translation><!-- Hotels --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Housing Finance Companies</masterLabel>
+        <translation><!-- Housing Finance Companies --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Housing Finance Statistics</masterLabel>
+        <translation><!-- Housing Finance Statistics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IT Services</masterLabel>
+        <translation><!-- IT Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Indian Retail Industry</masterLabel>
+        <translation><!-- Indian Retail Industry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jewellery</masterLabel>
+        <translation><!-- Jewellery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Key Economic Indicators</masterLabel>
+        <translation><!-- Key Economic Indicators --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Life Insurance</masterLabel>
+        <translation><!-- Life Insurance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Logistics - Road</masterLabel>
+        <translation><!-- Logistics - Road --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Market Update</masterLabel>
+        <translation><!-- Market Update --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Micro Finance Institutions</masterLabel>
+        <translation><!-- Micro Finance Institutions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mortgage Backed Security</masterLabel>
+        <translation><!-- Mortgage Backed Security --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Multiplex Industry</masterLabel>
+        <translation><!-- Multiplex Industry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NBFC - Infrastructure</masterLabel>
+        <translation><!-- NBFC - Infrastructure --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NBFC - Retail &amp; Commercial Finance</masterLabel>
+        <translation><!-- NBFC - Retail &amp; Commercial Finance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Non- Ferrous Metals</masterLabel>
+        <translation><!-- Non- Ferrous Metals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Non-Basmati Rice</masterLabel>
+        <translation><!-- Non-Basmati Rice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oil &amp; Gas</masterLabel>
+        <translation><!-- Oil &amp; Gas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Passenger Vehicles</masterLabel>
+        <translation><!-- Passenger Vehicles --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pharmaceuticals</masterLabel>
+        <translation><!-- Pharmaceuticals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Port Logistics</masterLabel>
+        <translation><!-- Port Logistics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ports</masterLabel>
+        <translation><!-- Ports --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Poultry</masterLabel>
+        <translation><!-- Poultry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Power</masterLabel>
+        <translation><!-- Power --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Real Estate</masterLabel>
+        <translation><!-- Real Estate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Refining &amp; Marketing</masterLabel>
+        <translation><!-- Refining &amp; Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Renewable Energy</masterLabel>
+        <translation><!-- Renewable Energy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Roads &amp; Highways</masterLabel>
+        <translation><!-- Roads &amp; Highways --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Seeds</masterLabel>
+        <translation><!-- Seeds --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ship Breaking</masterLabel>
+        <translation><!-- Ship Breaking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Small Finance Banks</masterLabel>
+        <translation><!-- Small Finance Banks --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>State Government Finance</masterLabel>
+        <translation><!-- State Government Finance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sugar</masterLabel>
+        <translation><!-- Sugar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Telecom Services</masterLabel>
+        <translation><!-- Telecom Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Telecom Tower</masterLabel>
+        <translation><!-- Telecom Tower --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tiles</masterLabel>
+        <translation><!-- Tiles --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tractors</masterLabel>
+        <translation><!-- Tractors --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Two Wheelers</masterLabel>
+        <translation><!-- Two Wheelers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tyres</masterLabel>
+        <translation><!-- Tyres --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wind Energy</masterLabel>
+        <translation><!-- Wind Energy --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

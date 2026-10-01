@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>AB Bank Ltd.</fullName>
+        <default>false</default>
+        <label>AB Bank Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>Abu Dhabi Commercial Bank Ltd.</fullName>
+        <default>false</default>
+        <label>Abu Dhabi Commercial Bank Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>American Express Banking Corporation</fullName>
+        <default>false</default>
+        <label>American Express Banking Corporation</label>
+    </customValue>
+    <customValue>
+        <fullName>Au Small Finance Bank Limited</fullName>
+        <default>false</default>
+        <label>Au Small Finance Bank Limited</label>
+    </customValue>
+    <customValue>
+        <fullName>Australia and New Zealand Banking Group Ltd.</fullName>
+        <default>false</default>
+        <label>Australia and New Zealand Banking Group Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>Axis Bank Ltd.</fullName>
+        <default>false</default>
+        <label>Axis Bank Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>Bandhan Bank Ltd.</fullName>
+        <default>false</default>
+        <label>Bandhan Bank Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>Bank of America</fullName>
+        <default>false</default>
+        <label>Bank of America</label>
+    </customValue>
+    <customValue>
+        <fullName>Bank of Bahrain &amp; Kuwait BSC</fullName>
+        <default>false</default>
+        <label>Bank of Bahrain &amp; Kuwait BSC</label>
+    </customValue>
+    <customValue>
+        <fullName>Bank of Baroda</fullName>
+        <default>false</default>
+        <label>Bank of Baroda</label>
+    </customValue>
+    <customValue>
+        <fullName>Bank of Ceylon</fullName>
+        <default>false</default>
+        <label>Bank of Ceylon</label>
+    </customValue>
+    <customValue>
+        <fullName>Bank of China Ltd.</fullName>
+        <default>false</default>
+        <label>Bank of China Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>Bank of India</fullName>
+        <default>false</default>
+        <label>Bank of India</label>
+    </customValue>
+    <customValue>
+        <fullName>Bank of Maharashtra</fullName>
+        <default>false</default>
+        <label>Bank of Maharashtra</label>
+    </customValue>
+    <customValue>
+        <fullName>Bank of Nova Scotia</fullName>
+        <default>false</default>
+        <label>Bank of Nova Scotia</label>
+    </customValue>
+    <customValue>
+        <fullName>Barclays Bank Plc.</fullName>
+        <default>false</default>
+        <label>Barclays Bank Plc.</label>
+    </customValue>
+    <customValue>
+        <fullName>BNP Paribas</fullName>
+        <default>false</default>
+        <label>BNP Paribas</label>
+    </customValue>
+    <customValue>
+        <fullName>Canara Bank</fullName>
+        <default>false</default>
+        <label>Canara Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Capital Small Finance Bank Limited</fullName>
+        <default>false</default>
+        <label>Capital Small Finance Bank Limited</label>
+    </customValue>
+    <customValue>
+        <fullName>Central Bank of India</fullName>
+        <default>false</default>
+        <label>Central Bank of India</label>
+    </customValue>
+    <customValue>
+        <fullName>Citibank N.A.</fullName>
+        <default>false</default>
+        <label>Citibank N.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>City Union Bank Ltd.</fullName>
+        <default>false</default>
+        <label>City Union Bank Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>Cooperatieve Rabobank U.A.</fullName>
+        <default>false</default>
+        <label>Cooperatieve Rabobank U.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>Credit Agricole Corporate &amp; Investment Bank</fullName>
+        <default>false</default>
+        <label>Credit Agricole Corporate &amp; Investment Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Credit Suisse A.G</fullName>
+        <default>false</default>
+        <label>Credit Suisse A.G</label>
+    </customValue>
+    <customValue>
+        <fullName>CSB Bank Ltd.</fullName>
+        <default>false</default>
+        <label>CSB Bank Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>CTBC Bank Co., Ltd.</fullName>
+        <default>false</default>
+        <label>CTBC Bank Co., Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>DBS Bank India Limited*</fullName>
+        <default>false</default>
+        <label>DBS Bank India Limited*</label>
+    </customValue>
+    <customValue>
+        <fullName>DCB Bank Ltd.</fullName>
+        <default>false</default>
+        <label>DCB Bank Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>Deutsche Bank</fullName>
+        <default>false</default>
+        <label>Deutsche Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Dhanlaxmi Bank Ltd.</fullName>
+        <default>false</default>
+        <label>Dhanlaxmi Bank Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>Doha Bank</fullName>
+        <default>false</default>
+        <label>Doha Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Emirates Bank NBD</fullName>
+        <default>false</default>
+        <label>Emirates Bank NBD</label>
+    </customValue>
+    <customValue>
+        <fullName>Equitas Small Finance Bank Limited</fullName>
+        <default>false</default>
+        <label>Equitas Small Finance Bank Limited</label>
+    </customValue>
+    <customValue>
+        <fullName>ESAF Small Finance Bank Limited</fullName>
+        <default>false</default>
+        <label>ESAF Small Finance Bank Limited</label>
+    </customValue>
+    <customValue>
+        <fullName>Exim Bank</fullName>
+        <default>false</default>
+        <label>Exim Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Federal Bank Ltd.</fullName>
+        <default>false</default>
+        <label>Federal Bank Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>Fincare Small Finance Bank Limited</fullName>
+        <default>false</default>
+        <label>Fincare Small Finance Bank Limited</label>
+    </customValue>
+    <customValue>
+        <fullName>First Abu Dhabi Bank PJSC</fullName>
+        <default>false</default>
+        <label>First Abu Dhabi Bank PJSC</label>
+    </customValue>
+    <customValue>
+        <fullName>FirstRand Bank Ltd</fullName>
+        <default>false</default>
+        <label>FirstRand Bank Ltd</label>
+    </customValue>
+    <customValue>
+        <fullName>HDFC Bank Ltd</fullName>
+        <default>false</default>
+        <label>HDFC Bank Ltd</label>
+    </customValue>
+    <customValue>
+        <fullName>HSBC Ltd</fullName>
+        <default>false</default>
+        <label>HSBC Ltd</label>
+    </customValue>
+    <customValue>
+        <fullName>ICICI Bank Ltd.</fullName>
+        <default>false</default>
+        <label>ICICI Bank Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>IDBI Bank Ltd.</fullName>
+        <default>false</default>
+        <label>IDBI Bank Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>IDFC First Bank Ltd.</fullName>
+        <default>false</default>
+        <label>IDFC First Bank Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>Indian Bank</fullName>
+        <default>false</default>
+        <label>Indian Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Indian Overseas Bank</fullName>
+        <default>false</default>
+        <label>Indian Overseas Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Induslnd Bank Ltd</fullName>
+        <default>false</default>
+        <label>Induslnd Bank Ltd</label>
+    </customValue>
+    <customValue>
+        <fullName>Industrial &amp; Commercial Bank of China Ltd.</fullName>
+        <default>false</default>
+        <label>Industrial &amp; Commercial Bank of China Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>Industrial Bank of Korea</fullName>
+        <default>false</default>
+        <label>Industrial Bank of Korea</label>
+    </customValue>
+    <customValue>
+        <fullName>J.P. Morgan Chase Bank N.A.</fullName>
+        <default>false</default>
+        <label>J.P. Morgan Chase Bank N.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>Jammu &amp; Kashmir Bank Ltd.</fullName>
+        <default>false</default>
+        <label>Jammu &amp; Kashmir Bank Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>Jana Small Finance Bank Limited</fullName>
+        <default>false</default>
+        <label>Jana Small Finance Bank Limited</label>
+    </customValue>
+    <customValue>
+        <fullName>JSC VTB Bank</fullName>
+        <default>false</default>
+        <label>JSC VTB Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Karnataka Bank Ltd.</fullName>
+        <default>false</default>
+        <label>Karnataka Bank Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>Karur Vysya Bank Ltd.</fullName>
+        <default>false</default>
+        <label>Karur Vysya Bank Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>KEB Hana Bank</fullName>
+        <default>false</default>
+        <label>KEB Hana Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Kookmin Bank</fullName>
+        <default>false</default>
+        <label>Kookmin Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Kotak Mahindra Bank Ltd</fullName>
+        <default>false</default>
+        <label>Kotak Mahindra Bank Ltd</label>
+    </customValue>
+    <customValue>
+        <fullName>Krung Thai Bank Public Co. Ltd.</fullName>
+        <default>false</default>
+        <label>Krung Thai Bank Public Co. Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>Lakshmi Vilas Bank Ltd.</fullName>
+        <default>false</default>
+        <label>Lakshmi Vilas Bank Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>Mashreq Bank PSC</fullName>
+        <default>false</default>
+        <label>Mashreq Bank PSC</label>
+    </customValue>
+    <customValue>
+        <fullName>Mizuho Bank Ltd.</fullName>
+        <default>false</default>
+        <label>Mizuho Bank Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>Nainital Bank Ltd.</fullName>
+        <default>false</default>
+        <label>Nainital Bank Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>NatWest Markets Plc</fullName>
+        <default>false</default>
+        <label>NatWest Markets Plc</label>
+    </customValue>
+    <customValue>
+        <fullName>North East Small Finance Bank Limited</fullName>
+        <default>false</default>
+        <label>North East Small Finance Bank Limited</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>PT Bank Maybank Indonesia TBK</fullName>
+        <default>false</default>
+        <label>PT Bank Maybank Indonesia TBK</label>
+    </customValue>
+    <customValue>
+        <fullName>Punjab &amp; Sind Bank</fullName>
+        <default>false</default>
+        <label>Punjab &amp; Sind Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Punjab National Bank</fullName>
+        <default>false</default>
+        <label>Punjab National Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Qatar National Bank</fullName>
+        <default>false</default>
+        <label>Qatar National Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>RBL Bank Ltd.</fullName>
+        <default>false</default>
+        <label>RBL Bank Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>Sberbank</fullName>
+        <default>false</default>
+        <label>Sberbank</label>
+    </customValue>
+    <customValue>
+        <fullName>SBM Bank (India) Limited*</fullName>
+        <default>false</default>
+        <label>SBM Bank (India) Limited*</label>
+    </customValue>
+    <customValue>
+        <fullName>Shinhan Bank</fullName>
+        <default>false</default>
+        <label>Shinhan Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Societe Generale</fullName>
+        <default>false</default>
+        <label>Societe Generale</label>
+    </customValue>
+    <customValue>
+        <fullName>Sonali Bank Ltd.</fullName>
+        <default>false</default>
+        <label>Sonali Bank Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>South Indian Bank Ltd.</fullName>
+        <default>false</default>
+        <label>South Indian Bank Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>Standard Chartered Bank</fullName>
+        <default>false</default>
+        <label>Standard Chartered Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>State Bank of India</fullName>
+        <default>false</default>
+        <label>State Bank of India</label>
+    </customValue>
+    <customValue>
+        <fullName>Sumitomo Mitsui Banking Corporation</fullName>
+        <default>false</default>
+        <label>Sumitomo Mitsui Banking Corporation</label>
+    </customValue>
+    <customValue>
+        <fullName>Suryoday Small Finance Bank Limited</fullName>
+        <default>false</default>
+        <label>Suryoday Small Finance Bank Limited</label>
+    </customValue>
+    <customValue>
+        <fullName>Tamilnad Mercantile Bank Ltd</fullName>
+        <default>false</default>
+        <label>Tamilnad Mercantile Bank Ltd</label>
+    </customValue>
+    <customValue>
+        <fullName>The Bank of Tokyo- Mitsubishi UFJ, Ltd.</fullName>
+        <default>false</default>
+        <label>The Bank of Tokyo- Mitsubishi UFJ, Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>UCO Bank</fullName>
+        <default>false</default>
+        <label>UCO Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Ujjivan Small Finance Bank Limited</fullName>
+        <default>false</default>
+        <label>Ujjivan Small Finance Bank Limited</label>
+    </customValue>
+    <customValue>
+        <fullName>Union Bank of India</fullName>
+        <default>false</default>
+        <label>Union Bank of India</label>
+    </customValue>
+    <customValue>
+        <fullName>United Overseas Bank Ltd</fullName>
+        <default>false</default>
+        <label>United Overseas Bank Ltd</label>
+    </customValue>
+    <customValue>
+        <fullName>Utkarsh Small Finance Bank Limited</fullName>
+        <default>false</default>
+        <label>Utkarsh Small Finance Bank Limited</label>
+    </customValue>
+    <customValue>
+        <fullName>Westpac Banking Corporation</fullName>
+        <default>false</default>
+        <label>Westpac Banking Corporation</label>
+    </customValue>
+    <customValue>
+        <fullName>Woori Bank</fullName>
+        <default>false</default>
+        <label>Woori Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>YES Bank Ltd.</fullName>
+        <default>false</default>
+        <label>YES Bank Ltd.</label>
+    </customValue>
+    <masterLabel>Banker</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

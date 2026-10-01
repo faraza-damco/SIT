@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SGST_UTGST_Rate_for_Amount_Recd__c</fullName>
+    <complianceGroup>HIPAA</complianceGroup>
+    <formula>IF( Account_Classification__c == &apos;Non-SEZ&apos;,
+IF( AND(Opportunity_Name__r.Account.RecordType.Name ==&apos;Issuer&apos;,
+TEXT(Opportunity_Name__r.BillingAddress__r.BillingState__c) == TEXT(Opportunity_Name__r.Opp_ICRA_Branch__r.State__c)
+) , 0.09,
+IF(AND(Opportunity_Name__r.Account.RecordType.Name ==&apos;Investors &amp; Intermediary&apos;,
+Opportunity_Name__r.Account.ShippingState == TEXT(Opportunity_Name__r.Opp_ICRA_Branch__r.State__c))
+, 0.09,
+0)),0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SGST/UTGST Rate for Amount Received</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

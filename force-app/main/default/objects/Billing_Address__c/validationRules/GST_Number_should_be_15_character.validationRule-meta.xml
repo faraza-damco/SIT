@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GST_Number_should_be_15_character</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(AND(NOT(ISBLANK(GSTN__c)),LEN(GSTN__c)!= 15),true,false)</errorConditionFormula>
+    <errorDisplayField>GSTN__c</errorDisplayField>
+    <errorMessage>Invalid GST number</errorMessage>
+</ValidationRule>

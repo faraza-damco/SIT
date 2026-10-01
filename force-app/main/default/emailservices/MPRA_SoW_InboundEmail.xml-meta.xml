@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailServicesFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apexClass>MPRA_SOW_EmailHandler</apexClass>
+    <attachmentOption>All</attachmentOption>
+    <authenticationFailureAction>Discard</authenticationFailureAction>
+    <authorizationFailureAction>Discard</authorizationFailureAction>
+    <emailServicesAddresses>
+        <authorizedSenders>arunr@damcogroup.com</authorizedSenders>
+        <developerName>MPRA_SoW_Email</developerName>
+        <isActive>true</isActive>
+        <localPart>mpra_sow_inboundemail</localPart>
+        <runAsUser>arunr@damcogroup.com.sit</runAsUser>
+    </emailServicesAddresses>
+    <functionInactiveAction>Discard</functionInactiveAction>
+    <functionName>MPRA_SoW_InboundEmail</functionName>
+    <isActive>true</isActive>
+    <isAuthenticationRequired>false</isAuthenticationRequired>
+    <isErrorRoutingEnabled>false</isErrorRoutingEnabled>
+    <isTextAttachmentsAsBinary>false</isTextAttachmentsAsBinary>
+    <isTlsRequired>false</isTlsRequired>
+    <overLimitAction>Discard</overLimitAction>
+</EmailServicesFunction>

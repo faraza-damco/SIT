@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Update_Base_Amount</fullName>
+        <description>Update Payment Receipt amount on Opportunity object</description>
+        <field>Payment_Receipt_Base_Amount__c</field>
+        <formula>Base_Fee_Amount__c</formula>
+        <name>Update Base Amount</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>Opportunity__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_CGST_Amount</fullName>
+        <description>Update Payment receipt CGST Amount on Opportunity Object</description>
+        <field>Payment_Receipt_CGST__c</field>
+        <formula>CGST_Payable__c</formula>
+        <name>Update CGST Amount</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>Opportunity__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Check_Current_Year_field</fullName>
+        <field>Check_Current_Year_Reference__c</field>
+        <formula>Check_Current_Year__c</formula>
+        <name>Update Check Current Year field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Financial_Year</fullName>
+        <description>Update Financial Year on Payment Receipt object</description>
+        <field>Financial_Year__c</field>
+        <formula>IF(AND(Created_Date__c &gt; DATE( YEAR( TODAY())-1 ,04,01), Created_Date__c &lt; DATE( YEAR( TODAY()) ,03,31), Is_Advance__c == FALSE ), &apos;Current Year&apos;, &apos;FY &apos;+Text( YEAR( TODAY())-1)+&apos;-&apos;+TEXT(YEAR( TODAY()) ))</formula>
+        <name>Update Financial Year</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_IGST_Amount</fullName>
+        <description>Update Payment receipt IGST Amount on Opportunity Object</description>
+        <field>Payment_Receipt_IGST__c</field>
+        <formula>IGST_Payable__c</formula>
+        <name>Update IGST Amount</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>Opportunity__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Last_Payment_Date</fullName>
+        <field>Last_Payment_Date__c</field>
+        <formula>Payment_Receipt_Created_Date__c</formula>
+        <name>Update Last Payment Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>Opportunity__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_SGST_Amount</fullName>
+        <description>Update Payment receipt SGST Amount on Opportunity Object</description>
+        <field>Payment_Receipt_SGST__c</field>
+        <formula>SGST_UTGST_Payable__c</formula>
+        <name>Update SGST Amount</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>Opportunity__c</targetObject>
+    </fieldUpdates>
+    <rules>
+        <fullName>Fields update on Opportunity</fullName>
+        <actions>
+            <name>Update_Base_Amount</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_CGST_Amount</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_IGST_Amount</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_SGST_Amount</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Name</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>When Payment Receipt is created Update base , ISGT, SGST and CGST amount on Opportunity</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Check Current Year field</fullName>
+        <actions>
+            <name>Update_Check_Current_Year_field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Name</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Financial Year</fullName>
+        <actions>
+            <name>Update_Financial_Year</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Name</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Update Financial Year on payment Receipt object</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Last Payment Date</fullName>
+        <actions>
+            <name>Update_Last_Payment_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Name</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

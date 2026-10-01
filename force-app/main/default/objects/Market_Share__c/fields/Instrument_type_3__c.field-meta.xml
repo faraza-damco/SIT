@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Instrument_type_3__c</fullName>
+    <label>Instrument type 3</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Instrument_type_2__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>GP_Instrument_Type_3</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Rating - Money Market (SF)</controllingFieldValue>
+            <valueName>Asset Backed Security</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rating - Money Market (SF)</controllingFieldValue>
+            <valueName>Collateralized Debt Obligation/Collateralized Loan Obligation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rating - Money Market (SF)</controllingFieldValue>
+            <valueName>Loan Sell-Off</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rating - Money Market (SF)</controllingFieldValue>
+            <valueName>Mortgage Backed Security</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rating - Money Market (SF)</controllingFieldValue>
+            <valueName>Security Receipts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rating - Bank Loan Rating</controllingFieldValue>
+            <valueName>Bank Loan Rating</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rating - Bank Loan Rating</controllingFieldValue>
+            <controllingFieldValue>Rating - Money Market (Non-SF)</controllingFieldValue>
+            <valueName>Long Term Borrowing Programme</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rating - Bank Loan Rating</controllingFieldValue>
+            <controllingFieldValue>Rating - Money Market (Non-SF)</controllingFieldValue>
+            <valueName>Short Term Borrowing Programme</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rating - Bank Loan Rating</controllingFieldValue>
+            <controllingFieldValue>Rating - Money Market (Non-SF)</controllingFieldValue>
+            <valueName>Various Debt Instruments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sector Research</controllingFieldValue>
+            <controllingFieldValue>Customised Research</controllingFieldValue>
+            <controllingFieldValue>CPR</controllingFieldValue>
+            <valueName>Annual</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sector Research</controllingFieldValue>
+            <controllingFieldValue>Customised Research</controllingFieldValue>
+            <controllingFieldValue>CPR</controllingFieldValue>
+            <valueName>One-Time</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sector Research</controllingFieldValue>
+            <controllingFieldValue>Customised Research</controllingFieldValue>
+            <controllingFieldValue>CPR</controllingFieldValue>
+            <valueName>One-Time Royalty</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Rating - Money Market (Non-SF)</controllingFieldValue>
+            <valueName>Bonds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Rating - Money Market (Non-SF)</controllingFieldValue>
+            <valueName>Commercial Paper/Certificate of Deposit/Short-term Debt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Rating - Money Market (Non-SF)</controllingFieldValue>
+            <valueName>Fixed Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <valueName>Mutual Fund</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Rating - Money Market (Non-SF)</controllingFieldValue>
+            <valueName>NCD/Debt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <valueName>Others</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

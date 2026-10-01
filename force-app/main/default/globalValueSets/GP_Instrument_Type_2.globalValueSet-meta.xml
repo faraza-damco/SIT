@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Rating - Money Market (SF)</fullName>
+        <default>false</default>
+        <label>Rating - Money Market (SF)</label>
+    </customValue>
+    <customValue>
+        <fullName>Rating - Money Market (Non-SF)</fullName>
+        <default>false</default>
+        <label>Rating - Money Market (Non-SF)</label>
+    </customValue>
+    <customValue>
+        <fullName>Rating - Bank Loan Rating</fullName>
+        <default>false</default>
+        <label>Rating - Bank Loan Rating</label>
+    </customValue>
+    <customValue>
+        <fullName>Sector Research</fullName>
+        <default>false</default>
+        <label>Sector Research</label>
+    </customValue>
+    <customValue>
+        <fullName>Customised Research</fullName>
+        <default>false</default>
+        <label>Customised Research</label>
+    </customValue>
+    <customValue>
+        <fullName>Research + CPR</fullName>
+        <default>false</default>
+        <label>Research + CPR</label>
+    </customValue>
+    <customValue>
+        <fullName>CPR</fullName>
+        <default>false</default>
+        <label>CPR</label>
+    </customValue>
+    <customValue>
+        <fullName>Others</fullName>
+        <default>false</default>
+        <label>Others</label>
+    </customValue>
+    <customValue>
+        <fullName>Others-SF</fullName>
+        <default>false</default>
+        <label>Others-SF</label>
+    </customValue>
+    <masterLabel>Instrument Type 2</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

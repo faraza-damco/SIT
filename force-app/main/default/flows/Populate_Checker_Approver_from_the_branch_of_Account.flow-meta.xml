@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_for_OFAC_Approver_on_Business_Segment</name>
+        <label>Check for OFAC Approver on Business Segment</label>
+        <locationX>182</locationX>
+        <locationY>647</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Available1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Account_Records.Business_Sector__r.OFAC_Approver__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_OFAC_Approver</targetReference>
+            </connector>
+            <label>Available</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_for_OFAC_Approver_on_Business_Segment1</name>
+        <label>Check for OFAC Approver on Business Segment</label>
+        <locationX>710</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Available2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Account_Records.Business_Sector__r.OFAC_Approver__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_OFAC_Approver1</targetReference>
+            </connector>
+            <label>Available</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_for_Opportunity_Checker_on_Business_Segment</name>
+        <label>Check for Opportunity Checker on Business Segment</label>
+        <locationX>446</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Check_for_OFAC_Approver_on_Business_Segment1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Available</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Account_Records.Business_Sector__r.Opportunity_Checker__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Opportunity_Checker_Approver</targetReference>
+            </connector>
+            <label>Available</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Populate Checker Approver from the branch of Account {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Populate Opportunity Checker from the Business Sector of Account</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Account_Records</name>
+        <label>Get Account Records</label>
+        <locationX>446</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_for_Opportunity_Checker_on_Business_Segment</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Business_Sector__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_OFAC_Approver</name>
+        <label>Update OFAC Approver</label>
+        <locationX>50</locationX>
+        <locationY>755</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>BD_Head__c</field>
+            <value>
+                <elementReference>Get_Account_Records.Business_Sector__r.Business_Head__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OFAC_Approver__c</field>
+            <value>
+                <elementReference>Get_Account_Records.Business_Sector__r.OFAC_Approver__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_OFAC_Approver1</name>
+        <label>Update OFAC Approver</label>
+        <locationX>578</locationX>
+        <locationY>647</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>BD_Head__c</field>
+            <value>
+                <elementReference>Get_Account_Records.Business_Sector__r.Business_Head__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OFAC_Approver__c</field>
+            <value>
+                <elementReference>Get_Account_Records.Business_Sector__r.OFAC_Approver__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Opportunity_Checker_Approver</name>
+        <label>Update Opportunity Checker Approver</label>
+        <locationX>182</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>Check_for_OFAC_Approver_on_Business_Segment</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Opportunity_Checker__c</field>
+            <value>
+                <elementReference>Get_Account_Records.Business_Sector__r.Opportunity_Checker__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>320</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Account_Records</targetReference>
+        </connector>
+        <filterFormula>AND(
+{!$Record.RecordType.Name} == &apos;New Business&apos;, {!$Record.AccountId}&lt;&gt;null, 
+    OR(
+          ISCHANGED({!$Record.AccountId}),
+          ISNEW(),
+AND(
+ISCHANGED({!$Record.Update_Opportunity_Checker__c}),
+{!$Record.Update_Opportunity_Checker__c}
+),
+AND(
+ISCHANGED({!$Record.Update_OFAC_Approver__c}),
+{!$Record.Update_OFAC_Approver__c}
+)
+         )
+)</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <triggerOrder>400</triggerOrder>
+</Flow>

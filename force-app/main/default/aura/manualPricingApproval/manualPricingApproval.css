@@ -1,0 +1,24 @@
+.THIS {
+}
+/*
+.THIS.yourComponentClass {
+    width: 100%;
+    height: auto;
+}
+
+
+
+@media only screen and (min-width: 481px) {
+    .THIS.yourComponentClass {
+        max-width: 1200px;
+        background-color: red;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .THIS.yourComponentClass {
+        font-size: 14px;
+    }
+}
+*/

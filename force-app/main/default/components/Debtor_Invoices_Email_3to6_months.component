@@ -1,0 +1,19 @@
+<apex:component controller="Debtor_Invoice_3to6Months_Controller" access="global">
+    <apex:attribute name="invId" type="String" description="Id of the invoice" assignTo="{!accountID}"/>
+    <table border = "2">
+        <tr>
+            <td><b>Bill No</b></td>
+            <td><b>Date of Bill</b></td>    
+            <td><b>On Account of</b></td>    
+            <td><b>Amounts(in Rs.)</b></td>                
+        </tr>
+        <apex:repeat value="{!DebtorInvoiceDetail}" var="inv">
+            <tr>
+                <td>{!inv.billNumber}</td>
+                <td>{!inv.invoiceDate}</td>     
+                <td>{!inv.accountName}</td>     
+                <td>{!inv.totalInvoiceAmount}</td>     
+            </tr>
+        </apex:repeat>        
+    </table>
+</apex:component>

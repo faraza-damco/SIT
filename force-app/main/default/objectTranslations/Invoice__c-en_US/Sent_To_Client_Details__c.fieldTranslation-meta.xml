@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sent To Client Details --></label>
+    <name>Sent_To_Client_Details__c</name>
+</CustomFieldTranslation>

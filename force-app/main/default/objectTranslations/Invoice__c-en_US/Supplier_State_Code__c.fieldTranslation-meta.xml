@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Country Name will be displayed within Generated Invoice for Account Type Classification: Export. --></help>
+    <label><!-- Supplier State Code --></label>
+    <name>Supplier_State_Code__c</name>
+</CustomFieldTranslation>

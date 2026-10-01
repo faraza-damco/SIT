@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_for_ASF</name>
+        <label>Check for ASF</label>
+        <locationX>314</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Present</name>
+            <conditionLogic>(1 AND 2 AND 3 AND 4 AND 5) OR (1 AND 2 AND 3 AND 4 AND (6 OR 7 OR 8 OR 9 OR 10))</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ASF_Final_Amount__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Instrument_type_4__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Monitoring Activity</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Billing_Start_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Billing_End_date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>isNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ASF_Final_Amount__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Billing_Start_Date__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Billing_End_date__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Requested_Fee__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Revised_Billing_End_Date__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Amount_to_be_Billed_for_Surveillance</targetReference>
+            </connector>
+            <label>Present</label>
+        </rules>
+        <rules>
+            <name>IPO_Monitoring</name>
+            <conditionLogic>(1 AND 2 AND 3 AND 4) AND (5 OR 6 OR 7 OR 8 OR 9)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Instrument_type_4__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Monitoring Activity</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ASF_Final_Amount__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Billing_Duration__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.IRF_Final_Amount__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Requested_Fee__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Billing_Duration__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Revised_IRF__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.IRF_Final_Amount__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ASF_Final_Amount__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Opportunity</targetReference>
+            </connector>
+            <label>IPO Monitoring</label>
+        </rules>
+    </decisions>
+    <description>v10==&gt; Changed the Execution from Before Save to After Save 
+v11==&gt; Reverted
+v18==&gt;  Changed the Execution from Before Save to After Save 
+v19==&gt; Resolving the Rounding Off issue
+v21==&gt; Revised Billing End Date Calculations
+v22==&gt; Order of Execution [After Save to Before Save]
+v23==&gt; removed &apos;Revised Billing End Date&apos; &amp;&amp; added &apos;Revised Billing Approval Status&apos;
+v25==&gt; Removed the flow entry criteria except the recordtype
+v26==&gt; Bypass Validation Logic &amp; Already Billed Logic
+v27==&gt; Replaced the value of the &apos;Revised Annual Surveillance Fee&apos; with &apos;Revised Surveillance Fee&apos; (Requested Fee)
+v29==&gt; Correction in the identification of the Leap Year
+v30==&gt; Removed the &apos;Already Billed&apos; from the entry condition
+v37==&gt; IPO Monitoring Changes
+v40==&gt; Amount to Be Billed [IPO]
+v42==&gt; Billing Dates as per Leap Year</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>amountToBeBilled</name>
+        <dataType>Currency</dataType>
+        <expression>IF(
+NOT(ISBLANK({!$Record.Requested_Fee__c})), 
+ROUND({!$Record.Requested_Fee__c}/{!numberOfDays}*{!billingDatesDifference},0),
+ROUND(({!$Record.ASF_Final_Amount__c}/{!numberOfDays})*{!billingDatesDifference},0)
+)</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>amtToBeBilled_IPO</name>
+        <dataType>Currency</dataType>
+        <expression>IF(ISPICKVAL({!$Record.Billing_Duration__c}, &apos;Yearly&apos;), 
+{!revised_ASF_IPO},
+
+IF(ISPICKVAL({!$Record.Billing_Duration__c}, &apos;Half-Yearly&apos;), 
+IF(
+{!$Record.Related_Opportunity_Count__c}&lt;=1, 
+ROUND(({!revised_IRF_IPO})/2,0),
+ROUND(({!revised_ASF_IPO})/2,0)
+), 
+
+IF(ISPICKVAL({!$Record.Billing_Duration__c}, &apos;Quarterly&apos;), 
+IF(
+{!$Record.Related_Opportunity_Count__c}&lt;=3, 
+ROUND(({!revised_IRF_IPO})/4,0),
+ROUND(({!revised_ASF_IPO})/4,0)
+), 0)))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <description>Annual or Revised Annual Surveillance Fee with the Leap Year Consideration</description>
+        <name>annualSurvFee</name>
+        <dataType>Currency</dataType>
+        <expression>IF(
+NOT(ISBLANK({!$Record.Requested_Fee__c})), 
+{!$Record.Requested_Fee__c}/{!numberOfDays}, 
+{!$Record.ASF_Final_Amount__c}/{!numberOfDays})</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>billingDatesDifference</name>
+        <dataType>Number</dataType>
+        <expression>IF(
+NOT(ISBLANK({!$Record.Revised_Billing_End_Date__c})), 
+{!$Record.Revised_Billing_End_Date__c}-{!$Record.Billing_Start_Date__c}, 
+{!$Record.Billing_End_date__c}-{!$Record.Billing_Start_Date__c})+1</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <description>If Revised present consider that or else use end date</description>
+        <name>endDate_Revised</name>
+        <dataType>Date</dataType>
+        <expression>IF(
+  NOT(ISBLANK({!$Record.Revised_Billing_End_Date__c})), 
+  {!$Record.Revised_Billing_End_Date__c}, 
+  {!$Record.Billing_End_Date__c}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>isLeapYear</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(
+    AND(
+        MOD(YEAR({!$Record.Billing_Start_Date__c}), 4) = 0,
+        OR(
+            MOD(YEAR({!$Record.Billing_Start_Date__c}), 100) != 0,
+            MOD(YEAR({!$Record.Billing_Start_Date__c}), 400) = 0
+        ),
+        DATE(YEAR({!$Record.Billing_Start_Date__c}), 2, 29) &gt;= {!$Record.Billing_Start_Date__c},
+        DATE(YEAR({!$Record.Billing_Start_Date__c}), 2, 29) &lt;= 
+        IF(
+            ISBLANK({!$Record.Revised_Billing_End_Date__c}),
+            {!$Record.Billing_End_Date__c},
+            {!$Record.Revised_Billing_End_Date__c}
+        )
+    ),
+    AND(
+        MOD(YEAR(
+            IF(
+                ISBLANK({!$Record.Revised_Billing_End_Date__c}),
+                {!$Record.Billing_End_Date__c},
+                {!$Record.Revised_Billing_End_Date__c}
+            )
+        ), 4) = 0,
+        OR(
+            MOD(YEAR(
+                IF(
+                    ISBLANK({!$Record.Revised_Billing_End_Date__c}),
+                    {!$Record.Billing_End_Date__c},
+                    {!$Record.Revised_Billing_End_Date__c}
+                )
+            ), 100) != 0,
+            MOD(YEAR(
+                IF(
+                    ISBLANK({!$Record.Revised_Billing_End_Date__c}),
+                    {!$Record.Billing_End_Date__c},
+                    {!$Record.Revised_Billing_End_Date__c}
+                )
+            ), 400) = 0
+        ),
+        DATE(YEAR(
+            IF(
+                ISBLANK({!$Record.Revised_Billing_End_Date__c}),
+                {!$Record.Billing_End_Date__c},
+                {!$Record.Revised_Billing_End_Date__c}
+            )
+        ), 2, 29) &gt;= {!$Record.Billing_Start_Date__c},
+        DATE(YEAR(
+            IF(
+                ISBLANK({!$Record.Revised_Billing_End_Date__c}),
+                {!$Record.Billing_End_Date__c},
+                {!$Record.Revised_Billing_End_Date__c}
+            )
+        ), 2, 29) &lt;= 
+        IF(
+            ISBLANK({!$Record.Revised_Billing_End_Date__c}),
+            {!$Record.Billing_End_Date__c},
+            {!$Record.Revised_Billing_End_Date__c}
+        )
+    )
+)</expression>
+    </formulas>
+    <formulas>
+        <description>to check the record</description>
+        <name>isNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <name>numberOfDays</name>
+        <dataType>Number</dataType>
+        <expression>ADDMONTHS({!$Record.Billing_Start_Date__c},12)-{!$Record.Billing_Start_Date__c}</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <description>Based on Billing Duration</description>
+        <name>numberOfDays_IPO</name>
+        <dataType>Number</dataType>
+        <expression>IF(
+  ISPICKVAL({!$Record.Billing_Duration__c}, &apos;Yearly&apos;),
+  ADDMONTHS({!$Record.Billing_Start_Date__c}, 12) - {!$Record.Billing_Start_Date__c},
+  IF(
+    ISPICKVAL({!$Record.Billing_Duration__c}, &apos;Half-Yearly&apos;),
+    ADDMONTHS({!$Record.Billing_Start_Date__c}, 6) - {!$Record.Billing_Start_Date__c},
+    IF(
+      ISPICKVAL({!$Record.Billing_Duration__c}, &apos;Quarterly&apos;),
+      ADDMONTHS({!$Record.Billing_Start_Date__c}, 3) - {!$Record.Billing_Start_Date__c},
+      null
+    )
+  )
+)</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>revised_ASF_IPO</name>
+        <dataType>Currency</dataType>
+        <expression>IF(NOT(ISBLANK({!$Record.Requested_Fee__c})), {!$Record.Requested_Fee__c}, {!$Record.ASF_Final_Amount__c})</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>revised_IRF_IPO</name>
+        <dataType>Currency</dataType>
+        <expression>IF(NOT(ISBLANK({!$Record.Revised_IRF__c})), {!$Record.Revised_IRF__c}, {!$Record.IRF_Final_Amount__c})</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>Update Amount to be billed for Surv. case {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Amount to be billed for Surv. case</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Amount_to_be_Billed_for_Surveillance</name>
+        <label>Update Amount to be Billed for Surveillance</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Amount_to_Be_Billed__c</field>
+            <value>
+                <elementReference>amountToBeBilled</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Billing_Dates_Difference__c</field>
+            <value>
+                <elementReference>billingDatesDifference</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>-Amount to Be Billed</description>
+        <name>Update_Opportunity</name>
+        <label>Update Opportunity</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Amount_to_Be_Billed__c</field>
+            <value>
+                <elementReference>amtToBeBilled_IPO</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_for_ASF</targetReference>
+        </connector>
+        <filterFormula>{!$Record.RecordType.DeveloperName}=&apos;Surveillance&apos;</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <triggerOrder>965</triggerOrder>
+</Flow>

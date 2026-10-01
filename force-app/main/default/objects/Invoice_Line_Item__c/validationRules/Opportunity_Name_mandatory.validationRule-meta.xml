@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Name_mandatory</fullName>
+    <active>true</active>
+    <description>When Is First InvoiceLine Item is true then Opportunity Cannot be null</description>
+    <errorConditionFormula>AND(isFirst_InvoiceLine_Item__c = True , Opportunity_Name__c = NULL)</errorConditionFormula>
+    <errorMessage>Please select Opportunity</errorMessage>
+</ValidationRule>

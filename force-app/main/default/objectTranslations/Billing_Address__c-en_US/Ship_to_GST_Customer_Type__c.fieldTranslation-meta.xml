@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Ship-to GST Customer Type --></label>
+    <name>Ship_to_GST_Customer_Type__c</name>
+    <picklistValues>
+        <masterLabel>Export</masterLabel>
+        <translation><!-- Export --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Registered</masterLabel>
+        <translation><!-- Registered --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEZ Unit</masterLabel>
+        <translation><!-- SEZ Unit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unregistered</masterLabel>
+        <translation><!-- Unregistered --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

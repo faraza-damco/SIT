@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Invoice</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Invoices</value>
+    </caseValues>
+    <layouts>
+        <layout>Credit Note Page Layout</layout>
+        <sections>
+            <label><!-- Credit Note Details --></label>
+            <section>Credit Note Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Instrument Details --></label>
+            <section>Instrument Details</section>
+        </sections>
+        <sections>
+            <label><!-- Invoice Line Information --></label>
+            <section>Invoice Line Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Inter Branch Invoice</layout>
+        <sections>
+            <label><!-- Amount Details --></label>
+            <section>Amount Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Invoice Details --></label>
+            <section>Invoice Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Invoice Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Invoice Page Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Details --></label>
+            <section>Customer Details</section>
+        </sections>
+        <sections>
+            <label><!-- GST Details --></label>
+            <section>GST Details</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Cancel IRN --></label>
+        <name>Cancel_IRN</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Cancel Invoice --></label>
+        <name>Cancel_Invoice</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Generate Credit Note --></label>
+        <name>Generate_Credit_Note</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Generate IRN Number --></label>
+        <name>Generate_IRN_Number</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Generate Invoice --></label>
+        <name>Generate_Invoice</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Get Signature --></label>
+        <name>Get_Signature</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Initiate Tax Invoice --></label>
+        <name>Initiate_Tax_Invoice</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Send To Client --></label>
+        <name>Send_To_Client</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Credit Note --></label>
+        <name>Credit_Note</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Inter-Branch Invoice --></label>
+        <name>Inter_Branch_Invoice</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Invoice --></label>
+        <name>Invoice</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Credit Note can only be created against an invoice with &apos;Tax Invoice&apos; status only. --></errorMessage>
+        <name>Credit_Note_Creation_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invoice Cannot be Generated when Opportunity Billing Status is Deferred or Hold or INC or Exit --></errorMessage>
+        <name>Deferred_Opportunity_is_true</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- An invoice can only be generated when the opportunity is &apos;Closed Won&apos; and the Billing Status of the opportunity is &apos;To Be Billed&apos; --></errorMessage>
+        <name>Invoice_Creation_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invoice Status cannot be changed to Proforma Invoice after Tax Invoice and Initiate Tax Invoice. --></errorMessage>
+        <name>Invoice_Status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invoice Status can only be &apos;Proforma Invoice&apos; or &apos;Initiate Tax Invoice&apos; for new Invoice --></errorMessage>
+        <name>Invoice_Status_Selection</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Currency Exchange Rate field cannot have a negative value. --></errorMessage>
+        <name>No_Negative_Value</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please update Tax /GST Classification in Billing Address --></errorMessage>
+        <name>TaxGSTClassification_Mandatory_for_Inv</name>
+    </validationRules>
+</CustomObjectTranslation>

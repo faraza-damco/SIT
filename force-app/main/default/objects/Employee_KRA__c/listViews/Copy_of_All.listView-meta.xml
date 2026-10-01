@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_All</fullName>
+    <columns>NAME</columns>
+    <columns>Quarter__c</columns>
+    <columns>Financial_Year__c</columns>
+    <columns>Total_Target__c</columns>
+    <columns>Total_Achievement__c</columns>
+    <columns>Total_achieved__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Employee_KRA__c.Quarterly</value>
+    </filters>
+    <label>Quarterly Employee KRA</label>
+</ListView>

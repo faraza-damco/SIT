@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <customErrors>
+        <name>Inactive_Account</name>
+        <label>Inactive Account</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <customErrorMessages>
+            <errorMessage>Billing Address creation/updation is not allowed for Inactive Account</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>Chech_for_Account_Status</name>
+        <label>Chech for Account Status</label>
+        <locationX>248</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Check_for_is_Primary_on_Billing_Address</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Inactive</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account_Name__r.Account_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Inactive</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Inactive_Account</targetReference>
+            </connector>
+            <label>Inactive</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_for_is_Primary_on_Billing_Address</name>
+        <label>Check for is_Primary on Billing Address</label>
+        <locationX>446</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>is_Primary_is_Checked</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Is_Primary_Billing_Address__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Primary_Address_Fields_on_Account</targetReference>
+            </connector>
+            <label>is_Primary is Checked</label>
+        </rules>
+    </decisions>
+    <description>To update Primary fields on Account</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>Ship_to_GST_CustomerType</name>
+        <dataType>String</dataType>
+        <expression>IF(
+AND(
+ISPICKVAL({!$Record.Tax_GST_Classification__c}, &quot;Non-SEZ&quot;),
+ NOT(ISBLANK( {!$Record.GSTN__c}))
+),
+ &quot;Register&quot;, 
+IF(AND(
+ISPICKVAL({!$Record.Tax_GST_Classification__c}, &quot;Non-SEZ&quot;),
+ (ISBLANK( {!$Record.GSTN__c}))
+),
+ &quot;UnRegister&quot;, 
+IF(
+OR(
+ISPICKVAL({!$Record.Tax_GST_Classification__c}, &quot;SEZ Without Tax&quot;),
+ ISPICKVAL({!$Record.Tax_GST_Classification__c}, &quot;SEZ With Tax&quot;)),
+
+ &quot;SEZ Unit&quot;, 
+IF(ISPICKVAL({!$Record.Tax_GST_Classification__c}, &quot;Export&quot;),
+ &quot;Export&quot;, &quot;&quot;
+))))</expression>
+    </formulas>
+    <interviewLabel>Update is_Primary Address Fields on Account {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Primary Address Fields on Account</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Primary_Address_Fields_on_Account</name>
+        <label>Update Primary Address Fields on Account</label>
+        <locationX>314</locationX>
+        <locationY>539</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Account_Name__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Account_Classification__c</field>
+            <value>
+                <elementReference>$Record.Tax_GST_Classification__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Billing_Address__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Primary_City__c</field>
+            <value>
+                <elementReference>$Record.Billing_City__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Primary_Country__c</field>
+            <value>
+                <elementReference>$Record.BillingCountry__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Primary_GST_Number__c</field>
+            <value>
+                <elementReference>$Record.GSTN__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Primary_State__c</field>
+            <value>
+                <elementReference>$Record.BillingState__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Primary_Street__c</field>
+            <value>
+                <elementReference>$Record.Billing_Street__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Primary_Zip_Postal_Code__c</field>
+            <value>
+                <elementReference>$Record.Billing_Zip_Postal_Code__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <start>
+        <locationX>122</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Chech_for_Account_Status</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Account_Name__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Billing_Address__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

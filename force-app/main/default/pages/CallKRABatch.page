@@ -1,0 +1,4 @@
+<apex:page standardController="Employee_KRA__c"  extensions="CallKRABatch" showQuickActionVfHeader="true" action="{!CalculateKra}" >
+  
+ 
+</apex:page>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>All Fields</label>
+    <protected>false</protected>
+    <values>
+        <field>Opportunity_Fields__c</field>
+        <value xsi:type="xsd:string">Instrument_type_1__c,Instrument_type_2__c,Instrument_type_3__c,Instrument_type_4__c,Instrument_Category__c,Surveillance_Fee_Revision_Maximum_new__c,Scheme_Trust_Name__c,Crore_or_Million__c,Rated_Entity__c,Delayed_Payment_Interest_Rate__c,Cash_Flow_Pool__c,MPRA_SoW_Reference_Number_iflow__c,MPRA_Sent_Date__c,Mandate_ID__c,VoD_in_crore__c,CurrencyIsoCode,IRF_Final_Amount__c,ASF_Final_Amount__c,Account.Name,BillingAddress__r.Billing_Street__c,BillingAddress__r.Billing_City__c,BillingAddress__r.BillingState__c,BillingAddress__r.Billing_Zip_Postal_Code__c,BillingAddress__r.BillingCountry__c,Signing_authority__r.Name,Signing_authority__r.Title,Signing_authority__r.Designation__c,Statement_of_Work_No__c,SOW_Effective_Date__c,Rated_Entity__r.PAN_Number__c,Rated_Entity__r.TAN_Number__c,Rated_Entity__r.Shippingcity,Rated_Entity__r.ShippingState,Rated_Entity__r.ShippingPostalcode,Rated_Entity__r.ShippingStreet,Rated_Entity__r.ShippingCountry,Opp_ICRA_Branch__c,Opp_ICRA_Branch__r.Name,Opp_ICRA_Branch__r.Street__c,Opp_ICRA_Branch__r.City__c,Opp_ICRA_Branch__r.State__c,Opp_ICRA_Branch__r.GSTIN__c,Opp_ICRA_Branch__r.PAN__c,CurrencyDisplayFormula__c,Payment_Terms__c,Rated_Entity__r.Name,PAN_Number__c,TAN_Number__c,GST_Number__c,Minimum_ASF__c,Initial_Rating_Fee_as_per_Agreement_BPS__c,ASF_as_per_Agreement_BPS__c,ASF_Agreement_with_Client__c,Opp_ICRA_Branch__r.Zip_Postal_Code__c</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SF_Master</fullName>
+    <columns>NAME</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>SL_NO__c</columns>
+    <columns>Min_Yield__c</columns>
+    <columns>Max_Yield__c</columns>
+    <columns>Target_of_increase__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>Max_ASF_Yield__c</columns>
+    <columns>Min_ASF_Amount__c</columns>
+    <columns>Min_ASF_Yield__c</columns>
+    <columns>Min_IRF_Amount__c</columns>
+    <columns>Target_ASF_Increase__c</columns>
+    <columns>Valid_Value__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Sector_Location_Master__c.SF_Master</value>
+    </filters>
+    <label>SF Master</label>
+</ListView>

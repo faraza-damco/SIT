@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SECG_Segment__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND(Classification__c=&apos;SECG&apos;,Customer_Fee_Type__c=&apos;Cap&apos;) , &apos;SECG CAP Client&apos;,
+IF(AND(Classification__c=&apos;SECG&apos;,Customer_Fee_Type__c=&apos;Non - Cap&apos;,Government_Type__c	!=&apos;&apos;), &apos;SECG PSU Client&apos;,
+IF(AND(Classification__c=&apos;SECG&apos;,Customer_Fee_Type__c=&apos;Non - Cap&apos;,Government_Type__c=&apos;&apos;, ISPICKVAL(Instrument_type_1__c,&apos;Structured Finance&apos;)), &apos;SECG Structured Finance&apos;, 
+IF(Classification__c=&apos;SECG&apos;,&apos;SECG-Other&apos;,&apos;&apos;)
+)
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SECG Segment</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

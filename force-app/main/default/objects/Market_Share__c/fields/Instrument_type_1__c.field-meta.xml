@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Instrument_type_1__c</fullName>
+    <label>Instrument type 1</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Business_segment__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>GP_Instrument_Type_1</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Rating</controllingFieldValue>
+            <valueName>Structured Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rating</controllingFieldValue>
+            <valueName>Non Structured Finance</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

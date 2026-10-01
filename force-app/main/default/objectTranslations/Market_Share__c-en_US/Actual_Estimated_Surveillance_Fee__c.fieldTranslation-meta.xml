@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Actual/Estimated Surveillance  Fee --></label>
+    <name>Actual_Estimated_Surveillance_Fee__c</name>
+</CustomFieldTranslation>

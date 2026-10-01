@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>Instrument__c</columns>
+    <columns>Sector__c</columns>
+    <columns>Location__c</columns>
+    <columns>Valid_Value__c</columns>
+    <columns>SL_NO__c</columns>
+    <columns>Min_Yield__c</columns>
+    <columns>Max_Yield__c</columns>
+    <columns>Target_of_increase__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Sector_Location_Master__c.Location_Master,Sector_Location_Master__c.SF_Master,Sector_Location_Master__c.Sector_Master</value>
+    </filters>
+    <label>ALL</label>
+</ListView>

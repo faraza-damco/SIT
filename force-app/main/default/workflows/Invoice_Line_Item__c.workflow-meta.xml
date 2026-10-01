@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Total_Invoice_Amount_Flag</fullName>
+        <field>check_Total_Invoice_Amount_Flag__c</field>
+        <literalValue>1</literalValue>
+        <name>Total Invoice Amount Flag</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_CGST_Invoice_amount</fullName>
+        <field>CGST_Invoice_Amt_Copy__c</field>
+        <formula>CGST_Amount_on_Invoice__c</formula>
+        <name>Update CGST Invoice amount</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_IGST_Invoice_amount</fullName>
+        <field>IGST_for_Invoice_Amt__c</field>
+        <formula>IGST_Amount_on_Invoice__c</formula>
+        <name>Update IGST Invoice amount</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Invoice_Taxable_Amount</fullName>
+        <field>Invoice_Taxable_Amount_copy__c</field>
+        <formula>Invoice_Taxable_Amount__c</formula>
+        <name>Update Invoice Taxable Amount</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_SGST_Invoice_amount</fullName>
+        <field>SGST_UTGST_Invoice_Amt__c</field>
+        <formula>SGST_UTGST_Amount_on_Invoice__c</formula>
+        <name>Update SGST Invoice amount</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Total_Invoice_Amount</fullName>
+        <field>Total_Invoice_Amount_Copy__c</field>
+        <formula>Total_Amount_for_invoice_Amount__c</formula>
+        <name>Update Total Invoice Amount</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Total_Invoice_Amount_WF</fullName>
+        <field>Total_Invoice_Amount_WF__c</field>
+        <formula>Invoice_Taxable_Amount__c + (ROUND(IGST_Amount_on_Invoice__c,0) +  ROUND(CGST_Amount_on_Invoice__c,0) + ROUND(SGST_UTGST_Amount_on_Invoice__c,0))</formula>
+        <name>Update Total Invoice Amount WF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Check Total Invoice Amount</fullName>
+        <actions>
+            <name>Total_Invoice_Amount_Flag</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Invoice_Line_Item__c.Total_Amount_for_invoice_Amount__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Copy GST rate fields</fullName>
+        <actions>
+            <name>Update_CGST_Invoice_amount</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_IGST_Invoice_amount</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_SGST_Invoice_amount</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Invoice_Line_Item__c.Account_Classification__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Invoice fields rolling up on Invoice Object</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Invoice Line Item Fields</fullName>
+        <actions>
+            <name>Update_Invoice_Taxable_Amount</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Total_Invoice_Amount</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Total_Invoice_Amount_WF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Invoice_Line_Item__c.Account_Classification__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Update Total Invoice Amount Copy</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

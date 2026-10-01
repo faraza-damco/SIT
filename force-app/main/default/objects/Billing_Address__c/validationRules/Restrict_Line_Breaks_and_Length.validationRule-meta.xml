@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Line_Breaks_and_Length</fullName>
+    <active>false</active>
+    <description>To restrict the length to less than 100 characters</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(Billing_Street__c)),
+OR(
+    LEN(Billing_Street__c) &gt; 100,
+    REGEX(Billing_Street__c, &apos;(.*\r?\n.*)*&apos;),
+				REGEX(Billing_Street__c, &apos;.*\\s{2,}+.*&apos;)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Billing_Street__c</errorDisplayField>
+    <errorMessage>The Billing Street must not contain line breaks, or double white spaces and must be 100 characters or less</errorMessage>
+</ValidationRule>

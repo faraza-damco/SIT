@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Invoice Line Item</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Invoice Line Items</value>
+    </caseValues>
+    <layouts>
+        <layout>Invoice Line Item Layout</layout>
+        <sections>
+            <label><!-- Advance Amount --></label>
+            <section>Advance Amount</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Instrument Details --></label>
+            <section>Instrument Details</section>
+        </sections>
+        <sections>
+            <label><!-- Invoice Line Details --></label>
+            <section>Invoice Line Details</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Invoice Line Item Cannot be Generated when Opportunity Billing Status is Deferred or Hold or INC or Exit --></errorMessage>
+        <name>Deferred_Opportunity_is_true</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Billing Duration on opportunity is mandatory --></errorMessage>
+        <name>INVLI_Creation_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A line item can only be generated when the opportunity is &apos;Closed Won&apos; and the Billing Status of the opportunity is &apos;To Be Billed&apos; --></errorMessage>
+        <name>INVLI_Creation_Rule_II</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select Opportunity --></errorMessage>
+        <name>Opportunity_Name_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Select the Relevant Opportunity --></errorMessage>
+        <name>To_get_Opportunity_from_related_Account</name>
+    </validationRules>
+</CustomObjectTranslation>

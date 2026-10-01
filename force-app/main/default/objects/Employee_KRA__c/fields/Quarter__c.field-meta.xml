@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quarter__c</fullName>
+    <label>Quarter</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Q1-April-June</fullName>
+                <default>false</default>
+                <label>Q1-April-June</label>
+            </value>
+            <value>
+                <fullName>Q2-July-September</fullName>
+                <default>false</default>
+                <label>Q2-July-September</label>
+            </value>
+            <value>
+                <fullName>Q3-October-December</fullName>
+                <default>false</default>
+                <label>Q3-October-December</label>
+            </value>
+            <value>
+                <fullName>Q4-January-March</fullName>
+                <default>false</default>
+                <label>Q4-January-March</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

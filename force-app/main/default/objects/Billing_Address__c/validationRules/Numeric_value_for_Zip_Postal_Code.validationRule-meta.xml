@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Numeric_value_for_Zip_Postal_Code</fullName>
+    <active>true</active>
+    <description>Billing Zip/Postal Code should only contain a numeric value</description>
+    <errorConditionFormula>NOT(
+    AND(
+        LEN(Billing_Zip_Postal_Code__c) &lt;= 10,
+		IF(
+            ISPICKVAL(BillingCountry__c, &apos;India&apos;),
+            REGEX(Billing_Zip_Postal_Code__c, &apos;^[1-9][0-9]{5}$&apos;),
+            TRUE
+        )
+    )
+)</errorConditionFormula>
+    <errorDisplayField>Billing_Zip_Postal_Code__c</errorDisplayField>
+    <errorMessage>The maximum length of the pin code should be 10 characters. If the Billing Country is India, the pin code must be exactly 6 digits long and should not start with zero.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>All_opportunity_Read_only_access</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>All opportunity Read only access</label>
+        <sharedTo>
+            <group>All_Readonly_Access</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>BD_Team_Classification_Formula__c</field>
+            <operation>notContain</operation>
+            <value>ABCD</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Data_Shared_with_Central_Billing_Team</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Edit Access is given with respect to update the PR date</description>
+        <label>Data Shared with Central Billing Team</label>
+        <sharedTo>
+            <group>ICRA_Central_Billing_Team</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>BD_Team_Classification_Formula__c</field>
+            <operation>notEqual</operation>
+            <value>abcd</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MIS_Sales_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>The sales profile users those are part of the MIS team.</description>
+        <label>MIS Sales Users</label>
+        <sharedTo>
+            <group>MIS_Sales_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>AccountId</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Opp_Full_SECG_data_access</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Opp Full SECG data access</label>
+        <sharedTo>
+            <group>SECG_Data_Access</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>New Business</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Opp_access_for_CBT</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Opp access for CBT</label>
+        <sharedTo>
+            <group>CBT_Team_Opp_Access</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Proforma_Invoice_Required__c</field>
+            <operation>equals</operation>
+            <value>Yes,No</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Research_opportunity_access</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Research opportunity access</label>
+        <sharedTo>
+            <group>Research_opportunity_access</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Business_Segment__c</field>
+            <operation>equals</operation>
+            <value>Research</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Access_to_Sanket_Kulkarni</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Access to Sanket Kulkarni</label>
+        <sharedTo>
+            <group>Opportunity_Access_to_Sanket_Kulkarni</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Opportunities_of_Animesh_Jaimin_and_Ma</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Corporate_TL_W2_Team_Member_Ahmedabad_role_Acess_to_Animesh</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Corporate : TL-W2-Team Member-Ahmedabad role Acess to Animesh</label>
+        <sharedTo>
+            <group>Opportunity_Access_to_Animesh</group>
+        </sharedTo>
+        <sharedFrom>
+            <role>Corporate_TL_W2_Team_Member_Ahmedabad</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Opportunity_Access_to_Sanket_Kulkarni_Lead_West_2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Opportunity Access to Sanket Kulkarni</description>
+        <label>Opportunity Access to Sanket Kulkarni Lead West 2</label>
+        <sharedTo>
+            <group>Opportunity_Access_to_Sanket_Kulkarni</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Corporate_Team_Lead_West_2</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>opportunity_access_to_sanket_west</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Access of opportunities to sanket kulkarni</description>
+        <label>opportunity access to sanket west</label>
+        <sharedTo>
+            <group>Opportunity_Access_to_Sanket_Kulkarni</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Corporate_Team_Lead_West</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

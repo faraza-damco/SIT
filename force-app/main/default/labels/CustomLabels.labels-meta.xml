@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Account_Cap_Amount</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account Cap Amount</shortDescription>
+        <value>100000</value>
+    </labels>
+    <labels>
+        <fullName>BulkEmailQuery</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BulkEmailQuery</shortDescription>
+        <value>SELECT Id,Accountid FROM opportunity where ((RecordType.name=&apos;New Business&apos; and stageName=&apos;Closed Won&apos; ) or (RecordType.name=&apos;Surveillance&apos;) ) and Instrument_type_4__c in (&apos;Bank Loan Rating Fresh&apos;,&apos;Bank Loan Rating Enhancement&apos;,&apos;Long Term Borrowing Programme&apos;,
+&apos;Short Term Borrowing Programme&apos;,&apos;Various Debt Instruments&apos;)</value>
+    </labels>
+    <labels>
+        <fullName>BulkEmailTemplate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BulkEmailTemplate</shortDescription>
+        <value>BulkEmailTemplate</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Note_Description</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Credit Note Description</shortDescription>
+        <value>Credit Rating Agency Services</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Note_Research_Description</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Credit Note Research Description</shortDescription>
+        <value>Market Research Agency Service</value>
+    </labels>
+    <labels>
+        <fullName>ECG_1st_Group_Min</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ECG 1st group Min pulled from Pricing Structure</shortDescription>
+        <value>0</value>
+    </labels>
+    <labels>
+        <fullName>ECG_2nd_Group_Min</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ECG 2nd Group Min Pulled from Pricing structure</shortDescription>
+        <value>50.01</value>
+    </labels>
+    <labels>
+        <fullName>Email_Address_Billing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email_Address_Billing</shortDescription>
+        <value>finance@finance.com</value>
+    </labels>
+    <labels>
+        <fullName>ICRA_Receivables_Mgmt</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ICRA Receivables Mgmt</shortDescription>
+        <value>icra.receivablesmanagement@icraindia.com.invalid</value>
+    </labels>
+    <labels>
+        <fullName>IPO_Invoice_Description</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in Invoice PDF</shortDescription>
+        <value>Other Support Services n.e.c</value>
+    </labels>
+    <labels>
+        <fullName>IRN_Cancel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IRN Cancel</shortDescription>
+        <value>https://api.qa.einvoice.aw.navigatetax.pwc.co.in/qa/v1/en/cancel</value>
+    </labels>
+    <labels>
+        <fullName>IRN_Content_Type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IRN Content Type</shortDescription>
+        <value>application/json</value>
+    </labels>
+    <labels>
+        <fullName>IRN_Customer_Type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IRN Customer Type</shortDescription>
+        <value>259</value>
+    </labels>
+    <labels>
+        <fullName>IRN_Token</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IRN Token</shortDescription>
+        <value>njfNCuNZEKuRsmuQ50KXUw</value>
+    </labels>
+    <labels>
+        <fullName>Invoice_Rollup_Filter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Invoice Rollup Filter</shortDescription>
+        <value>Canceled</value>
+    </labels>
+    <labels>
+        <fullName>Jayanta_Chatterjee_Email</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Jayanta Chatterjee Email</shortDescription>
+        <value>niiyaz1@damcogroup.com</value>
+    </labels>
+    <labels>
+        <fullName>L_Shivakumar</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>L Shivakumar</shortDescription>
+        <value>bharatj@damcogroup.com</value>
+    </labels>
+    <labels>
+        <fullName>MPRA_SoW_Email</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MPRA_SoW_Email</shortDescription>
+        <value>mpra_sow_inboundemail@m9t8esr9466b5vcp1dk877vlq5ezzbrpaekvxo156vp2nl4br.c4-40lhamai.ind22s.apex.sandbox.salesforce.com</value>
+    </labels>
+    <labels>
+        <fullName>Manual_Push_Timer</fullName>
+        <categories>iFlow</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Manual Push Timer</shortDescription>
+        <value>15</value>
+    </labels>
+    <labels>
+        <fullName>Market_Research_Description</fullName>
+        <categories>Used in Invoice PDF</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Market Research Description</shortDescription>
+        <value>Market Research Agency Service</value>
+    </labels>
+    <labels>
+        <fullName>PDF_Error_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PDF Error Message</shortDescription>
+        <value>Error message</value>
+    </labels>
+    <labels>
+        <fullName>PI_Batch_Start_Date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PI Batch Start Date</shortDescription>
+        <value>9</value>
+    </labels>
+    <labels>
+        <fullName>PWC_End_Point_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PWC End Point URL</shortDescription>
+        <value>https://api.qa.einvoice.aw.navigatetax.pwc.co.in/qa/v1/en/push</value>
+    </labels>
+    <labels>
+        <fullName>Proforma_Invoice_Generation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Proforma Invoice Generation</shortDescription>
+        <value>60</value>
+    </labels>
+    <labels>
+        <fullName>Proforma_Invoice_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Proforma Invoice Text</shortDescription>
+        <value>This is not a GST tax invoice and should not be considered for tax purposes.</value>
+    </labels>
+    <labels>
+        <fullName>Sales_ICRA_Email</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales ICRA Email</shortDescription>
+        <value>sales@icraindia.info.invalid</value>
+    </labels>
+    <labels>
+        <fullName>Sez_and_Non_Sez_Static_text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sez and Non-Sez Static text</shortDescription>
+        <value>SUPPLY MEANT FOR EXPORT/SUPPLY TO SEZ UNIT OR SEZ DEVELOPER FOR AUTHORISED OPERATIONS UNDER LETTER OF UNDERTAKING WITHOUT PAYMENT OF INTEGRATED TAX</value>
+    </labels>
+    <labels>
+        <fullName>Signing_Authority_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Signing Authority ID</shortDescription>
+        <value>0052w0000071a28AAA</value>
+    </labels>
+    <labels>
+        <fullName>Signing_Authority_MPRA_SoW</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Signing Authority MPRA SoW</shortDescription>
+        <value>prodICRA</value>
+    </labels>
+    <labels>
+        <fullName>Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status</shortDescription>
+        <value>true</value>
+    </labels>
+    <labels>
+        <fullName>Surveillance_Invoice_Description</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Surveillance Invoice Description</shortDescription>
+        <value>Credit Rating Agency Services</value>
+    </labels>
+    <labels>
+        <fullName>Tax_Invoice_Generation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Tax Invoice Generation</shortDescription>
+        <value>15</value>
+    </labels>
+    <labels>
+        <fullName>Update_Sales_Team_of_Lead</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Update Sales Team of Lead</shortDescription>
+        <value>Active</value>
+    </labels>
+    <labels>
+        <fullName>Update_Sales_Team_of_Market_share</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Update Sales Team of Market share</shortDescription>
+        <value>Active</value>
+    </labels>
+    <labels>
+        <fullName>Update_Sales_Team_of_Opportunity</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Update Sales Team of Opportunity</shortDescription>
+        <value>Inactive</value>
+    </labels>
+    <labels>
+        <fullName>ers_CancelButton</fullName>
+        <categories>buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>ers_ClearFilterAction</fullName>
+        <categories>actions</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Clear Filter</shortDescription>
+        <value>Clear Filter</value>
+    </labels>
+    <labels>
+        <fullName>ers_ClearSelectionButton</fullName>
+        <categories>buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Clear Selection</shortDescription>
+        <value>Clear Selection</value>
+    </labels>
+    <labels>
+        <fullName>ers_ColumnHeader</fullName>
+        <categories>headers</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Column</shortDescription>
+        <value>Column</value>
+    </labels>
+    <labels>
+        <fullName>ers_EmptyTableMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Empty</shortDescription>
+        <value>This table currently has no data to display</value>
+    </labels>
+    <labels>
+        <fullName>ers_ErrorRequiredEntry</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Required</shortDescription>
+        <value>This is a required entry.  At least 1 row must be selected.</value>
+    </labels>
+    <labels>
+        <fullName>ers_FilterHeader</fullName>
+        <categories>headers</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Filter</shortDescription>
+        <value>Filter</value>
+    </labels>
+    <labels>
+        <fullName>ers_LabelHeader</fullName>
+        <categories>headers</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label</shortDescription>
+        <value>Label</value>
+    </labels>
+    <labels>
+        <fullName>ers_SaveButton</fullName>
+        <categories>buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>ers_SetFilterAction</fullName>
+        <categories>actions</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Set Filter</shortDescription>
+        <value>Set Filter</value>
+    </labels>
+    <labels>
+        <fullName>fsc_AccessLevel</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccessLevel</shortDescription>
+        <value>Access Level</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Back</fullName>
+        <categories>Buttons,Filters,Title</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Back</shortDescription>
+        <value>Back</value>
+    </labels>
+    <labels>
+        <fullName>fsc_ButtonIsNotSupportedMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ButtonIsNotSupportedMessage</shortDescription>
+        <value>Following buttons are note supported:</value>
+    </labels>
+    <labels>
+        <fullName>fsc_ConditionLogicHelpText</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ConditionLogicHelpText</shortDescription>
+        <value>Use parentheses, AND, OR, and NOT to customize the logic. For example, if you enter “(1 AND 2 AND 3) OR 4”, the flow evaluates whether the first three conditions are true or only the fourth condition is true.</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Delete</fullName>
+        <categories>labels, buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delete</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>fsc_FieldIsNotSupportedMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FieldIsNotSupportedMessage</shortDescription>
+        <value>Following fields are not supported:</value>
+    </labels>
+    <labels>
+        <fullName>fsc_FieldTypeNotSuportedMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>fsc_FieldTypeNotSuportedMessage</shortDescription>
+        <value>You provided an unsupported value for the DataTypeFilter input on Object and Field Picker. Currently the only supported value is ’picklist’</value>
+    </labels>
+    <labels>
+        <fullName>fsc_For</fullName>
+        <categories>Buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>For</shortDescription>
+        <value>For</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Key_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Key Label</shortDescription>
+        <value>Key</value>
+    </labels>
+    <labels>
+        <fullName>fsc_LackingPermissions</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LackingPermissions</shortDescription>
+        <value>You don\&apos;t have the proper permissions for ths action</value>
+    </labels>
+    <labels>
+        <fullName>fsc_ManagerEmptyMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ManagerEmptyMessage</shortDescription>
+        <value>&quot;Manager APEX Class&quot; can not be empty</value>
+    </labels>
+    <labels>
+        <fullName>fsc_MultipleGroupsForRole</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MultipleGroupsForRole</shortDescription>
+        <value>There are multiple groups for that role</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Name</fullName>
+        <categories>quicklinks, Labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>fsc_NonePicklistValueLabel</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NonePicklistValueLabel</shortDescription>
+        <value>-- None --</value>
+    </labels>
+    <labels>
+        <fullName>fsc_OWDReadWrite</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OWDReadWrite</shortDescription>
+        <value>Sharing Settings must be private or public read/write to enable manual sharing</value>
+    </labels>
+    <labels>
+        <fullName>fsc_OwnerAdminModify</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OwnerAdminModify</shortDescription>
+        <value>Only the record owner or administrators can modify permissions</value>
+    </labels>
+    <labels>
+        <fullName>fsc_PublicGroups</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PublicGroups</shortDescription>
+        <value>Public Groups</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Queues</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Queues</shortDescription>
+        <value>Queues</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Read</fullName>
+        <categories>labels, buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Read</shortDescription>
+        <value>Read</value>
+    </labels>
+    <labels>
+        <fullName>fsc_ReadWrite</fullName>
+        <categories>labels, buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ReadWrite</shortDescription>
+        <value>Read / Write</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Reason</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Reason</shortDescription>
+        <value>Reason</value>
+    </labels>
+    <labels>
+        <fullName>fsc_RelatedUsers</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RelatedUsers</shortDescription>
+        <value>Related Users</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Roles</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Roles</shortDescription>
+        <value>Roles</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Search</fullName>
+        <categories>Actions,Buttons,quicklinks</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Search in</shortDescription>
+        <value>Search in</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SearchFor</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SearchFor</shortDescription>
+        <value>For</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SetAccessLevel</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SetAccessLevel</shortDescription>
+        <value>Set Access Level</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SupportedAddCapabilitiesEmptyMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SupportedAddCapabilitiesEmptyMessage</shortDescription>
+        <value>&quot;Add Capabilities&quot; can not be empty</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SupportedButtonsEmptyMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SupportedButtonsEmptyMessage</shortDescription>
+        <value>&quot;Supported Buttons&quot; can not be empty</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SupportedEditCapabilitiesEmptyMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SupportedEditCapabilitiesEmptyMessage</shortDescription>
+        <value>&quot;Edit Capabilities&quot; can not be empty</value>
+    </labels>
+    <labels>
+        <fullName>fsc_TooManyResultsMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TooManyResultsMessage</shortDescription>
+        <value>Your search found more than 200 results.  Keep typing to make it more specific</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Type</fullName>
+        <categories>Buttons,Filters,Title</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Type</shortDescription>
+        <value>Type</value>
+    </labels>
+    <labels>
+        <fullName>fsc_UserOrGroup</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UserOrGroup</shortDescription>
+        <value>User Or Group</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Users</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Users</shortDescription>
+        <value>Users</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Value_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Value Label</shortDescription>
+        <value>Value</value>
+    </labels>
+    <labels>
+        <fullName>set_CC_email</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>set_CC_email</shortDescription>
+        <value>prasad.mrinal@gmail.com</value>
+    </labels>
+</CustomLabels>

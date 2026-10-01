@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Current_Year__c</fullName>
+    <externalId>false</externalId>
+    <formula>if(AND(Created_Date__c &gt;= DATE( YEAR( TODAY()) ,04,01),Created_Date__c &lt;= DATE( YEAR( TODAY())+1 ,03,31)),&apos;Current Year&apos;,Bill_Year__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Check Current Year</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

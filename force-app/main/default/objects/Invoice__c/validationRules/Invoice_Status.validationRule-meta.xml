@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Status</fullName>
+    <active>true</active>
+    <description>Invoice Status cannot be changed after Tax Invoice.</description>
+    <errorConditionFormula>IF(
+				AND( OR(ISPICKVAL( PRIORVALUE(Invoice_Status__c),&apos;Tax Invoice&apos;),ISPICKVAL( PRIORVALUE(Invoice_Status__c),&apos;Initiate Tax Invoice&apos;)),
+								ISPICKVAL(Invoice_Status__c,&apos;Proforma Invoice&apos;)),true,false)</errorConditionFormula>
+    <errorMessage>Invoice Status cannot be changed to Proforma Invoice after Tax Invoice and Initiate Tax Invoice.</errorMessage>
+</ValidationRule>

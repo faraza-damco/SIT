@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Reason for Credit Note --></label>
+    <name>Reason_for_Credit_Note__c</name>
+    <picklistValues>
+        <masterLabel>Reduction in Limits</masterLabel>
+        <translation><!-- Reduction in Limits --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

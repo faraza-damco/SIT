@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Invoice Status --></label>
+    <name>Invoice_Status__c</name>
+    <picklistValues>
+        <masterLabel>Cancel Due to Credit Note</masterLabel>
+        <translation><!-- Cancel Due to Credit Note --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Canceled</masterLabel>
+        <translation><!-- Canceled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GST Credit Note</masterLabel>
+        <translation><!-- GST Credit Note --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Initiate GST Credit Note</masterLabel>
+        <translation><!-- Initiate GST Credit Note --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Initiate Tax Invoice</masterLabel>
+        <translation><!-- Initiate Tax Invoice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Proforma Invoice</masterLabel>
+        <translation><!-- Proforma Invoice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>QR and IRN - Failed</masterLabel>
+        <translation><!-- QR and IRN - Failed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>QR and IRN - Generated</masterLabel>
+        <translation><!-- QR and IRN - Generated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tax Invoice</masterLabel>
+        <translation><!-- Tax Invoice --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

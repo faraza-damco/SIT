@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>In_Export_country_cant_be_India</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(Tax_GST_Classification__c, &quot;Export&quot;),
+ISPICKVAL(BillingCountry__c, &quot;India&quot;))</errorConditionFormula>
+    <errorMessage>Billing country cannot be India when Tax/GST Classification is Export.</errorMessage>
+</ValidationRule>

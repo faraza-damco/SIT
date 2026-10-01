@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_for_change_in_FY</name>
+        <label>Check for change in FY</label>
+        <locationX>446</locationX>
+        <locationY>395</locationY>
+        <defaultConnector>
+            <targetReference>Check_for_Null_Mandate_ID</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>FY_Changed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_the_latest_opportunity.Bill_Year__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>FinancialYear</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_for_Null_Mandate_ID1</targetReference>
+            </connector>
+            <label>FY Changed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_for_Null_Mandate_ID</name>
+        <label>Check for Null Mandate ID</label>
+        <locationX>710</locationX>
+        <locationY>503</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Mandate_ID__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Mandate_ID</targetReference>
+            </connector>
+            <label>Null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_for_Null_Mandate_ID1</name>
+        <label>Check for Null Mandate ID</label>
+        <locationX>182</locationX>
+        <locationY>503</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Null0</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Mandate_ID__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Mandate_ID1</targetReference>
+            </connector>
+            <label>Null</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <description>FY</description>
+        <name>FinancialYear</name>
+        <dataType>String</dataType>
+        <expression>IF(
+AND(TODAY() &gt;= DATE(YEAR(TODAY()),04,01),
+TODAY()&lt;= DATE(YEAR(TODAY())+1 ,03,31)),
+RIGHT(Text(YEAR( TODAY())), 2) + RIGHT(Text(YEAR( TODAY())+1), 2) , RIGHT(Text(YEAR( TODAY())-1), 2) + RIGHT(Text(YEAR( TODAY())), 2))</expression>
+    </formulas>
+    <formulas>
+        <description>The combination CreatedDate year and Mandate Serial No of the latest record plus one</description>
+        <name>MandateID</name>
+        <dataType>String</dataType>
+        <expression>{!FinancialYear}&amp;&apos;2&apos;&amp;{!MandateSerialWithZeroes}&amp;
+TEXT(IF(ISBLANK({!Get_the_latest_opportunity.Mandate_Serial_No__c}), 
+1, 
+VALUE({!Get_the_latest_opportunity.Mandate_Serial_No__c})+1))</expression>
+    </formulas>
+    <formulas>
+        <name>MandateID_Reset</name>
+        <dataType>String</dataType>
+        <expression>{!FinancialYear}&amp;&apos;2000&apos;&amp;&apos;1&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>MandateSerialNumber</name>
+        <dataType>String</dataType>
+        <expression>TEXT(IF(ISBLANK({!Get_the_latest_opportunity.Mandate_Serial_No__c}), 
+1, 
+VALUE({!Get_the_latest_opportunity.Mandate_Serial_No__c})+1))</expression>
+    </formulas>
+    <formulas>
+        <name>MandateSerialWithZeroes</name>
+        <dataType>String</dataType>
+        <expression>      IF(VALUE({!Get_the_latest_opportunity.Mandate_Serial_No__c})=9,&apos;00&apos;,
+      IF(VALUE({!Get_the_latest_opportunity.Mandate_Serial_No__c})=99,&apos;0&apos;,
+      IF(VALUE({!Get_the_latest_opportunity.Mandate_Serial_No__c})=999,&apos;null&apos;,
+      IF(VALUE({!Get_the_latest_opportunity.Mandate_Serial_No__c})=9999,null,
+      IF(LEN({!Get_the_latest_opportunity.Mandate_Serial_No__c})=1,&apos;000&apos;,
+      IF(LEN({!Get_the_latest_opportunity.Mandate_Serial_No__c})=2,&apos;00&apos;,
+      IF(LEN({!Get_the_latest_opportunity.Mandate_Serial_No__c})=3,&apos;0&apos;,
+      IF(LEN({!Get_the_latest_opportunity.Mandate_Serial_No__c})=4,&apos;null&apos;,
+         &apos;&apos;
+))))))
+)
+)</expression>
+    </formulas>
+    <interviewLabel>Create Mandate ID {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Create Mandate ID</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_the_latest_opportunity</name>
+        <label>Get the latest opportunity</label>
+        <locationX>446</locationX>
+        <locationY>287</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_for_change_in_FY</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Mandate_ID__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Mandate_Serial_No__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Mandate_Serial_No__c</queriedFields>
+        <queriedFields>Bill_Year__c</queriedFields>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Mandate_ID</name>
+        <label>Update Mandate ID</label>
+        <locationX>578</locationX>
+        <locationY>611</locationY>
+        <inputAssignments>
+            <field>Mandate_ID__c</field>
+            <value>
+                <elementReference>MandateID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Mandate_Serial_No__c</field>
+            <value>
+                <elementReference>MandateSerialNumber</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Mandate_ID1</name>
+        <label>Update Mandate ID</label>
+        <locationX>50</locationX>
+        <locationY>611</locationY>
+        <inputAssignments>
+            <field>Mandate_ID__c</field>
+            <value>
+                <elementReference>MandateID_Reset</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Mandate_Serial_No__c</field>
+            <value>
+                <stringValue>1</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>320</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_the_latest_opportunity</targetReference>
+        </connector>
+        <object>Opportunity</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

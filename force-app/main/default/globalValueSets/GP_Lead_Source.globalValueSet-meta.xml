@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Alternate Investment Fund</fullName>
+        <default>false</default>
+        <label>Alternate Investment Fund</label>
+    </customValue>
+    <customValue>
+        <fullName>Banks</fullName>
+        <default>false</default>
+        <label>Banks</label>
+    </customValue>
+    <customValue>
+        <fullName>CA</fullName>
+        <default>false</default>
+        <label>CA</label>
+    </customValue>
+    <customValue>
+        <fullName>Call</fullName>
+        <default>false</default>
+        <label>Call</label>
+    </customValue>
+    <customValue>
+        <fullName>Client Referal</fullName>
+        <default>false</default>
+        <label>Client Referal</label>
+    </customValue>
+    <customValue>
+        <fullName>Consultant</fullName>
+        <default>false</default>
+        <label>Consultant</label>
+    </customValue>
+    <customValue>
+        <fullName>Debt Capital Market</fullName>
+        <default>false</default>
+        <label>Debt Capital Market</label>
+    </customValue>
+    <customValue>
+        <fullName>Fund</fullName>
+        <default>false</default>
+        <label>Fund</label>
+    </customValue>
+    <customValue>
+        <fullName>ICRA Helpdesk</fullName>
+        <default>false</default>
+        <label>ICRA Helpdesk</label>
+    </customValue>
+    <customValue>
+        <fullName>Industry Associations</fullName>
+        <default>false</default>
+        <label>Industry Associations</label>
+    </customValue>
+    <customValue>
+        <fullName>Insurance Companies</fullName>
+        <default>false</default>
+        <label>Insurance Companies</label>
+    </customValue>
+    <customValue>
+        <fullName>Investment Banker</fullName>
+        <default>false</default>
+        <label>Investment Banker</label>
+    </customValue>
+    <customValue>
+        <fullName>Law/Audit/Consulting Firms</fullName>
+        <default>false</default>
+        <label>Law/Audit/Consulting Firms</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing Associates</fullName>
+        <default>false</default>
+        <label>Marketing Associates</label>
+    </customValue>
+    <customValue>
+        <fullName>Merchant Banker</fullName>
+        <default>false</default>
+        <label>Merchant Banker</label>
+    </customValue>
+    <customValue>
+        <fullName>Mutual Fund</fullName>
+        <default>false</default>
+        <label>Mutual Fund</label>
+    </customValue>
+    <customValue>
+        <fullName>NBFCs</fullName>
+        <default>false</default>
+        <label>NBFCs</label>
+    </customValue>
+    <customValue>
+        <fullName>Others</fullName>
+        <default>false</default>
+        <label>Others</label>
+    </customValue>
+    <customValue>
+        <fullName>PE Firm</fullName>
+        <default>false</default>
+        <label>PE Firm</label>
+    </customValue>
+    <customValue>
+        <fullName>Trusteeship Companies</fullName>
+        <default>false</default>
+        <label>Trusteeship Companies</label>
+    </customValue>
+    <customValue>
+        <fullName>Website</fullName>
+        <default>false</default>
+        <label>Website</label>
+    </customValue>
+    <masterLabel>Lead Source</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

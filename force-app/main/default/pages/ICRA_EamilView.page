@@ -1,0 +1,107 @@
+<!--
+@description       : 
+@author            : ChangeMeIn@UserSettingsUnder.SFDoc
+@group             : 
+@last modified on  : 10-14-2021
+@last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<apex:page controller="ICRA_EamilViewController" sidebar="false" lightningStylesheets="true" standardStylesheets="false" >
+    <apex:slds /> 
+    
+    <style>
+        body .pbBody, .slds-vf-scope .pbBody {
+            overflow: initial;
+        }
+
+        body .bPageBlock.apexDefaultPageBlock, body .bPageBlock.bDetailBlock, body .bPageBlock.bEditBlock, .slds-vf-scope .bPageBlock.apexDefaultPageBlock, .slds-vf-scope .bPageBlock.bDetailBlock, .slds-vf-scope .bPageBlock.bEditBlock {
+            padding: .5rem .75rem;
+            width: fit-content;
+        }
+    </style>
+    
+    <apex:form >
+        
+        <apex:actionStatus id="pageStatus">
+            <apex:facet name="start">
+                <apex:outputPanel >
+                    <img src="/img/loading32.gif" width="25" height="25" />
+                    <apex:outputLabel value="Loading..."/>
+                </apex:outputPanel>            
+            </apex:facet>
+        </apex:actionStatus> 
+        <apex:pageBlock id="rerenderId">
+            <apex:pageMessages ></apex:pageMessages>
+            <div class="slds-card">
+                <div class="slds-card__header">
+                    <header class="slds-media slds-media_center " >
+                        
+                        <div class="slds-media__body">
+                            <h5 class="slds-m-bottom_none slds-p-top_none">Invoice Filter:</h5>
+                            <apex:selectList size="1" value="{!InvoiceStatus}">
+                                <apex:actionSupport event="onchange" action="{!fetchInvoiceList}" rerender="rerenderId" status="pageStatus"/>
+                                <apex:selectOption itemLabel="Today" itemValue="today" ></apex:selectOption>
+                                <apex:selectOption itemLabel="Proforma Invoice" itemValue="PI" ></apex:selectOption>
+                                <apex:selectOption itemLabel="Tax Invoice" itemValue="Tax" ></apex:selectOption> 
+                                <apex:selectOption itemLabel="Proforma Invoice Sent" itemValue="PI Sent" ></apex:selectOption>
+                                <apex:selectOption itemLabel="Tax Invoice Sent" itemValue="Tax Sent" ></apex:selectOption>
+                                <apex:selectOption itemLabel="Error In Invoice" itemValue="error" ></apex:selectOption>
+                            </apex:selectList>
+                            <apex:commandButton value="Send Selected Email" action="{!sendSelectedEmail}" styleClass="slds-button slds-button_brand" rerender="rerenderId" status="pageStatus"/>
+                        </div>
+                        
+                    </header>
+                </div>
+            </div> 
+            
+            <apex:outputPanel >
+                <apex:pageBlockTable value="{!invoiceDataList}" var="n" styleClass="slds-table_bordered slds-table_col-bordered  slds-border_right slds-border_left">
+                    <apex:column headerValue="Invoice Number" value="{!n.invoiceRecord.Bill_No__c}"/>
+                    <apex:column headerValue="Billing Date" value="{!n.invoiceRecord.Opportunity_Name__r.Billing_Start_Date__c}"/>   
+                    <apex:column headerValue="Invoice Status" value="{!n.invoiceRecord.Invoice_Status__c}"/>
+                    
+                    <apex:column headerValue="PI Invoice Status" rendered="{!if((InvoiceStatus == 'PI' || InvoiceStatus =='PI Sent' ),true,false  )}" > 
+                        <apex:facet name="header"> 
+                        </apex:facet>
+                        {! IF(n.invoiceRecord.PI_Send__c,'Sent','Not Sent')}
+                    </apex:column>
+                    
+                    <apex:column headerValue="Tax Invoice Status"  rendered="{!if((InvoiceStatus == 'Tax' || InvoiceStatus =='Tax Sent' ),true,false  )}"> 
+                        <apex:facet name="header"> 
+                        </apex:facet>
+                        {! IF(n.invoiceRecord.Tax_Send__c,'Sent','Not Sent')}
+                    </apex:column>
+                    
+                    <apex:column headerValue="Invoice Document" >
+                        <apex:facet name="header"> 
+                        </apex:facet>
+                        <a href ="/lightning/r/ContentDocument/{!n.emailRecord.EntityAttachments[0]}/view"> View PDF File </a> 
+                    </apex:column>
+                    
+                    <apex:column headerValue="Error Message" rendered="{!if((InvoiceStatus == 'error'),true,false  )}" >
+                        <apex:facet name="header"> 
+                        </apex:facet>
+                         {!n.invoiceRecord.Error_Message__c}
+                    </apex:column>
+                    
+                    <apex:column headerValue="Customer Recipients" value="{!n.emailRecord.ToAddresses}" /> 
+                    <apex:column headerValue="ICRA Recipients" value="{!n.emailRecord.CcAddresses}" />
+                    
+                    <apex:column headerValue="Email Body" >
+                        <apex:facet name="header"> 
+                        </apex:facet>
+                        <c:ICRAInvocePDF subject="{!n.emailRecord.Subject}"  textBody="{!n.emailRecord.PlainTextBody}" ></c:ICRAInvocePDF>
+                    </apex:column>
+                    
+                    <apex:column headerValue="Select Invoice" >
+                        <apex:facet name="header"> 
+                        </apex:facet>
+                        <apex:inputCheckbox value="{!n.selectRecord}" id="inputId"/>
+                    </apex:column>
+                    
+                </apex:pageBlockTable>
+                
+            </apex:outputPanel>
+            
+        </apex:pageBlock>
+    </apex:form> 
+</apex:page>

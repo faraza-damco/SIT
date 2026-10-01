@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If on the Opportunity, user has input Revised Rated VoD, its value will be displayed in the Rated Amount in Invoice Line Item, else, Volume of Debt (in Crore) will be considered. --></help>
+    <label><!-- Rated Amount (Locked) --></label>
+    <name>Rated_Amount_Locked__c</name>
+</CustomFieldTranslation>

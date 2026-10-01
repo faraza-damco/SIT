@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <label>Invoice</label>
+    <picklistValues>
+        <picklist>Advance_Billing_Status__c</picklist>
+        <values>
+            <fullName>New Advance billing practice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Old billing practice</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contact_Name_Verified__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Credit_Note_Discount__c</picklist>
+        <values>
+            <fullName>One Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recurring</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Credit_Note_Type__c</picklist>
+        <values>
+            <fullName>Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GST Credit Note</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Debtor_Type__c</picklist>
+        <values>
+            <fullName>180Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>90Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>After 1year</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Email_Send_at__c</picklist>
+        <values>
+            <fullName>180Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>90Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>After 1year</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Email_Sent__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Initiate_Tax_Invoice_Status__c</picklist>
+        <values>
+            <fullName>ITI Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ITI Pending with Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ITI Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Invoice_Status__c</picklist>
+        <values>
+            <fullName>Cancel Due to Credit Note</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canceled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initiate Tax Invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proforma Invoice</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>QR and IRN - Failed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QR-IRN-Generated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tax Invoice</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Proforma_Invoice_Email_Sent__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Proforma_Invoice_Status__c</picklist>
+        <values>
+            <fullName>PI Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PI Pending with Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PI Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_for_Credit_Note__c</picklist>
+        <values>
+            <fullName>Reduction in Limits</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Verification Pending</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Verified</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tax_Invoice_Email_Sent__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

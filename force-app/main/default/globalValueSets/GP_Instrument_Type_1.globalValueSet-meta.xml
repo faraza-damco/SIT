@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Structured Finance</fullName>
+        <default>false</default>
+        <label>Structured Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>Non Structured Finance</fullName>
+        <default>false</default>
+        <label>Non Structured Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>Research</fullName>
+        <default>false</default>
+        <label>Research</label>
+    </customValue>
+    <masterLabel>Instrument Type 1</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

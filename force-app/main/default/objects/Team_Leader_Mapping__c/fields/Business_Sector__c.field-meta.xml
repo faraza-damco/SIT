@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Sector__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Business Sector</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Business_Sector__c.ICRA_Branch__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.ICRA_Branch__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Business_Sector__c</referenceTo>
+    <relationshipLabel>Team Leader Mapping</relationshipLabel>
+    <relationshipName>Team_Leader_Mapping</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

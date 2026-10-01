@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Lead Layout</layout>
+        <sections>
+            <label><!-- Business Details --></label>
+            <section>Business Details</section>
+        </sections>
+        <sections>
+            <label><!-- ICRA Sales Team --></label>
+            <section>ICRA Sales Team</section>
+        </sections>
+        <sections>
+            <label><!-- Instrument Details --></label>
+            <section>Instrument Details</section>
+        </sections>
+        <sections>
+            <label><!-- Mandate Details --></label>
+            <section>Mandate Details</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Manual Share --></label>
+        <name>Manual_Share</name>
+    </quickActions>
+</CustomObjectTranslation>

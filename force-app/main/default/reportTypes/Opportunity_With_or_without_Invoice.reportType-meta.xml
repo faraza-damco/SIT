@@ -1,0 +1,2692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Opportunity</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Opportunity with or without Invoice</description>
+    <join>
+        <join>
+            <outerJoin>true</outerJoin>
+            <relationship>Invoice_Line_Items__r</relationship>
+        </join>
+        <outerJoin>true</outerJoin>
+        <relationship>Invoices__r</relationship>
+    </join>
+    <label>Opportunity With or Without Invoice</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity ID</displayNameOverride>
+            <field>Id</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Name</displayNameOverride>
+            <field>Account</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity Record Type</displayNameOverride>
+            <field>RecordType</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Private</displayNameOverride>
+            <field>IsPrivate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Opportunity Name</displayNameOverride>
+            <field>Name</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Additional Remarks</displayNameOverride>
+            <field>Description</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Stage</displayNameOverride>
+            <field>StageName</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Stage Sort Order</displayNameOverride>
+            <field>StageSortOrder</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Amount</displayNameOverride>
+            <field>Amount</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Probability (%)</displayNameOverride>
+            <field>Probability</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Expected Revenue</displayNameOverride>
+            <field>ExpectedRevenue</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Quantity</displayNameOverride>
+            <field>TotalOpportunityQuantity</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Expected Closure Date</displayNameOverride>
+            <field>CloseDate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Type</displayNameOverride>
+            <field>Type</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Next Step</displayNameOverride>
+            <field>NextStep</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Lead Source</displayNameOverride>
+            <field>LeadSource</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Closed</displayNameOverride>
+            <field>IsClosed</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Won</displayNameOverride>
+            <field>IsWon</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecast Category</displayNameOverride>
+            <field>ForecastCategoryName</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity Currency</displayNameOverride>
+            <field>CurrencyIsoCode</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Primary Campaign Source</displayNameOverride>
+            <field>Campaign</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Has Line Item</displayNameOverride>
+            <field>HasOpportunityLineItem</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Price Book</displayNameOverride>
+            <field>Pricebook2</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity Owner</displayNameOverride>
+            <field>Owner</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified Date</displayNameOverride>
+            <field>LastModifiedDate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified By</displayNameOverride>
+            <field>LastModifiedBy</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Activity</displayNameOverride>
+            <field>LastActivityDate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Stage Change Date</displayNameOverride>
+            <field>LastStageChangeDate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contact</displayNameOverride>
+            <field>Contact</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Primary Partner Account</displayNameOverride>
+            <field>PrimaryPartnerAccount</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Synced Quote</displayNameOverride>
+            <field>SyncedQuote</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract</displayNameOverride>
+            <field>Contract</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Currency</displayNameOverride>
+            <field>CurrencyDisplayFormula__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Discovery Completed</displayNameOverride>
+            <field>Discovery_Completed__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sum of Volume of Debt</displayNameOverride>
+            <field>Sum_of_Volume_of_Debt__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mandate Received Date</displayNameOverride>
+            <field>Mandate_Received_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>GST Not Applicable</displayNameOverride>
+            <field>GST_Not_Applicable__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Rated by (Fresh from Poached)</displayNameOverride>
+            <field>Rated_by_FFP_del__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Payment Received</displayNameOverride>
+            <field>Total_Payment_Received__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>QTR</displayNameOverride>
+            <field>QTR__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Year</displayNameOverride>
+            <field>Year__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Invoice Amount NA</displayNameOverride>
+            <field>Total_Invoice_Amount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Balance Amount</displayNameOverride>
+            <field>Balance_Amount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Invoice Date</displayNameOverride>
+            <field>Last_Invoice_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Capped Amount</displayNameOverride>
+            <field>Capped_Amount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Individual Contributor</displayNameOverride>
+            <field>Team_Member__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Team Manager</displayNameOverride>
+            <field>Team_Manager__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Team Leader</displayNameOverride>
+            <field>Team_Leader__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Location Head</displayNameOverride>
+            <field>Location_Head__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Chief Business Officer</displayNameOverride>
+            <field>Commercial_Head__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Revised Agreed Amount from Credit Note</displayNameOverride>
+            <field>Revised_Agreed_Amount_from_Credit_Note__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Out of Pocket Expenses</displayNameOverride>
+            <field>OPE__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Execution Team</displayNameOverride>
+            <field>Execution_Team__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>BLR - Sub Instrument 1</displayNameOverride>
+            <field>BLR_Sub_Instrument_1__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>BLR - Sub Instrument 2</displayNameOverride>
+            <field>BLR_Sub_Instrument_2__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Minimum ASF as per Agreement</displayNameOverride>
+            <field>Minimum_ASF__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Discount Type</displayNameOverride>
+            <field>Discount_Type__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Write off</displayNameOverride>
+            <field>Write_off__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>BD Team Classification Formula</displayNameOverride>
+            <field>BD_Team_Classification_Formula__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Reason for write off</displayNameOverride>
+            <field>Reason_for_write_off__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Record Lock</displayNameOverride>
+            <field>Record_Lock__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ASF Agreement with Client</displayNameOverride>
+            <field>ASF_Agreement_with_Client__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mark in case of SO/CE</displayNameOverride>
+            <field>Mark_in_case_of_SO_CE__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Auto Calculated Amount</displayNameOverride>
+            <field>Auto_Calculated_Amount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Reason</displayNameOverride>
+            <field>Reason__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Comment</displayNameOverride>
+            <field>Comment__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Annual Initial Rating Amount</displayNameOverride>
+            <field>Annual_Initial_Rating_Amount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Annual Surveillance Opportunities Amount</displayNameOverride>
+            <field>Annual_Surveillance_Opportunities_Amount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>BLR - Sub Instrument 3</displayNameOverride>
+            <field>BLR_Sub_Instrument_3__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Revised Agreed Amount</displayNameOverride>
+            <field>Revised_Agreed_Amount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Analyst</displayNameOverride>
+            <field>Analyst__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Co Analyst</displayNameOverride>
+            <field>Co_Analyst__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sector Head</displayNameOverride>
+            <field>Sector_Head__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Group Head</displayNameOverride>
+            <field>Group_Head__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>PAN Number</displayNameOverride>
+            <field>PAN_Number__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TAN Number</displayNameOverride>
+            <field>TAN_Number__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>GST Number</displayNameOverride>
+            <field>GST_Number__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Instrument type 1</displayNameOverride>
+            <field>Instrument_type_1__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Instrument type 2</displayNameOverride>
+            <field>Instrument_type_2__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Instrument type 3</displayNameOverride>
+            <field>Instrument_type_3__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Instrument type 4</displayNameOverride>
+            <field>Instrument_type_4__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payment Received</displayNameOverride>
+            <field>Payment_Received__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Expected Deferred Date</displayNameOverride>
+            <field>Expected_Deferred_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payment Receipt Base Amount</displayNameOverride>
+            <field>Payment_Receipt_Base_Amount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payment Receipt SGST</displayNameOverride>
+            <field>Payment_Receipt_SGST__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payment Receipt CGST</displayNameOverride>
+            <field>Payment_Receipt_CGST__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payment Receipt IGST</displayNameOverride>
+            <field>Payment_Receipt_IGST__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Annual Credit Note Amount</displayNameOverride>
+            <field>Annual_Credit_Note_Amount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mandate Type</displayNameOverride>
+            <field>Mandate_Type__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last PR Date</displayNameOverride>
+            <field>Last_PR_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Parent Opportunity</displayNameOverride>
+            <field>Parent_Opportunity__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Likely Initial Rating Fee</displayNameOverride>
+            <field>Likely_Initial_Rating_Fee__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Business Segment</displayNameOverride>
+            <field>Business_Segment__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Lead Source</displayNameOverride>
+            <field>Lead_Source__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Write off date</displayNameOverride>
+            <field>Write_off_date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Remarks, If any</displayNameOverride>
+            <field>Remarks_If_any__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Instrument Type 5</displayNameOverride>
+            <field>Instrument_Type_5__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contact</displayNameOverride>
+            <field>Contact__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>BranchFormula</displayNameOverride>
+            <field>BranchFormula__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>PR Date</displayNameOverride>
+            <field>PR_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>If Others, then specify</displayNameOverride>
+            <field>If_Others_then_specify__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>isLeapYear</displayNameOverride>
+            <field>isLeapYear__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>No of Days</displayNameOverride>
+            <field>No_of_Days__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Amount to Be Billed</displayNameOverride>
+            <field>Amount_to_Be_Billed__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Already Invoiced</displayNameOverride>
+            <field>Already_Invoiced__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ASF Calculated Formula</displayNameOverride>
+            <field>ASF_Calculated_Formula__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Initial Rating Fee as per Agreement</displayNameOverride>
+            <field>IRF_Final_Amount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Amount of OPE CAP</displayNameOverride>
+            <field>Amt_of_CAP_fee__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Past Invoice Number</displayNameOverride>
+            <field>Past_Invoice_Number__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Subscription End Date</displayNameOverride>
+            <field>Subscription_End_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Initial Rating Fee as per Schedule</displayNameOverride>
+            <field>IRF1__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Annual Surveillance Fee as per Schedule</displayNameOverride>
+            <field>ASF__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Annual Surveillance Fee Applied Discount</displayNameOverride>
+            <field>ASF_Applied_Discount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Initial Rating Fee (BPS)</displayNameOverride>
+            <field>IRF_BPS__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Annual Surveillance Fee (BPS)</displayNameOverride>
+            <field>ASF_BPS__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Subscription Start Date</displayNameOverride>
+            <field>Subscription_Start_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Annual Initial Rating Amount</displayNameOverride>
+            <field>Annual_Initial_Rating_Amount_1__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Annual Surveillance Opportunities Amount</displayNameOverride>
+            <field>Annual_Surveillance_Opp_Amount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Approved by MD and Group CEO</displayNameOverride>
+            <field>Approved_by_MD_CEO_Group__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Approved by Commercial Head</displayNameOverride>
+            <field>Approved_by_Commercial_Head__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>OFAC Approved</displayNameOverride>
+            <field>OFAC_Approved__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Invoice Amount</displayNameOverride>
+            <field>Total_Invoice_Amount_1__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Annual Surveillance Fee as per Agreement</displayNameOverride>
+            <field>ASF_Final_Amount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Initial Rating Fee Applied Discount</displayNameOverride>
+            <field>IRF_Applied_Discount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Business Entity</displayNameOverride>
+            <field>Bill_To__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Narration for Invoice</displayNameOverride>
+            <field>Narration_for_Invoice__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>MIS Support</displayNameOverride>
+            <field>MIS_Support__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Original Account</displayNameOverride>
+            <field>Original_Account__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>BLR - Sub Instrument 4</displayNameOverride>
+            <field>BLR_Sub_Instrument_4__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>BLR - Sub Instrument 5</displayNameOverride>
+            <field>BLR_Sub_Instrument_5__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Volume of Debt 1 (Amount in Crore)</displayNameOverride>
+            <field>Volume_of_Debt_1_amount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Volume of Debt 2 (Amount in Crore)</displayNameOverride>
+            <field>Volume_of_Debt_2_Amount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Volume of Debt 3 (Amount in Crore)</displayNameOverride>
+            <field>Volume_of_Debt_3_amount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Volume of Debt 4 (Amount in Crore)</displayNameOverride>
+            <field>Volume_of_Debt_4_amount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Volume of Debt 5 (Amount in Crore)</displayNameOverride>
+            <field>Volume_of_Debt_5_amount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Loss Reason</displayNameOverride>
+            <field>Loss_Reason__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Crore/Million</displayNameOverride>
+            <field>Crore_or_Million__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Others Reasons (Only for Fresh - Other)</displayNameOverride>
+            <field>Others_Reasons_Only_for_Fresh_Other__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Lost To</displayNameOverride>
+            <field>Lost_To__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Line of Business</displayNameOverride>
+            <field>Line_of_Business__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sector</displayNameOverride>
+            <field>Sector__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sub-Sector</displayNameOverride>
+            <field>Sub_Sector__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account ICRA Branch</displayNameOverride>
+            <field>Branch__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Debt OR Balance Sheet Size</displayNameOverride>
+            <field>Debt_OR_Balance_Sheet_Size__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>BD Team Classification</displayNameOverride>
+            <field>BD_Team_Classification__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Focus Group</displayNameOverride>
+            <field>Focus_Group__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Initial Rating Fee as per Agreement(BPS)</displayNameOverride>
+            <field>Initial_Rating_Fee_as_per_Agreement_BPS__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Annual Surv Fee as per Agreement (BPS)</displayNameOverride>
+            <field>ASF_as_per_Agreement_BPS__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Conversion Probability</displayNameOverride>
+            <field>Conversion_Probability__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Fee Type</displayNameOverride>
+            <field>Customer_Fee_Type__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Discount Required</displayNameOverride>
+            <field>Discount_Required__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Reason for Discount</displayNameOverride>
+            <field>Reason_for_Discount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Third-Party Bill To</displayNameOverride>
+            <field>Third_Party_Bill_To__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Approving Authority as per DoA</displayNameOverride>
+            <field>Approving_Authority_as_per_DoA__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Provision to be made</displayNameOverride>
+            <field>Provision_to_be_made__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Reason for provision</displayNameOverride>
+            <field>Reason_for_provision__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Provision Date</displayNameOverride>
+            <field>Provision_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing Status</displayNameOverride>
+            <field>Defer_Billing_or_Exit_Case__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Surveillance Billing period</displayNameOverride>
+            <field>Surveillance_Billing_period__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Bill Date</displayNameOverride>
+            <field>Bill_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing Start Date</displayNameOverride>
+            <field>Billing_Start_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing End date</displayNameOverride>
+            <field>Billing_End_date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Debtor Period</displayNameOverride>
+            <field>Debtor_Period__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Fee Outstanding</displayNameOverride>
+            <field>Fee_Outstanding__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Actual Surveillance Fee</displayNameOverride>
+            <field>Actual_Surveillance_Fee__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Chance of Retention</displayNameOverride>
+            <field>Chance_of_Retention__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Non Cooperation/Withdrawal Reason</displayNameOverride>
+            <field>Non_Cooperation_Withdrawal_Reason__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Revenue Loss in Rs</displayNameOverride>
+            <field>Revenue_Loss_in_Rs__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Fee received</displayNameOverride>
+            <field>Fee_received__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Rating Validity Till</displayNameOverride>
+            <field>Rating_Validity_Till__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last RC Date</displayNameOverride>
+            <field>Last_RC_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Revised Surveillance Fee</displayNameOverride>
+            <field>Requested_Fee__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Discount Comment</displayNameOverride>
+            <field>Detailed_Comment__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Discount % Requested</displayNameOverride>
+            <field>Discount_Requested__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Additional Discount Approved</displayNameOverride>
+            <field>Additional_Discount_Approved__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Size rated last year (in Cr/M)</displayNameOverride>
+            <field>Size_rated_last_year_in_Cr_M__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Volume of Debt Category</displayNameOverride>
+            <field>Volume_of_Debt_Category__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Type</displayNameOverride>
+            <field>Type_Tender__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Client Status</displayNameOverride>
+            <field>Client_Status__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Amount to be Provisioned (In Rs.)</displayNameOverride>
+            <field>Amount_to_be_provisioned_In_Rs__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Amount to be written off (In Rs.)</displayNameOverride>
+            <field>Amount_to_be_written_off_In_Rs__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Provisioned Detailed Remarks</displayNameOverride>
+            <field>Provisioned_Detailed_Remarks__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Written Off Detailed Remarks</displayNameOverride>
+            <field>Written_Off_Detailed_Remarks__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Amount Outstanding (In Rs.)</displayNameOverride>
+            <field>Amount_Outstanding_In_Rs__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Legal Approval</displayNameOverride>
+            <field>Legal_Compliance_Approval__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Internal Control Approval</displayNameOverride>
+            <field>Internal_Control_Approval__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Report  BLR Sector Segment</displayNameOverride>
+            <field>Report_BLR_Sector_Segment__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Report MM Sector Segment</displayNameOverride>
+            <field>Report_MM_Sector_Segment__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Initial Rating Yield per Framework(BPS)</displayNameOverride>
+            <field>Target_Yield_IRF__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Deviation ASF Percentage</displayNameOverride>
+            <field>Deviation_ASF_Percent__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Deviation IRF Percentage</displayNameOverride>
+            <field>Deviation_IRF_Percent__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>OwnerUpdated</displayNameOverride>
+            <field>OwnerUpdated__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Closed Won Date</displayNameOverride>
+            <field>Closed_Won_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity_Full_ID</displayNameOverride>
+            <field>Opportunity_Full_ID__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>MPRA/SoW Reference Number</displayNameOverride>
+            <field>MPRA_SoW_Reference_Number_iflow__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ICRA Branch</displayNameOverride>
+            <field>Opp_ICRA_Branch__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Initial Rating Fee as per Framework</displayNameOverride>
+            <field>Target_Fee_IRF__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Execution Status</displayNameOverride>
+            <field>Execution_Status_new_Formula__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date of Communication</displayNameOverride>
+            <field>Date_of_Communication__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date of Non-Acceptance of Rating</displayNameOverride>
+            <field>Date_of_Non_Acceptance_of_Rating__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Business Sector</displayNameOverride>
+            <field>Business_Sector__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mandate ID</displayNameOverride>
+            <field>Mandate_ID__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mandate ID</displayNameOverride>
+            <field>Mandate_ID_Formula__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>To Be Deleted</displayNameOverride>
+            <field>To_Be_Deleted__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>WorkItem Number</displayNameOverride>
+            <field>WorkItem_Number__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Instrument Category</displayNameOverride>
+            <field>Instrument_Category_Report__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>BD_Head__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Instrument_Category__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>VoD_in_crore__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Size_to_be_rated_this_year_in_Cr_M__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Rated_VOD__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Total_VoD_at_Instrument_Category__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Proforma_Invoice_Required__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Proforma_Invoice_Required_Surv__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Surveillance_ID__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Revised_Billing_Status__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <masterLabel>Opportunities</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice ID</displayNameOverride>
+            <field>Id</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Invoice Name</displayNameOverride>
+            <field>Name</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Currency</displayNameOverride>
+            <field>CurrencyIsoCode</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Record Type</displayNameOverride>
+            <field>RecordType</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified Date</displayNameOverride>
+            <field>LastModifiedDate</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified By</displayNameOverride>
+            <field>LastModifiedBy</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Activity Date</displayNameOverride>
+            <field>LastActivityDate</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account ID</displayNameOverride>
+            <field>Account_ID__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>IRN Number</displayNameOverride>
+            <field>IRN_Number__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>QR Code</displayNameOverride>
+            <field>QR_Code__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Currency</displayNameOverride>
+            <field>Currency__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer State Code</displayNameOverride>
+            <field>Customer_State_Code__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Location of Supplier</displayNameOverride>
+            <field>Location_of_Supplier__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Supplier State</displayNameOverride>
+            <field>Supplier_State__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Supplier GSTIN</displayNameOverride>
+            <field>Supplier_GSTIN__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Description of Service</displayNameOverride>
+            <field>Description_of_Service__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tax Subject to Reverse Charge</displayNameOverride>
+            <field>Tax_subject_to_reverse_charge__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Address</displayNameOverride>
+            <field>Address__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contact Name</displayNameOverride>
+            <field>Contact_Name__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer State</displayNameOverride>
+            <field>Customer_State__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer GSTIN</displayNameOverride>
+            <field>Customer_GSTIN__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contact Designation</displayNameOverride>
+            <field>Contact_Designation__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SAC/HSN</displayNameOverride>
+            <field>SAC_HSN__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Particulars</displayNameOverride>
+            <field>Particulars__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>isFirst_InvoiceLine_Item</displayNameOverride>
+            <field>isFirst_InvoiceLine_Item__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice No</displayNameOverride>
+            <field>Invoice_No__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Instrument</displayNameOverride>
+            <field>Instrument__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing Number</displayNameOverride>
+            <field>Billing_Number__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Deferred Opportunity</displayNameOverride>
+            <field>Defer_Opportunity__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Reason for Credit Note</displayNameOverride>
+            <field>Reason_for_Credit_Note__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Supplier State Code</displayNameOverride>
+            <field>Supplier_State_Code__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Service Code</displayNameOverride>
+            <field>Service_Code__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Supplier PAN</displayNameOverride>
+            <field>Supplier_PAN__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CGST Rate for Invoice Amount</displayNameOverride>
+            <field>CGST_Rate_for_Invoice_Amount__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Destination Branch</displayNameOverride>
+            <field>Destination_Branch__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SGST/UTGST Rate for Invoice Amount</displayNameOverride>
+            <field>SGST_UTGST_Rate_for_Invoice_Amount__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SGST/UTGST Amount on Credit Note</displayNameOverride>
+            <field>SGST_UTGST_Amount_on_Credit_Note__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>IGST Rate for Invoice Amount</displayNameOverride>
+            <field>IGST_Rate_for_Invoice_Amount__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>IGST Amount on Credit Note</displayNameOverride>
+            <field>IGST_Amount_on_Credit_Note__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total GST Amount</displayNameOverride>
+            <field>Total_GST_Amount__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Credit Amount</displayNameOverride>
+            <field>Total_Credit_Amount__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Source Branch</displayNameOverride>
+            <field>Source_Branch__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Credit Note Date</displayNameOverride>
+            <field>Credit_Note_Created_Date__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total CGST Invoice Amount</displayNameOverride>
+            <field>Total_CGST_Invoice_Amount__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CGST Amount on Credit Note</displayNameOverride>
+            <field>CGST_Amount_on_Credit_Note__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Credit Note Amount</displayNameOverride>
+            <field>Credit_Note__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total IGST Invoice Amount</displayNameOverride>
+            <field>Total_IGST_Invoice_Amount__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Phone</displayNameOverride>
+            <field>Phone__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Email</displayNameOverride>
+            <field>Email__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Pincode</displayNameOverride>
+            <field>Pincode__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
+            <field>Created_Date__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Credit Note No</displayNameOverride>
+            <field>Credit_Note_No__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Name</displayNameOverride>
+            <field>Customer_Name__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Comment</displayNameOverride>
+            <field>Comments__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer PAN</displayNameOverride>
+            <field>Customer_Pan__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Invoice Amount</displayNameOverride>
+            <field>Total_Invoice_Amount__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Status</displayNameOverride>
+            <field>Status__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Taxable Advance Amount</displayNameOverride>
+            <field>Taxable_Advance_Amount__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Credit Note Type</displayNameOverride>
+            <field>Credit_Note_Type__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total SGST Invoice Amount</displayNameOverride>
+            <field>Total_SGST_Invoice_Amount__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Financial Year</displayNameOverride>
+            <field>Financial_Year__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Is Ageing</displayNameOverride>
+            <field>Is_Ageing__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice Age</displayNameOverride>
+            <field>Age__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Credit Note Discount</displayNameOverride>
+            <field>Credit_Note_Discount__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Credit Amount Copy</displayNameOverride>
+            <field>Total_Credit_Amount_Copy__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Outstanding Amount</displayNameOverride>
+            <field>Outstanding_Amount__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Amount</displayNameOverride>
+            <field>Amount__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>GST Amount</displayNameOverride>
+            <field>GST_Amount__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Line Count</displayNameOverride>
+            <field>Line_Count__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Invoice Taxable Amount</displayNameOverride>
+            <field>Total_Invoice_Taxable_Amount__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Invoice Amount</displayNameOverride>
+            <field>Total_Invoice_Amount_Copy__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Revised Agreed Amount</displayNameOverride>
+            <field>Revised_Agreed_Amount_Copy__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CGST Rate on Credit Note</displayNameOverride>
+            <field>CGST_Rate_on_Credit_Note__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>IGST Rate for Credit Note</displayNameOverride>
+            <field>IGST_Rate_for_Credit_Note__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SGST Rate for Credit Note</displayNameOverride>
+            <field>SGST_Rate_for_Credit_Note__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contact Designation (Locked)</displayNameOverride>
+            <field>Contact_Designation_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Outstanding Amount (Locked)</displayNameOverride>
+            <field>Outstanding_Amount_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Advance Billing Status</displayNameOverride>
+            <field>Advance_Billing_Status__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Name (Locked)</displayNameOverride>
+            <field>Customer_Name_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Address (Locked)</displayNameOverride>
+            <field>Address_TI_Formula__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer State (Locked)</displayNameOverride>
+            <field>Customer_State_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Pincode (Locked)</displayNameOverride>
+            <field>Pincode_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Phone (Locked)</displayNameOverride>
+            <field>Phone_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Email (Locked)</displayNameOverride>
+            <field>Email_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer GSTIN (Locked)</displayNameOverride>
+            <field>Customer_GSTIN_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer PAN (Locked)</displayNameOverride>
+            <field>Customer_PAN_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Service Code (Locked)</displayNameOverride>
+            <field>Service_Code_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Description of Service (Locked)</displayNameOverride>
+            <field>Description_of_Service_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Location of Supplier (Locked)</displayNameOverride>
+            <field>Location_of_Supplier_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Supplier State (Locked)</displayNameOverride>
+            <field>Supplier_State_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Supplier State Code (Locked)</displayNameOverride>
+            <field>Supplier_State_Code_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Supplier GSTIN (Locked)</displayNameOverride>
+            <field>Supplier_GSTIN_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Supplier PAN (Locked)</displayNameOverride>
+            <field>Supplier_PAN_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity Name</displayNameOverride>
+            <field>Opportunity_Name__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Credit Note No (Locked)</displayNameOverride>
+            <field>Credit_Note_No_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Bill No</displayNameOverride>
+            <field>Bill_No__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Bill No (Locked)</displayNameOverride>
+            <field>Bill_No_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Bill No CN</displayNameOverride>
+            <field>Bill_No_CreditNote__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Bill No CN (Locked)</displayNameOverride>
+            <field>Bill_No_CreditNote_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice Date</displayNameOverride>
+            <field>Invoice_Created_Date__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice Date CN</displayNameOverride>
+            <field>Invoice_Date__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice Date CN (Locked)</displayNameOverride>
+            <field>Invoice_Date_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice Date RP</displayNameOverride>
+            <field>Invoice_Date_Copy__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice Date RP (Locked)</displayNameOverride>
+            <field>Invoice_Date_Copy_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Invoice Amount (Locked)</displayNameOverride>
+            <field>Total_Invoice_Amount_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Invoice Amount RP (Locked)</displayNameOverride>
+            <field>Total_Invoice_Amount_Copy_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice Status</displayNameOverride>
+            <field>Invoice_Status__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice Status CN</displayNameOverride>
+            <field>Invoice_Status_CreditNote__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice Status CN (Locked)</displayNameOverride>
+            <field>Invoice_Status_CreditNote_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SGST/UTGST Rate for Invoice Amount (Lock</displayNameOverride>
+            <field>SGST_UTGST_Rate_for_Invoice_Amount_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Instrument (Locked)</displayNameOverride>
+            <field>Instrument_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Credit Note Amount (Locked)</displayNameOverride>
+            <field>Credit_Note_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SGST/UTGST Amount on Credit Note (Locked</displayNameOverride>
+            <field>SGST_UTGST_Amount_on_Credit_Note_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CGST Amount on Credit Note (Locked)</displayNameOverride>
+            <field>CGST_Amount_on_Credit_Note_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>IGST Amount on Credit Note (Locked)</displayNameOverride>
+            <field>IGST_Amount_on_Credit_Note_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total GST Amount (Locked)</displayNameOverride>
+            <field>Total_GST_Amount_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Credit Amount (Locked)</displayNameOverride>
+            <field>Total_Credit_Amount_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Revised Agreed Amount CN</displayNameOverride>
+            <field>Revised_agreed_amount__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Invoice_Amount_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Currency_Exchange_Rate__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Invoice_Amount__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Proforma_Invoice_Status__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Proforma_Invoice_Status_Formula__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Initiate_Tax_Invoice_Status__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Initiate_Tax_Invoice_Status_Formula__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Auto_Generated_Proforma_Invoice__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Auto_Generated_Tax_Invoice__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <masterLabel>Invoices</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice Line Item ID</displayNameOverride>
+            <field>Id</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Invoice Line Item Name</displayNameOverride>
+            <field>Name</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Currency</displayNameOverride>
+            <field>CurrencyIsoCode</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified Date</displayNameOverride>
+            <field>LastModifiedDate</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified By</displayNameOverride>
+            <field>LastModifiedBy</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Activity Date</displayNameOverride>
+            <field>LastActivityDate</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Classification</displayNameOverride>
+            <field>Account_Classification__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Particulars of Service</displayNameOverride>
+            <field>Particulars_of_Service__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Period of Rating Fees - From Date</displayNameOverride>
+            <field>Period_of_Rating_Fees_From_Date__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Period of Rating Fees - To Date</displayNameOverride>
+            <field>Period_of_Rating_Fees_To_Date__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Instruments</displayNameOverride>
+            <field>Instruments__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Rated Amount</displayNameOverride>
+            <field>Rated_Amount__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Effective Date of Initial Rating</displayNameOverride>
+            <field>Effective_Date_of_Initial_Rating__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Currency</displayNameOverride>
+            <field>Currency__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>No of Days</displayNameOverride>
+            <field>No_of_Days__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity Name</displayNameOverride>
+            <field>Opportunity_Name__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>isFirst InvoiceLine Item</displayNameOverride>
+            <field>isFirst_InvoiceLine_Item__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Deferred Opportunity</displayNameOverride>
+            <field>Deferred_Opportunity__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>No of Months</displayNameOverride>
+            <field>No_of_Months__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>PR Date</displayNameOverride>
+            <field>PR_Date__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Balance Taxable Amount</displayNameOverride>
+            <field>Balance_Taxable_Amount__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CGST Invoice Amt</displayNameOverride>
+            <field>CGST_Invoice_Amt_Copy__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice Taxable Amount</displayNameOverride>
+            <field>Invoice_Taxable_Amount__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CGST  Rate for Invoice Amount</displayNameOverride>
+            <field>CGST_Rate_for_Invoice_Amount__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CGST Amount on Invoice</displayNameOverride>
+            <field>CGST_Amount_on_Invoice__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CGST Rate for Amount Received</displayNameOverride>
+            <field>CGST_Rate_for_Amount_Recd__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CGST Advance  Amount Received</displayNameOverride>
+            <field>CGST_Amount_Recd_on_Invoice__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CGST  Amount Balance</displayNameOverride>
+            <field>CGST_Amount_Balance__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SGST/UTGST Rate for Invoice Amount</displayNameOverride>
+            <field>SGST_UTGST_Rate_for_Invoice_Amount__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SGST/UTGST Amount on Invoice</displayNameOverride>
+            <field>SGST_UTGST_Amount_on_Invoice__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SGST/UTGST Rate for Amount Received</displayNameOverride>
+            <field>SGST_UTGST_Rate_for_Amount_Recd__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SGST/UTGST Advance Amount Received</displayNameOverride>
+            <field>SGST_UTGST_Amount_Recd_on_Invoice__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SGST/UTGST Amount Balance</displayNameOverride>
+            <field>SGST_UTGST_Amount_Balance__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>IGST Rate for Invoice Amount</displayNameOverride>
+            <field>IGST_Rate_for_Invoice_Amount__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>IGST Amount on Invoice</displayNameOverride>
+            <field>IGST_Amount_on_Invoice__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>IGST Rate for Amount Received</displayNameOverride>
+            <field>IGST_Rate_for_Amount_Recd__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>IGST Advance Amount Received</displayNameOverride>
+            <field>IGST_Amount_Recd_on_Invoice__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>IGST  Amount Balance</displayNameOverride>
+            <field>IGST_Amount_Balance__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>IGST for Invoice Amt</displayNameOverride>
+            <field>IGST_for_Invoice_Amt__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Invoice Amount</displayNameOverride>
+            <field>Total_Invoice_Amount_Copy__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Amount Received</displayNameOverride>
+            <field>Total_Amount_for_Amount_Recd__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SGST/UTGST Invoice Amt</displayNameOverride>
+            <field>SGST_UTGST_Invoice_Amt__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Invoice Amount O</displayNameOverride>
+            <field>Total_Amount_for_invoice_Amount__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Amount Balance</displayNameOverride>
+            <field>Total_Amount_Balance__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sno</displayNameOverride>
+            <field>Sno__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Comments</displayNameOverride>
+            <field>Comments__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Amount Payable</displayNameOverride>
+            <field>Amount_Payable__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>GST Rate</displayNameOverride>
+            <field>GST_Rate__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Base Amount Received</displayNameOverride>
+            <field>Taxable_Advance_Received_Amount__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payable Amount</displayNameOverride>
+            <field>Payable_Amount__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Gross Amount Received</displayNameOverride>
+            <field>Gross_Amount_Received__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Balance Amount Taxable</displayNameOverride>
+            <field>Balance_Amount_Taxable__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Balance Amount Taxable</displayNameOverride>
+            <field>Balance_Amounts_Taxable__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Amount Invoiced</displayNameOverride>
+            <field>Total_Amount_Invoiced__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice Taxable Amount copy</displayNameOverride>
+            <field>Invoice_Taxable_Amount_copy__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>GST Rate</displayNameOverride>
+            <field>GST_Rate_Copy__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CGST Rate for Invoice Amount</displayNameOverride>
+            <field>CGST_Rate_for_Invoice_Amount_Copy__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>IGST Rate for Invoice Amount</displayNameOverride>
+            <field>IGST_Rate_for_Invoice_Amount_Copy__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SGST/UTGST Rate for Invoice Amount</displayNameOverride>
+            <field>SGST_UTGST_Rate_for_Invoice_Amount_Copy__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Financial Year</displayNameOverride>
+            <field>Financial_Year__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice Record Type</displayNameOverride>
+            <field>Invoice_Record_Type__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Invoice Amount WF</displayNameOverride>
+            <field>Total_Invoice_Amount_WF__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CGST Payable</displayNameOverride>
+            <field>CGST_Payable__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SGST Payable</displayNameOverride>
+            <field>SGST_Payable__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>IGST Payable</displayNameOverride>
+            <field>IGST_Payable__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CGST Realisable</displayNameOverride>
+            <field>CGST_Realisable__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SGST Realisable</displayNameOverride>
+            <field>SGST_Realisable__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>IGST Realisable</displayNameOverride>
+            <field>IGST_Realisable__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Narration for Invoice</displayNameOverride>
+            <field>Narration_for_Invoice__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice  Status</displayNameOverride>
+            <field>Invoice_Status__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity duplicate</displayNameOverride>
+            <field>Opportunity_duplicate__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity test md</displayNameOverride>
+            <field>Opportunity_test_md__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Instruments (Locked)</displayNameOverride>
+            <field>Instruments_TI__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Particulars of Service (Locked)</displayNameOverride>
+            <field>Particulars_of_Service_TI__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Currency (Locked)</displayNameOverride>
+            <field>Currency_TI__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Base Amount Received (Locked)</displayNameOverride>
+            <field>Taxable_Advance_Received_Amount_TI__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Gross Amount Received (Locked)</displayNameOverride>
+            <field>Gross_Amount_Received_TI__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice Taxable Amount (Locked)</displayNameOverride>
+            <field>Invoice_Taxable_Amount_TI__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SGST/UTGST Rate for Invoice Amount (L)</displayNameOverride>
+            <field>SGST_UTGST_Rate_for_Invoice_Amount_TI__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CGST Rate for Invoice Amount (Locked)</displayNameOverride>
+            <field>CGST_Rate_for_Invoice_Amount_TI__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>IGST Rate for Invoice Amount (Locked)</displayNameOverride>
+            <field>IGST_Rate_for_Invoice_Amount_TI__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Invoice Amount O (Locked)</displayNameOverride>
+            <field>Total_Amount_for_invoice_Amount_TI__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Period of Rating Fees-From Date (Locked)</displayNameOverride>
+            <field>Period_of_Rating_Fees_From_Date_TI__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Period of Rating Fees-To Date (Locked)</displayNameOverride>
+            <field>Period_of_Rating_Fees_To_Date_TI__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Effective Date of Initial Rating(Locked)</displayNameOverride>
+            <field>Effective_Date_of_Initial_Rating_TI__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>No of Months (Locked)</displayNameOverride>
+            <field>No_of_Months_TI__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SGST/UTGST Advance Amount Received (L)</displayNameOverride>
+            <field>SGST_UTGST_Amount_Recd_on_Invoice_TI__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>IGST Advance Amount Received (Locked)</displayNameOverride>
+            <field>IGST_Amount_Recd_on_Invoice_TI__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SGST/UTGST Amount on Invoice (Locked)</displayNameOverride>
+            <field>SGST_UTGST_Amount_on_Invoice_TI__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CGST Amount on Invoice (Locked)</displayNameOverride>
+            <field>CGST_Amount_on_Invoice_TI__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>IGST Amount on Invoice (Locked)</displayNameOverride>
+            <field>IGST_Amount_on_Invoice_TI__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payable Amount (Locked)</displayNameOverride>
+            <field>Payable_Amount_TI__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CGST Advance Amount Received (Locked)</displayNameOverride>
+            <field>CGST_Amount_Recd_on_Invoice_TI__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Credit Note Date</displayNameOverride>
+            <field>Credit_Note_Date__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Classification</displayNameOverride>
+            <field>Account_Classification__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Credit Note Start Date</displayNameOverride>
+            <field>Credit_Note_Start_Date__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Credit Note End Date</displayNameOverride>
+            <field>Credit_Note_End_Date__c</field>
+            <table>Opportunity.Invoices__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Invoice_Amount_TI__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Bypass_Validation__c</field>
+            <table>Opportunity.Invoices__r.Invoice_Line_Items__r</table>
+        </columns>
+        <masterLabel>Invoice Line Items</masterLabel>
+    </sections>
+</ReportType>

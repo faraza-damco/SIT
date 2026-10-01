@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InterBranch_Manual_Invoice__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>to control the trigger on Manual Invoice</description>
+    <label>InterBranch_Manual_Invoice</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

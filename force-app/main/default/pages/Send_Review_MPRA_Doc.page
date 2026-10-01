@@ -1,0 +1,383 @@
+<apex:page standardController="Opportunity" extensions="Send_Review_MPRA_Doc_ExtensionClass" showQuickActionVfHeader="true" >
+    <apex:slds />
+    <apex:form >
+        <apex:actionFunction name="updateOppDates" action="{!updateDates}" reRender="none">
+             <apex:param name="paramName" value="" assignTo="{!controllerVariable}"/>    
+        </apex:actionFunction>
+        <apex:actionFunction name="updateOppEffectiveDatesOnSending" action="{!updateEffectiveDatesOnSend}" oncomplete="return SubmitReqisition();" reRender="output">
+            <apex:param name="paramNameMPRA" value="" assignTo="{!isMPRAChecked}"/>  
+            <apex:param name="paramNameSOW" value="" assignTo="{!isSOWChecked}"/>  
+       </apex:actionFunction>
+        <apex:includeScript value="/soap/ajax/42.0/connection.js"/>
+        <apex:includeScript value="/soap/ajax/42.0/apex.js"/>
+        <script>
+        sforce.connection.sessionId = '{!$Api.Session_ID}';
+        
+        function PreviewDoc(){
+            var ReqId = "{!Opportunity.Id}";
+            var instrumentType="{!Opportunity.Instrument_type_4__c}";
+            var e = document.getElementsByClassName("Docview")[0];
+            var docname = e.options[e.selectedIndex].value;
+            
+            var MPRAContact = "{!conId}"//"{!Opportunity.Contact_for_MPRA_SOW__c}";
+            var MPRADate ="{!Opportunity.MPRA_Sent_Date__c}";
+            var SoWDate ="{!Opportunity.SOW_Effective_Date__c}";
+            var StatementOfWork ="{!Opportunity.Statement_of_Work_No__c}";
+            //var sendmpra=document.getElementById('chkMPRA').checked;
+            //var sendsow=document.getElementById('SowDoc');
+            var selectedValue = document.getElementById('{!$Component.docType}').value;
+            //var SigningAuthority ="{!Opportunity.Signing_authority__c}";
+            var accountCity= "{!Opportunity.Account.ShippingCity}";
+            var accountStreet= "{!Opportunity.Account.ShippingStreet}";
+            var accountState= "{!Opportunity.Account.ShippingState}";
+            var accountPostalCode= "{!Opportunity.Account.ShippingPostalcode}";
+            var accountCountry= "{!Opportunity.Account.ShippingCountry}";
+            // alert(ProposalContact);
+            // alert(ProposalDate);
+            
+            if(MPRAContact == "" /*|| MPRADate=="" || SigningAuthority=='' */){
+                var   resultMessage='Please add Contact with role as MPRA/SOW !!'; //, Signing authority
+                document.getElementById("erMsg").style.display = "block";
+                document.getElementById("ErrorMsg").innerHTML=resultMessage;
+                
+                //return;
+              }else if(StatementOfWork=='' && docname=='SowDoc'/*|| MPRADate=="" || SigningAuthority=='' */){
+                var   resultMessage='Please fill the Statement of Work No.!!'; //, Signing authority
+                document.getElementById("erMsg").style.display = "block";
+                document.getElementById("ErrorMsg").innerHTML=resultMessage;
+              }
+              else if(accountCity=='' && accountStreet=='' && accountState=='' && accountPostalCode=='' && accountCountry==''){
+                var msg= 'Register Address is Mandatory !!';
+                document.getElementById("erMsg").style.display = "block";
+                document.getElementById("ErrorMsg").innerHTML=msg;
+            }
+
+            else
+            {
+                if(docname=='MPRADoc')
+                {
+                    switch (instrumentType) {
+                        case 'Issuer Rating':
+                            var win = window.open("/apex/ICRA_MPRA_Standard?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Loss Estimation/Direct Assignment':
+                            var win = window.open("/apex/ICRA_MPRA_DA?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Resolution Plan - Independent Credit Evaluation (ICE)':
+                            var win = window.open("/apex/ICRA_MPRA_ICE?id="+ReqId,"_blank");
+                            var win1 = window.open("/apex/ICRA_Side_Letter_ICE_SoW?id="+ReqId,"_blank");
+                            win.focus();
+                            win1.focus();
+                            break;
+                        case 'Pass Through Certificates':
+                            var win = window.open("/apex/ICRA_MPRA_PTC?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Security Receipts':
+                            var win = window.open("/apex/ICRA_MPRA_SR?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Mutual Fund Rating':
+                            var win = window.open("/apex/ICRA_MPRA_MF?id="+ReqId,"_blank");  //need to update
+                            win.focus();
+                            break;
+                        case 'Fixed Deposits':
+                            var win = window.open("/apex/ICRA_MPRA_Standard?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Non-Convertible Debenture':
+                            var win = window.open("/apex/ICRA_MPRA_Standard?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                           
+                        case 'Certificate of Deposit':
+                            var win = window.open("/apex/ICRA_MPRA_Standard?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Commercial Paper':
+                            var win = window.open("/apex/ICRA_MPRA_Standard?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Short Term Borrowing Programme':
+                            var win = window.open("/apex/ICRA_MPRA_Standard?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Various Debt Instruments':
+                            var win = window.open("/apex/ICRA_MPRA_Standard?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Long Term Borrowing Programme':
+                            var win = window.open("/apex/ICRA_MPRA_Standard?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Hybrid Debt':
+                            var win = window.open("/apex/ICRA_MPRA_Standard?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'PP- Market Linked Debenture':
+                            var win = window.open("/apex/ICRA_MPRA_Standard?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Preference Shares':
+                            var win = window.open("/apex/ICRA_MPRA_Standard?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Sub Debt':
+                            var win = window.open("/apex/ICRA_MPRA_Standard?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Bank Loan Rating':
+                            var win = window.open("/apex/ICRA_MPRA_Standard?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Bank Loan Rating Fresh':
+                            var win = window.open("/apex/ICRA_MPRA_Standard?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Bank Loan Rating Enhancement':
+                            var win = window.open("/apex/ICRA_MPRA_Standard?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Infrastructure Expected Loss Ratings':
+                            var win = window.open("/apex/ICRA_MPRA_AIF?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Infrastructure Investment Trusts-InvITs':
+                            var win = window.open("/apex/ICRA_MPRA_AIF?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Real Estate Investment Trust':
+                            var win = window.open("/apex/ICRA_MPRA_AIF?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Monitoring Activity':
+                            var win = window.open("/apex/ICRA_MPRA_AIF?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'AIF':
+                            var win = window.open("/apex/ICRA_MPRA_AIF?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                    }
+                }
+                else if(docname=='SowDoc')
+                {
+                    switch (instrumentType) {
+                        case 'Issuer Rating':
+                            var win =window.open("/apex/ICRA_Issuer_Rating?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Loss Estimation/Direct Assignment':
+                            var win =window.open("/apex/ICRA_DA_SoW?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Bank Loan Rating':
+                            var win = window.open("/apex/ICRA_SAW_BLR_Rating?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Bank Loan Rating Fresh':
+                            var win = window.open("/apex/ICRA_SAW_BLR_Rating?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Bank Loan Rating Enhancement':
+                            var win = window.open("/apex/ICRA_SAW_BLR_Rating?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Non-Convertible Debenture':
+                            var win = window.open("/apex/ICRA_NCD_CD_Rating?id="+ReqId,"_blank");
+                            win.focus();
+                            break; 
+                        case 'Certificate of Deposit':
+                            var win = window.open("/apex/ICRA_NCD_CD_Rating?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Fixed Deposits':
+                            var win = window.open("/apex/ICRA_CP_STD_FD_Rating?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Commercial Paper':
+                            var win =window.open("/apex/ICRA_CP_STD_FD_Rating?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        // case 'Assignee Payout':
+                        //     var win =window.open("/apex/ICRA_RRAAP_Doc?id="+ReqId,"_blank");
+                        //     win.focus();
+                        //     break;
+                        // case 'Pass Through Certificates':
+                        //     var win = window.open("/apex/ICRA_RRAPTC_Doc?id="+ReqId,"_blank");
+                        //     win.focus();
+                        //     break;
+                        case 'Short Term Borrowing Programme':
+                            var win = window.open("/apex/ICRA_CP_STD_FD_Rating?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Various Debt Instruments':
+                            var win = window.open("/apex/ICRA_CP_STD_FD_Rating?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Long Term Borrowing Programme':
+                            var win = window.open("/apex/ICRA_CP_STD_FD_Rating?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Hybrid Debt':
+                            var win = window.open("/apex/ICRA_NCD_CD_Rating?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'PP- Market Linked Debenture':
+                            var win = window.open("/apex/ICRA_NCD_CD_Rating?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Preference Shares':
+                            var win = window.open("/apex/ICRA_NCD_CD_Rating?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Sub Debt':
+                            var win = window.open("/apex/ICRA_NCD_CD_Rating?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                        case 'Mutual Fund Rating':
+                            var win = window.open("/apex/ICRA_MF_Rating_SoW?id="+ReqId,"_blank");
+                            win.focus();
+                            break;
+                    }
+                    
+                }
+                    else
+                    {
+                        alert('Please select any Document for review !!');
+                    }
+                
+            }
+        }
+        function SubmitReqisition(){
+            debugger;
+            var ReqId = "{!Opportunity.Id}";
+            var sendmpra=document.getElementById('chkMPRA').checked;
+            var sendsow=document.getElementById('chkSOW').checked;
+            var accountCity= "{!Opportunity.Account.ShippingCity}";
+            var accountStreet= "{!Opportunity.Account.ShippingStreet}";
+            var accountState= "{!Opportunity.Account.ShippingState}";
+            var accountPostalCode= "{!Opportunity.Account.ShippingPostalcode}";
+            var accountCountry= "{!Opportunity.Account.ShippingCountry}";
+            var StatementOfWork ="{!Opportunity.Statement_of_Work_No__c}";
+            var docname = document.getElementById('{!$Component.docType}').value;//e.options[e.selectedIndex].value;
+            if(accountCity=='' && accountStreet=='' && accountState=='' && accountPostalCode=='' && accountCountry==''){
+                var msg= 'Register Address is mandatory!!';
+                document.getElementById("erMsg").style.display = "block";
+                document.getElementById("ErrorMsg").innerHTML=msg;
+            }else if(StatementOfWork=='' && sendsow){
+                var msg= 'Statement of Work No. is Mandatory !!';
+                document.getElementById("erMsg").style.display = "block";
+                document.getElementById("ErrorMsg").innerHTML=msg;
+                return;
+            }
+                var resultMessage = sforce.apex.execute("SendProposal","SendMPRAAttachment", {OppotunityId:ReqId,MPRA:sendmpra,SOW:sendsow});
+                if (resultMessage == "SUCCESS"){
+                    document.getElementById('erMsg').classList.add('slds-theme_success');
+                    document.getElementById("erMsg").style.display = "block";
+                    document.getElementById("ErrorMsg").innerHTML='Document Sent Successfully !!';
+                    //window.location.reload();
+                    //window.history.go(-1);
+                } else {
+                    //alert(resultMessage);
+                    document.getElementById("erMsg").style.display = "block";
+                    document.getElementById("ErrorMsg").innerHTML=resultMessage;
+                }
+                return;
+            //alert(sendmpra);
+        }
+
+        function updateEffectiveDates(){
+            debugger;
+            var e = document.getElementsByClassName("Docview")[0];
+            var docname = e.options[e.selectedIndex].value;
+                updateOppDates(docname);
+        }
+
+        function updateEffectiveSendDates(){
+            debugger;
+            var sendmpraDoc=document.getElementById('chkMPRA').checked;
+            var sendsowDoc=document.getElementById('chkSOW').checked;
+            updateOppEffectiveDatesOnSending(sendmpraDoc,sendsowDoc);
+        }
+        
+        </script>
+        
+        <div id="erMsg" class="slds-notify slds-notify_alert slds-alert_error" role="alert" style="display:none">
+            <span class="slds-assistive-text">error</span>
+            <span class="slds-icon_container slds-icon-utility-error slds-m-right_x-small" title="Description of icon when needed">
+                
+            </span>
+            <h2 id="ErrorMsg" > </h2>
+            <div class="slds-notify__close">
+                <button class="slds-button slds-button_icon slds-button_icon-small slds-button_icon-inverse" title="Close">
+                    
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+            </div>
+        </div>
+        <h1 id="ErrorMsg" class="slds-text-body_regular" style=" display: block;font-size: 2em;font-weight: bold;margin-block-start: .67em;margin-block-end: .67em;"></h1><br/>
+        
+        <div class="slds-section slds-is-open">
+            <h3 class="slds-section__title">
+                <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action">
+                    
+                    <span class="slds-truncate" title="Section Title">Review MPRA/SOW Document</span>
+                </button>
+            </h3>
+            <div align="center" aria-hidden="false" class="slds-section__content" id="expando-unique-id">
+                <b>Select document type for review:  </b>   <apex:selectList id="docType" styleclass="Docview slds-select slds-size_small" label="Select Doc Type:" size="1">
+                <apex:selectOption itemLabel="Select document type" itemValue="SelectAnyDoc"/>
+                <apex:selectOption itemLabel="MPRA" itemValue="MPRADoc"/>
+                <apex:selectOption itemLabel="SOW" itemValue="SowDoc"/>      
+                </apex:selectList>
+                <br/>
+                <br/>
+                <br/>
+                <apex:commandButton action="{!cancel}"  onclick="updateEffectiveDates(); return PreviewDoc()"  value="Review" oncomplete="Window.close();" styleClass="slds-button slds-button_brand"/>
+                <apex:commandButton action="{!cancel}" value="Close" styleClass="slds-button slds-button_brand"/>
+                <br/>
+            </div>
+        </div>
+        
+        <div class="slds-section slds-is-open">
+            <h3 class="slds-section__title">
+                <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action">
+                    
+                    <span class="slds-truncate" title="Section Title">Send MPRA/SOW Document</span>
+                </button>
+            </h3>
+            <div align="center" aria-hidden="false" class="slds-section__content" id="expando-unique-id">
+                <b>Select document type for send:  </b>  
+                <div class="slds-checkbox">
+                    <input type="checkbox" id="chkMPRA" name="options" value="{!sendmpraDoc}"  />     <!--checkbox-unique-id-73-->
+                    <label class="slds-checkbox__label" for="chkMPRA">
+                        <span class="slds-checkbox_faux"></span>
+                        <span class="slds-form-element__label">MPRA</span>
+                    </label>
+                </div>
+                <div class="slds-checkbox">
+                    <input type="checkbox" id="chkSOW" value="{!sendsowDoc}" name="options"    />
+                    <label class="slds-checkbox__label" for="chkSOW">
+                        <span class="slds-checkbox_faux"></span>
+                        <span class="slds-form-element__label">SOW</span>
+                    </label>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+                <apex:commandButton action="{!cancel}"  onclick="updateEffectiveSendDates('{!isMPRAChecked} {!isSOWChecked}'); return;" oncomplete="return;" value="Send" styleClass="slds-button slds-button_brand"/>
+                <apex:commandButton action="{!cancel}" value="Close" styleClass="slds-button slds-button_brand"/>
+                <br/>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+    </apex:form>
+</apex:page>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Credit Note Type --></label>
+    <name>Credit_Note_Type__c</name>
+    <picklistValues>
+        <masterLabel>Commercial</masterLabel>
+        <translation><!-- Commercial --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GST Credit Note</masterLabel>
+        <translation><!-- GST Credit Note --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

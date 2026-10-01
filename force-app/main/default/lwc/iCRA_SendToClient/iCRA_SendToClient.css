@@ -1,0 +1,10 @@
+.custom-modal-size {
+    max-width: 90vw;
+    min-width: 60vw;
+    height: 110vh;
+}
+
+.custom-modal-content {
+    height: 30vh;
+    overflow-y: auto;
+}

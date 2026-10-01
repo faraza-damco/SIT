@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GST_and_State_Code_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(AND(
+		NOT(ISBLANK(GSTN__c)),
+		State_Code__c!= LEFT(GSTN__c,2),
+		ISPICKVAL(BillingCountry__c, &apos;India&apos;)), 
+		true, false)</errorConditionFormula>
+    <errorDisplayField>BillingState__c</errorDisplayField>
+    <errorMessage>State and GST number are not matching. Please provide correct state or GST number</errorMessage>
+</ValidationRule>

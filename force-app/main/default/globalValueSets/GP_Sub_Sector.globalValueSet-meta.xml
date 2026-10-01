@@ -1,0 +1,2097 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Cooperative Bank</fullName>
+        <default>false</default>
+        <label>Cooperative Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Dairy Products</fullName>
+        <default>false</default>
+        <label>Dairy Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Distributors</fullName>
+        <default>false</default>
+        <label>Distributors</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial Institution</fullName>
+        <default>false</default>
+        <label>Financial Institution</label>
+    </customValue>
+    <customValue>
+        <fullName>Life Insurance</fullName>
+        <default>false</default>
+        <label>Life Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Others</fullName>
+        <default>false</default>
+        <label>Others</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail</fullName>
+        <default>false</default>
+        <label>Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Security Receipts</fullName>
+        <default>false</default>
+        <label>Security Receipts</label>
+    </customValue>
+    <customValue>
+        <fullName>Seeds</fullName>
+        <default>false</default>
+        <label>Seeds</label>
+    </customValue>
+    <customValue>
+        <fullName>Shipping</fullName>
+        <default>false</default>
+        <label>Shipping</label>
+    </customValue>
+    <customValue>
+        <fullName>Sugar</fullName>
+        <default>false</default>
+        <label>Sugar</label>
+    </customValue>
+    <customValue>
+        <fullName>Trading - Chemicals</fullName>
+        <default>false</default>
+        <label>Trading - Chemicals</label>
+    </customValue>
+    <customValue>
+        <fullName>Trading - Metals</fullName>
+        <default>false</default>
+        <label>Trading - Metals</label>
+    </customValue>
+    <customValue>
+        <fullName>Urban Local Bodies</fullName>
+        <default>false</default>
+        <label>Urban Local Bodies</label>
+    </customValue>
+    <customValue>
+        <fullName>Iron &amp; Steel</fullName>
+        <default>false</default>
+        <label>Iron &amp; Steel</label>
+    </customValue>
+    <customValue>
+        <fullName>Dealer - PV</fullName>
+        <default>false</default>
+        <label>Dealer - PV</label>
+    </customValue>
+    <customValue>
+        <fullName>Cut &amp; Polished Diamonds</fullName>
+        <default>false</default>
+        <label>Cut &amp; Polished Diamonds</label>
+    </customValue>
+    <customValue>
+        <fullName>Diversified</fullName>
+        <default>false</default>
+        <label>Diversified</label>
+    </customValue>
+    <customValue>
+        <fullName>Engineering</fullName>
+        <default>false</default>
+        <label>Engineering</label>
+    </customValue>
+    <customValue>
+        <fullName>K XII</fullName>
+        <default>false</default>
+        <label>K XII</label>
+    </customValue>
+    <customValue>
+        <fullName>Management</fullName>
+        <default>false</default>
+        <label>Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Medical</fullName>
+        <default>false</default>
+        <label>Medical</label>
+    </customValue>
+    <customValue>
+        <fullName>Film Exhibition</fullName>
+        <default>false</default>
+        <label>Film Exhibition</label>
+    </customValue>
+    <customValue>
+        <fullName>Film Production</fullName>
+        <default>false</default>
+        <label>Film Production</label>
+    </customValue>
+    <customValue>
+        <fullName>Commercial</fullName>
+        <default>false</default>
+        <label>Commercial</label>
+    </customValue>
+    <customValue>
+        <fullName>LRD</fullName>
+        <default>false</default>
+        <label>LRD</label>
+    </customValue>
+    <customValue>
+        <fullName>Mixed Use</fullName>
+        <default>false</default>
+        <label>Mixed Use</label>
+    </customValue>
+    <customValue>
+        <fullName>Residential</fullName>
+        <default>false</default>
+        <label>Residential</label>
+    </customValue>
+    <customValue>
+        <fullName>Cotton Ginning</fullName>
+        <default>false</default>
+        <label>Cotton Ginning</label>
+    </customValue>
+    <customValue>
+        <fullName>Cotton Yarn</fullName>
+        <default>false</default>
+        <label>Cotton Yarn</label>
+    </customValue>
+    <customValue>
+        <fullName>Fabric Manufacturer</fullName>
+        <default>false</default>
+        <label>Fabric Manufacturer</label>
+    </customValue>
+    <customValue>
+        <fullName>Fabric Processing</fullName>
+        <default>false</default>
+        <label>Fabric Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Synthetic and other Yarn</fullName>
+        <default>false</default>
+        <label>Synthetic and other Yarn</label>
+    </customValue>
+    <customValue>
+        <fullName>Jewellery - Retail</fullName>
+        <default>false</default>
+        <label>Jewellery - Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Jewellery - Trading</fullName>
+        <default>false</default>
+        <label>Jewellery - Trading</label>
+    </customValue>
+    <customValue>
+        <fullName>Jewellery - Wholesale</fullName>
+        <default>false</default>
+        <label>Jewellery - Wholesale</label>
+    </customValue>
+    <customValue>
+        <fullName>Cashews</fullName>
+        <default>false</default>
+        <label>Cashews</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Agricultural Products</fullName>
+        <default>false</default>
+        <label>Other Agricultural Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Pulses and Other Milling</fullName>
+        <default>false</default>
+        <label>Pulses and Other Milling</label>
+    </customValue>
+    <customValue>
+        <fullName>Rice Mills</fullName>
+        <default>false</default>
+        <label>Rice Mills</label>
+    </customValue>
+    <customValue>
+        <fullName>Spices</fullName>
+        <default>false</default>
+        <label>Spices</label>
+    </customValue>
+    <customValue>
+        <fullName>Diversified FMCG</fullName>
+        <default>false</default>
+        <label>Diversified FMCG</label>
+    </customValue>
+    <customValue>
+        <fullName>Foreign banks</fullName>
+        <default>false</default>
+        <label>Foreign banks</label>
+    </customValue>
+    <customValue>
+        <fullName>Regional Rural Bank</fullName>
+        <default>false</default>
+        <label>Regional Rural Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Small Finance Bank</fullName>
+        <default>false</default>
+        <label>Small Finance Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Alternative Investment Funds</fullName>
+        <default>false</default>
+        <label>Alternative Investment Funds</label>
+    </customValue>
+    <customValue>
+        <fullName>Mutual Funds</fullName>
+        <default>false</default>
+        <label>Mutual Funds</label>
+    </customValue>
+    <customValue>
+        <fullName>Primary Dealers</fullName>
+        <default>false</default>
+        <label>Primary Dealers</label>
+    </customValue>
+    <customValue>
+        <fullName>NBFC-Infrastructure</fullName>
+        <default>false</default>
+        <label>NBFC-Infrastructure</label>
+    </customValue>
+    <customValue>
+        <fullName>NBFC-Retail</fullName>
+        <default>false</default>
+        <label>NBFC-Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>NBFC-Wholesale &amp; Investment</fullName>
+        <default>false</default>
+        <label>NBFC-Wholesale &amp; Investment</label>
+    </customValue>
+    <customValue>
+        <fullName>Asset Reconstruction Companies</fullName>
+        <default>false</default>
+        <label>Asset Reconstruction Companies</label>
+    </customValue>
+    <customValue>
+        <fullName>APIs</fullName>
+        <default>false</default>
+        <label>APIs</label>
+    </customValue>
+    <customValue>
+        <fullName>CRAMS</fullName>
+        <default>false</default>
+        <label>CRAMS</label>
+    </customValue>
+    <customValue>
+        <fullName>Formulations</fullName>
+        <default>false</default>
+        <label>Formulations</label>
+    </customValue>
+    <customValue>
+        <fullName>Dealer - CV</fullName>
+        <default>false</default>
+        <label>Dealer - CV</label>
+    </customValue>
+    <customValue>
+        <fullName>Dealer - Tractor</fullName>
+        <default>false</default>
+        <label>Dealer - Tractor</label>
+    </customValue>
+    <customValue>
+        <fullName>Compressors &amp; Pumps</fullName>
+        <default>false</default>
+        <label>Compressors &amp; Pumps</label>
+    </customValue>
+    <customValue>
+        <fullName>NHAI HAM</fullName>
+        <default>false</default>
+        <label>NHAI HAM</label>
+    </customValue>
+    <customValue>
+        <fullName>NHAI Annuity</fullName>
+        <default>false</default>
+        <label>NHAI Annuity</label>
+    </customValue>
+    <customValue>
+        <fullName>NHAI Toll</fullName>
+        <default>false</default>
+        <label>NHAI Toll</label>
+    </customValue>
+    <customValue>
+        <fullName>State Annuity</fullName>
+        <default>false</default>
+        <label>State Annuity</label>
+    </customValue>
+    <customValue>
+        <fullName>State Toll</fullName>
+        <default>false</default>
+        <label>State Toll</label>
+    </customValue>
+    <customValue>
+        <fullName>Power Distribution</fullName>
+        <default>false</default>
+        <label>Power Distribution</label>
+    </customValue>
+    <customValue>
+        <fullName>Non-renewable</fullName>
+        <default>false</default>
+        <label>Non-renewable</label>
+    </customValue>
+    <customValue>
+        <fullName>Renewable</fullName>
+        <default>false</default>
+        <label>Renewable</label>
+    </customValue>
+    <customValue>
+        <fullName>Home Textiles</fullName>
+        <default>false</default>
+        <label>Home Textiles</label>
+    </customValue>
+    <customValue>
+        <fullName>Commodity Chemicals</fullName>
+        <default>false</default>
+        <label>Commodity Chemicals</label>
+    </customValue>
+    <customValue>
+        <fullName>Specialty Chemicals</fullName>
+        <default>false</default>
+        <label>Specialty Chemicals</label>
+    </customValue>
+    <customValue>
+        <fullName>Carbon Black</fullName>
+        <default>false</default>
+        <label>Carbon Black</label>
+    </customValue>
+    <customValue>
+        <fullName>Dyes And Pigments</fullName>
+        <default>false</default>
+        <label>Dyes And Pigments</label>
+    </customValue>
+    <customValue>
+        <fullName>Explosives</fullName>
+        <default>false</default>
+        <label>Explosives</label>
+    </customValue>
+    <customValue>
+        <fullName>Petrochemicals</fullName>
+        <default>false</default>
+        <label>Petrochemicals</label>
+    </customValue>
+    <customValue>
+        <fullName>Printing Inks</fullName>
+        <default>false</default>
+        <label>Printing Inks</label>
+    </customValue>
+    <customValue>
+        <fullName>Industrial Gases</fullName>
+        <default>false</default>
+        <label>Industrial Gases</label>
+    </customValue>
+    <customValue>
+        <fullName>Fertilizers</fullName>
+        <default>false</default>
+        <label>Fertilizers</label>
+    </customValue>
+    <customValue>
+        <fullName>Pesticides &amp; Agrochemicals</fullName>
+        <default>false</default>
+        <label>Pesticides &amp; Agrochemicals</label>
+    </customValue>
+    <customValue>
+        <fullName>Cement &amp; Cement Products</fullName>
+        <default>false</default>
+        <label>Cement &amp; Cement Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Construction Materials</fullName>
+        <default>false</default>
+        <label>Other Construction Materials</label>
+    </customValue>
+    <customValue>
+        <fullName>Ferro &amp; Silica Manganese</fullName>
+        <default>false</default>
+        <label>Ferro &amp; Silica Manganese</label>
+    </customValue>
+    <customValue>
+        <fullName>Pig Iron</fullName>
+        <default>false</default>
+        <label>Pig Iron</label>
+    </customValue>
+    <customValue>
+        <fullName>Sponge Iron</fullName>
+        <default>false</default>
+        <label>Sponge Iron</label>
+    </customValue>
+    <customValue>
+        <fullName>Shipbreakers</fullName>
+        <default>false</default>
+        <label>Shipbreakers</label>
+    </customValue>
+    <customValue>
+        <fullName>Aluminium</fullName>
+        <default>false</default>
+        <label>Aluminium</label>
+    </customValue>
+    <customValue>
+        <fullName>Copper</fullName>
+        <default>false</default>
+        <label>Copper</label>
+    </customValue>
+    <customValue>
+        <fullName>Zinc</fullName>
+        <default>false</default>
+        <label>Zinc</label>
+    </customValue>
+    <customValue>
+        <fullName>Precious Metals</fullName>
+        <default>false</default>
+        <label>Precious Metals</label>
+    </customValue>
+    <customValue>
+        <fullName>Diversified Metals</fullName>
+        <default>false</default>
+        <label>Diversified Metals</label>
+    </customValue>
+    <customValue>
+        <fullName>Industrial Minerals</fullName>
+        <default>false</default>
+        <label>Industrial Minerals</label>
+    </customValue>
+    <customValue>
+        <fullName>Trading - Minerals</fullName>
+        <default>false</default>
+        <label>Trading - Minerals</label>
+    </customValue>
+    <customValue>
+        <fullName>Paper &amp; Paper Products</fullName>
+        <default>false</default>
+        <label>Paper &amp; Paper Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Forest Products</fullName>
+        <default>false</default>
+        <label>Forest Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Jute &amp; Jute Products</fullName>
+        <default>false</default>
+        <label>Jute &amp; Jute Products</label>
+    </customValue>
+    <customValue>
+        <fullName>2/3 Wheelers</fullName>
+        <default>false</default>
+        <label>2/3 Wheelers</label>
+    </customValue>
+    <customValue>
+        <fullName>Dealer - 2/3 wheeler</fullName>
+        <default>false</default>
+        <label>Dealer - 2/3 wheeler</label>
+    </customValue>
+    <customValue>
+        <fullName>Tyres &amp; Rubber Products</fullName>
+        <default>false</default>
+        <label>Tyres &amp; Rubber Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Trading - Auto Components</fullName>
+        <default>false</default>
+        <label>Trading - Auto Components</label>
+    </customValue>
+    <customValue>
+        <fullName>Cycles</fullName>
+        <default>false</default>
+        <label>Cycles</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumer Electronics</fullName>
+        <default>false</default>
+        <label>Consumer Electronics</label>
+    </customValue>
+    <customValue>
+        <fullName>Furniture, Home Furnishing</fullName>
+        <default>false</default>
+        <label>Furniture, Home Furnishing</label>
+    </customValue>
+    <customValue>
+        <fullName>Ceramics</fullName>
+        <default>false</default>
+        <label>Ceramics</label>
+    </customValue>
+    <customValue>
+        <fullName>Granites &amp; Marbles</fullName>
+        <default>false</default>
+        <label>Granites &amp; Marbles</label>
+    </customValue>
+    <customValue>
+        <fullName>Watches</fullName>
+        <default>false</default>
+        <label>Watches</label>
+    </customValue>
+    <customValue>
+        <fullName>Glass - Consumer</fullName>
+        <default>false</default>
+        <label>Glass - Consumer</label>
+    </customValue>
+    <customValue>
+        <fullName>Household Appliances</fullName>
+        <default>false</default>
+        <label>Household Appliances</label>
+    </customValue>
+    <customValue>
+        <fullName>Houseware</fullName>
+        <default>false</default>
+        <label>Houseware</label>
+    </customValue>
+    <customValue>
+        <fullName>Leather And Leather Products</fullName>
+        <default>false</default>
+        <label>Leather And Leather Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Leisure Products</fullName>
+        <default>false</default>
+        <label>Leisure Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Plastic Products - Consumer</fullName>
+        <default>false</default>
+        <label>Plastic Products - Consumer</label>
+    </customValue>
+    <customValue>
+        <fullName>Plywood Boards/ Laminates</fullName>
+        <default>false</default>
+        <label>Plywood Boards/ Laminates</label>
+    </customValue>
+    <customValue>
+        <fullName>Sanitary Ware</fullName>
+        <default>false</default>
+        <label>Sanitary Ware</label>
+    </customValue>
+    <customValue>
+        <fullName>Paints</fullName>
+        <default>false</default>
+        <label>Paints</label>
+    </customValue>
+    <customValue>
+        <fullName>Diversified consumer products</fullName>
+        <default>false</default>
+        <label>Diversified consumer products</label>
+    </customValue>
+    <customValue>
+        <fullName>Footwear</fullName>
+        <default>false</default>
+        <label>Footwear</label>
+    </customValue>
+    <customValue>
+        <fullName>Garments &amp; Apparels</fullName>
+        <default>false</default>
+        <label>Garments &amp; Apparels</label>
+    </customValue>
+    <customValue>
+        <fullName>Trading - Textile Products</fullName>
+        <default>false</default>
+        <label>Trading - Textile Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Advertising &amp; Media Agencies</fullName>
+        <default>false</default>
+        <label>Advertising &amp; Media Agencies</label>
+    </customValue>
+    <customValue>
+        <fullName>Electronic Media</fullName>
+        <default>false</default>
+        <label>Electronic Media</label>
+    </customValue>
+    <customValue>
+        <fullName>Web based media and service</fullName>
+        <default>false</default>
+        <label>Web based media and service</label>
+    </customValue>
+    <customValue>
+        <fullName>Print Media</fullName>
+        <default>false</default>
+        <label>Print Media</label>
+    </customValue>
+    <customValue>
+        <fullName>Film Distribution</fullName>
+        <default>false</default>
+        <label>Film Distribution</label>
+    </customValue>
+    <customValue>
+        <fullName>Digital Entertainment</fullName>
+        <default>false</default>
+        <label>Digital Entertainment</label>
+    </customValue>
+    <customValue>
+        <fullName>Media &amp; Entertainment</fullName>
+        <default>false</default>
+        <label>Media &amp; Entertainment</label>
+    </customValue>
+    <customValue>
+        <fullName>TV Broadcasting &amp; Software Production</fullName>
+        <default>false</default>
+        <label>TV Broadcasting &amp; Software Production</label>
+    </customValue>
+    <customValue>
+        <fullName>Printing &amp; Publication</fullName>
+        <default>false</default>
+        <label>Printing &amp; Publication</label>
+    </customValue>
+    <customValue>
+        <fullName>Passenger Cars &amp; Utility Vehicles</fullName>
+        <default>false</default>
+        <label>Passenger Cars &amp; Utility Vehicles</label>
+    </customValue>
+    <customValue>
+        <fullName>Real Estate related services</fullName>
+        <default>false</default>
+        <label>Real Estate related services</label>
+    </customValue>
+    <customValue>
+        <fullName>Real Estate Investment Trusts (REITs)</fullName>
+        <default>false</default>
+        <label>Real Estate Investment Trusts (REITs)</label>
+    </customValue>
+    <customValue>
+        <fullName>Hotels &amp; Resorts</fullName>
+        <default>false</default>
+        <label>Hotels &amp; Resorts</label>
+    </customValue>
+    <customValue>
+        <fullName>Restaurants</fullName>
+        <default>false</default>
+        <label>Restaurants</label>
+    </customValue>
+    <customValue>
+        <fullName>Amusement Parks/ Other Recreation</fullName>
+        <default>false</default>
+        <label>Amusement Parks/ Other Recreation</label>
+    </customValue>
+    <customValue>
+        <fullName>Wellness</fullName>
+        <default>false</default>
+        <label>Wellness</label>
+    </customValue>
+    <customValue>
+        <fullName>Tour, Travel Related Services</fullName>
+        <default>false</default>
+        <label>Tour, Travel Related Services</label>
+    </customValue>
+    <customValue>
+        <fullName>E-Learning</fullName>
+        <default>false</default>
+        <label>E-Learning</label>
+    </customValue>
+    <customValue>
+        <fullName>Food Storage Facilities</fullName>
+        <default>false</default>
+        <label>Food Storage Facilities</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Consumer Services</fullName>
+        <default>false</default>
+        <label>Other Consumer Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Speciality Retail</fullName>
+        <default>false</default>
+        <label>Speciality Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Pharmacy Retail</fullName>
+        <default>false</default>
+        <label>Pharmacy Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Diversified Retail</fullName>
+        <default>false</default>
+        <label>Diversified Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>E-Retail/ E-Commerce</fullName>
+        <default>false</default>
+        <label>E-Retail/ E-Commerce</label>
+    </customValue>
+    <customValue>
+        <fullName>Internet &amp; Catalogue Retail</fullName>
+        <default>false</default>
+        <label>Internet &amp; Catalogue Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Gas Transmission/Marketing</fullName>
+        <default>false</default>
+        <label>Gas Transmission/Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>LPG/CNG/PNG/LNG Supplier</fullName>
+        <default>false</default>
+        <label>LPG/CNG/PNG/LNG Supplier</label>
+    </customValue>
+    <customValue>
+        <fullName>Trading - Gas</fullName>
+        <default>false</default>
+        <label>Trading - Gas</label>
+    </customValue>
+    <customValue>
+        <fullName>Oil Exploration &amp; Production</fullName>
+        <default>false</default>
+        <label>Oil Exploration &amp; Production</label>
+    </customValue>
+    <customValue>
+        <fullName>Offshore Support Solution Drilling</fullName>
+        <default>false</default>
+        <label>Offshore Support Solution Drilling</label>
+    </customValue>
+    <customValue>
+        <fullName>Oil Storage &amp; Transportation</fullName>
+        <default>false</default>
+        <label>Oil Storage &amp; Transportation</label>
+    </customValue>
+    <customValue>
+        <fullName>Oil Equipment &amp; Services</fullName>
+        <default>false</default>
+        <label>Oil Equipment &amp; Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Refineries &amp; Marketing</fullName>
+        <default>false</default>
+        <label>Refineries &amp; Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Lubricants</fullName>
+        <default>false</default>
+        <label>Lubricants</label>
+    </customValue>
+    <customValue>
+        <fullName>Coal</fullName>
+        <default>false</default>
+        <label>Coal</label>
+    </customValue>
+    <customValue>
+        <fullName>Trading - Coal</fullName>
+        <default>false</default>
+        <label>Trading - Coal</label>
+    </customValue>
+    <customValue>
+        <fullName>Edible Oil</fullName>
+        <default>false</default>
+        <label>Edible Oil</label>
+    </customValue>
+    <customValue>
+        <fullName>Tea &amp; Coffee</fullName>
+        <default>false</default>
+        <label>Tea &amp; Coffee</label>
+    </customValue>
+    <customValue>
+        <fullName>Breweries &amp; Distilleries</fullName>
+        <default>false</default>
+        <label>Breweries &amp; Distilleries</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Beverages</fullName>
+        <default>false</default>
+        <label>Other Beverages</label>
+    </customValue>
+    <customValue>
+        <fullName>Cigarettes &amp; Tobacco Products</fullName>
+        <default>false</default>
+        <label>Cigarettes &amp; Tobacco Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Animal Feed</fullName>
+        <default>false</default>
+        <label>Animal Feed</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Food Products</fullName>
+        <default>false</default>
+        <label>Other Food Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Packaged Foods</fullName>
+        <default>false</default>
+        <label>Packaged Foods</label>
+    </customValue>
+    <customValue>
+        <fullName>Seafood</fullName>
+        <default>false</default>
+        <label>Seafood</label>
+    </customValue>
+    <customValue>
+        <fullName>Meat Products including Poultry</fullName>
+        <default>false</default>
+        <label>Meat Products including Poultry</label>
+    </customValue>
+    <customValue>
+        <fullName>Personal Care</fullName>
+        <default>false</default>
+        <label>Personal Care</label>
+    </customValue>
+    <customValue>
+        <fullName>Household Products</fullName>
+        <default>false</default>
+        <label>Household Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Stationary</fullName>
+        <default>false</default>
+        <label>Stationary</label>
+    </customValue>
+    <customValue>
+        <fullName>Trading-FMCG Products</fullName>
+        <default>false</default>
+        <label>Trading-FMCG Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Housing Finance Company</fullName>
+        <default>false</default>
+        <label>Housing Finance Company</label>
+    </customValue>
+    <customValue>
+        <fullName>Investment Company</fullName>
+        <default>false</default>
+        <label>Investment Company</label>
+    </customValue>
+    <customValue>
+        <fullName>Public Sector Bank</fullName>
+        <default>false</default>
+        <label>Public Sector Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Private Sector Bank</fullName>
+        <default>false</default>
+        <label>Private Sector Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Depositories, Clearing Houses and Other Intermediaries</fullName>
+        <default>false</default>
+        <label>Depositories, Clearing Houses and Other Intermediaries</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial Products Distributor</fullName>
+        <default>false</default>
+        <label>Financial Products Distributor</label>
+    </customValue>
+    <customValue>
+        <fullName>Ratings</fullName>
+        <default>false</default>
+        <label>Ratings</label>
+    </customValue>
+    <customValue>
+        <fullName>Exchange and Data Platform</fullName>
+        <default>false</default>
+        <label>Exchange and Data Platform</label>
+    </customValue>
+    <customValue>
+        <fullName>Stockbroking &amp; Allied</fullName>
+        <default>false</default>
+        <label>Stockbroking &amp; Allied</label>
+    </customValue>
+    <customValue>
+        <fullName>General Insurance</fullName>
+        <default>false</default>
+        <label>General Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Insurance Companies</fullName>
+        <default>false</default>
+        <label>Other Insurance Companies</label>
+    </customValue>
+    <customValue>
+        <fullName>Insurance Distributors</fullName>
+        <default>false</default>
+        <label>Insurance Distributors</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial Technology (Fintech)</fullName>
+        <default>false</default>
+        <label>Financial Technology (Fintech)</label>
+    </customValue>
+    <customValue>
+        <fullName>Biotechnology</fullName>
+        <default>false</default>
+        <label>Biotechnology</label>
+    </customValue>
+    <customValue>
+        <fullName>Medical Equipment &amp; Supplies</fullName>
+        <default>false</default>
+        <label>Medical Equipment &amp; Supplies</label>
+    </customValue>
+    <customValue>
+        <fullName>Hospital</fullName>
+        <default>false</default>
+        <label>Hospital</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcare Service Provider</fullName>
+        <default>false</default>
+        <label>Healthcare Service Provider</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcare Research, Analytics &amp; Technology</fullName>
+        <default>false</default>
+        <label>Healthcare Research, Analytics &amp; Technology</label>
+    </customValue>
+    <customValue>
+        <fullName>Civil Construction</fullName>
+        <default>false</default>
+        <label>Civil Construction</label>
+    </customValue>
+    <customValue>
+        <fullName>Aerospace &amp; Defense</fullName>
+        <default>false</default>
+        <label>Aerospace &amp; Defense</label>
+    </customValue>
+    <customValue>
+        <fullName>Tractors</fullName>
+        <default>false</default>
+        <label>Tractors</label>
+    </customValue>
+    <customValue>
+        <fullName>Commercial Vehicles</fullName>
+        <default>false</default>
+        <label>Commercial Vehicles</label>
+    </customValue>
+    <customValue>
+        <fullName>Construction Vehicles</fullName>
+        <default>false</default>
+        <label>Construction Vehicles</label>
+    </customValue>
+    <customValue>
+        <fullName>Dealer - Construction Vehicles</fullName>
+        <default>false</default>
+        <label>Dealer - Construction Vehicles</label>
+    </customValue>
+    <customValue>
+        <fullName>Heavy Electrical Equipment</fullName>
+        <default>false</default>
+        <label>Heavy Electrical Equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Electrical Equipment</fullName>
+        <default>false</default>
+        <label>Other Electrical Equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>Railway Wagons</fullName>
+        <default>false</default>
+        <label>Railway Wagons</label>
+    </customValue>
+    <customValue>
+        <fullName>Ship Building &amp; Allied Services</fullName>
+        <default>false</default>
+        <label>Ship Building &amp; Allied Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Industrial Products</fullName>
+        <default>false</default>
+        <label>Industrial Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Cables - Electricals</fullName>
+        <default>false</default>
+        <label>Cables - Electricals</label>
+    </customValue>
+    <customValue>
+        <fullName>Castings &amp; Forgings</fullName>
+        <default>false</default>
+        <label>Castings &amp; Forgings</label>
+    </customValue>
+    <customValue>
+        <fullName>Packaging</fullName>
+        <default>false</default>
+        <label>Packaging</label>
+    </customValue>
+    <customValue>
+        <fullName>Plastic Products - Industrial</fullName>
+        <default>false</default>
+        <label>Plastic Products - Industrial</label>
+    </customValue>
+    <customValue>
+        <fullName>Rubber</fullName>
+        <default>false</default>
+        <label>Rubber</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Industrial Products</fullName>
+        <default>false</default>
+        <label>Other Industrial Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Glass - Industrial</fullName>
+        <default>false</default>
+        <label>Glass - Industrial</label>
+    </customValue>
+    <customValue>
+        <fullName>Aluminium, Copper &amp; Zinc Products</fullName>
+        <default>false</default>
+        <label>Aluminium, Copper &amp; Zinc Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Iron &amp; Steel Products</fullName>
+        <default>false</default>
+        <label>Iron &amp; Steel Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Abrasives &amp; Bearings</fullName>
+        <default>false</default>
+        <label>Abrasives &amp; Bearings</label>
+    </customValue>
+    <customValue>
+        <fullName>Electrodes &amp; Refractories</fullName>
+        <default>false</default>
+        <label>Electrodes &amp; Refractories</label>
+    </customValue>
+    <customValue>
+        <fullName>Software Products</fullName>
+        <default>false</default>
+        <label>Software Products</label>
+    </customValue>
+    <customValue>
+        <fullName>IT Enabled Services</fullName>
+        <default>false</default>
+        <label>IT Enabled Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Dredging</fullName>
+        <default>false</default>
+        <label>Dredging</label>
+    </customValue>
+    <customValue>
+        <fullName>Airline</fullName>
+        <default>false</default>
+        <label>Airline</label>
+    </customValue>
+    <customValue>
+        <fullName>Logistics Solution Provider</fullName>
+        <default>false</default>
+        <label>Logistics Solution Provider</label>
+    </customValue>
+    <customValue>
+        <fullName>Railways</fullName>
+        <default>false</default>
+        <label>Railways</label>
+    </customValue>
+    <customValue>
+        <fullName>Road Transport</fullName>
+        <default>false</default>
+        <label>Road Transport</label>
+    </customValue>
+    <customValue>
+        <fullName>Transport Related Services</fullName>
+        <default>false</default>
+        <label>Transport Related Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Airport &amp; Airport services</fullName>
+        <default>false</default>
+        <label>Airport &amp; Airport services</label>
+    </customValue>
+    <customValue>
+        <fullName>Port &amp; Port services</fullName>
+        <default>false</default>
+        <label>Port &amp; Port services</label>
+    </customValue>
+    <customValue>
+        <fullName>State HAM</fullName>
+        <default>false</default>
+        <label>State HAM</label>
+    </customValue>
+    <customValue>
+        <fullName>Trading &amp; Distributors</fullName>
+        <default>false</default>
+        <label>Trading &amp; Distributors</label>
+    </customValue>
+    <customValue>
+        <fullName>Consulting Services</fullName>
+        <default>false</default>
+        <label>Consulting Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Processing Services</fullName>
+        <default>false</default>
+        <label>Data Processing Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Computers Hardware &amp; Equipments</fullName>
+        <default>false</default>
+        <label>Computers Hardware &amp; Equipments</label>
+    </customValue>
+    <customValue>
+        <fullName>Diversified Commercial Services</fullName>
+        <default>false</default>
+        <label>Diversified Commercial Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Process Outsourcing (BPO)/ Knowledge Process Outsourcing (KPO)</fullName>
+        <default>false</default>
+        <label>Business Process Outsourcing (BPO)/ Knowledge Process Outsourcing (KPO)</label>
+    </customValue>
+    <customValue>
+        <fullName>State Government</fullName>
+        <default>false</default>
+        <label>State Government</label>
+    </customValue>
+    <customValue>
+        <fullName>Development Authority</fullName>
+        <default>false</default>
+        <label>Development Authority</label>
+    </customValue>
+    <customValue>
+        <fullName>Telecom - Cellular &amp; Fixed line services</fullName>
+        <default>false</default>
+        <label>Telecom - Cellular &amp; Fixed line services</label>
+    </customValue>
+    <customValue>
+        <fullName>Telecom - Infrastructure</fullName>
+        <default>false</default>
+        <label>Telecom - Infrastructure</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Telecom Services</fullName>
+        <default>false</default>
+        <label>Other Telecom Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Telecom - Equipment &amp; Accessories</fullName>
+        <default>false</default>
+        <label>Telecom - Equipment &amp; Accessories</label>
+    </customValue>
+    <customValue>
+        <fullName>Integrated Power Utilities</fullName>
+        <default>false</default>
+        <label>Integrated Power Utilities</label>
+    </customValue>
+    <customValue>
+        <fullName>Power Trading</fullName>
+        <default>false</default>
+        <label>Power Trading</label>
+    </customValue>
+    <customValue>
+        <fullName>Power - Transmission</fullName>
+        <default>false</default>
+        <label>Power - Transmission</label>
+    </customValue>
+    <customValue>
+        <fullName>Water Supply &amp; Management</fullName>
+        <default>false</default>
+        <label>Water Supply &amp; Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Waste Management</fullName>
+        <default>false</default>
+        <label>Waste Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Emergency Services</fullName>
+        <default>false</default>
+        <label>Emergency Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Multi Utilities</fullName>
+        <default>false</default>
+        <label>Multi Utilities</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Utilities</fullName>
+        <default>false</default>
+        <label>Other Utilities</label>
+    </customValue>
+    <customValue>
+        <fullName>Computers - Software &amp; Consulting</fullName>
+        <default>false</default>
+        <label>Computers - Software &amp; Consulting</label>
+    </customValue>
+    <customValue>
+        <fullName>Auto Components &amp; Equipments</fullName>
+        <default>false</default>
+        <label>Auto Components &amp; Equipments</label>
+    </customValue>
+    <customValue>
+        <fullName>ABS</fullName>
+        <default>false</default>
+        <label>ABS</label>
+    </customValue>
+    <customValue>
+        <fullName>MBS</fullName>
+        <default>false</default>
+        <label>MBS</label>
+    </customValue>
+    <customValue>
+        <fullName>CDO</fullName>
+        <default>false</default>
+        <label>CDO</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Securitisation</fullName>
+        <default>false</default>
+        <label>Other Securitisation</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Centres</fullName>
+        <default>false</default>
+        <label>Data Centres</label>
+    </customValue>
+    <customValue>
+        <fullName>Holding Company(Financial)</fullName>
+        <default>false</default>
+        <label>Holding Company(Financial)</label>
+    </customValue>
+    <customValue>
+        <fullName>Holding Company(Non-Financial)</fullName>
+        <default>false</default>
+        <label>Holding Company(Non-Financial)</label>
+    </customValue>
+    <customValue>
+        <fullName>Microfinance Institutions</fullName>
+        <default>false</default>
+        <label>Microfinance Institutions</label>
+    </customValue>
+    <customValue>
+        <fullName>SI Grading</fullName>
+        <default>false</default>
+        <label>SI Grading</label>
+    </customValue>
+    <customValue>
+        <fullName>Real Estate - Mixed Use</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Real Estate - Mixed Use</label>
+    </customValue>
+    <customValue>
+        <fullName>Real Estate - LRD</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Real Estate - LRD</label>
+    </customValue>
+    <customValue>
+        <fullName>Real Estate - Commercial</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Real Estate - Commercial</label>
+    </customValue>
+    <customValue>
+        <fullName>Power - Transmission and Trading</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Power - Transmission and Trading</label>
+    </customValue>
+    <customValue>
+        <fullName>Power - Thermal Generation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Power - Thermal Generation</label>
+    </customValue>
+    <customValue>
+        <fullName>Power - Integrated Utilities and SEBs</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Power - Integrated Utilities and SEBs</label>
+    </customValue>
+    <customValue>
+        <fullName>Power - Hydro and Renewable</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Power - Hydro and Renewable</label>
+    </customValue>
+    <customValue>
+        <fullName>Power - Distribution</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Power - Distribution</label>
+    </customValue>
+    <customValue>
+        <fullName>Road Transport Corporations</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Road Transport Corporations</label>
+    </customValue>
+    <customValue>
+        <fullName>Development Authorities</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Development Authorities</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial Service Companies</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Financial Service Companies</label>
+    </customValue>
+    <customValue>
+        <fullName>Public Sector Banks</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Public Sector Banks</label>
+    </customValue>
+    <customValue>
+        <fullName>Private Sector Banks</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Private Sector Banks</label>
+    </customValue>
+    <customValue>
+        <fullName>Broking Companies</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Broking Companies</label>
+    </customValue>
+    <customValue>
+        <fullName>Housing Finance Companies</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Housing Finance Companies</label>
+    </customValue>
+    <customValue>
+        <fullName>Non-Life Insurance</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Non-Life Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Chemicals - Others</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Chemicals - Others</label>
+    </customValue>
+    <customValue>
+        <fullName>Engineering - Others</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Engineering - Others</label>
+    </customValue>
+    <customValue>
+        <fullName>FMCG</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>FMCG</label>
+    </customValue>
+    <customValue>
+        <fullName>Poultry</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Poultry</label>
+    </customValue>
+    <customValue>
+        <fullName>Ports</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Ports</label>
+    </customValue>
+    <customValue>
+        <fullName>Port Support Services</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Port Support Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Plastics</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Plastics</label>
+    </customValue>
+    <customValue>
+        <fullName>Pharmaceuticals - Formulations</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pharmaceuticals - Formulations</label>
+    </customValue>
+    <customValue>
+        <fullName>Pharmaceuticals - CRAMS</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pharmaceuticals - CRAMS</label>
+    </customValue>
+    <customValue>
+        <fullName>Pharmaceuticals - Ayurveda and Others</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pharmaceuticals - Ayurveda and Others</label>
+    </customValue>
+    <customValue>
+        <fullName>Pharmaceuticals - APIs</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pharmaceuticals - APIs</label>
+    </customValue>
+    <customValue>
+        <fullName>Petrochemicals and Polymers - Polymer Traders</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Petrochemicals and Polymers - Polymer Traders</label>
+    </customValue>
+    <customValue>
+        <fullName>Petrochemicals and Polymers - Polymer Processors</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Petrochemicals and Polymers - Polymer Processors</label>
+    </customValue>
+    <customValue>
+        <fullName>Miscellaneous</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Miscellaneous</label>
+    </customValue>
+    <customValue>
+        <fullName>Mining</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Mining</label>
+    </customValue>
+    <customValue>
+        <fullName>Medical Products and Devices</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Medical Products and Devices</label>
+    </customValue>
+    <customValue>
+        <fullName>Media and Entertainment - Publishing and Printing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Media and Entertainment - Publishing and Printing</label>
+    </customValue>
+    <customValue>
+        <fullName>Media and Entertainment - Movies</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Media and Entertainment - Movies</label>
+    </customValue>
+    <customValue>
+        <fullName>Media and Entertainment - Exhibitors (Movies)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Media and Entertainment - Exhibitors (Movies)</label>
+    </customValue>
+    <customValue>
+        <fullName>Media and Entertainment - Broadcasting</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Media and Entertainment - Broadcasting</label>
+    </customValue>
+    <customValue>
+        <fullName>Media and Entertainment - Advertising</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Media and Entertainment - Advertising</label>
+    </customValue>
+    <customValue>
+        <fullName>Media &amp; Entertainment - Others</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Media &amp; Entertainment - Others</label>
+    </customValue>
+    <customValue>
+        <fullName>Manpower Outsourcing and Security Services</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Manpower Outsourcing and Security Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Logistics - Road</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Logistics - Road</label>
+    </customValue>
+    <customValue>
+        <fullName>Logistics - Rail</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Logistics - Rail</label>
+    </customValue>
+    <customValue>
+        <fullName>Logistics - Others</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Logistics - Others</label>
+    </customValue>
+    <customValue>
+        <fullName>Information Technology and BPO - IT Services</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Information Technology and BPO - IT Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Information Technology and BPO - Hardware</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Information Technology and BPO - Hardware</label>
+    </customValue>
+    <customValue>
+        <fullName>Information Technology and BPO - BPO</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Information Technology and BPO - BPO</label>
+    </customValue>
+    <customValue>
+        <fullName>Holding Company</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Holding Company</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcare - Hospitals</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Healthcare - Hospitals</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcare - Diagnostic Chains etc</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Healthcare - Diagnostic Chains etc</label>
+    </customValue>
+    <customValue>
+        <fullName>Glass</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Glass</label>
+    </customValue>
+    <customValue>
+        <fullName>Gems and Jewellery - Wholesale</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Gems and Jewellery - Wholesale</label>
+    </customValue>
+    <customValue>
+        <fullName>Gems and Jewellery - Trading</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Gems and Jewellery - Trading</label>
+    </customValue>
+    <customValue>
+        <fullName>Gems and Jewellery - Retail</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Gems and Jewellery - Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Gems and Jewellery - Cut and Polished Diamonds</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Gems and Jewellery - Cut and Polished Diamonds</label>
+    </customValue>
+    <customValue>
+        <fullName>Footwear - Leather Products</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Footwear - Leather Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Food and Food Products</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Food and Food Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Fertilisers</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Fertilisers</label>
+    </customValue>
+    <customValue>
+        <fullName>Ferrous Metals</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Ferrous Metals</label>
+    </customValue>
+    <customValue>
+        <fullName>ESCO Grading</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>ESCO Grading</label>
+    </customValue>
+    <customValue>
+        <fullName>Engineering - Capital Goods</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Engineering - Capital Goods</label>
+    </customValue>
+    <customValue>
+        <fullName>Electronics and Electricals</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Electronics and Electricals</label>
+    </customValue>
+    <customValue>
+        <fullName>Education - Medical</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Education - Medical</label>
+    </customValue>
+    <customValue>
+        <fullName>Education - Management</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Education - Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Education - K XII</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Education - K XII</label>
+    </customValue>
+    <customValue>
+        <fullName>Education - Engineering</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Education - Engineering</label>
+    </customValue>
+    <customValue>
+        <fullName>Education - Diversified</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Education - Diversified</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumer Durables</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Consumer Durables</label>
+    </customValue>
+    <customValue>
+        <fullName>Consulting</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Consulting</label>
+    </customValue>
+    <customValue>
+        <fullName>Construction Equipment</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Construction Equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>Construction - Others</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Construction - Others</label>
+    </customValue>
+    <customValue>
+        <fullName>Construction - Local EPC Contractors</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Construction - Local EPC Contractors</label>
+    </customValue>
+    <customValue>
+        <fullName>Construction - Electro Mechanical Contractors</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Construction - Electro Mechanical Contractors</label>
+    </customValue>
+    <customValue>
+        <fullName>Conglomerate</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Conglomerate</label>
+    </customValue>
+    <customValue>
+        <fullName>Chemicals - Dyes and Pigments</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Chemicals - Dyes and Pigments</label>
+    </customValue>
+    <customValue>
+        <fullName>Chemicals - Agrochemicals</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Chemicals - Agrochemicals</label>
+    </customValue>
+    <customValue>
+        <fullName>Ceramic Tiles</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Ceramic Tiles</label>
+    </customValue>
+    <customValue>
+        <fullName>Cables etc</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cables etc</label>
+    </customValue>
+    <customValue>
+        <fullName>Building Materials - Others</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Building Materials - Others</label>
+    </customValue>
+    <customValue>
+        <fullName>Building Materials - Cement</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Building Materials - Cement</label>
+    </customValue>
+    <customValue>
+        <fullName>Breweries and Distilleries</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Breweries and Distilleries</label>
+    </customValue>
+    <customValue>
+        <fullName>Aviation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Aviation</label>
+    </customValue>
+    <customValue>
+        <fullName>Automobile OEMs - Two Wheelers</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Automobile OEMs - Two Wheelers</label>
+    </customValue>
+    <customValue>
+        <fullName>Automobile Dealerships - Tractors</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Automobile Dealerships - Tractors</label>
+    </customValue>
+    <customValue>
+        <fullName>Automobile Dealerships - Diversified</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Automobile Dealerships - Diversified</label>
+    </customValue>
+    <customValue>
+        <fullName>Automobile Dealerships - Commercial Vehicles</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Automobile Dealerships - Commercial Vehicles</label>
+    </customValue>
+    <customValue>
+        <fullName>Automobile Dealerships - Cars</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Automobile Dealerships - Cars</label>
+    </customValue>
+    <customValue>
+        <fullName>Auto Ancillaries</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Auto Ancillaries</label>
+    </customValue>
+    <customValue>
+        <fullName>Agricultural Produce - Spices</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Agricultural Produce - Spices</label>
+    </customValue>
+    <customValue>
+        <fullName>Agricultural Produce - Rice Mills</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Agricultural Produce - Rice Mills</label>
+    </customValue>
+    <customValue>
+        <fullName>Agricultural Produce - Pulses and Other Milling</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Agricultural Produce - Pulses and Other Milling</label>
+    </customValue>
+    <customValue>
+        <fullName>Agricultural Produce - Cashews</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Agricultural Produce - Cashews</label>
+    </customValue>
+    <customValue>
+        <fullName>Mutual Fund</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Mutual Fund</label>
+    </customValue>
+    <customValue>
+        <fullName>Agricultural Produce - Others</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Agricultural Produce - Others</label>
+    </customValue>
+    <customValue>
+        <fullName>Construction - National EPC Contractors</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Construction - National EPC Contractors</label>
+    </customValue>
+    <customValue>
+        <fullName>Compressors, Pumps &amp; Diesel Engines</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Compressors, Pumps &amp; Diesel Engines</label>
+    </customValue>
+    <customValue>
+        <fullName>Not Mapped</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Not Mapped</label>
+    </customValue>
+    <customValue>
+        <fullName>Securitisation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Securitisation</label>
+    </customValue>
+    <customValue>
+        <fullName>Others Securitisation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Others Securitisation</label>
+    </customValue>
+    <customValue>
+        <fullName>REITs</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>REITs</label>
+    </customValue>
+    <customValue>
+        <fullName>Non Banking Finance Company</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Non Banking Finance Company</label>
+    </customValue>
+    <customValue>
+        <fullName>Asset Reconstruction Company</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Asset Reconstruction Company</label>
+    </customValue>
+    <customValue>
+        <fullName>Foreign Bank</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Foreign Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Petrochemicals and Polymers - Petrochemicals</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Petrochemicals and Polymers - Petrochemicals</label>
+    </customValue>
+    <customValue>
+        <fullName>Paper</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Paper</label>
+    </customValue>
+    <customValue>
+        <fullName>Packaging - Rigid</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Packaging - Rigid</label>
+    </customValue>
+    <customValue>
+        <fullName>Packaging - Flexible</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Packaging - Flexible</label>
+    </customValue>
+    <customValue>
+        <fullName>Oil and Gas</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Oil and Gas</label>
+    </customValue>
+    <customValue>
+        <fullName>Non-Ferrous Metals</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Non-Ferrous Metals</label>
+    </customValue>
+    <customValue>
+        <fullName>Automobile OEMs - Tractors</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Automobile OEMs - Tractors</label>
+    </customValue>
+    <customValue>
+        <fullName>Automobile OEMs - Diversified</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Automobile OEMs - Diversified</label>
+    </customValue>
+    <customValue>
+        <fullName>Automobile OEMs - Commercial Vehicles</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Automobile OEMs - Commercial Vehicles</label>
+    </customValue>
+    <customValue>
+        <fullName>Automobile OEMs - Cars</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Automobile OEMs - Cars</label>
+    </customValue>
+    <customValue>
+        <fullName>Automobile dealerships - Two Wheelers</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Automobile Dealerships - Two Wheelers</label>
+    </customValue>
+    <customValue>
+        <fullName>Microfinance Institution</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Microfinance Institution</label>
+    </customValue>
+    <customValue>
+        <fullName>State Level Entity</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>State Level Entity</label>
+    </customValue>
+    <customValue>
+        <fullName>Utilities - Others</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Utilities - Others</label>
+    </customValue>
+    <customValue>
+        <fullName>Tyres</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tyres</label>
+    </customValue>
+    <customValue>
+        <fullName>Trading - Others</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Trading - Others</label>
+    </customValue>
+    <customValue>
+        <fullName>Tourism Hotels and Restaurant</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tourism Hotels and Restaurant</label>
+    </customValue>
+    <customValue>
+        <fullName>Timbers and Plywood etc</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Timbers and Plywood etc</label>
+    </customValue>
+    <customValue>
+        <fullName>Textiles - Spinning-Manmade and Others</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Textiles - Spinning-Manmade and Others</label>
+    </customValue>
+    <customValue>
+        <fullName>Textiles - Spinning-Cotton</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Textiles - Spinning-Cotton</label>
+    </customValue>
+    <customValue>
+        <fullName>Textiles - Retail</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Textiles - Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Textiles - Processing &amp; Others</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Textiles - Processing &amp; Others</label>
+    </customValue>
+    <customValue>
+        <fullName>Textiles - Ginning and Cotton Oil</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Textiles - Ginning and Cotton Oil</label>
+    </customValue>
+    <customValue>
+        <fullName>Textiles - Fabric Making and Weaving</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Textiles - Fabric Making and Weaving</label>
+    </customValue>
+    <customValue>
+        <fullName>Textiles - Apparel Making</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Textiles - Apparel Making</label>
+    </customValue>
+    <customValue>
+        <fullName>Telecom - Equipment</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Telecom - Equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>Telecom - Services</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Telecom - Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Tea and Coffee</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tea and Coffee</label>
+    </customValue>
+    <customValue>
+        <fullName>Solvent Extraction - Non-Edible Oil</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Solvent Extraction - Non-Edible Oil</label>
+    </customValue>
+    <customValue>
+        <fullName>Solvent Extraction - Edible Oil</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Solvent Extraction - Edible Oil</label>
+    </customValue>
+    <customValue>
+        <fullName>Shipbuilding</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Shipbuilding</label>
+    </customValue>
+    <customValue>
+        <fullName>Shipbreaking</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Shipbreaking</label>
+    </customValue>
+    <customValue>
+        <fullName>Seafoods</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Seafoods</label>
+    </customValue>
+    <customValue>
+        <fullName>Roads - State Toll and Annuity</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Roads - State Toll and Annuity</label>
+    </customValue>
+    <customValue>
+        <fullName>Roads - State Toll</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Roads - State Toll</label>
+    </customValue>
+    <customValue>
+        <fullName>Roads - State Annuity</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Roads - State Annuity</label>
+    </customValue>
+    <customValue>
+        <fullName>Roads - NHAI Toll and Annuity</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Roads - NHAI Toll and Annuity</label>
+    </customValue>
+    <customValue>
+        <fullName>Roads - NHAI Toll</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Roads - NHAI Toll</label>
+    </customValue>
+    <customValue>
+        <fullName>Roads - NHAI Annuity</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Roads - NHAI Annuity</label>
+    </customValue>
+    <customValue>
+        <fullName>Real Estate - Retail</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Real Estate - Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Real Estate - Residential</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Real Estate - Residential</label>
+    </customValue>
+    <masterLabel>Sub Sector</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

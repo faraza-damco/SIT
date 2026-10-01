@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Investor &amp; Intermediary --></label>
+    <lookupFilter>
+        <errorMessage><!-- Please select an Investor &amp; Intermediary account --></errorMessage>
+    </lookupFilter>
+    <name>Investor_Intermediary__c</name>
+    <relationshipLabel><!-- Lender Details (Investor &amp; Intermediary) --></relationshipLabel>
+</CustomFieldTranslation>

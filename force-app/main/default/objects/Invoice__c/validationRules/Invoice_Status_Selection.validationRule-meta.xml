@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Status_Selection</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISNEW(),
+	    $RecordType.Name=&apos;Invoice&apos;,
+	    NOT(ISPICKVAL(Invoice_Status__c, &apos;Proforma Invoice&apos;)),
+	    NOT(ISPICKVAL(Invoice_Status__c, &apos;Initiate Tax Invoice&apos;)),
+	    NOT(ISPICKVAL(Invoice_Status__c, &apos;&apos;))
+    )</errorConditionFormula>
+    <errorDisplayField>Invoice_Status__c</errorDisplayField>
+    <errorMessage>Invoice Status can only be &apos;Proforma Invoice&apos; or &apos;Initiate Tax Invoice&apos; for new Invoice</errorMessage>
+</ValidationRule>

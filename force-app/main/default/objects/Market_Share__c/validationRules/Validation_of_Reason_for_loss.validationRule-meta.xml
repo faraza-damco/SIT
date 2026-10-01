@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_of_Reason_for_loss</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF(AND(
+ISPICKVAL(Reason_for_loss__c, &quot;Fresh Issuers - Other reasons&quot;),ISPICKVAL(Others_Reasons_Details_only_for_Fresh__c,&quot;&quot;)
+),true,false)</errorConditionFormula>
+    <errorMessage>Please select Others Reasons Details (only for Fresh - Other)</errorMessage>
+</ValidationRule>

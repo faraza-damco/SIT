@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InterBranch_SACHSN_is_Mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+RecordType.Name = &quot;Inter-Branch Invoice&quot;,
+ISBLANK( SAC_HSN__c )
+)</errorConditionFormula>
+    <errorDisplayField>SAC_HSN__c</errorDisplayField>
+    <errorMessage>SAC/HSN is a Mandatory field. Kindly input the same.</errorMessage>
+</ValidationRule>

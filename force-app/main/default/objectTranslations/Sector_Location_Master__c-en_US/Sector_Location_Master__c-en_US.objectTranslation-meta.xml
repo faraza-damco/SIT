@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Sector Location Master</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Sector Location Masters</value>
+    </caseValues>
+    <layouts>
+        <layout>Location Master</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SF Master</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Sector Location Master Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Location Master --></label>
+        <name>Location_Master</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- SF Master --></label>
+        <name>SF_Master</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Sector Master --></label>
+        <name>Sector_Master</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

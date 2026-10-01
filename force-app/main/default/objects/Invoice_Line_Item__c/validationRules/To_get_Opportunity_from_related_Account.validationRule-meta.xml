@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>To_get_Opportunity_from_related_Account</fullName>
+    <active>true</active>
+    <description>To get Opportunity from the related Account</description>
+    <errorConditionFormula>IF(Opportunity_Name__r.Bill_To__c != null,IF( isFirst_InvoiceLine_Item__c ,
+IF(Invoice_No__r.Customer_Name__c &lt;&gt; Opportunity_Name__r.Bill_To__r.Name,true,false),false),IF( isFirst_InvoiceLine_Item__c ,
+IF(Invoice_No__r.Customer_Name__c &lt;&gt; Opportunity_Name__r.Account.Name,true,false),false))</errorConditionFormula>
+    <errorDisplayField>Opportunity_Name__c</errorDisplayField>
+    <errorMessage>Please Select the Relevant Opportunity</errorMessage>
+</ValidationRule>

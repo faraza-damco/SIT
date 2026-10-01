@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Employee KRA</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Employee KRA</value>
+    </caseValues>
+    <layouts>
+        <layout>Employee KRA Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Income Booking (Billing) Quarterly Target/Achievement --></label>
+            <section>Income Booking (Billing) Quarterly Target/Achievement</section>
+        </sections>
+        <sections>
+            <label><!-- Information Details --></label>
+            <section>Information Details</section>
+        </sections>
+        <sections>
+            <label><!-- Mandate Inflow Quarterly Target/Achievement --></label>
+            <section>Mandate Inflow Quarterly Target/Achievement</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Yearly Employee KRA</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- ICRA Market Share  Money Market --></label>
+            <section>ICRA Market Share  Money Market</section>
+        </sections>
+        <sections>
+            <label><!-- ICRA Market Share  for Bank Loan Rating --></label>
+            <section>ICRA Market Share  for Bank Loan Rating</section>
+        </sections>
+        <sections>
+            <label><!-- Information Details --></label>
+            <section>Information Details</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Calculate KRA --></label>
+        <name>Calculate_KRA</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Quarterly --></label>
+        <name>Quarterly</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Yearly --></label>
+        <name>Yearly</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Target are locked now you can&apos;t change that !! --></errorMessage>
+        <name>validation_for_Target_Locked</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_for_Credit_Note_Type</name>
+        <label>Check for Credit Note Type</label>
+        <locationX>182</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>GST_Credit_Note</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Credit_Note_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>GST Credit Note</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Invoice_Status</targetReference>
+            </connector>
+            <label>GST Credit Note</label>
+        </rules>
+    </decisions>
+    <description>1.Update Invoice Status for GST Credit Note</description>
+    <environments>Default</environments>
+    <interviewLabel>Update Invoice Status on Invoice {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Invoice Status on Invoice</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Invoice_Status</name>
+        <label>Update Invoice Status</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>Invoice_Status__c</field>
+            <value>
+                <stringValue>Initiate GST Credit Note</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_for_Credit_Note_Type</targetReference>
+        </connector>
+        <filterFormula>AND(
+{!$Record.RecordType.Name}=&apos;Credit Note&apos;
+)</filterFormula>
+        <object>Invoice__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

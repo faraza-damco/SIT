@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>AAA</fullName>
+        <default>false</default>
+        <label>AAA</label>
+    </customValue>
+    <customValue>
+        <fullName>AA+</fullName>
+        <default>false</default>
+        <label>AA+</label>
+    </customValue>
+    <customValue>
+        <fullName>AA</fullName>
+        <default>false</default>
+        <label>AA</label>
+    </customValue>
+    <customValue>
+        <fullName>AA-</fullName>
+        <default>false</default>
+        <label>AA-</label>
+    </customValue>
+    <customValue>
+        <fullName>A+</fullName>
+        <default>false</default>
+        <label>A+</label>
+    </customValue>
+    <customValue>
+        <fullName>A</fullName>
+        <default>false</default>
+        <label>A</label>
+    </customValue>
+    <customValue>
+        <fullName>A-</fullName>
+        <default>false</default>
+        <label>A-</label>
+    </customValue>
+    <customValue>
+        <fullName>BBB+</fullName>
+        <default>false</default>
+        <label>BBB+</label>
+    </customValue>
+    <customValue>
+        <fullName>BBB</fullName>
+        <default>false</default>
+        <label>BBB</label>
+    </customValue>
+    <customValue>
+        <fullName>BBB-</fullName>
+        <default>false</default>
+        <label>BBB-</label>
+    </customValue>
+    <customValue>
+        <fullName>BB+</fullName>
+        <default>false</default>
+        <label>BB+</label>
+    </customValue>
+    <customValue>
+        <fullName>BB</fullName>
+        <default>false</default>
+        <label>BB</label>
+    </customValue>
+    <customValue>
+        <fullName>BB-</fullName>
+        <default>false</default>
+        <label>BB-</label>
+    </customValue>
+    <customValue>
+        <fullName>B+</fullName>
+        <default>false</default>
+        <label>B+</label>
+    </customValue>
+    <customValue>
+        <fullName>B</fullName>
+        <default>false</default>
+        <label>B</label>
+    </customValue>
+    <customValue>
+        <fullName>B-</fullName>
+        <default>false</default>
+        <label>B-</label>
+    </customValue>
+    <customValue>
+        <fullName>C</fullName>
+        <default>false</default>
+        <label>C</label>
+    </customValue>
+    <customValue>
+        <fullName>D</fullName>
+        <default>false</default>
+        <label>D</label>
+    </customValue>
+    <customValue>
+        <fullName>AAA (CE)</fullName>
+        <default>false</default>
+        <label>AAA (CE)</label>
+    </customValue>
+    <customValue>
+        <fullName>AA+ (CE)</fullName>
+        <default>false</default>
+        <label>AA+ (CE)</label>
+    </customValue>
+    <customValue>
+        <fullName>AA (CE)</fullName>
+        <default>false</default>
+        <label>AA (CE)</label>
+    </customValue>
+    <customValue>
+        <fullName>AA- (CE)</fullName>
+        <default>false</default>
+        <label>AA- (CE)</label>
+    </customValue>
+    <customValue>
+        <fullName>A+ (CE)</fullName>
+        <default>false</default>
+        <label>A+ (CE)</label>
+    </customValue>
+    <customValue>
+        <fullName>A (CE)</fullName>
+        <default>false</default>
+        <label>A (CE)</label>
+    </customValue>
+    <customValue>
+        <fullName>A- (CE)</fullName>
+        <default>false</default>
+        <label>A- (CE)</label>
+    </customValue>
+    <customValue>
+        <fullName>BBB+ (CE)</fullName>
+        <default>false</default>
+        <label>BBB+ (CE)</label>
+    </customValue>
+    <customValue>
+        <fullName>BBB (CE)</fullName>
+        <default>false</default>
+        <label>BBB (CE)</label>
+    </customValue>
+    <customValue>
+        <fullName>BBB- (CE)</fullName>
+        <default>false</default>
+        <label>BBB- (CE)</label>
+    </customValue>
+    <customValue>
+        <fullName>BB+ (CE)</fullName>
+        <default>false</default>
+        <label>BB+ (CE)</label>
+    </customValue>
+    <customValue>
+        <fullName>BB (CE)</fullName>
+        <default>false</default>
+        <label>BB (CE)</label>
+    </customValue>
+    <customValue>
+        <fullName>BB- (CE)</fullName>
+        <default>false</default>
+        <label>BB- (CE)</label>
+    </customValue>
+    <customValue>
+        <fullName>B+ (CE)</fullName>
+        <default>false</default>
+        <label>B+ (CE)</label>
+    </customValue>
+    <customValue>
+        <fullName>B (CE)</fullName>
+        <default>false</default>
+        <label>B (CE)</label>
+    </customValue>
+    <customValue>
+        <fullName>B- (CE)</fullName>
+        <default>false</default>
+        <label>B- (CE)</label>
+    </customValue>
+    <customValue>
+        <fullName>C (CE)</fullName>
+        <default>false</default>
+        <label>C (CE)</label>
+    </customValue>
+    <customValue>
+        <fullName>D (CE)</fullName>
+        <default>false</default>
+        <label>D (CE)</label>
+    </customValue>
+    <customValue>
+        <fullName>AAA (SO)</fullName>
+        <default>false</default>
+        <label>AAA (SO)</label>
+    </customValue>
+    <customValue>
+        <fullName>AA+ (SO)</fullName>
+        <default>false</default>
+        <label>AA+ (SO)</label>
+    </customValue>
+    <customValue>
+        <fullName>AA (SO)</fullName>
+        <default>false</default>
+        <label>AA (SO)</label>
+    </customValue>
+    <customValue>
+        <fullName>AA- (SO)</fullName>
+        <default>false</default>
+        <label>AA- (SO)</label>
+    </customValue>
+    <customValue>
+        <fullName>A+ (SO)</fullName>
+        <default>false</default>
+        <label>A+ (SO)</label>
+    </customValue>
+    <customValue>
+        <fullName>A (SO)</fullName>
+        <default>false</default>
+        <label>A (SO)</label>
+    </customValue>
+    <customValue>
+        <fullName>A- (SO)</fullName>
+        <default>false</default>
+        <label>A- (SO)</label>
+    </customValue>
+    <customValue>
+        <fullName>BBB+ (SO)</fullName>
+        <default>false</default>
+        <label>BBB+ (SO)</label>
+    </customValue>
+    <customValue>
+        <fullName>BBB (SO)</fullName>
+        <default>false</default>
+        <label>BBB (SO)</label>
+    </customValue>
+    <customValue>
+        <fullName>BBB- (SO)</fullName>
+        <default>false</default>
+        <label>BBB- (SO)</label>
+    </customValue>
+    <customValue>
+        <fullName>BB+ (SO)</fullName>
+        <default>false</default>
+        <label>BB+ (SO)</label>
+    </customValue>
+    <customValue>
+        <fullName>BB (SO)</fullName>
+        <default>false</default>
+        <label>BB (SO)</label>
+    </customValue>
+    <customValue>
+        <fullName>BB- (SO)</fullName>
+        <default>false</default>
+        <label>BB- (SO)</label>
+    </customValue>
+    <customValue>
+        <fullName>B+ (SO)</fullName>
+        <default>false</default>
+        <label>B+ (SO)</label>
+    </customValue>
+    <customValue>
+        <fullName>B (SO)</fullName>
+        <default>false</default>
+        <label>B (SO)</label>
+    </customValue>
+    <customValue>
+        <fullName>B- (SO)</fullName>
+        <default>false</default>
+        <label>B- (SO)</label>
+    </customValue>
+    <customValue>
+        <fullName>C (SO)</fullName>
+        <default>false</default>
+        <label>C (SO)</label>
+    </customValue>
+    <customValue>
+        <fullName>D (SO)</fullName>
+        <default>false</default>
+        <label>D (SO)</label>
+    </customValue>
+    <customValue>
+        <fullName>AAA (hyb)</fullName>
+        <default>false</default>
+        <label>AAA (hyb)</label>
+    </customValue>
+    <customValue>
+        <fullName>AA+ (hyb)</fullName>
+        <default>false</default>
+        <label>AA+ (hyb)</label>
+    </customValue>
+    <customValue>
+        <fullName>AA (hyb)</fullName>
+        <default>false</default>
+        <label>AA (hyb)</label>
+    </customValue>
+    <customValue>
+        <fullName>AA- (hyb)</fullName>
+        <default>false</default>
+        <label>AA- (hyb)</label>
+    </customValue>
+    <customValue>
+        <fullName>A+ (hyb)</fullName>
+        <default>false</default>
+        <label>A+ (hyb)</label>
+    </customValue>
+    <customValue>
+        <fullName>A (hyb)</fullName>
+        <default>false</default>
+        <label>A (hyb)</label>
+    </customValue>
+    <customValue>
+        <fullName>A- (hyb)</fullName>
+        <default>false</default>
+        <label>A- (hyb)</label>
+    </customValue>
+    <customValue>
+        <fullName>BBB+ (hyb)</fullName>
+        <default>false</default>
+        <label>BBB+ (hyb)</label>
+    </customValue>
+    <customValue>
+        <fullName>BBB (hyb)</fullName>
+        <default>false</default>
+        <label>BBB (hyb)</label>
+    </customValue>
+    <customValue>
+        <fullName>BBB- (hyb)</fullName>
+        <default>false</default>
+        <label>BBB- (hyb)</label>
+    </customValue>
+    <customValue>
+        <fullName>BB+ (hyb)</fullName>
+        <default>false</default>
+        <label>BB+ (hyb)</label>
+    </customValue>
+    <customValue>
+        <fullName>BB (hyb)</fullName>
+        <default>false</default>
+        <label>BB (hyb)</label>
+    </customValue>
+    <customValue>
+        <fullName>BB- (hyb)</fullName>
+        <default>false</default>
+        <label>BB- (hyb)</label>
+    </customValue>
+    <customValue>
+        <fullName>B+ (hyb)</fullName>
+        <default>false</default>
+        <label>B+ (hyb)</label>
+    </customValue>
+    <customValue>
+        <fullName>B (hyb)</fullName>
+        <default>false</default>
+        <label>B (hyb)</label>
+    </customValue>
+    <customValue>
+        <fullName>B- (hyb)</fullName>
+        <default>false</default>
+        <label>B- (hyb)</label>
+    </customValue>
+    <customValue>
+        <fullName>C (hyb)</fullName>
+        <default>false</default>
+        <label>C (hyb)</label>
+    </customValue>
+    <customValue>
+        <fullName>D (hyb)</fullName>
+        <default>false</default>
+        <label>D (hyb)</label>
+    </customValue>
+    <customValue>
+        <fullName>AAA (mfs)</fullName>
+        <default>false</default>
+        <label>AAA (mfs)</label>
+    </customValue>
+    <customValue>
+        <fullName>AA+ (mfs)</fullName>
+        <default>false</default>
+        <label>AA+ (mfs)</label>
+    </customValue>
+    <customValue>
+        <fullName>AA (mfs)</fullName>
+        <default>false</default>
+        <label>AA (mfs)</label>
+    </customValue>
+    <customValue>
+        <fullName>AA- (mfs)</fullName>
+        <default>false</default>
+        <label>AA- (mfs)</label>
+    </customValue>
+    <customValue>
+        <fullName>A+ (mfs)</fullName>
+        <default>false</default>
+        <label>A+ (mfs)</label>
+    </customValue>
+    <customValue>
+        <fullName>A (mfs)</fullName>
+        <default>false</default>
+        <label>A (mfs)</label>
+    </customValue>
+    <customValue>
+        <fullName>A- (mfs)</fullName>
+        <default>false</default>
+        <label>A- (mfs)</label>
+    </customValue>
+    <customValue>
+        <fullName>BBB+ (mfs)</fullName>
+        <default>false</default>
+        <label>BBB+ (mfs)</label>
+    </customValue>
+    <customValue>
+        <fullName>BBB (mfs)</fullName>
+        <default>false</default>
+        <label>BBB (mfs)</label>
+    </customValue>
+    <customValue>
+        <fullName>BBB- (mfs)</fullName>
+        <default>false</default>
+        <label>BBB- (mfs)</label>
+    </customValue>
+    <customValue>
+        <fullName>BB+ (mfs)</fullName>
+        <default>false</default>
+        <label>BB+ (mfs)</label>
+    </customValue>
+    <customValue>
+        <fullName>BB (mfs)</fullName>
+        <default>false</default>
+        <label>BB (mfs)</label>
+    </customValue>
+    <customValue>
+        <fullName>BB- (mfs)</fullName>
+        <default>false</default>
+        <label>BB- (mfs)</label>
+    </customValue>
+    <customValue>
+        <fullName>B+ (mfs)</fullName>
+        <default>false</default>
+        <label>B+ (mfs)</label>
+    </customValue>
+    <customValue>
+        <fullName>B (mfs)</fullName>
+        <default>false</default>
+        <label>B (mfs)</label>
+    </customValue>
+    <customValue>
+        <fullName>B- (mfs)</fullName>
+        <default>false</default>
+        <label>B- (mfs)</label>
+    </customValue>
+    <customValue>
+        <fullName>C (mfs)</fullName>
+        <default>false</default>
+        <label>C (mfs)</label>
+    </customValue>
+    <customValue>
+        <fullName>D (mfs)</fullName>
+        <default>false</default>
+        <label>D (mfs)</label>
+    </customValue>
+    <masterLabel>LT Rating</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

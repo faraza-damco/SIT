@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Agency__c</columns>
+    <columns>Classification__c</columns>
+    <columns>Instrument_type_1__c</columns>
+    <columns>Instrument_type_2__c</columns>
+    <columns>Instrument_type_3__c</columns>
+    <columns>Instrument_type_4__c</columns>
+    <columns>ST_Rating__c</columns>
+    <columns>MT_Rating__c</columns>
+    <columns>LT_Rating__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

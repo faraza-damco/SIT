@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Amount_Received_InterBranch__c</fullName>
+    <externalId>false</externalId>
+    <formula>ROUND( Base_Amount_Received_Inter_Branch__c +  CGST_Amount_Received_InterBranch__c +  IGST_Amount_Received_InterBranch__c +  SGST_Amount_Received_InterBranch__c ,0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Amount Received InterBranch</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

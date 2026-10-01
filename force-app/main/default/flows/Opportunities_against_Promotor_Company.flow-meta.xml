@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <customErrors>
+        <name>Cannot_Create_Opportunity</name>
+        <label>Cannot Create Opportunity</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <customErrorMessages>
+            <errorMessage>ICRA cannot take up mandates from Promoter Companies.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Check_VoD1</name>
+        <label>Check VoD</label>
+        <locationX>842</locationX>
+        <locationY>503</locationY>
+        <customErrorMessages>
+            <errorMessage>Put VoD value as zero if the Instrument 4 value is: Issuer Rating, Resolution Plan, Mutual Fund Rating to proceed further</errorMessage>
+            <fieldSelection>VoD_in_crore__c</fieldSelection>
+            <isFieldError>true</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>VoD_cannot_be_updated</name>
+        <label>VoD cannot be updated</label>
+        <locationX>578</locationX>
+        <locationY>503</locationY>
+        <customErrorMessages>
+            <errorMessage>VoD cannot be updated if the Instrument 4 value is: Issuer Rating, Resolution Plan, Mutual Fund Rating. Please Contact System Administrator !!</errorMessage>
+            <fieldSelection>VoD_in_crore__c</fieldSelection>
+            <isFieldError>true</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>Check_For_Record</name>
+        <label>Check For Record</label>
+        <locationX>710</locationX>
+        <locationY>395</locationY>
+        <defaultConnector>
+            <targetReference>Check_VoD1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Update</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ISNEW</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>VoD_cannot_be_updated</targetReference>
+            </connector>
+            <label>Update</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check for the &apos;Related Party&apos; field value on the Account</description>
+        <name>Check_for_the_Promotor_Company_on_Account</name>
+        <label>Check for the Promotor Company on Account</label>
+        <locationX>578</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Related_Party_is_Marked_as_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.Related_Party__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Yes</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Instrument_type_4__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.VoD_in_crore__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Cannot_Create_Opportunity</targetReference>
+            </connector>
+            <label>Related Party is Marked as Yes</label>
+        </rules>
+        <rules>
+            <name>Check_Instrument_4</name>
+            <conditionLogic>5 AND ((6 AND 1) OR (7 AND 2) OR (8 AND 3) OR (9 AND 4))</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Instrument_type_4__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Issuer Rating</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Instrument_type_4__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Resolution Plan - Independent Credit Evaluation (ICE)</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Instrument_type_4__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Mutual Fund Rating</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Instrument_type_4__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>AIF</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>ISNEW</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Instrument_type_4__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Issuer Rating</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Instrument_type_4__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Resolution Plan - Independent Credit Evaluation (ICE)</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Instrument_type_4__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Mutual Fund Rating</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Instrument_type_4__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>AIF</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_VoD</targetReference>
+            </connector>
+            <label>Check Instrument 4</label>
+        </rules>
+        <rules>
+            <name>Check_for_VoD</name>
+            <conditionLogic>(1 OR 2 OR 3 ) AND 5 AND 6 AND 7 AND 8 AND 9 AND 10 AND ((4 AND 11) OR (12 AND 13))</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Instrument_type_4__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Issuer Rating</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Instrument_type_4__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Resolution Plan - Independent Credit Evaluation (ICE)</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Instrument_type_4__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Mutual Fund Rating</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.VoD_in_crore__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Profile.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>System Administrator</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$UserRole.DeveloperName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Team_Lead_BD_MIS</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$UserRole.DeveloperName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>BD_MIS_Team_Member_Gurgaon</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$UserRole.DeveloperName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>BD_MIS_Team_Member_Hyderabad</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$UserRole.DeveloperName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>BD_MIS_Team_Member_Kolkata</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$UserRole.DeveloperName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>BD_MIS_Team_Member_Mumbai</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>ISNEW</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>ISNEW</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.VoD_in_crore__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_For_Record</targetReference>
+            </connector>
+            <label>Check for VoD</label>
+        </rules>
+    </decisions>
+    <description>-v3: Set VoD as zero if the Instr 4 value is  &apos;Issuer Rating&apos;, &apos;Resolution Plan/ICE&apos;, &apos;Mutual Fund Rating&apos;, or &apos;AIF&apos; while creating an opp</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Check if the record is &apos;New&apos;</description>
+        <name>ISNEW</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <interviewLabel>Opportunities against Promotor Company {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunities against Promotor Company</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_VoD</name>
+        <label>Update VoD</label>
+        <locationX>314</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>VoD_in_crore__c</field>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>452</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_for_the_Promotor_Company_on_Account</targetReference>
+        </connector>
+        <filterFormula>OR(ISCHANGED( {!$Record.StageName}),
+ISCHANGED({!$Record.Instrument_type_4__c}),
+ISCHANGED({!$Record.VoD_in_crore__c}),
+ISNEW())</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

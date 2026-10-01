@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>INVLI_Creation_Rule</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPICKVAL(Opportunity_Name__r.Instrument_type_4__c, &apos;Monitoring Activity&apos;), 
+  	 ISPICKVAL(Opportunity_Name__r.Billing_Duration__c, &apos;&apos;) 
+				)</errorConditionFormula>
+    <errorMessage>Billing Duration on opportunity is mandatory</errorMessage>
+</ValidationRule>

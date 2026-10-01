@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Individual_Contributor</name>
+        <label>Assign Individual Contributor</label>
+        <locationX>974</locationX>
+        <locationY>611</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Team_Member__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_Team_Leam_Leader_Mapping</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Team_Leader</name>
+        <label>Assign Team Leader</label>
+        <locationX>842</locationX>
+        <locationY>827</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Team_Leader__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Team_Leader_Mapping.Team_Leader__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_Team_Leader1</name>
+        <label>Assign Team Leader</label>
+        <locationX>1106</locationX>
+        <locationY>827</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Team_Leader__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Owner.ManagerId</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <customErrors>
+        <name>Restrict_Any_Change_on_Opportunity</name>
+        <label>Restrict Any Change on Opportunity</label>
+        <locationX>578</locationX>
+        <locationY>503</locationY>
+        <customErrorMessages>
+            <errorMessage>Opportunity under the &apos;Closed Lost&apos; stage cannot be edited</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Restrict_Changes_on_Inactive_Account_s_Opportunity</name>
+        <label>Restrict Changes on Inactive Account&apos;s Opportunity</label>
+        <locationX>50</locationX>
+        <locationY>503</locationY>
+        <customErrorMessages>
+            <errorMessage>Account Status is &apos;Inactive&apos;. No changes are allowed under Inactive account</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Restrict_Changes_on_OFAC_Pending_Account_s_Opportunity</name>
+        <label>Restrict Changes on OFAC Pending Account&apos;s Opportunity</label>
+        <locationX>314</locationX>
+        <locationY>503</locationY>
+        <customErrorMessages>
+            <errorMessage>Account Status is &apos;OFAC Pending&apos;. No changes are allowed under the account&apos;s opportunity if the account status is &apos;OFAC Pending&apos;</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>Check_Change_on_Billing_Duration_Start_Date</name>
+        <label>Check Change on Billing Duration &amp; Start Date</label>
+        <locationX>2822</locationX>
+        <locationY>503</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Billing_Duration_Start_Date_IPO</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Instrument_type_4__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Monitoring Activity</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Billing_Duration__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Billing_Duration__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_3_of_Update_Opportunity</targetReference>
+            </connector>
+            <label>Billing Duration || Start Date [IPO]</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Conditions1</name>
+        <label>Check Conditions</label>
+        <locationX>1898</locationX>
+        <locationY>503</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>PR_Date_DoC</name>
+            <conditionLogic>(1 AND 2) OR (3 AND 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PR_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PR_Date__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Date_of_Communication__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Date_of_Communication__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Opportunity4</targetReference>
+            </connector>
+            <label>PR Date || DoC</label>
+        </rules>
+        <rules>
+            <name>Billing_Start_Date_1</name>
+            <conditionLogic>(1 AND 3) AND (2 OR 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Instrument_type_4__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Monitoring Activity</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Billing_Start_Date__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Billing_Duration__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Billing_Duration__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Opportunity_5</targetReference>
+            </connector>
+            <label>Billing Duration || Start Date</label>
+        </rules>
+        <rules>
+            <name>Closed_Won_Stage</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed Won</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Stage</targetReference>
+            </connector>
+            <label>Closed Won Stage</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>-Stage
+-Account Status</description>
+        <name>Check_For_Conditions</name>
+        <label>Check For Conditions</label>
+        <locationX>1634</locationX>
+        <locationY>395</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Inactive_Account</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.Account_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Inactive</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Restrict_Changes_on_Inactive_Account_s_Opportunity</targetReference>
+            </connector>
+            <label>Inactive Account</label>
+        </rules>
+        <rules>
+            <name>OFAC_Pending_Account</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.Account_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>OFAC Pending</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Restrict_Changes_on_OFAC_Pending_Account_s_Opportunity</targetReference>
+            </connector>
+            <label>OFAC Pending Account</label>
+        </rules>
+        <rules>
+            <name>Closed_Lost</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed Lost</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed Lost</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.is_Special__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Restrict_Any_Change_on_Opportunity</targetReference>
+            </connector>
+            <label>Closed Lost</label>
+        </rules>
+        <rules>
+            <name>Owner_Changed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.OwnerId</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Team_Leader_Mapping</targetReference>
+            </connector>
+            <label>Owner Changed</label>
+        </rules>
+        <rules>
+            <name>New_Business</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New_Business</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Conditions1</targetReference>
+            </connector>
+            <label>New_Business</label>
+        </rules>
+        <rules>
+            <name>Surveillance</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Surveillance</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Change_on_Billing_Duration_Start_Date</targetReference>
+            </connector>
+            <label>Surveillance</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Stage</name>
+        <label>Check Stage</label>
+        <locationX>2030</locationX>
+        <locationY>611</locationY>
+        <defaultConnector>
+            <targetReference>Update_Opportunity1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Prior_Stage</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.StageName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed Won</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_2_of_Update_Opportunity</targetReference>
+            </connector>
+            <label>Prior Stage</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Team_Leam_Leader_Mapping</name>
+        <label>Check Team Leam Leader Mapping</label>
+        <locationX>974</locationX>
+        <locationY>719</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Team_Leader1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Present</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Team_Leader_Mapping</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Team_Leader</targetReference>
+            </connector>
+            <label>Present</label>
+        </rules>
+    </decisions>
+    <description>v42-Fetch the &apos;Alignment Logic&apos; from the Billing Date object based on the instruments combination
+v46-to calculate the billing start/end dates on the New Business Opportunity
+v47-Removed the updation of alignment logic for the Surveillance Opportunity
+v48-Date of Communication Logic
+v49-Updation of the Billing Dates [even when the Billing Dates are not null]
+v50-Update Billing Status to Closed Won
+v51-Bypass Validation
+v52-Calculate the Billing End Date [IPO]
+v53-Remove updation of the Billing Dates when PR Date or DoC is updated
+v56- Billing End Date</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>billing_end_date</name>
+        <dataType>Date</dataType>
+        <expression>ADDMONTHS({!billing_start_date},12)-1</expression>
+    </formulas>
+    <formulas>
+        <name>billing_End_Date_IPO</name>
+        <dataType>Date</dataType>
+        <expression>IF(
+  ISPICKVAL({!$Record.Billing_Duration__c}, &apos;Yearly&apos;),
+  ADDMONTHS({!$Record.Billing_Start_Date__c}, 12)-1,
+  IF(
+    ISPICKVAL({!$Record.Billing_Duration__c}, &apos;Half-Yearly&apos;),
+    ADDMONTHS({!$Record.Billing_Start_Date__c}, 6)-1,
+    IF(
+      ISPICKVAL({!$Record.Billing_Duration__c}, &apos;Quarterly&apos;),
+      ADDMONTHS({!$Record.Billing_Start_Date__c}, 3)-1,
+      null
+    )
+  )
+)</expression>
+    </formulas>
+    <formulas>
+        <name>billing_start_date</name>
+        <dataType>Date</dataType>
+        <expression>IF(NOT(ISBLANK({!$Record.PR_Date__c})), {!$Record.PR_Date__c}, {!$Record.Date_of_Communication__c})</expression>
+    </formulas>
+    <formulas>
+        <name>isLeapYear</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(
+    AND(
+        MOD(YEAR({!billing_start_date}), 4) = 0,
+        OR(
+            MOD(YEAR({!billing_start_date}), 100) != 0,
+            MOD(YEAR({!billing_start_date}), 400) = 0
+        ),
+        {!billing_start_date} &lt;= DATE(YEAR({!billing_start_date}), 2, 29)
+    ),
+    AND(
+        MOD(YEAR(ADDMONTHS({!billing_start_date}, 12)), 4) = 0,
+        OR(
+            MOD(YEAR(ADDMONTHS({!billing_start_date}, 12)), 100) != 0,
+            MOD(YEAR(ADDMONTHS({!billing_start_date}, 12)), 400) = 0
+        ),
+        ADDMONTHS({!billing_start_date}, 12) &gt;= DATE(YEAR(ADDMONTHS({!billing_start_date}, 12)), 2, 29)
+    ),
+    AND(
+        YEAR({!billing_start_date}) &lt; YEAR(ADDMONTHS({!billing_start_date}, 12)),
+        MOD(YEAR(ADDMONTHS({!billing_start_date}, 12)), 4) = 0,
+        OR(
+            MOD(YEAR(ADDMONTHS({!billing_start_date}, 12)), 100) != 0,
+            MOD(YEAR(ADDMONTHS({!billing_start_date}, 12)), 400) = 0
+        )
+    )
+)</expression>
+    </formulas>
+    <formulas>
+        <name>Today</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <formulas>
+        <name>varAgeing</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record.Provision_Date__c}-{!$Record.Billing_Start_Date__c}</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>Opportunity Before Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity Before Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Team_Leader_Mapping</name>
+        <label>Get Team Leader Mapping</label>
+        <locationX>974</locationX>
+        <locationY>503</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assign_Individual_Contributor</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Individual_Contributor__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Business_Sector__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Account.Business_Sector__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Team_Leader_Mapping__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>-Fetch the &apos;Alignment Logic&apos; from the Billing Date object based on the instruments combination and start/end dates</description>
+        <name>Get_the_Billing_Date_Record</name>
+        <label>Get the Billing Date Record</label>
+        <locationX>1634</locationX>
+        <locationY>287</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_For_Conditions</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Instrument_type_1__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Instrument_type_1__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Instrument_type_2__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Instrument_type_2__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Instrument_Type_3__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Instrument_type_3__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Instrument_Type_4__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Instrument_type_4__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Start_Date__c</field>
+            <operator>LessThanOrEqualTo</operator>
+            <value>
+                <elementReference>Today</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>End_date__c</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <elementReference>Today</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Billing_Date__c</object>
+        <sortField>Start_Date__c</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>-Update the Billing Status &amp; the Alignment Logic on Opportunity</description>
+        <name>Copy_2_of_Update_Opportunity</name>
+        <label>Update Opportunity</label>
+        <locationX>1898</locationX>
+        <locationY>719</locationY>
+        <inputAssignments>
+            <field>Alignment_Logic__c</field>
+            <value>
+                <elementReference>Get_the_Billing_Date_Record.Alignment_Logic__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Defer_Billing_or_Exit_Case__c</field>
+            <value>
+                <stringValue>To Be Billed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>-Billing End Date [Based on the Billing Duration]</description>
+        <name>Copy_3_of_Update_Opportunity</name>
+        <label>Update Opportunity</label>
+        <locationX>2690</locationX>
+        <locationY>611</locationY>
+        <inputAssignments>
+            <field>Billing_End_date__c</field>
+            <value>
+                <elementReference>billing_End_Date_IPO</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Bypass_Validation__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>-Update the Alignment Logic on Opportunity</description>
+        <name>Update_Opportunity1</name>
+        <label>Update Opportunity</label>
+        <locationX>2162</locationX>
+        <locationY>719</locationY>
+        <inputAssignments>
+            <field>Alignment_Logic__c</field>
+            <value>
+                <elementReference>Get_the_Billing_Date_Record.Alignment_Logic__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>-Update the Alignment Logic on Opportunity
+-Billing End/Start Dates</description>
+        <name>Update_Opportunity4</name>
+        <label>Update Opportunity</label>
+        <locationX>1370</locationX>
+        <locationY>611</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Instrument_type_4__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>IPO Monitoring</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Alignment_Logic__c</field>
+            <value>
+                <elementReference>Get_the_Billing_Date_Record.Alignment_Logic__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Billing_End_date__c</field>
+            <value>
+                <elementReference>billing_end_date</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Billing_Start_Date__c</field>
+            <value>
+                <elementReference>billing_start_date</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Bypass_Validation__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>-Billing End Date [Based on the Billing Duration]</description>
+        <name>Update_Opportunity_5</name>
+        <label>Update Opportunity</label>
+        <locationX>1634</locationX>
+        <locationY>611</locationY>
+        <inputAssignments>
+            <field>Billing_End_date__c</field>
+            <value>
+                <elementReference>billing_End_Date_IPO</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>1508</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_the_Billing_Date_Record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

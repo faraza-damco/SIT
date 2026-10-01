@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Instrument Category --></label>
+    <name>Instrument_Category__c</name>
+    <picklistValues>
+        <masterLabel>Alternative investment Fund</masterLabel>
+        <translation><!-- Alternative investment Fund --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BLR</masterLabel>
+        <translation><!-- BLR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BLR/CP</masterLabel>
+        <translation><!-- BLR/CP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bonds</masterLabel>
+        <translation><!-- Bonds --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Borrowing programme</masterLabel>
+        <translation><!-- Borrowing programme --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CP/CD/STD</masterLabel>
+        <translation><!-- CP/CD/STD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Certificate of Deposit</masterLabel>
+        <translation><!-- Certificate of Deposit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Commercial Paper</masterLabel>
+        <translation><!-- Commercial Paper --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DA</masterLabel>
+        <translation><!-- DA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deposits</masterLabel>
+        <translation><!-- Deposits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expected Loss Rating</masterLabel>
+        <translation><!-- Expected Loss Rating --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Issuer Rating</masterLabel>
+        <translation><!-- Issuer Rating --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Market Linked Debenture</masterLabel>
+        <translation><!-- Market Linked Debenture --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Monitoring Activity</masterLabel>
+        <translation><!-- Monitoring Activity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mutual Fund Rating</masterLabel>
+        <translation><!-- Mutual Fund Rating --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NCD/Debt</masterLabel>
+        <translation><!-- NCD/Debt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other-SF</masterLabel>
+        <translation><!-- Other-SF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PTC/AP</masterLabel>
+        <translation><!-- PTC/AP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Perpetual Debt</masterLabel>
+        <translation><!-- Perpetual Debt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RP - Independent Credit Evaluation (ICE)</masterLabel>
+        <translation><!-- RP - Independent Credit Evaluation (ICE) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Research</masterLabel>
+        <translation><!-- Research --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SR</masterLabel>
+        <translation><!-- SR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Short Term Borrowing Programme</masterLabel>
+        <translation><!-- Short Term Borrowing Programme --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Short term debt</masterLabel>
+        <translation><!-- Short term debt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sub Debt</masterLabel>
+        <translation><!-- Sub Debt --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tax Invoice Sent By --></label>
+    <name>Tax_Invoice_Sent_By__c</name>
+    <relationshipLabel><!-- Invoices (Tax Invoice Sent By) --></relationshipLabel>
+</CustomFieldTranslation>

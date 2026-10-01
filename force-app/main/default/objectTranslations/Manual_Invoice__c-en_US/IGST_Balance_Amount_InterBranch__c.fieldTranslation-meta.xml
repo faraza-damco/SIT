@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- IGST Balance Amount InterBranch --></label>
+    <name>IGST_Balance_Amount_InterBranch__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Update Invoice</description>
+        <name>Assign_Values</name>
+        <label>Assign Values</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>invoiceRecord.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_the_Invoice_Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>invoiceRecord.Invoice_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Initiate Tax Invoice</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Invoice</targetReference>
+        </connector>
+    </assignments>
+    <customProperties>
+        <name>ScreenProgressIndicator</name>
+        <value>
+            <stringValue>{&quot;location&quot;:&quot;top&quot;,&quot;type&quot;:&quot;simple&quot;}</stringValue>
+        </value>
+    </customProperties>
+    <description>-to update the Invoice Status</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>errorMessage</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    CONTAINS(LOWER($Flow.FaultMessage), &apos;error occurred:&apos;),
+    TRIM(
+        LEFT(
+            MID(
+                $Flow.FaultMessage,
+                FIND(&apos;error occurred:&apos;, LOWER($Flow.FaultMessage)) + 15,
+                LEN($Flow.FaultMessage)
+            ),
+            IF(
+                CONTAINS(MID(
+                    $Flow.FaultMessage,
+                    FIND(&apos;error occurred:&apos;, LOWER($Flow.FaultMessage)) + 15,
+                    LEN($Flow.FaultMessage)
+                ), &apos;You can look up ExceptionCode&apos;),
+                FIND(&apos;You can look up ExceptionCode&apos;, MID(
+                    $Flow.FaultMessage,
+                    FIND(&apos;error occurred:&apos;, LOWER($Flow.FaultMessage)) + 15,
+                    LEN($Flow.FaultMessage)
+                )) - 1,
+                IF(
+                    CONTAINS(
+                        MID(
+                            $Flow.FaultMessage,
+                            FIND(&apos;error occurred:&apos;, LOWER($Flow.FaultMessage)) + 15,
+                            LEN($Flow.FaultMessage)
+                        ),
+                        &apos;(&apos;
+                    ),
+                    FIND(&apos;(&apos;, MID(
+                        $Flow.FaultMessage,
+                        FIND(&apos;error occurred:&apos;, LOWER($Flow.FaultMessage)) + 15,
+                        LEN($Flow.FaultMessage)
+                    )) - 1,
+                    LEN($Flow.FaultMessage)
+                )
+            )
+        )
+    ),
+    $Flow.FaultMessage
+)</expression>
+    </formulas>
+    <interviewLabel>Initiate Tax Invoice Button {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Initiate Tax Invoice Button</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <description>-to update the Invoice Status to &apos;Initiate Tax Invoice&apos;</description>
+        <name>Get_the_Invoice_Record</name>
+        <label>Get the Invoice Record</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assign_Values</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Invoice__c</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Invoice_Status__c</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Update the Invoice Status</description>
+        <name>Update_Invoice</name>
+        <label>Update Invoice</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Success_Message</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Message</targetReference>
+        </faultConnector>
+        <inputReference>invoiceRecord</inputReference>
+    </recordUpdates>
+    <screens>
+        <description>to display the error message</description>
+        <name>Message</name>
+        <label>Message</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>displayMessage</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(40, 39, 39);&quot;&gt;{!errorMessage}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Success_Message</name>
+        <label>Success Message</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Successful</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;color: rgb(14, 231, 54);&quot;&gt;&lt;em&gt;Invoice Status updated successfully !!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <nextOrFinishButtonLabel>Close</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_the_Invoice_Record</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>invoiceRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Invoice__c</objectType>
+    </variables>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

@@ -1,0 +1,15 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-13-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<apex:component >
+    <apex:attribute name="subject" description="Invoice ID" type="String" required="true"/>
+    <apex:attribute name="textBody" description="Invoice ID" type="String" required="true"/>
+    <div class="slds-card" style="width: 380px">
+       <h5  style="font-weight: 700;">Subject : {!subject}</h5>
+      <div class="slds-card__body slds-card__body_inner">{!textBody}</div> 
+    </div> 
+</apex:component>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_for_VOD4</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(AND(
+NOT(ISPICKVAL( BLR_Sub_Instrument_4__c,&quot;&quot;)),
+OR(
+ISBLANK(Volume_of_Debt_4_Amount__c)
+)
+),
+AND(
+NOT(ISBLANK(Volume_of_Debt_4_Amount__c)),
+OR(
+ISPICKVAL(BLR_Sub_Instrument_4__c,&quot;&quot;)
+)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Volume_of_Debt_4_Amount__c</errorDisplayField>
+    <errorMessage>If BLR Sub Instrument is selected then please specify its VoD or Vice-Versa</errorMessage>
+</ValidationRule>

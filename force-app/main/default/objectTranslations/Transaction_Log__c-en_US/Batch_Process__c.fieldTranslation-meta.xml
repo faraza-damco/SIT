@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Batch Process --></label>
+    <name>Batch_Process__c</name>
+    <picklistValues>
+        <masterLabel>ICRA_CreateRollover_T_Logic</masterLabel>
+        <translation><!-- ICRA_CreateRollover_T_Logic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ICRA_CreateRollover_T_Logic_Manual</masterLabel>
+        <translation><!-- ICRA_CreateRollover_T_Logic_Manual --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ICRA_Generate_Proforma_Invoice_Batch</masterLabel>
+        <translation><!-- ICRA_Generate_Proforma_Invoice_Batch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ICRA_Generate_Tax_Invoice_Batch</masterLabel>
+        <translation><!-- ICRA_Generate_Tax_Invoice_Batch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ICRA_Invoice_Status_Update_Batch</masterLabel>
+        <translation><!-- ICRA_Invoice_Status_Update_Batch --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,446 @@
+<apex:page renderAs="pdf" standardController="Opportunity" extensions="ICRA_Proposal_new_ExtensionClass" showHeader="false"
+           sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false" docType="html-5.0">
+<html>
+   <head>
+       <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+     <style type="text/css">@import url('https://themes.googleusercontent.com/fonts/css?kit=hh9VFM0qOK4TrLidDd__Un9O60_DnxKKASUGfrktkbs');.lst-kix_list_2-1>li{counter-increment:lst-ctn-kix_list_2-1}ul.lst-kix_list_1-0{list-style-type:none}ol.lst-kix_list_2-6.start{counter-reset:lst-ctn-kix_list_2-6 0}.lst-kix_list_3-0>li:before{content:"-  "}ul.lst-kix_list_5-7{list-style-type:none}ul.lst-kix_list_5-8{list-style-type:none}.lst-kix_list_3-1>li:before{content:"o  "}.lst-kix_list_3-2>li:before{content:"\0025aa  "}ul.lst-kix_list_5-5{list-style-type:none}ul.lst-kix_list_5-6{list-style-type:none}ol.lst-kix_list_2-3.start{counter-reset:lst-ctn-kix_list_2-3 0}ul.lst-kix_list_1-3{list-style-type:none}.lst-kix_list_3-5>li:before{content:"\0025aa  "}ul.lst-kix_list_5-0{list-style-type:none}ul.lst-kix_list_1-4{list-style-type:none}ul.lst-kix_list_1-1{list-style-type:none}.lst-kix_list_3-4>li:before{content:"o  "}ul.lst-kix_list_1-2{list-style-type:none}ul.lst-kix_list_5-3{list-style-type:none}ul.lst-kix_list_1-7{list-style-type:none}.lst-kix_list_3-3>li:before{content:"\0025cf  "}ul.lst-kix_list_5-4{list-style-type:none}ul.lst-kix_list_1-8{list-style-type:none}ul.lst-kix_list_5-1{list-style-type:none}ul.lst-kix_list_1-5{list-style-type:none}ul.lst-kix_list_5-2{list-style-type:none}ul.lst-kix_list_1-6{list-style-type:none}.lst-kix_list_3-8>li:before{content:"\0025aa  "}.lst-kix_list_2-0>li{counter-increment:lst-ctn-kix_list_2-0}.lst-kix_list_2-3>li{counter-increment:lst-ctn-kix_list_2-3}.lst-kix_list_3-6>li:before{content:"\0025cf  "}.lst-kix_list_3-7>li:before{content:"o  "}ol.lst-kix_list_2-2{list-style-type:none}ol.lst-kix_list_2-3{list-style-type:none}.lst-kix_list_5-0>li:before{content:"\002022  "}ol.lst-kix_list_2-4{list-style-type:none}ol.lst-kix_list_2-5{list-style-type:none}ol.lst-kix_list_2-0{list-style-type:none}ol.lst-kix_list_2-1{list-style-type:none}.lst-kix_list_4-8>li:before{content:"\002022  "}.lst-kix_list_5-3>li:before{content:"\002022  "}.lst-kix_list_4-7>li:before{content:"\002022  "}.lst-kix_list_5-2>li:before{content:"\002022  "}.lst-kix_list_5-1>li:before{content:"\002022  "}ul.lst-kix_list_4-8{list-style-type:none}.lst-kix_list_5-7>li:before{content:"\002022  "}ul.lst-kix_list_4-6{list-style-type:none}.lst-kix_list_5-6>li:before{content:"\002022  "}.lst-kix_list_5-8>li:before{content:"\002022  "}ul.lst-kix_list_4-7{list-style-type:none}ul.lst-kix_list_4-0{list-style-type:none}ul.lst-kix_list_4-1{list-style-type:none}.lst-kix_list_5-4>li:before{content:"\002022  "}ul.lst-kix_list_4-4{list-style-type:none}.lst-kix_list_5-5>li:before{content:"\002022  "}ol.lst-kix_list_2-6{list-style-type:none}ul.lst-kix_list_4-5{list-style-type:none}ol.lst-kix_list_2-7{list-style-type:none}ul.lst-kix_list_4-2{list-style-type:none}ol.lst-kix_list_2-8{list-style-type:none}ul.lst-kix_list_4-3{list-style-type:none}.lst-kix_list_6-1>li:before{content:"\002022  "}.lst-kix_list_6-3>li:before{content:"\002022  "}.lst-kix_list_6-0>li:before{content:"\002022  "}.lst-kix_list_6-4>li:before{content:"\002022  "}li.li-bullet-2:before{margin-left:-18pt;white-space:nowrap;display:inline-block;min-width:18pt}.lst-kix_list_6-2>li:before{content:"\002022  "}.lst-kix_list_2-5>li{counter-increment:lst-ctn-kix_list_2-5}.lst-kix_list_2-8>li{counter-increment:lst-ctn-kix_list_2-8}.lst-kix_list_6-8>li:before{content:"\002022  "}.lst-kix_list_6-5>li:before{content:"\002022  "}.lst-kix_list_6-7>li:before{content:"\002022  "}.lst-kix_list_7-0>li:before{content:"\002022  "}.lst-kix_list_2-2>li{counter-increment:lst-ctn-kix_list_2-2}ol.lst-kix_list_2-4.start{counter-reset:lst-ctn-kix_list_2-4 0}.lst-kix_list_6-6>li:before{content:"\002022  "}.lst-kix_list_2-6>li:before{content:"" counter(lst-ctn-kix_list_2-6,decimal) ". "}.lst-kix_list_2-7>li:before{content:"" counter(lst-ctn-kix_list_2-7,lower-latin) ". "}.lst-kix_list_2-7>li{counter-increment:lst-ctn-kix_list_2-7}.lst-kix_list_7-4>li:before{content:"\002022  "}.lst-kix_list_7-6>li:before{content:"\002022  "}.lst-kix_list_2-4>li:before{content:"" counter(lst-ctn-kix_list_2-4,lower-latin) ". "}.lst-kix_list_2-5>li:before{content:"" counter(lst-ctn-kix_list_2-5,lower-roman) ". "}.lst-kix_list_2-8>li:before{content:"" counter(lst-ctn-kix_list_2-8,lower-roman) ". "}.lst-kix_list_7-1>li:before{content:"\002022  "}.lst-kix_list_7-5>li:before{content:"\002022  "}.lst-kix_list_7-2>li:before{content:"\002022  "}.lst-kix_list_7-3>li:before{content:"\002022  "}ul.lst-kix_list_7-5{list-style-type:none}ul.lst-kix_list_7-6{list-style-type:none}ul.lst-kix_list_7-3{list-style-type:none}ul.lst-kix_list_3-7{list-style-type:none}ul.lst-kix_list_7-4{list-style-type:none}ul.lst-kix_list_3-8{list-style-type:none}ul.lst-kix_list_7-7{list-style-type:none}ul.lst-kix_list_7-8{list-style-type:none}ul.lst-kix_list_3-1{list-style-type:none}ul.lst-kix_list_3-2{list-style-type:none}.lst-kix_list_7-8>li:before{content:"\002022  "}ul.lst-kix_list_3-0{list-style-type:none}ul.lst-kix_list_7-1{list-style-type:none}ul.lst-kix_list_3-5{list-style-type:none}ul.lst-kix_list_7-2{list-style-type:none}ul.lst-kix_list_3-6{list-style-type:none}ul.lst-kix_list_3-3{list-style-type:none}ul.lst-kix_list_7-0{list-style-type:none}.lst-kix_list_7-7>li:before{content:"\002022  "}ul.lst-kix_list_3-4{list-style-type:none}ol.lst-kix_list_2-5.start{counter-reset:lst-ctn-kix_list_2-5 0}li.li-bullet-1:before{margin-left:-18pt;white-space:nowrap;display:inline-block;min-width:18pt}.lst-kix_list_4-0>li:before{content:"\002022  "}.lst-kix_list_2-6>li{counter-increment:lst-ctn-kix_list_2-6}.lst-kix_list_4-1>li:before{content:"\002022  "}.lst-kix_list_4-4>li:before{content:"\002022  "}ol.lst-kix_list_2-2.start{counter-reset:lst-ctn-kix_list_2-2 0}.lst-kix_list_4-3>li:before{content:"\002022  "}.lst-kix_list_4-5>li:before{content:"\002022  "}.lst-kix_list_4-2>li:before{content:"\002022  "}.lst-kix_list_4-6>li:before{content:"\002022  "}.lst-kix_list_2-4>li{counter-increment:lst-ctn-kix_list_2-4}ul.lst-kix_list_6-6{list-style-type:none}ul.lst-kix_list_6-7{list-style-type:none}ul.lst-kix_list_6-4{list-style-type:none}ul.lst-kix_list_6-5{list-style-type:none}ol.lst-kix_list_2-8.start{counter-reset:lst-ctn-kix_list_2-8 0}ul.lst-kix_list_6-8{list-style-type:none}.lst-kix_list_1-0>li:before{content:"\0025cf  "}ul.lst-kix_list_6-2{list-style-type:none}ul.lst-kix_list_6-3{list-style-type:none}.lst-kix_list_1-1>li:before{content:"o  "}.lst-kix_list_1-2>li:before{content:"\0025aa  "}ol.lst-kix_list_2-0.start{counter-reset:lst-ctn-kix_list_2-0 0}ul.lst-kix_list_6-0{list-style-type:none}ul.lst-kix_list_6-1{list-style-type:none}.lst-kix_list_1-3>li:before{content:"\0025cf  "}.lst-kix_list_1-4>li:before{content:"o  "}.lst-kix_list_1-7>li:before{content:"o  "}ol.lst-kix_list_2-7.start{counter-reset:lst-ctn-kix_list_2-7 0}.lst-kix_list_1-5>li:before{content:"\0025aa  "}.lst-kix_list_1-6>li:before{content:"\0025cf  "}li.li-bullet-0:before{margin-left:-14.2pt;white-space:nowrap;display:inline-block;min-width:14.2pt}.lst-kix_list_2-0>li:before{content:"" counter(lst-ctn-kix_list_2-0,decimal) ". "}.lst-kix_list_2-1>li:before{content:"" counter(lst-ctn-kix_list_2-1,lower-latin) ". "}ol.lst-kix_list_2-1.start{counter-reset:lst-ctn-kix_list_2-1 0}.lst-kix_list_1-8>li:before{content:"\0025aa  "}.lst-kix_list_2-2>li:before{content:"" counter(lst-ctn-kix_list_2-2,lower-roman) ". "}.lst-kix_list_2-3>li:before{content:"" counter(lst-ctn-kix_list_2-3,decimal) ". "}ol{margin:0;padding:0}table td,table th{padding:0}.c22{border-right-style:solid;padding:0pt 5.4pt 0pt 5.4pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#d9e2f3;border-left-style:solid;border-bottom-width:1pt;width:113.3pt;border-top-color:#000000;border-bottom-style:solid}.c2{border-right-style:solid;padding:0pt 5.4pt 0pt 5.4pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:120.5pt;border-top-color:#000000;border-bottom-style:solid}.c37{border-right-style:solid;padding:0pt 5.4pt 0pt 5.4pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:113.3pt;border-top-color:#000000;border-bottom-style:solid}.c13{border-right-style:solid;padding:0pt 5.4pt 0pt 5.4pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:175.6pt;border-top-color:#000000;border-bottom-style:solid}.c36{border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;vertical-align:middle;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;width:375pt;border-top-color:#000000;border-bottom-style:solid}.c6{color:#0000ff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:normal}.c33{padding-top:0pt;text-indent:-63.8pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:left}.c0{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Times New Roman";font-style:normal}.c9{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Times New Roman";font-style:normal}.c1{padding-top:0pt;padding-bottom:0pt;line-height:1.0;orphans:2;widows:2;text-align:justify;height:12pt}.c17{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-family:"Times New Roman";font-style:normal}.c42{color:#0000ff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:6pt;font-family:"Arial";font-style:normal}.c32{-webkit-text-decoration-skip:none;font-weight:400;text-decoration:underline;text-decoration-skip-ink:none;font-family:"Times New Roman";font-style:normal}.c15{padding-top:0pt;padding-bottom:0pt;line-height:1.0;orphans:2;widows:2;text-align:justify}.c43{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:left}.c3{padding-top:0pt;padding-bottom:0pt;line-height:1.0;orphans:2;widows:2;text-align:left}.c5{padding-top:0pt;padding-bottom:0pt;line-height:1.0;orphans:2;widows:2;text-align:center}.c8{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c41{font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Times New Roman";font-style:normal}.c45{color:#2e74b5;font-weight:400;text-decoration:none;font-family:"Times New Roman";font-style:normal}.c30{color:#0000ff;font-weight:400;text-decoration:none;font-family:"Times New Roman";font-style:normal}.c25{color:#1e1916;font-weight:400;text-decoration:none;font-family:"Times New Roman";font-style:normal}.c40{border-spacing:0;border-collapse:collapse;margin-right:auto}.c20{vertical-align:baseline;font-size:10pt;font-style:italic;color:#000000}.c12{-webkit-text-decoration-skip:none;font-weight:700;text-decoration:underline;text-decoration-skip-ink:none}.c51{font-weight:400;text-decoration:none;font-family:"Times New Roman";font-style:normal}.c38{text-decoration:none;font-family:"Times New Roman";font-style:italic}.c11{vertical-align:baseline;font-size:11pt}.c52{font-family:"Times New Roman";font-style:normal}.c44{font-family:"Times New Roman";font-style:italic}.c53{vertical-align:baseline;font-size:16pt}.c54{margin-left:49.6pt;text-indent:-49.6pt}.c23{margin-left:36pt;padding-left:0pt}.c16{color:#000000;font-weight:700}.c26{vertical-align:baseline;font-size:14pt}.c21{color:#1e1916;font-weight:700}.c19{padding:0;margin:0}.c28{margin-left:3.8pt;padding-left:-3.8pt}.c31{}.c18{font-style:italic;font-weight:700}.c29{margin-left:36pt}.c49{background-color:#8eaadb}.c10{background-color:#ffffff}.c50{margin-right:-38.9pt}.c39{page-break-after:avoid}.c47{color:#2e74b5}.c27{color:#000000}.c48{height:14.8pt}.c4{height:12pt}.c34{background-color:#d9e2f3}.c7{height:15pt}.c14{margin-right:0.2pt}.c24{font-weight:700}.c46{margin-left:-13.5pt}.c35{color:#ff0000}.title{padding-top:0pt;-webkit-text-decoration-skip:none;color:#000000;font-weight:700;text-decoration:underline;font-size:12pt;padding-bottom:0pt;line-height:1.0;text-decoration-skip-ink:none;font-family:"Times New Roman";orphans:2;widows:2;text-align:center}.subtitle{padding-top:0pt;color:#0000ff;font-size:16pt;padding-bottom:0pt;font-family:"Times New Roman";line-height:1.0;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:12pt;font-family:"Times New Roman"}p{margin:0;color:#000000;font-size:12pt;font-family:"Times New Roman"}h1{padding-top:12pt;color:#000000;font-weight:700;font-size:16pt;padding-bottom:3pt;font-family:"Calibri";line-height:1.0;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:0pt;color:#000000;font-weight:700;font-size:12pt;padding-bottom:0pt;font-family:"Arial";line-height:1.0;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:12pt;color:#000000;font-weight:700;font-size:13pt;padding-bottom:3pt;font-family:"Calibri";line-height:1.0;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:12pt;color:#000000;font-weight:700;font-size:12pt;padding-bottom:2pt;font-family:"Times New Roman";line-height:1.0;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:0pt;color:#000000;font-size:12pt;padding-bottom:0pt;font-family:"Book Antiqua";line-height:1.0;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:10pt;color:#000000;font-weight:700;font-size:10pt;padding-bottom:2pt;font-family:"Times New Roman";line-height:1.0;page-break-after:avoid;orphans:2;widows:2;text-align:left}</style>
+    <style type="text/CSS">
+ @page {
+ border: 1px solid black;
+ }
+ </style>
+   <!--   <script>
+            window.onload = function () {
+            var myOutputLabel = document.getElementById('j_id0:IRF_FinalAmount');
+            myOutputLabel.innerHTML=({!Opportunity.IRF_Final_Amount__c}).toFixed(2).replace(/(\d)(?=(\d{2})+\d\.)/g, '$1,');
+            }
+      </script> -->
+       
+       </head>
+   <body class="c10 c31">
+      <div>
+          <p class="c3 c50" ><span style="overflow: hidden; display: inline-block; margin: 1.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 149.07px; height: 63.80px;"><img alt="in_01" src="{!URLFOR($Resource.ICRA_Proposal_Template_files,
+                  'ICRA_Proposal_Template_files/image4.png')}" style="width: 149.07px; height: 63.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""/></span></p>
+      </div>
+      <p class="c1"><span class="c0"></span></p>
+      <p class="c15"><span class="c0">Date: {!DAY(Opportunity.Date_of_Proposal__c)}/{!MONTH(Opportunity.Date_of_Proposal__c)}/{!YEAR(Opportunity.Date_of_Proposal__c)} </span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <p class="c15"><span class="c9">{!salutation}  {!name}<!--{!Opportunity.Contact_for_Proposal__r.Salutation} {!Opportunity.Contact_for_Proposal__r.Name}--></span></p>
+      <p class="c15"><span class="c9">{!designation}<!--{!Opportunity.Contact_for_Proposal__r.Designation__C}--> </span></p>
+      <p class="c15"><span class="c9">{!Opportunity.Account.Name}</span></p>
+      <a id="t.fea689de4f86c9c8106f8ce5ed27f30b422d9436"></a><a id="t.0"></a>
+      <table class="c40">
+         <tbody>
+            <tr class="c7">
+               <td class="c10 c36" colspan="1" rowspan="1">
+                  <p class="c15"><span class="c9">{!Opportunity.BillingAddress__r.Billing_Street__c}</span></p>
+                  <p class="c15"><span class="c9">{!Opportunity.BillingAddress__r.Billing_City__c+'  '+Opportunity.BillingAddress__r.Billing_Zip_Postal_Code__c}</span></p>
+                    <p class="c15"><span class="c9">{!Opportunity.BillingAddress__r.BillingState__c}</span></p>
+                    <p class="c15"><span class="c9">{!Opportunity.BillingAddress__r.BillingCountry__c}</span></p>
+                  
+                   
+                   <p class="c1"><span class="c0"></span></p>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <p class="c1"><span class="c0"></span></p>
+       <p class="c15"><span class="c0">Dear {!salutation}  {!lastName}<!--{!Opportunity.Contact_for_Proposal__r.Salutation}  {!Opportunity.Contact_for_Proposal__r.Name}-->,</span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <p class="c5"><span class="c12 c11">Re: Proposal for Rating of {!Opportunity.CurrencyDisplayFormula__c}  {!Opportunity.VoD_in_crore__c} {!Opportunity.Crore_or_Million__c} {!Opportunity.Instrument_type_4__c } </span></p>
+      <p class="c5 c4"><span class="c32 c11 c27"></span></p>
+   
+      <p class="c15"><span class="c0">This has the reference to our discussion regarding the rating of your company as per captioned details.</span><span class="c9">&nbsp;</span><span class="c0">In accordance, we are pleased to submit our proposal for rating of the above-mentioned programme.</span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <p class="c15"><span class="c0">The enclosed note contains the following sections:</span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <apex:outputText escape="false">
+      <p class="c15"><strong>Part I</strong><span class="c11 c24" style="padding-left:67px;">:</span><span class="c0"> Credentials of ICRA</span></p>
+      <p class="c15"><strong>Part II</strong><span class="c11 c24" style="padding-left:61px;">:</span><span class="c0"> Expertise, Coverage and ICRA&rsquo;s Advantage</span></p>
+      <p class="c15"><strong>Part III</strong><span class="c11 c24" style="padding-left:55px;">:</span><span class="c11"> Rating Process, Timeframe &amp; Deliverables</span></p>
+      <p class="c15"><strong>Part IV</strong><span class="c11 c24" style="padding-left:56px;">:</span><span class="c11"> Commercial Terms</span></p>
+      <p class="c1"><span class="c0"></span></p>
+      </apex:outputText>
+    
+      <h2 class="c15 c39"><span class="c0">Please feel free to discuss with us if you need any clarification. You may contact us at the below mentioned. </span></h2>
+     
+      <h2 class="c15 c39"><span class="c0">We look forward to work on this assignment and assure you of our best services.</span></h2>
+      <p class="c1"><span class="c0"></span></p>
+      <p class="c15"><span class="c0">Sincerely,</span></p>
+      <p class="c3 c4"><span class="c0"></span></p>
+      <p class="c3 c4"><span class="c0"></span></p>
+   
+
+      
+      <p><span class="c0"></span></p>
+      <p class="c3"><span class="c11 c24">S/d-</span></p>
+      <p class="c3"><span class="c11 c24">{!Opportunity.owner.name}</span></p>
+      <p class="c3"><span class="c11 c24">{!Opportunity.owner.Designation__C}</span></p>
+      <p class="c3"><span class="c11 c24">Mobile No:&nbsp;{!Opportunity.owner.MobilePhone}</span></p>
+      <p class="c3"><span class="c11 c24">Email:&nbsp;{!Opportunity.owner.email}</span></p>
+      <p class="c3 c4"><span class="c0"></span></p>
+      <p class="c3 c4"><span class="c0"></span></p>
+      <p class="c3"><span class="c11 c18"></span></p>
+      <p class="c3"><span class="c0"> </span></p>
+      <p class="c3 c4"><span class="c0"></span></p>
+      <p class="c3 c4"><span class="c0"></span></p>
+      <p class="c3 c4"><span class="c0"></span></p> 
+      <p class="c3 c4"><span class="c0"></span></p>
+      <p class="c3 c4"><span class="c0"></span></p>
+      <p class="c3 c4"><span class="c20 c10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(This is a system generated proposal and does not require signature)</span></p>
+      <p class="c15"><span class="c11 c24 c35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+      <p class="c15"><span class="c11 c24 c35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+      <p class="c1 title"><span class="c12 c11 c27 c52"></span></p>
+      <p class="c3 c4" 
+style='page-break-after: always;'><span class="c32 c11 c27"></span></p>
+      <div>
+         <p class="c3 c50"><span style="overflow: hidden; display: inline-block; margin: 1.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 149.07px; height: 63.80px;"><img alt="in_01" src="{!URLFOR($Resource.ICRA_Proposal_Template_files,
+                 'ICRA_Proposal_Template_files/image4.png')}" style="width: 149.07px; height: 63.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""/></span></p>
+     </div>
+     <p class="c3 c4 subtitle"><span class="c6"></span></p>
+      <p class="c3 subtitle"><span class="c26 c24">PART I &nbsp; &nbsp; </span></p>
+      <p class="c3 subtitle"><span class="c6">&nbsp; &nbsp; </span></p>
+      <p class="c3 subtitle"><span class="c6">ICRA&rsquo;s background</span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <p class="c8 subtitle"><span class="c0">ICRA Limited (formerly Investment Information and Credit Rating Agency of India Limited) was set up in 1991 by leading financial/investment institutions, commercial banks and financial services companies as an independent and professional investment Information and Credit Rating Agency. </span></p>
+      <p class="c8 c4 subtitle"><span class="c0"></span></p>
+      <p class="c8 subtitle"><span class="c0">Today, ICRA and its subsidiaries together form the ICRA Group of Companies (Group ICRA). ICRA is a Public Limited Company, with its shares listed on the Bombay Stock Exchange and the National Stock Exchange.</span></p>
+      <p class="c8 c4 subtitle"><span class="c0"></span></p>
+       <p class="c8 subtitle"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 517.93px; height: 255.07px;"><img alt="" src="{!URLFOR($Resource.ICRA_Proposal_Template_files,
+                  'ICRA_Proposal_Template_files/image1.jpg')}" style="width: 517.93px; height: 255.07px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""/></span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <p class="c3 subtitle"><span class="c6">Alliance with Moody&rsquo;s Investors Service</span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <p class="c15"><span class="c11">The International rating agency, Moody&#39;s Investors Service, through its investment arm based in India is the largest shareholder in ICRA. ICRA is now designated as a Moody&rsquo;s Investors Service Company. Moody&#39;s and ICRA also have a technical services agreement which entails Moody&#39;s providing technical inputs to ICRA. Specifically, the agreement is aimed at benefiting ICRA&#39;s in-house research capabilities and provides access to Moody&#39;s global research base.&nbsp;Moody&#39;s association with ICRA brings to India the global expertise and research, which Moody&#39;s has developed over the past nine decades of their existence. ICRA&#39;s association with Moody&#39;s is an important step towards the continuing process of building a strong Rating system in India.</span><span class="c41 c27">&nbsp;</span></p>
+      <p class="c1"><span class="c27 c41"></span></p>
+      <p class="c3 c4" 
+style='page-break-after: always;'><span class="c32 c11 c27"></span></p>
+      <div>
+         <p class="c3 c50" ><span style="overflow: hidden; display: inline-block; margin: 1.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 149.07px; height: 63.80px;"><img alt="in_01" src="{!URLFOR($Resource.ICRA_Proposal_Template_files,
+               'ICRA_Proposal_Template_files/image4.png')}" style="width: 149.07px; height: 63.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""/></span></p>
+      </div>
+      <p class="c1"><span class="c27 c41"></span></p>
+      <p class="c3 subtitle"><span class="c26">ICRA Over the Years</span></p>
+       <p class="c15"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 619.60px; height: 126.00px;"><img alt="" src="{!URLFOR($Resource.ICRA_Proposal_Template_files,
+                  'ICRA_Proposal_Template_files/image3.png')}" style="width: 619.60px; height: 126.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""/></span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <p class="c3 subtitle"><span class="c26">ICRA&rsquo;s </span><span class="c26 c47">In</span><span class="c6">dependent/ Non-Executive Board Members:</span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <p><a href="https://www.icra.in/Home/BoardOfDirector"><i>Click here to view ICRA's Board of Directors</i></a></p>
+      <p class="c1 c14"><span class="c0"></span></p>
+      <p class="c1 c14"><span class="c0"></span></p>
+      <p class="c1 c14"><span class="c0"></span></p>
+      <p class="c3 subtitle"><span class="c26">Senior Management:</span></p>
+      <p class="c1 c14"><span class="c0"></span></p>
+      <p class="c1 c14"><span class="c0"></span></p>
+      <p><a href="https://www.icra.in/Home/SeniorManagement"><i>Click here to view ICRA's Senior Management</i></a></p>
+      <p class="c1 c14"><span class="c0"></span></p>
+      <p class="c1 c14"><span class="c0"></span></p>
+      <p class="c1 c14"><span class="c0"></span></p>
+      <p class="c3 subtitle"><span class="c26">Rating Methodology:</span></p>
+      <p class="c1 c14"><span class="c0"></span></p>
+      <p class="c1 c14"><span class="c0"></span></p>
+      <p><a href="https://www.icra.in/Rating/Methodology"><i>Click here to view ICRA's Rating Methodologies for different Industries</i></a></p>
+      <p class="c1 c14"><span class="c0"></span></p>
+      <p class="c1 c14"><span class="c0"></span></p>
+      <p style='page-break-after: always;'></p>
+         <div>
+         <p class="c3 c50" ><span style="overflow: hidden; display: inline-block; margin: 1.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 149.07px; height: 63.80px;"><img alt="in_01" src="{!URLFOR($Resource.ICRA_Proposal_Template_files,
+               'ICRA_Proposal_Template_files/image4.png')}" style="width: 149.07px; height: 63.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""/></span></p>
+      </div>
+      <p class="c1"><span class="c27 c41"></span></p>
+      <p class="c3 subtitle"><span class="c24 c26">Part II</span></p>
+      <p class="c3 c4 subtitle"><span class="c6"></span></p>
+      <p class="c3 subtitle"><span class="c26 c45">Expertise and Coverage </span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <a id="t.3da3d80d09cf21c47f3c915926a11647c7fa6570"></a><a id="t.1"></a>
+      <table class="c40">
+         <tbody>
+            <tr class="c7">
+               <td class="c13 c49" colspan="1" rowspan="1">
+                  <p class="c5"><span class="c11 c16">Corporate Debt Ratings</span></p>
+               </td>
+               <td class="c37 c49" colspan="1" rowspan="1">
+                  <p class="c5"><span class="c11 c21">Industry Research</span></p>
+               </td>
+               <td class="c2 c49" colspan="1" rowspan="1">
+                  <p class="c3"><span class="c11 c16">ICRA Group</span></p>
+               </td>
+            </tr>
+            <tr class="c48">
+               <td class="c13 c34" colspan="1" rowspan="1">
+                  <p class="c3"><span class="c0">Bank Loan Rating</span></p>
+               </td>
+               <td class="c22" colspan="1" rowspan="1">
+                  <p class="c3 c4"><span class="c25 c11">Industry Research</span></p>
+               </td>
+               <td class="c2 c34" colspan="1" rowspan="1">
+                  <p class="c3"><span class="c0">ICRA Analytics Limited</span></p>
+               </td>
+            </tr>
+            <tr class="c7">
+               <td class="c13" colspan="1" rowspan="1">
+                  <p class="c3"><span class="c0">Financial Sector Ratings</span></p>
+               </td>
+               <td class="c37" colspan="1" rowspan="1">
+                  <p class="c3"><span class="c25 c11">Economy Research</span></p>
+               </td>
+               <td class="c2" colspan="1" rowspan="1">
+                  <p class="c3"><span class="c0">ICRA Lanka Limited</span></p>
+               </td>
+            </tr>
+            <tr class="c7">
+               <td class="c13 c34" colspan="1" rowspan="1">
+                  <p class="c3"><span class="c0">Structured Finance Rating</span></p>
+               </td>
+               <td class="c22" colspan="1" rowspan="1">
+                  <p class="c3"><span class="c25 c11">Customized Research</span></p>
+               </td>
+               <td class="c2 c34" colspan="1" rowspan="1">
+                  <p class="c3"><span class="c0">ICRA Nepal Limited</span></p>
+               </td>
+            </tr>
+            <tr class="c7">
+               <td class="c13" colspan="1" rowspan="1">
+                  <p class="c3"><span class="c0">Infrastructure Sector Ratings</span></p>
+               </td>
+               <td class="c37" colspan="1" rowspan="1">
+                  <p class="c3"><span class="c25 c11">Credit Perspectives</span></p>
+               </td>
+               <td class="c2" colspan="1" rowspan="1">
+                  <p class="c3 c4"><span class="c0"></span></p>
+               </td>
+            </tr>
+            <tr class="c7">
+               <td class="c13 c34" colspan="1" rowspan="1">
+                  <p class="c3"><span class="c0">Mutual Fund ratings</span></p>
+               </td>
+               <td class="c22" colspan="1" rowspan="1">
+                  <p class="c3"><span class="c25 c11"></span></p>
+               </td>
+               <td class="c2 c34" colspan="1" rowspan="1">
+                  <p class="c5 c4"><span class="c0"></span></p>
+               </td>
+            </tr>
+            <tr class="c7">
+               <td class="c13" colspan="1" rowspan="1">
+                  <p class="c3"><span class="c0">Public Finance Ratings</span></p>
+               </td>
+               <td class="c37" colspan="1" rowspan="1">
+                  <p class="c5 c4"><span class="c25 c11"></span></p>
+               </td>
+               <td class="c2" colspan="1" rowspan="1">
+                  <p class="c4 c5"><span class="c0"></span></p>
+               </td>
+            </tr>
+            <tr class="c7">
+               <td class="c13 c34" colspan="1" rowspan="1">
+                  <p class="c3"><span class="c0">Issuer Ratings</span></p>
+               </td>
+               <td class="c22" colspan="1" rowspan="1">
+                  <p class="c5 c4"><span class="c11 c25"></span></p>
+               </td>
+               <td class="c2 c34" colspan="1" rowspan="1">
+                  <p class="c5 c4"><span class="c0"></span></p>
+               </td>
+            </tr>
+            <tr class="c7">
+               <td class="c13" colspan="1" rowspan="1">
+                  <p class="c3"><span class="c0">Infrastructure Expected Loss Ratings</span></p>
+               </td>
+               <td class="c37" colspan="1" rowspan="1">
+                  <p class="c5 c4"><span class="c25 c11"></span></p>
+               </td>
+               <td class="c2" colspan="1" rowspan="1">
+                  <p class="c5 c4"><span class="c0"></span></p>
+               </td>
+            </tr>
+            <tr class="c7">
+               <td class="c13 c34" colspan="1" rowspan="1">
+                  <p class="c3"><span class="c0">InvIT &amp; REIT</span></p>
+               </td>
+               <td class="c22" colspan="1" rowspan="1">
+                  <p class="c5 c4"><span class="c25 c11"></span></p>
+               </td>
+               <td class="c2 c34" colspan="1" rowspan="1">
+                  <p class="c5 c4"><span class="c0"></span></p>
+               </td>
+            </tr>
+            <tr class="c7">
+               <td class="c13" colspan="1" rowspan="1">
+                  <p class="c3"><span class="c0">Independent Credit Evaluation (ICE)</span></p>
+               </td>
+               <td class="c37" colspan="1" rowspan="1">
+                  <p class="c5 c4"><span class="c25 c11"></span></p>
+               </td>
+               <td class="c2" colspan="1" rowspan="1">
+                  <p class="c5 c4"><span class="c0"></span></p>
+               </td>
+            </tr>
+            <tr class="c7">
+               <td class="c13 c34" colspan="1" rowspan="1">
+                  <p class="c3"><span class="c0">Market Linked Debentures</span></p>
+               </td>
+               <td class="c22" colspan="1" rowspan="1">
+                  <p class="c5 c4"><span class="c25 c11"></span></p>
+               </td>
+               <td class="c2 c34" colspan="1" rowspan="1">
+                  <p class="c5 c4"><span class="c0"></span></p>
+               </td>
+            </tr>
+            <tr class="c7">
+               <td class="c13" colspan="1" rowspan="1">
+                  <p class="c3"><span class="c0">Monitoring Activity</span></p>
+               </td>
+               <td class="c37" colspan="1" rowspan="1">
+                  <p class="c5 c4"><span class="c25 c11"></span></p>
+               </td>
+               <td class="c2" colspan="1" rowspan="1">
+                  <p class="c5 c4"><span class="c0"></span></p>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <p class="c1"><span class="c0"></span></p>
+      <p class="c15"><span class="c0">ICRA has built expertise in the major sectors. The key specialty areas include: </span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <ul class="c19 lst-kix_list_1-0 start" style="text-indent: -6px; ">
+         <li class="c15 c23 li-bullet-1" style="list-style-type: disc" ><span class="c0" style="padding-left: 5px;">Corporate sector including Transport Corporations, Engineering and Electricals, Cement &amp; Building Materials, PEBs, Power, Solar &amp; Wind Energy, Engineering, Healthcare, Pharmaceuticals, Information Technology, Steel, Sugar, Power, Automobile, Textile, Hotels, Metals and mining, Media, Retail, etc.</span></li>
+         <li class="c15 c23 li-bullet-1"  style="list-style-type: disc"><span class="c0" style="padding-left: 5px;">Public finance including state governments, municipal and urban local bodies.</span></li>
+         <li class="c15 c23 li-bullet-2" style="list-style-type: disc;" ><span class="c0" style="padding-left: 5px;">Financial sector including NBFCs, Banks, financial services &amp; insurance companies.</span></li>
+         <li class="c15 c23 li-bullet-2" style="list-style-type: disc" ><span class="c0" style="padding-left: 5px;">Infrastructure and utilities including Oil and Gas, Irrigation, Roads, Buildings, Telecom and Transportation sector.</span></li>
+         <li class="c15 c23 li-bullet-1"  style="list-style-type: disc"><span class="c0" style="padding-left: 5px;">Real Estate &amp; Construction Entities</span></li>
+         <li class="c15 c23 li-bullet-1"  style="list-style-type: disc"><span class="c0" style="padding-left: 5px;">Structured Finance</span></li>
+         <li class="c15 c23 li-bullet-1"  style="list-style-type: disc"><span class="c0" style="padding-left: 5px;">Economic Research</span></li>
+      </ul>
+      <p class="c1 c29"><span class="c0"></span></p>
+      <p><a href="https://www.icraresearch.in/Research/SubscribeSector"><i>Click here to view ICRA's Research Services</i></a></p>
+      <p class="c1 c29"><span class="c0"></span></p>
+      <p class="c15"><span class="c0">These sectors are headed by a Group Head who, in turn, is supported by a team of sector heads &amp; dedicated analysts. Sector focus provides a specialized approach, higher level of rating consistency and faster turnaround times. &nbsp;With a long track record and expertise available within, ICRA is well placed to scale up in case of necessity. Nine offices across the country enable comprehensive geographic coverage. </span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <p class="c15"><span class="c0">ICRA has already conducted Rating of a sizeable number of companies across various sectors. Through this, ICRA has acquired a deep understanding of the factors affecting the performance of the industry as well as the Company. Given this, ICRA is very well placed to complete an assignment of this nature. </span></p>
+      <p class="c3 c4 subtitle" style='page-break-after: always;'><span class="c6"></span></p>
+      <div>
+         <p class="c3 c50" ><span style="overflow: hidden; display: inline-block; margin: 1.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 149.07px; height: 63.80px;"><img alt="in_01" src="{!URLFOR($Resource.ICRA_Proposal_Template_files,
+               'ICRA_Proposal_Template_files/image4.png')}" style="width: 149.07px; height: 63.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""/></span></p>
+      </div>
+      <p class="c1"><span class="c27 c41"></span></p>
+      <p class="c1"><span class="c27 c41"></span></p>
+      <p class="c15"><span class="c6">ICRA&rsquo;s Advantage</span></p>
+      <p class="c1"><span class="c6"></span></p>
+      <p class="c1"><span class="c0"></span></p>
+       <p class="c15" style='page-break-after: always;'><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 636.13px; height: 367.80px;"><img alt="" src="{!URLFOR($Resource.ICRA_Proposal_Template_files,
+                  'ICRA_Proposal_Template_files/image2.jpg')}" style="width: 636.13px; height: 367.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""/></span></p>
+      <div>
+         <p class="c3 c50" ><span style="overflow: hidden; display: inline-block; margin: 1.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 149.07px; height: 63.80px;"><img alt="in_01" src="{!URLFOR($Resource.ICRA_Proposal_Template_files,
+               'ICRA_Proposal_Template_files/image4.png')}" style="width: 149.07px; height: 63.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""/></span></p>
+      </div>
+      <p class="c1"><span class="c27 c41"></span></p>
+      <p class="c3 c4 subtitle" ><span class="c6"></span></p>
+      <p class="c3 subtitle"><span class="c6">Part III</span></p>
+      <p class="c3 c4 subtitle"><span class="c6"></span></p>
+      <p class="c3 subtitle"><span class="c26">Rating Process</span><span class="c26 c47">&nbsp;</span></p>
+      <p class="c43 c4 subtitle"><span class="c0 c10"></span></p>
+       
+       <p class="c33 subtitle"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 801.8px; height: 283.53px;"><img alt="" src="{!URLFOR($Resource.ICRA_Proposal_Template_files,
+                  'ICRA_Proposal_Template_files/image5.png')}" style="width: 705.80px; height: 283.53px; margin-left: 161px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""/></span></p>
+      <p class="c8 c4 subtitle"><span class="c0 c10"></span></p>
+      <p class="c8 c4 subtitle"><span class="c0 c10"></span></p>
+      <p class="c8 subtitle"><span class="c20 c10 c24">* For Fresh ratings:</span><span class="c20 c10">&nbsp;If rating is not accepted and review is requested, review process is conducted; rating assigned is disclosed on website</span></p>
+      <p class="c8 subtitle"><span class="c20 c10 c24">* For Surveillance ratings:</span><span class="c10 c20">&nbsp;If review is requested, review process is conducted and thereafter the rating rationale is disseminated and uploaded on ICRA&nbsp;website</span></p>
+      <p class="c8 subtitle"><span class="c20 c10">** Timeline is subject to receipt of entire information and completion of site visits and meetings, as per mutually agreed schedules</span></p>
+      <p class="c8 c4 subtitle"><span class="c51 c26 c10 c27"></span></p>
+      <p class="c3 c4 subtitle"><span class="c6"></span></p>
+      <p class="c3 c4 subtitle"><span class="c6"></span></p>
+      <p class="c3 c4 subtitle"><span class="c6"></span></p>
+      <p class="c3 c4 subtitle"><span class="c6"></span></p>
+      <p class="c3 c4 subtitle"><span class="c6"></span></p>
+      <p class="c3 c4 subtitle"><span class="c6"></span></p>
+      <p class="c3 c4 subtitle"><span class="c6"></span></p>
+      <p class="c3 c4 subtitle"><span class="c6"></span></p>
+      <p class="c3 c4 subtitle"><span class="c6"></span></p>
+      <p class="c3 c4 subtitle"><span class="c6"></span></p>
+      <p class="c3 c4 subtitle"><span class="c6"></span></p>
+      <p class="c3 c4 subtitle"><span class="c6"></span></p>
+      <p class="c15" style='page-break-after: always;'></p>
+      <div>
+         <p class="c3 c50" ><span style="overflow: hidden; display: inline-block; margin: 1.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 149.07px; height: 63.80px;"><img alt="in_01" src="{!URLFOR($Resource.ICRA_Proposal_Template_files,
+               'ICRA_Proposal_Template_files/image4.png')}" style="width: 149.07px; height: 63.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""/></span></p>
+      </div>
+      <p class="c1"><span class="c27 c41"></span></p>
+      <p class="c1"><span class="c27 c41"></span></p>
+      <p class="c3 subtitle"><span class="c6">PART IV</span></p>
+      <p class="c3 c4 subtitle"><span class="c26 c27 c51"></span></p>
+      <p class="c15 subtitle"><span class="c6">Commercial Terms</span></p>
+      <p class="c1 subtitle"><span class="c6"></span></p>
+      <p class="c15"><span class="c11 c16">For Rating of </span><span class="c11 c12"> {!Opportunity.CurrencyDisplayFormula__c} {!Opportunity.VoD_in_crore__c} {!Opportunity.Crore_or_Million__c}  {!Opportunity.Instrument_type_4__c }</span><span class="c11 c16">, </span></p>
+      <p class="c15"><span class="c0">Fees consist of two parts:</span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <!--<apex:outputPanel style="text-align:center;">-->
+         <p class="c15"><span class="c11 c16" style="display:inline-block;">[A] Initial Rating Fee<span style="display:inline-block; width:69px; text-align:right;">:</span></span><span class="c0">&nbsp;{!if(Opportunity.IRF_Final_Amount__c==0,'Not Applicable','Payable at the beginning of the Rating Exercise &')}</span></p>
+         <p class="c15"><span class="c11 c16" style="display:inline-block;">[B] Annual Surveillance Fee<span style="display:inline-block; width:27px; text-align:right;">:</span></span><span class="c0">&nbsp;{!if(Opportunity.ASF_Final_Amount__c==0,'Not Applicable',if(Opportunity.Instrument_type_4__c=='Loss Estimation/Direct Assignment' || Opportunity.Instrument_type_4__c=='Resolution Plan - Independent Credit Evaluation (ICE)','Not Applicable','Payable one year from date of initial rating and on annual basis till redemption of the debt/ withdrawal of Rating.'))} </span></p>
+      <!--</apex:outputPanel>-->
+      <p class="c1"><span class="c0"></span></p>
+      <p class="c15"><span class="c11 c27">ICRA is keen to be associated with </span><span class="c11">{!Opportunity.Account.Name}  for the proposed rating programme. Hence, w</span><span class="c11 c27">e are pleased to offer the following Commercial Terms:</span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <p class="c15"><span class="c12 c11 c27">Commercial Terms for Rating</span><span class="c11 c12"> {!Opportunity.CurrencyDisplayFormula__c} {!Opportunity.VoD_in_crore__c} {!Opportunity.Crore_or_Million__c}  {!Opportunity.Instrument_type_4__c }</span><span class="c11 c16"> </span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <p class="c15"><span class="c11 c16">Initial Rating Fee&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </span><span class="c11 c27">{!if(Opportunity.IRF_Final_Amount__c==0,'Not Applicable',Opportunity.CurrencyDisplayFormula__c)}</span>
+<span class="c11 c27">
+<apex:outputText id="IRF_FinalAmount" rendered="{!Opportunity.IRF_Final_Amount__c!=0}" value="{0,number,#,##,##0.00}">
+<apex:param value="{!ROUND(Opportunity.IRF_Final_Amount__c,0)}" />
+</apex:outputText>
+<!--<apex:outputText label="NRR" value="{0,number,}">
+{! Opportunity.CurrencyIsoCode} &nbsp;
+<apex:param value="{!Opportunity.IRF_Final_Amount__c}" />
+</apex:outputText>-->
+   <!--{!if(Opportunity.IRF_Final_Amount__c!=0, ROUND(Opportunity.IRF_Final_Amount__c,4),'')}-->
+</span></p>
+     
+
+<p class="c15"><span class="c11 c16">Surveillance Fee&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span><span class="c11 c27"> {!if(Opportunity.Instrument_type_4__c=='Loss Estimation/Direct Assignment' || Opportunity.Instrument_type_4__c=='Resolution Plan - Independent Credit Evaluation (ICE)','Not Applicable',if((Opportunity.ASF_Final_Amount__c==0 || Opportunity.ASF_Final_Amount__c==null),'Not Applicable',''))}</span>
+<span class="c11 c27">{!if(Opportunity.ASF_Final_Amount__c!=null && Opportunity.ASF_Final_Amount__c>0 && (Opportunity.ASF_Agreement_with_Client__c=='In Absolute' || Opportunity.ASF_Agreement_with_Client__c=='')&& (Opportunity.Instrument_type_4__c!='Loss Estimation/Direct Assignment' && Opportunity.Instrument_type_4__c!='Resolution Plan - Independent Credit Evaluation (ICE)'),Opportunity.CurrencyDisplayFormula__c,'')}</span>
+<span class="c11 c27"> 
+   <apex:outputText rendered="{!Opportunity.ASF_Final_Amount__c!=null && Opportunity.ASF_Final_Amount__c>0 && (Opportunity.ASF_Agreement_with_Client__c=='In Absolute' || Opportunity.ASF_Agreement_with_Client__c=='')&& (Opportunity.Instrument_type_4__c!='Loss Estimation/Direct Assignment' && Opportunity.Instrument_type_4__c!='Resolution Plan - Independent Credit Evaluation (ICE)')}" value="{0,number,#,##,##0.00}">
+   <apex:param value="{!Opportunity.ASF_Final_Amount__c}" />
+   </apex:outputText>
+   <!--{!if(Opportunity.ASF_Final_Amount__c!=null && Opportunity.ASF_Final_Amount__c>0 && (Opportunity.ASF_Agreement_with_Client__c=='In Absolute' || Opportunity.ASF_Agreement_with_Client__c=='')&& (Opportunity.Instrument_type_4__c!='Loss Estimation/Direct Assignment' && Opportunity.Instrument_type_4__c!='Resolution Plan - Independent Credit Evaluation (ICE)'),ROUND(Opportunity.ASF_Final_Amount__c,4),'')}-->
+</span> 
+<span class="c11 c27">
+   <apex:outputText rendered="{!Opportunity.ASF_Final_Amount__c!=null && Opportunity.ASF_Final_Amount__c>0 && Opportunity.ASF_Agreement_with_Client__c=='In BPS' && (Opportunity.Instrument_type_4__c!='Loss Estimation/Direct Assignment' && Opportunity.Instrument_type_4__c!='Resolution Plan - Independent Credit Evaluation (ICE)')}" value="{0,number,#,##,##0.00}">
+      <apex:param value="{!Opportunity.ASF_as_per_Agreement_BPS__c}" />
+   </apex:outputText>
+   <!--{!if(Opportunity.ASF_Final_Amount__c!=null && Opportunity.ASF_Final_Amount__c>0 && Opportunity.ASF_Agreement_with_Client__c=='In BPS' && (Opportunity.Instrument_type_4__c!='Loss Estimation/Direct Assignment' && Opportunity.Instrument_type_4__c!='Resolution Plan - Independent Credit Evaluation (ICE)'),Opportunity.ASF_as_per_Agreement_BPS__c,'')}-->
+</span>
+<span class="c11 c27">
+   {!if(Opportunity.ASF_Final_Amount__c!=null && Opportunity.ASF_Final_Amount__c>0 && Opportunity.ASF_Agreement_with_Client__c=='In BPS' && (Opportunity.Instrument_type_4__c!='Loss Estimation/Direct Assignment' && Opportunity.Instrument_type_4__c!='Resolution Plan - Independent Credit Evaluation (ICE)'),'BPS of the o/s amount subject to minimum of Rs.','')}
+</span>  
+<span class="c11 c27">
+   <apex:outputText rendered="{!Opportunity.ASF_Final_Amount__c!=null && Opportunity.ASF_Final_Amount__c>0 && Opportunity.ASF_Agreement_with_Client__c=='In BPS' && (Opportunity.Instrument_type_4__c!='Loss Estimation/Direct Assignment' && Opportunity.Instrument_type_4__c!='Resolution Plan - Independent Credit Evaluation (ICE)')}" value="{0,number,#,##,##0.00}">
+      <apex:param value="{!Opportunity.Minimum_ASF__c}" />
+   </apex:outputText>
+   <!--{!if(Opportunity.ASF_Final_Amount__c!=null && Opportunity.ASF_Agreement_with_Client__c=='In BPS' && (Opportunity.Instrument_type_4__c!='Loss Estimation/Direct Assignment' && Opportunity.Instrument_type_4__c!='Resolution Plan - Independent Credit Evaluation (ICE)'),Opportunity.Minimum_ASF__c,'')}-->
+</span> </p>
+
+
+<p class="c15"><span class="c11 c16">Out of Pocket Expenses<span style="display:inline-block; width:26px; text-align:right;">:</span> </span><span class="c11 c27">{!if(Opportunity.OPE__c=='Reimbursed','Reimbursed- At Actuals',if(Opportunity.OPE__c=='Absorbed','Absorbed- NIL',''))    }</span>
+<span class="c11 c27">{!if(Opportunity.OPE__c=='Capped','Capped- At Actuals subject to cap of','')}&nbsp;{!if(Opportunity.OPE__c=='Capped',Opportunity.CurrencyDisplayFormula__c,'')}&nbsp;
+   <apex:outputText value="{0,number,#,##,##0.00}">
+      <apex:param value="{!Opportunity.Amt_of_CAP_fee__c}" />
+  </apex:outputText><!--{!Opportunity.Amt_of_CAP_fee__c}--></span><span class="c11 c27">&nbsp;</span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <p class="c15"><span class="c0">In addition to this, GST, as applicable, would be charged on the initial rating and the surveillance fees. The initial rating fee is payable upfront along with the mandate.</span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <p class="c15"><span class="c11 c27">We look forward to receiving your valued mandate.</span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <p class="c1"><span class="c0"></span></p>
+      <div>
+         <p class="c5 c4 c46"><span class="c42"></span></p>
+      </div>
+   </body>
+</html>
+</apex:page>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Lost to Competition (Higher Rating Actual)</fullName>
+        <default>false</default>
+        <label>Lost to Competition (Higher Rating Actual)</label>
+    </customValue>
+    <customValue>
+        <fullName>Lost to Competition (Higher Rating Perceived)</fullName>
+        <default>false</default>
+        <label>Lost to Competition (Higher Rating Perceived)</label>
+    </customValue>
+    <customValue>
+        <fullName>Lost to Competition (Lower Fee)</fullName>
+        <default>false</default>
+        <label>Lost to Competition (Lower Fee)</label>
+    </customValue>
+    <customValue>
+        <fullName>Lost to Competition (Relationship Issue)</fullName>
+        <default>false</default>
+        <label>Lost to Competition (Relationship Issue)</label>
+    </customValue>
+    <customValue>
+        <fullName>NPA/Financial Crisis</fullName>
+        <default>false</default>
+        <label>NPA/Financial Crisis</label>
+    </customValue>
+    <customValue>
+        <fullName>Limits Reduced Below Rs. 5 Cr</fullName>
+        <default>false</default>
+        <label>Limits Reduced Below Rs. 5 Cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Bank/Third Party Influence</fullName>
+        <default>false</default>
+        <label>Bank/Third Party Influence</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Reasons</fullName>
+        <default>false</default>
+        <label>Other Reasons</label>
+    </customValue>
+    <customValue>
+        <fullName>Loan Repaid</fullName>
+        <default>false</default>
+        <label>Loan Repaid</label>
+    </customValue>
+    <masterLabel>Reason for provision</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

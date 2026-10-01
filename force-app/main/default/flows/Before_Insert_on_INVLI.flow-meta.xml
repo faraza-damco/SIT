@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <customErrors>
+        <name>Different_Branch_on_Invoice</name>
+        <label>Different Branch on Invoice</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>The branch on the opportunity linked with the Invoice is different. Please rectify and try again.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>Check_Branch_on_Invoice</name>
+        <label>Check Branch on Invoice</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Different_Branch</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>branch_Invoice</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>branch_INVLI</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Different_Branch_on_Invoice</targetReference>
+            </connector>
+            <label>Different Branch</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>branch_INVLI</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Opportunity_Name__r.Opp_ICRA_Branch__c}</expression>
+    </formulas>
+    <formulas>
+        <name>branch_Invoice</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Invoice_No__r.Opportunity_Name__r.Opp_ICRA_Branch__c}</expression>
+    </formulas>
+    <interviewLabel>Before Insert on INVLI {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Before Insert on INVLI</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Branch_on_Invoice</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Invoice_No__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Opportunity_Name__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Invoice_Line_Item__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

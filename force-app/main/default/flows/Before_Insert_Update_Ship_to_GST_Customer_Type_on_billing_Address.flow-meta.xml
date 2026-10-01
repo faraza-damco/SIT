@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assigning_Ship_to_GST_Customer_Type_value</name>
+        <label>Assigning Ship-to GST Customer Type value</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Ship_to_GST_Customer_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Ship_To_GST_Customer_Type_Formula</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <environments>Default</environments>
+    <formulas>
+        <name>Ship_To_GST_Customer_Type_Formula</name>
+        <dataType>String</dataType>
+        <expression>IF(
+AND(
+ISPICKVAL({!$Record.Tax_GST_Classification__c}, &quot;Non-SEZ&quot;),
+ NOT(ISBLANK( {!$Record.GSTN__c}))
+),
+ &quot;Registered&quot;, 
+IF(AND(
+ISPICKVAL({!$Record.Tax_GST_Classification__c}, &quot;Non-SEZ&quot;),
+ (ISBLANK( {!$Record.GSTN__c}))
+),
+ &quot;UnRegistered&quot;, 
+IF(
+OR(
+ISPICKVAL({!$Record.Tax_GST_Classification__c}, &quot;SEZ Without Tax&quot;),
+ ISPICKVAL({!$Record.Tax_GST_Classification__c}, &quot;SEZ&quot;)),
+
+ &quot;SEZ Unit&quot;, 
+IF(ISPICKVAL({!$Record.Tax_GST_Classification__c}, &quot;Export&quot;),
+ &quot;Export&quot;, &quot;&quot;
+))))</expression>
+    </formulas>
+    <interviewLabel>Before Insert Update Ship-to GST Customer Type on billing Address {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Before Insert Update Ship-to GST Customer Type on billing Address</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Assigning_Ship_to_GST_Customer_Type_value</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Tax_GST_Classification__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Billing_Address__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

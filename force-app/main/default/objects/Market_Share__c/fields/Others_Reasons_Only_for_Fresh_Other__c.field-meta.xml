@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Others_Reasons_Only_for_Fresh_Other__c</fullName>
+    <label>Others Reasons (Only for Fresh - Other)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Loss_Reason__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Others_Reasons_Only_for_Fresh_Other</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Fresh Issuers - Other Reasons</controllingFieldValue>
+            <valueName>Other Reasons - Bankers Preference</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fresh Issuers - Other Reasons</controllingFieldValue>
+            <valueName>Other Reasons - CA Reference</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fresh Issuers - Other Reasons</controllingFieldValue>
+            <valueName>Other Reasons - City not Covered</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fresh Issuers - Other Reasons</controllingFieldValue>
+            <valueName>Other Reasons - Prefers Competitor/ICRA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fresh Issuers - Other Reasons</controllingFieldValue>
+            <valueName>Other Reasons - Misc</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

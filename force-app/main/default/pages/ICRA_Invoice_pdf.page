@@ -1,0 +1,846 @@
+<!--
+@description       : Invoice PDF documnet 
+@author            : ChangeMeIn@UserSettingsUnder.Ritesh Kumar
+@group             : 
+@last modified on  : 05-25-2021
+@last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+Modifications Log 
+Ver   Date         Author                               Modification
+1.0   01-29-2021   Ritesh Kumar   Initial Version
+
+-->
+<apex:page renderAs="PDF" standardController="Invoice__c" extensions="ICRA_InvoicePdfController" showHeader="false" sidebar="false"
+    standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false" docType="html-5.0">
+    <html>
+
+    <head>
+        <style type="text/css" media="print">
+            @font-face {
+                font-family: 'myarial';
+                src: url("{!$Resource.ICRA}");
+
+            }
+
+            body {
+                font-family: 'myarial';
+                font-size: 8.5pt;
+                word-wrap: break-word;
+                padding: 0px;
+                margin: 0px;
+            }
+
+            table {
+                word-wrap: break-word;
+                font-family: 'myarial';
+                border-collapse: collapse;
+                table-layout: auto;
+                width: 100%;
+            }
+
+            td,
+            tr {
+                word-wrap: break-word;
+                padding: 0px 3px 0px 3px;
+            }
+
+            .text-label {
+                font-weight: bolder !important;
+            }
+
+            p {
+                padding: 0px;
+                margin: 0px;
+                line-height: 1.5;
+            }
+
+            .custom-border td {
+                border: 0.2px solid #aaa9a9;
+
+            }
+
+            .a {
+                word-break: break-all;
+            }
+
+            .text-align {
+                text-align: center;
+            }
+
+            @page {
+                size: 8.5in 12.5in;
+                margin-top: 3.5cm;
+                margin-bottom: 4.5cm;
+
+                @top-center {
+                    content: element(header);
+                }
+                @bottom-left {
+                    content: element(footer);
+                }
+            }
+
+            div.header {
+                position: running(header);
+                margin: 30px 0px 20px 0px;
+                height: 130px;
+                width: 720px;
+                text-align: right;
+            }
+
+            div.footer {
+                display: block;
+                position: running(footer);
+                margin: 0px 0px 20px 0px;
+                width: 720px;
+                text-align: left;
+                border-top: 2px solid #0027A0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="header">
+            <apex:image value="{!$Resource.ICRA}" width="210px" height="85px" style="float: left;" />
+            <!--<p style="text-align: left; color:#0060AA; font-size: 24pt; width: 150px; float: left; margin: 21px 0px 0px 10px;font-weight: 500">
+                ICRA
+            </p>-->
+            <p style="text-align: right; color:#0060AA; font-size: 24pt; width: 350px; float: right; margin: 21px 0px 0px 0px;font-weight: 500">
+                ICRA Limited
+            </p>
+
+        </div>
+        <div class="footer">
+            <table cellspacing="0" cellpadding="0" style=" table-layout: fixed;">
+                <tr>
+                    <td style="text-align: left;color:#0060AA;font-size:10pt;font-weight: 500;vertical-align:top;">
+                        <p style="width: 80%; text-overflow: hidden !important; height: 100px  !important;">
+                            {!invoicePage.invoiceRecord.Opportunity_Name__r.Opp_ICRA_Branch__r.Street__c}, {!invoicePage.invoiceRecord.Opportunity_Name__r.Opp_ICRA_Branch__r.City__c}
+                            {!invoicePage.invoiceRecord.Opportunity_Name__r.Opp_ICRA_Branch__r.State__c} - {!invoicePage.invoiceRecord.Opportunity_Name__r.Opp_ICRA_Branch__r.Zip_Postal_Code__c},
+                            {!invoicePage.invoiceRecord.Opportunity_Name__r.Opp_ICRA_Branch__r.Country__c}
+
+                        </p>
+                    </td>
+                    <td style="text-align: left;color:#0060AA;font-size:10pt;font-weight: 500;vertical-align:top;">
+                        <p style="width: 80%;">Tel : {!invoicePage.invoiceFooter.Telephone__c}</p>
+                        <p style="width: 80%;">CIN : {!invoicePage.invoiceFooter.CIN__c}</p>
+                    </td>
+                    <td style="text-align: left;color:#0060AA;font-size:10pt;font-weight: 500;vertical-align:top;">
+
+                        <p style="width: 80%; float: right">Website : {!invoicePage.invoiceFooter.Website__c}</p>
+                        <p style="width: 80%;float: right">Email : {!invoicePage.invoiceFooter.Email__c}</p>
+                        <p style="width: 80%;float: right">Helpdesk : {!invoicePage.invoiceFooter.HelpDesk__c}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: left;color:#0060AA;font-size:10pt;font-weight: 500;">
+                        <p> Registered Office:
+                            <apex:outputText value="{!invoicePage.invoiceFooter.Registered_Office__c}" />
+                        </p>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: center;color:#0060AA;font-size:18pt;font-weight: 800 !important; letter-spacing: 5px; !important!">
+                        <p> RATING &nbsp;&nbsp;&#8226;&nbsp;&nbsp; RESEARCH &nbsp;&nbsp;&#8226;&nbsp;&nbsp; INFORMATION</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="content">
+            <apex:outputPanel rendered="{!IF(isError == false, true,false)}">
+                <table cellspacing="0" cellpadding="0" style="IF(invoicePage.nextPgae,'table-layout: fixed; width: 960px;','table-layout: fixed; width: 960px;')">
+                    <tbody>
+                        <tr>
+                            <td colspan="3" style="text-align: right; padding: 0px;margin:0px;">Original for Recipient</td>
+                        </tr>
+                        <tr>
+
+                            <td colspan="3" style="text-align: center;font-size: 20pt;font-weight: 600">
+                                {!IF(invoicePage.invoiceRecord.Invoice_status__c =='Proforma Invoice','Proforma Invoice','Tax Invoice')}
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top; width:215px;">
+                                <table cellspacing="0" cellpadding="0" class="text-label">
+                                    <tr>
+                                        <td colspan="2" class="text-label" style="word-wrap:break-word;">
+                                            <!--p style="width:260px;"-->
+
+                                            {!invoicePage.invoiceRecord.Customer_Name__c}
+                                            <br/>
+                                            <apex:outputField value="{!invoicePage.invoiceRecord.Address__c}" />
+                                            <br/> &nbsp;
+                                            <!--/p-->
+                                        </td>
+                                    </tr>
+                                    <apex:outputPanel rendered="{!invoicePage.invoiceRecord.Account_Classification__c == 'Export'}" layout="none">
+                                        <tr>
+                                            <td class="text-label" style="width:80px; vertical-align:top;">
+                                                <p style="padding:0px;margin:0px;">Country</p>
+                                            </td>
+                                            <td class="text-label">
+                                                <p style="float: left; ">:&nbsp;</p>
+                                                <p style="float: left; width: 70%; padding: 0px; margin: 0px;"> {!invoicePage.invoiceRecord.Customer_Country__c}</p>
+                                            </td>
+                                        </tr>
+                                    </apex:outputPanel>
+                                    <apex:outputPanel rendered="{!invoicePage.invoiceRecord.Account_Classification__c != 'Export'}" layout="none">
+                                        <tr>
+                                            <td class="text-label" style="width:80px; vertical-align:top;">
+                                                <p style="padding:0px;margin:0px;">State</p>
+                                            </td>
+                                            <td class="text-label">
+                                                <p style="float: left; ">:&nbsp;</p>
+                                                <p style="float: left; width: 80%; padding: 0px; margin: 0px;"> {!invoicePage.invoiceRecord.Customer_State__c}
+                                                    <br/>(Place of Supply)</p>
+                                            </td>
+                                        </tr>
+                                    </apex:outputPanel>
+                                    <tr>
+                                        <td class="text-label">
+                                            <p style="padding:0px;margin:0px;">State Code </p>
+                                        </td>
+                                        <td class="text-label">: 
+                                            <span style="display:inline;">{!IF(invoicePage.invoiceRecord.Customer_State_Code__c
+                                            <=0 , '',invoicePage.invoiceRecord.Customer_State_Code__c)}</span>
+                                            <span style="display:inline; margin-left: 4px;">{!IF(invoicePage.invoiceRecord.Customer_State_Code__c==97 ,'- Other Territory', '')}</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-label">
+                                            <p style="padding:0px;margin:0px;">GSTIN</p>
+                                        </td>
+                                        <td class="text-label" style="text-transform: uppercase;">:&nbsp;{!invoicePage.invoiceRecord.Customer_GSTIN__c}</td>
+                                    </tr>
+                 <!--               <tr>
+                                        <td class="text-label">
+                                            <p style="padding:0px;margin:0px;">Kind Attn.&nbsp;</p>
+                                        </td>
+                                        <td class="text-label">
+                                            <p>
+                                                :&nbsp;{!invoicePage.invoiceRecord.Contact_Name__r.Salutation}&nbsp;{!invoicePage.invoiceRecord.Contact_Name__r.Name}
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-label">
+                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                                        </td>
+                                        <td class="text-label">
+                                            <p>
+                                                &nbsp;{!invoicePage.invoiceRecord.Contact_Designation__c}
+                                            </p>
+                                        </td>
+                                    </tr>   -->
+                            <!--        <tr>
+                                        <td class="text-label">
+                                            <p style="padding:0px;margin:0px;">IRN</p>
+                                        </td>
+                                        <td class="text-label">
+                                            <p>
+                                                :&nbsp;{!invoicePage.invoiceRecord.IRN_Number__c}
+                                            </p>
+                                        </td>
+                                    </tr> -->
+                                </table>
+                                </td>
+                                <!-- QR code Block -->
+                                <td style="text-align: left; text-align: center;width: 250px;" cellspacing="0" cellpadding="0">
+                                    <!--img src="https://api.qrserver.com/v1/create-qr-code/?size=192x192&data={!invoicePage.invoiceRecord.IRN_Number__c}" height="192px" width="192px" /-->
+                                    <apex:outputField value="{!invoicePage.invoiceRecord.QR_Code__c}" style="width: 250px; height: 250px;" />
+
+                                </td>
+
+                                <td style="vertical-align: top;">
+                                    <table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed;">
+
+                                        <tr>
+                                            <td class="text-label" style="vertical-align: text-top; width:115px !important;">
+                                                <p style="padding:0px;margin:0px;">
+                                                    {!IF(invoicePage.invoiceRecord.Invoice_status__c =='Proforma Invoice','PI No','Bill No')}
+                                                </p>
+                                            </td>
+                                            <td class="text-label">:&nbsp; {!IF(invoicePage.invoiceRecord.Invoice_status__c =='Proforma Invoice',invoicePage.invoiceRecord.Name,invoicePage.invoiceRecord.Bill_No__c)}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-label">
+                                                <p style="padding:0px;margin:0px;">Dated</p>
+                                            </td>
+                                            <td class="text-label">:&nbsp;
+                                                <apex:outputField value="{!invoicePage.invoiceRecord.Created_Date__c}" />
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="text-label">
+                                                <p style="padding:0px;margin:0px;">Location of supplier</p>
+                                            </td>
+                                            <td class="text-label">:&nbsp;{!invoicePage.invoiceRecord.Location_of_Supplier__c}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-label">
+                                                <p style="padding:0px;margin:0px;">State</p>
+                                            </td>
+                                            <td class="text-label" style="vertical-align:top;">:&nbsp;{!invoicePage.invoiceRecord.Supplier_State__c}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-label">
+                                                <p style="padding:0px;margin:0px;"> State Code</p>
+                                            </td>
+                                            <td class="text-label">:&nbsp;{!invoicePage.invoiceRecord.Supplier_State_Code__c}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-label">
+                                                <p style="padding:0px;margin:0px;">GSTIN</p>
+                                            </td>
+                                            <td class="text-label" style="text-transform: uppercase;">:&nbsp;{!invoicePage.invoiceRecord.Supplier_GSTIN__c}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-label" style="vertical-align:top;">
+                                                <p style="padding:0px;margin:0px;">Description</p>
+                                            </td>
+                                            <td class="text-label" style="vertical-align:top; ">
+                                                <p style="float: left; ">:&nbsp;</p>
+                                                <p style="float: left; width: 90%; ">
+                                                    {!IF(invoicePage.invoiceRecord.Opportunity_Name__r.Instrument_type_4__c='Monitoring Activity',$Label.IPO_Invoice_Description,
+                                                    IF( AND(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name =='New Business',invoicePage.invoiceRecord.Opportunity_Name__r.Business_Segment__c=='Research')
+                                                    ,$Label.Market_Research_Description,$Label.Surveillance_Invoice_Description))}
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-label">
+                                                <p style="padding:0px;margin:0px;">SAC/HSN</p>
+                                            </td>
+                                            <td class="text-label">:&nbsp;{!invoicePage.invoiceRecord.SAC_HSN__c}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-label" style="vertical-align:top;">
+                                                <p style="padding:0px;margin:0px;">Tax Subject Reverse Charge </p>
+                                            </td>
+                                            <td class="text-label" style="vertical-align:top;">
+                                                <p style="float: left; ">:&nbsp;</p>
+                                                <p style="float: left; width: 90%; ">No</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-label">
+                                                <p style="padding:0px;margin:0px;text-transform: uppercase;">Pan</p>
+                                            </td>
+                                            <td class="text-label" style="text-transform: uppercase;">:&nbsp;{!invoicePage.invoiceRecord.Supplier_PAN__c} </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <span style="margin-right:60px;font-weight:bolder;">&nbsp;IRN</span>
+                                <b>:</b>&nbsp;{!invoicePage.invoiceRecord.IRN_Number__c}
+                            </td>
+                        </tr>   
+                        <tr>
+                            <td colspan="3">
+                                &nbsp;
+                             <br/> {!IF(invoicePage.invoiceRecord.Opportunity_Name__r.Instrument_type_4__c='Monitoring Activity',invoicePage.invoiceStaticTextMap['New Business'].Description_A__c,
+                                     invoicePage.invoiceStaticTextMap[invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name].Description_A__c)}
+                            <!--invoicePage.invoiceStaticTextMap[invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name].Description_A__c -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <table cellspacing="0" cellpadding="0" class="custom-border" width="100%" style=" table-layout: fixed;">
+                                    <tr class="custom-border">
+                                        <td colspan="9" style="text-align: center;" class="text-label">PARTICULARS</td>
+                                        <td style="text-align: center;" class="text-label">Amount ({!invoicePage.invoiceRecord.CurrencyIsoCode})</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9" class="text-label">
+                                            &nbsp;
+                                            <br/>{!IF(invoicePage.invoiceRecord.Opportunity_Name__r.Instrument_type_4__c='Monitoring Activity','',
+                                            IF( AND( invoicePage.invoiceRecord.Opportunity_Name__r.Business_Segment__c
+                                            == 'Research'), invoicePage.invoiceStaticTextMap['Research'].Description_B__c,
+                                            invoicePage.invoiceStaticTextMap[invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name].Description_B__c))}
+
+                                            <br/> &nbsp;
+                                            <br/> &nbsp;
+
+                                        </td>
+                                        <td style="border-bottom: none;border-top:none;">&nbsp;</td>
+                                    </tr> 
+                                    <tr>
+                                        <td class="text-label text-align" style="border-right: none; border-bottom: none; " colspan="2">
+                                            <p style="{! IF(invoicePage.invoiceRecord.Opportunity_Name__r.Instrument_type_4__c='Monitoring Activity' ,'display: block;text-decoration: underline;','display: none;')}">Period of Fees</p>
+                                            <p style="{! IF(AND(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name =='Surveillance',invoicePage.invoiceRecord.Opportunity_Name__r.Instrument_type_4__c!='Monitoring Activity') ,'display: block;text-decoration: underline;','display: none;')}">Period of Surveillance Fees</p>
+                                            <p style="{! IF(AND(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name =='New Business',invoicePage.invoiceRecord.Opportunity_Name__r.Business_Segment__c !='Research',invoicePage.invoiceRecord.Opportunity_Name__r.Instrument_type_4__c!='Monitoring Activity') ,'display: block;text-decoration: underline;','display: none;')}">Period of Rating Fees</p>
+                                            <p style="{! IF(AND(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name =='New Business',invoicePage.invoiceRecord.Opportunity_Name__r.Business_Segment__c =='Research',invoicePage.invoiceRecord.Opportunity_Name__r.Instrument_type_4__c!='Monitoring Activity') ,'display: block;text-decoration: underline;','display: none;')}">Period of Fees</p>
+                                        </td>
+                                        <td class="text-label text-align" style="border-right: none; border-left: none;" rowspan="2">No of Days</td>
+                                        <td class="text-label text-align" colspan="3" style="border-right: none; border-left: none;" rowspan="2">
+                                            <p style="{! IF(AND(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name =='New Business',invoicePage.invoiceRecord.Opportunity_Name__r.Business_Segment__c =='Research') ,'display: block;width:420px;text-align: left;','display: none;')}">Particulars</p>
+                                            <p style="{! IF(NOT(AND(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name =='New Business',invoicePage.invoiceRecord.Opportunity_Name__r.Business_Segment__c =='Research')),'display: block;text-decoration: underline;','display: none;')}">Instrument(s)</p>
+                                        </td>
+                                        <td align="center" class="text-label text-align" rowspan="2" colspan="3" style="border-right: none; border-left: none;word-break: break-all; ">
+                                            <div style="{! IF(AND(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name =='New Business',invoicePage.invoiceRecord.Opportunity_Name__r.Business_Segment__c == 'Research') ,'display:none;','display: block;')}">
+                                                <p style="{!IF( AND(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name =='Surveillance', invoicePage.invoiceRecord.CurrencyIsoCode =='INR') ,'display: block;','display: none;')}">
+
+                                                    O/s / Rated Amount
+                                                    <br/>(INR Crores)
+
+                                                </P>
+
+                                                <p style="{!IF( AND(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name =='Surveillance', 
+                                                      invoicePage.invoiceRecord.CurrencyIsoCode !='INR') ,'display: block;','display: none;')}">
+
+                                                    O/s / Rated Amount
+                                                    <br/>({!invoicePage.invoiceRecord.CurrencyIsoCode} Millions)
+
+                                                </P>
+
+                                                <p style="{!IF( AND(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name !='Surveillance', 
+                                                  invoicePage.invoiceRecord.CurrencyIsoCode =='INR') ,'display: block;','display: none;')}">
+
+                                                    O/s / Rated Amount
+                                                    <br/>(INR Crores)
+
+                                                </P>
+
+                                                <p style="{!IF( AND(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name !='Surveillance', 
+                                              invoicePage.invoiceRecord.CurrencyIsoCode !='INR') ,'display: block;','display: none;')}">
+                                                    Rated Amount
+                                                    <br/>({!invoicePage.invoiceRecord.CurrencyIsoCode} Millions)
+                                                </P>
+                                            </div>
+                                        </td>
+                                        <!--<td class="text-label text-align" rowspan="2" style="border-right: none; border-left: none;">
+                                        <p style="{!IF(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name !='Surveillance','display: block;','display: none;')}">
+                                        Effective Date of Rating
+                                        </P>
+                                        <p style="{!IF(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name =='Surveillance','display: block;','display: none;')}">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        </p>
+
+                                        </td>-->
+                                        <td rowspan="2" style="border-bottom: none;border-top:none;">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-label text-align" style="border-right: none; border-top: none;">From</td>
+                                        <td class="text-label text-align" style="border-right: none; border-left: none; border-top: none;">To</td>
+                                    </tr>
+
+
+                                    <apex:repeat value="{!invoicePage.invoiceLineItemList}" var="invoiceLine">
+
+                                        <tr style="padding: 10px !important;">
+                                            <td class="text-align" style="border: none; border-left:0.2px solid #aaa9a9;">
+                                                <div style="{! IF(AND(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name =='New Business',invoicePage.invoiceRecord.Opportunity_Name__r.Business_Segment__c == 'Research') ,'display:block;','display: none;')}">
+                                                    <apex:outputField value="{!invoiceLine.Opportunity_Name__r.Subscription_Start_Date__c}" />
+                                                </div>
+                                                <div style="{! IF(NOT(AND(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name =='New Business',invoicePage.invoiceRecord.Opportunity_Name__r.Business_Segment__c == 'Research')),'display:block;','display: none;')}">
+                                                    <apex:outputField value="{!invoiceLine.Period_of_Rating_Fees_From_Date__c}" />
+                                                </div>
+
+                                            </td>
+                                            <td class="text-align" style="border: none">
+                                                <div style="{! IF(AND(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name =='New Business',invoicePage.invoiceRecord.Opportunity_Name__r.Business_Segment__c == 'Research') ,'display:block;','display: none;')}">
+                                                    <apex:outputField value="{!invoiceLine.Opportunity_Name__r.Subscription_End_Date__c}" />
+                                                </div>
+                                                <div style="{! IF(NOT(AND(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name =='New Business',invoicePage.invoiceRecord.Opportunity_Name__r.Business_Segment__c == 'Research')),'display:block;','display: none;')}">
+                                                    <apex:outputField value="{!invoiceLine.Period_of_Rating_Fees_To_Date__c}" />
+                                                </div>
+
+                                            </td>
+                                            <td class="text-align" style="border: none">{!invoiceLine.No_of_Days__c}</td>
+                                            <td class="text-align" colspan="3" style="border: none">
+                                                <p style="{!IF(AND(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name =='New Business',invoicePage.invoiceRecord.Opportunity_Name__r.Business_Segment__c == 'Research'),'display: block;width:420px;text-align: left;','display: none;')}">
+                                                    {!invoiceLine.Opportunity_Name__r.Instrument_Type_5__c}
+                                                </p>
+
+                                                <p style="{!IF(NOT(AND(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name =='New Business',invoicePage.invoiceRecord.Opportunity_Name__r.Business_Segment__c == 'Research')),'display: block;','display: none;')}">
+                                                    {!invoiceLine.Instruments__c}
+                                                </p>
+                                                {!IF(AND(invoiceLine.Narration_for_Invoice__c !=null,invoiceLine.Narration_for_Invoice__c !=''), '( '+invoiceLine.Narration_for_Invoice__c+'
+                                                )','') }
+                                            </td>
+                                            <td class="text-align" align="center" colspan="3" style="text-align: center;border: none;">
+                                                <p style="{!IF(NOT(AND(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name =='New Business',invoicePage.invoiceRecord.Opportunity_Name__r.Business_Segment__c == 'Research')),'display: block; ','display: none;')}">
+                                                    {!invoiceLine.Rated_Amount__c}
+                                                </p>
+                                            </td>
+                                            <!--td class="text-align" style="border: none">
+                                                <p style="{!IF(AND(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name =='New Business',invoicePage.invoiceRecord.Opportunity_Name__r.Business_Segment__c
+                                                != 'Research'),'display: block;','display: none;')}">
+                                                    <apex:outputField value="{!invoiceLine.PR_Date__c}" />
+                                                </p>
+                                                <p style="{!IF(AND(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name =='New Business',invoicePage.invoiceRecord.Opportunity_Name__r.Business_Segment__c == 'Research'),'display: block;','display: none;')}">
+                                                    &nbsp;
+                                                </p>
+                                                <p style="{!IF(invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name =='Surveillance','display: block;','display: none;')}">
+                                                    &nbsp;
+                                                </p>
+                                            </td-->
+                                            <td class="text-align" style="border: none;border-left:0.2px solid #aaa9a9; border-right:0.2px solid #aaa9a9;">
+                                                <apex:outputText value="{0, number, integer}">
+                                                    <apex:param value="{!invoiceLine.Invoice_Taxable_Amount__c}" />
+                                                </apex:outputText>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="9" style="border: none; border-left:0.2px solid #aaa9a9;">
+
+                                            </td>
+                                            <td style="border: none;border-left:0.2px solid #aaa9a9; border-right:0.2px solid #aaa9a9;">&nbsp;</td>
+                                        </tr>
+                                    </apex:repeat>
+
+                                    <!--tr>
+                                    <td colspan="9" style="border: none; border-left:0.2px solid #aaa9a9;">
+                                    &nbsp;
+                                    <br/> &nbsp;
+                                    <br/>
+                                    </td>
+                                    <td style="border: none;border-left:0.2px solid #aaa9a9; border-right:0.2px solid #aaa9a9;">&nbsp;</td>
+                                    </tr-->
+
+                                    <tr>
+                                        <td rowspan="2" colspan="2" class="text-label">Particulars</td>
+                                        <td rowspan="2" class="text-label text-align" style="vertical-align: text-top; width: 100px !important;"> Taxable Amount</td>
+                                        <td colspan="2" class="text-label text-align">SGST/UTGST</td>
+                                        <td colspan="2" class="text-label text-align">CGST</td>
+                                        <td colspan="2" class="text-label text-align">IGST</td>
+                                        <td rowspan="2" class="text-label text-align">Total Amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-label text-align">Rate</td>
+                                        <td class="text-label text-align">Amount</td>
+                                        <td class="text-label text-align">Rate</td>
+                                        <td class="text-label text-align">Amount</td>
+                                        <td class="text-label text-align">Rate</td>
+                                        <td class="text-label text-align">Amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" class="text-label">Invoice </td>
+                                        <apex:repeat value="{!aggregateAmount}" var="amount">
+                                            <td class="text-align">
+                                                <p style="{! IF(amount['InvoiceAmount'] > 0 ,'display: block;','display: none;')}">
+                                                    <!--<apex:outputText value="{0, number, integer}">-->
+                                                    <!--<apex:param value="{!amount['InvoiceAmount']*1.42}" />-->
+                                                    <apex:outputText value="{0, number, integer}">
+                                                        <apex:param value="{!amount['InvoiceAmount']}" />
+                                                    </apex:outputText>
+                                                </p>
+
+                                                <p style="{! IF(amount['InvoiceAmount'] <= 0 ,'display: block;','display: none;')}">-</p>
+                                            </td>
+                                            <td class="text-align">
+                                                <p style="{! IF( AND( invoicePage.invoiceLineItemList[0].SGST_UTGST_Rate_for_Invoice_Amount__c > 0,  amount['InvoiceAmount'] > 0),'display: block;','display: none;')}">
+                                                    <apex:outputText value="{0, number, integer}">
+                                                        <apex:param value="{!invoicePage.invoiceLineItemList[0].SGST_UTGST_Rate_for_Invoice_Amount__c}" />
+                                                    </apex:outputText>%
+                                                </p>
+                                                <p style="{! IF(NOT( AND( invoicePage.invoiceLineItemList[0].SGST_UTGST_Rate_for_Invoice_Amount__c > 0,  amount['InvoiceAmount'] > 0)) ,'display: block;','display: none;')}">-</p>
+
+                                            </td>
+                                            <td class="text-align">
+                                                <p style="{! IF(amount['SGSTInvoice'] > 0 ,'display: block;','display: none;')}">
+                                                    <apex:outputText value="{0, number, integer}">
+                                                        <apex:param value="{!amount['SGSTInvoice'] }" />
+                                                    </apex:outputText>
+                                                </p>
+                                                <p style="{! IF(amount['SGSTInvoice'] <= 0 ,'display: block;','display: none;')}">-</p>
+
+                                            </td>
+                                            <td class="text-align">
+                                                <p style="{! IF( AND(invoicePage.invoiceLineItemList[0].CGST_Rate_for_Invoice_Amount__c > 0 , amount['InvoiceAmount'] > 0),'display: block;','display: none;')}">
+                                                    <apex:outputText value="{0, number, integer}">
+                                                        <apex:param value="{!invoicePage.invoiceLineItemList[0].CGST_Rate_for_Invoice_Amount__c}" />
+                                                    </apex:outputText>%
+                                                </p>
+                                                <p style="{! IF(NOT(AND(invoicePage.invoiceLineItemList[0].CGST_Rate_for_Invoice_Amount__c > 0 , amount['InvoiceAmount'] > 0 )), 'display: block;', 'display: none;')} ">-</p>
+                                            </td>
+
+                                            <td class="text-align">
+                                                <p style="{! IF(amount['CGSTInvoice'] > 0 ,'display: block;','display: none;')}">
+                                                    <apex:outputText value="{0, number, integer}">
+                                                        <apex:param value="{!amount['CGSTInvoice'] }" />
+                                                    </apex:outputText>
+                                                </p>
+                                                <p style="{! IF(amount['CGSTInvoice'] <= 0 ,'display: block;','display: none;')}">-</p>
+                                            </td>
+                                            <td class="text-align">
+                                                <p style="{! IF(AND(invoicePage.invoiceLineItemList[0].IGST_Rate_for_Invoice_Amount__c > 0, amount['InvoiceAmount'] > 0) ,'display: block;','display: none;')}">
+                                                    <apex:outputText value="{0, number, integer}">
+                                                        <apex:param value="{!invoicePage.invoiceLineItemList[0].IGST_Rate_for_Invoice_Amount__c}" />
+                                                    </apex:outputText>%
+                                                </p>
+                                                <p style="{! IF(NOT(AND(invoicePage.invoiceLineItemList[0].IGST_Rate_for_Invoice_Amount__c > 0, amount['InvoiceAmount'] > 0)),'display: block;','display: none;')}">-</p>
+                                            </td>
+                                            <td class="text-align">
+                                                <p style="{! IF(amount['IGSTAmountInvoice'] > 0 ,'display: block;','display: none;')}">
+                                                    <apex:outputText value="{0, number, integer}">
+                                                        <apex:param value="{!amount['IGSTAmountInvoice']}" />
+                                                    </apex:outputText>
+                                                </p>
+                                                <p style="{! IF(amount['IGSTAmountInvoice'] <= 0 ,'display: block;','display: none;')}">-</p>
+                                            </td>
+                                            <td class="text-align">
+                                                <p style="{! IF(amount['TotalAmountinvoiceAmount'] > 0 ,'display: block;','display: none;')}">
+                                                    <apex:outputText value="{0, number, integer}">
+                                                        <apex:param value="{!amount['TotalAmountinvoiceAmount']}" />
+                                                    </apex:outputText>
+                                                </p>
+                                                <p style="{! IF(amount['TotalAmountinvoiceAmount'] <= 0 ,'display: block;','display: none;')}">
+                                                    <apex:outputText value="{0, number, integer}">
+                                                        <apex:param value="{!amount['TotalAmountinvoiceAmount']}" />
+                                                    </apex:outputText>
+                                                </p>
+                                            </td>
+                                        </apex:repeat>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" class="text-label">Advance Recd. </td>
+                                        <apex:repeat value="{!aggregateAmount}" var="amount">
+                                            <td class="text-align">
+                                                <p style="{! IF(amount['AdvanceReceivedAmount'] > 0 ,'display: block;','display: none;')}">
+                                                    <apex:outputText value="{0, number, integer}">
+                                                        <apex:param value="{!amount['AdvanceReceivedAmount']}" />
+                                                    </apex:outputText>
+                                                </p>
+                                                <p style="{! IF(amount['AdvanceReceivedAmount'] <= 0 ,'display: block;','display: none;')}">-</p>
+                                            </td>
+                                            <td class="text-align">
+                                                <p style="{! IF( AND(invoicePage.invoiceLineItemList[0].SGST_UTGST_Rate_for_Amount_Recd__c > 0,amount['AdvanceReceivedAmount'] > 0) ,'display: block;','display: none;')}">
+                                                    <apex:outputText value="{0, number, integer}">
+                                                        <apex:param value="{!invoicePage.invoiceLineItemList[0].SGST_UTGST_Rate_for_Amount_Recd__c}" />
+                                                    </apex:outputText>%
+                                                </p>
+                                                <p style="{! IF(NOT(AND(invoicePage.invoiceLineItemList[0].SGST_UTGST_Rate_for_Amount_Recd__c > 0,amount['AdvanceReceivedAmount'] > 0)) ,'display: block;','display: none;')}">-</p>
+                                            </td>
+                                            <td class="text-align">
+                                                <p style="{! IF(amount['SGSTRecdInvoice'] > 0 ,'display: block;','display: none;')}">
+                                                    <apex:outputText value="{0, number, integer}">
+                                                        <apex:param value="{!amount['SGSTRecdInvoice']}" />
+                                                    </apex:outputText>
+                                                </p>
+                                                <p style="{! IF(amount['SGSTRecdInvoice'] <= 0 ,'display: block;','display: none;')}">-</p>
+                                            </td>
+                                            <td class="text-align">
+                                                <p style="{! IF(AND(invoicePage.invoiceLineItemList[0].CGST_Rate_for_Amount_Recd__c > 0,amount['AdvanceReceivedAmount'] >0) ,'display: block;','display: none;')}">
+                                                    <apex:outputText value="{0, number, integer}">
+                                                        <apex:param value="{!invoicePage.invoiceLineItemList[0].CGST_Rate_for_Amount_Recd__c}" />
+                                                    </apex:outputText>%
+                                                </p>
+                                                <p style="{! IF(NOT(AND(invoicePage.invoiceLineItemList[0].CGST_Rate_for_Amount_Recd__c > 0,amount['AdvanceReceivedAmount'] >0)),'display: block;','display: none;')}">-</p>
+                                            </td>
+                                            <td class="text-align">
+                                                <p style="{! IF(amount['CGSTRecdInvoice'] > 0 ,'display: block;','display: none;')}">
+                                                    <apex:outputText value="{0, number, integer}">
+                                                        <apex:param value="{!amount['CGSTRecdInvoice'] }" />
+                                                    </apex:outputText>
+                                                </p>
+                                                <p style="{! IF(amount['CGSTRecdInvoice'] <= 0 ,'display: block;','display: none;')}">-</p>
+                                            </td>
+                                            <td class="text-align">
+                                                <p style="{! IF(AND(invoicePage.invoiceLineItemList[0].IGST_Rate_for_Amount_Recd__c > 0,amount['AdvanceReceivedAmount'] >0  ),'display: block;','display: none;')}">
+                                                    <apex:outputText value="{0, number, integer}">
+                                                        <apex:param value="{!invoicePage.invoiceLineItemList[0].IGST_Rate_for_Amount_Recd__c}" />
+                                                    </apex:outputText>%
+                                                </p>
+                                                <p style="{! IF(NOT(AND(invoicePage.invoiceLineItemList[0].IGST_Rate_for_Amount_Recd__c > 0,amount['AdvanceReceivedAmount'] >0  )),'display: block;','display: none;')}">-</p>
+                                            </td>
+                                            <td class="text-align">
+                                                <p style="{! IF(amount['IGSTRecdInvoice'] > 0 ,'display: block;','display: none;')}">
+                                                    <apex:outputText value="{0, number, integer}">
+                                                        <apex:param value="{!amount['IGSTRecdInvoice']}" />
+                                                    </apex:outputText>
+                                                </p>
+                                                <p style="{! IF(amount['IGSTRecdInvoice'] <= 0 ,'display: block;','display: none;')}">-</p>
+                                            </td>
+                                            <td class="text-align">
+                                                <p style="{! IF(amount['amountReceived'] > 0 ,'display: block;','display: none;')}">
+                                                    <apex:outputText value="{0, number, integer}">
+                                                        <apex:param value="{!amount['amountReceived'] }" />
+                                                    </apex:outputText>
+                                                </p>
+                                                <p style="{! IF(amount['amountReceived'] <= 0 ,'display: block;','display: none;')}">-</p>
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" class="text-label"> Balance</td>
+                                        <apex:repeat value="{!aggregateAmount}" var="amount">
+                                            <td class="text-align">
+                                                <p style="{! IF(amount['BalanceAmount'] > 0 ,'display: block;','display: none;')}">
+                                                    <apex:outputText value="{0, number,integer}">
+                                                        <apex:param value="{!amount['BalanceAmount']}" />
+                                                    </apex:outputText>
+                                                </p>
+                                                <p style="{! IF(amount['BalanceAmount'] <= 0 ,'display: block;','display: none;')}">-</p>
+                                            </td>
+                                            <td class="text-align"> </td>
+                                            <td class="text-align">
+                                                <p style="{! IF(amount['SGSTAmountBalance'] > 0 ,'display: block;','display: none;')}">
+                                                    <apex:outputText value="{0, number, integer}">
+                                                        <apex:param value="{!amount['SGSTAmountBalance']}" />
+                                                    </apex:outputText>
+                                                </p>
+                                                <p style="{! IF(amount['SGSTAmountBalance'] <= 0 ,'display: block;','display: none;')}">-</p>
+                                            </td>
+                                            <td class="text-align"> </td>
+                                            <td class="text-align">
+                                                <p style="{! IF(amount['CGSTBalance'] > 0 ,'display: block;','display: none;')}">
+                                                    <apex:outputText value="{0, number, integer}">
+                                                        <apex:param value="{!amount['CGSTBalance'] }" />
+                                                    </apex:outputText>
+                                                </p>
+                                                <p style="{! IF(amount['CGSTBalance'] <= 0 ,'display: block;','display: none;')}">-</p>
+                                            </td>
+                                            <td class="text-align"> </td>
+                                            <td class="text-align">
+                                                <p style="{! IF(amount['IGSTAmountBalance'] > 0 ,'display: block;','display: none;')}">
+                                                    <apex:outputText value="{0, number, integer}">
+                                                        <apex:param value="{!amount['IGSTAmountBalance']}" />
+                                                    </apex:outputText>
+                                                </p>
+                                                <p style="{! IF(amount['IGSTAmountBalance'] <= 0 ,'display: block;','display: none;')}">-</p>
+                                            </td>
+                                            <td class="text-align">
+                                                <p style="{! IF(amount['PayableAmount'] > 0 ,'display: block;','display: none;')}">
+                                                    <apex:outputText value="{0, number, integer}">
+                                                        <apex:param value="{!amount['PayableAmount'] }" />
+                                                    </apex:outputText>
+                                                </p>
+                                                <p style="{! IF(amount['PayableAmount'] <= 0 ,'display: block;','display: none;')}">-</p>
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <apex:outputpanel rendered="{!invoicePage.nextPgae}">
+                            <div style="page-break-after:always;width: 960px;">&nbsp;</div>
+                        </apex:outputpanel>
+
+                        <tr>
+                            <td colspan="3">
+                                &nbsp;
+                                <br/> {!invoicePage.invoiceStaticTextMap[invoicePage.invoiceRecord.Opportunity_Name__r.RecordType.Name].Description_C__c}
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <p style="{! IF(OR(invoicePage.invoiceLineItemList[0].Account_Classification__c == 'SEZ Without Tax',invoicePage.invoiceLineItemList[0].Account_Classification__c == 'Export') ,'display: block;margin-top:5px;','display:none;')}">
+                                    {!$Label.Sez_and_Non_Sez_Static_text}
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <p style="{! IF(invoicePage.invoiceRecord.Invoice_status__c =='Proforma Invoice' ,'display: block; margin-top:5px; font-weight: 800; font-size: 10pt;','display:none;')}">
+                                    {!$Label.Proforma_Invoice_Text}
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-label">
+                                &nbsp;
+                            </td>
+                            <td colspan="3">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-label">
+                                <p style="text-decoration:underline; line-height: 1.5"> Bank Account Details :-</p>
+                            </td>
+                            <td colspan="3">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-label">
+                                &nbsp;
+                            </td>
+                            <td colspan="3">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <table cellspacing="0" cellpadding="0" width="100%" style="IF(invoicePage.nextPgae,'table-layout: fixed; width: 960px;','table-layout: fixed; width: 960px;')">
+                                    <tr class="text-label">
+                                        <td style="width: 160px;">Account Name </td>
+                                        <td> :&nbsp;{!invoicePage.bankAccountDetails[0].Account_Name__c}</td>
+                                    </tr>
+                                    <tr class="text-label">
+                                        <td style="width: 160px;">Current Account No.*</td>
+                                        <td> :&nbsp;{!invoicePage.bankAccountDetails[0].Current_Account_No__c}</td> 
+                                    </tr>
+                                    <tr class="text-label">
+                                        <td style="width: 160px;">RTGS/IFSC Code</td>
+                                        <td> :&nbsp;{!invoicePage.bankAccountDetails[0].RTGS_IFSC_Code__c}</td> 
+                                    </tr>
+                                    <tr class="text-label">
+                                        <td style="width: 160px;">Virtual Account No.*</td>
+                                        <td> :&nbsp;{!invoicePage.invoiceRecord.Opportunity_Name__r.Account.Customer_Number__c}</td> 
+                                    </tr>
+                                    <apex:repeat value="{!invoicePage.bankAccountDetails}" var="bank">
+                                        <!--tr class="text-label">
+
+                                            <td> Current Account No. </td>
+                                            <td>:&nbsp;{!bank.Current_Account_No__c}</td>
+                                        </tr-->
+                                        <tr class="text-label">
+                                            <td>RTGS/IFSC of Virtual Account</td>
+                                            <td>:&nbsp;{!bank.RTGS_IFSC__c}</td>
+                                        </tr>
+
+                                        <tr class="text-label" style="vertical-align:top;padding:0px;margin:0px;">
+                                            <td>Bank Name &amp; Address </td>
+                                            <td>
+                                                <p style="float: left; ">:&nbsp;</p>
+                                                <p style="float: left; width: 90%; padding: 0px; margin: 0px;">{!bank.Bank_Name__c}&nbsp;{!bank.Bank_Address__c}</p>
+
+                                            </td>
+                                        </tr>
+
+                                        <tr class="text-label">
+                                            <td colspan="2" class="text-label">&nbsp;</td>
+                                        </tr>
+
+                                    </apex:repeat>
+                                </table>
+                                *<i>Payment can be made with any of the above accounts of the Company.</i>
+                            </td>
+                             <td style="text-align: center;">
+                                <apex:outputPanel rendered="{!IF(invoicePage.invoiceRecord.Invoice_Status__c !='Proforma Invoice',true,false)}">
+                                    for and on behalf of ICRA Limited
+                                    <br/>&nbsp;
+                                    <br/>&nbsp;
+                                    <br/>&nbsp;
+                                    <br/>&nbsp;
+                                    <br/>&nbsp;
+                                    <br/>&nbsp;
+                                    <br/>(Authorised Signatory)
+                                </apex:outputPanel>
+                            </td> 
+                        </tr>
+                    </tbody>
+                </table>
+                <br/>&nbsp;
+                <br/>&nbsp;
+                <br/>&nbsp;
+                <p style="text-align:center; font-size: 11pt;">{!IF(invoicePage.invoiceRecord.Invoice_status__c =='Proforma Invoice','This is computer generated Proforma Invoice hence no signature is required','')}</p>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!IF(isError == true, true,false)}">
+                {! $Label.PDF_Error_Message}
+            </apex:outputPanel>
+        </div>
+    </body>
+
+    </html>
+</apex:page>

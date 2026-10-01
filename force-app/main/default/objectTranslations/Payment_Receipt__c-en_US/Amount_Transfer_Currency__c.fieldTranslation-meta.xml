@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Amount Transfer Currency --></label>
+    <name>Amount_Transfer_Currency__c</name>
+    <picklistValues>
+        <masterLabel>AED - UAE Dirham</masterLabel>
+        <translation><!-- AED - UAE Dirham --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AUD - Australian Dollar</masterLabel>
+        <translation><!-- AUD - Australian Dollar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CAD - Canadian Dollar</masterLabel>
+        <translation><!-- CAD - Canadian Dollar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EUR - Euro</masterLabel>
+        <translation><!-- EUR - Euro --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GBP - British Pound</masterLabel>
+        <translation><!-- GBP - British Pound --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INR - Indian Rupee</masterLabel>
+        <translation><!-- INR - Indian Rupee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JPY - Japanese Yen</masterLabel>
+        <translation><!-- JPY - Japanese Yen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SGD - Singapore Dollar</masterLabel>
+        <translation><!-- SGD - Singapore Dollar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>USD - U.S. Dollar</masterLabel>
+        <translation><!-- USD - U.S. Dollar --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

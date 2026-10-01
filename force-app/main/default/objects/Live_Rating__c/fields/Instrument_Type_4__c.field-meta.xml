@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Instrument_Type_4__c</fullName>
+    <label>Instrument Type 4</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Instrument_Type_3__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>GP_Instrument_Type_4</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Bonds</controllingFieldValue>
+            <valueName>AT1 Bonds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bonds</controllingFieldValue>
+            <valueName>Bonds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bonds</controllingFieldValue>
+            <controllingFieldValue>Fixed Deposits</controllingFieldValue>
+            <controllingFieldValue>Long Term Borrowing Programme</controllingFieldValue>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <controllingFieldValue>Commercial Paper/Certificate of Deposit/Short-term Debt</controllingFieldValue>
+            <controllingFieldValue>NCD/Debt</controllingFieldValue>
+            <valueName>Long Term Borrowing Programme</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bonds</controllingFieldValue>
+            <controllingFieldValue>Fixed Deposits</controllingFieldValue>
+            <controllingFieldValue>Short Term Borrowing Programme</controllingFieldValue>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <controllingFieldValue>Commercial Paper/Certificate of Deposit/Short-term Debt</controllingFieldValue>
+            <controllingFieldValue>NCD/Debt</controllingFieldValue>
+            <valueName>Short Term Borrowing Programme</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bonds</controllingFieldValue>
+            <valueName>Tier II Bonds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bonds</controllingFieldValue>
+            <controllingFieldValue>Fixed Deposits</controllingFieldValue>
+            <controllingFieldValue>Various Debt Instruments</controllingFieldValue>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <controllingFieldValue>Commercial Paper/Certificate of Deposit/Short-term Debt</controllingFieldValue>
+            <controllingFieldValue>NCD/Debt</controllingFieldValue>
+            <valueName>Various Debt Instruments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fixed Deposits</controllingFieldValue>
+            <valueName>Fixed Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Loan Rating</controllingFieldValue>
+            <valueName>Bank Loan Rating</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asset Backed Security</controllingFieldValue>
+            <controllingFieldValue>Loan Sell-Off</controllingFieldValue>
+            <controllingFieldValue>Collateralized Debt Obligation/Collateralized Loan Obligation</controllingFieldValue>
+            <controllingFieldValue>Security Receipts</controllingFieldValue>
+            <valueName>Loss Estimation/Direct Assignment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asset Backed Security</controllingFieldValue>
+            <controllingFieldValue>Loan Sell-Off</controllingFieldValue>
+            <controllingFieldValue>Collateralized Debt Obligation/Collateralized Loan Obligation</controllingFieldValue>
+            <controllingFieldValue>Security Receipts</controllingFieldValue>
+            <valueName>Pass Through Certificates</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Paper/Certificate of Deposit/Short-term Debt</controllingFieldValue>
+            <valueName>Certificate of Deposit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Paper/Certificate of Deposit/Short-term Debt</controllingFieldValue>
+            <valueName>Commercial Paper</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mortgage Backed Security</controllingFieldValue>
+            <controllingFieldValue>Security Receipts</controllingFieldValue>
+            <valueName>Assignee Payout</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mortgage Backed Security</controllingFieldValue>
+            <controllingFieldValue>Security Receipts</controllingFieldValue>
+            <valueName>Security Receipts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mutual Fund</controllingFieldValue>
+            <valueName>Mutual Fund Rating</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCD/Debt</controllingFieldValue>
+            <valueName>Hybrid Debt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCD/Debt</controllingFieldValue>
+            <valueName>Non-Convertible Debenture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCD/Debt</controllingFieldValue>
+            <valueName>PP- Market Linked Debenture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCD/Debt</controllingFieldValue>
+            <valueName>Preference Shares</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCD/Debt</controllingFieldValue>
+            <valueName>Sub Debt</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

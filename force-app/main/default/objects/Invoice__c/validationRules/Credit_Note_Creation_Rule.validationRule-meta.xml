@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Note_Creation_Rule</fullName>
+    <active>true</active>
+    <description>Credit Note can only be created against the Tax Invoice</description>
+    <errorConditionFormula>AND(
+ISNEW(),
+RecordType.Name=&apos;Credit Note&apos;,
+Bypass_Validation__c=false,
+NOT(ISPICKVAL(Invoice_No__r.Invoice_Status__c, &apos;Tax Invoice&apos;))
+)</errorConditionFormula>
+    <errorMessage>Credit Note can only be created against an invoice with &apos;Tax Invoice&apos; status only.</errorMessage>
+</ValidationRule>

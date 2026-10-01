@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SGST_UTGST_Rate_for_Invoice_Amount__c</fullName>
+    <formula>IF( Account_Classification__c == &apos;Non-SEZ&apos;,
+IF(TEXT(Invoice_No__r.Account_Name__r.Primary_State__c) == TEXT(Invoice_No__r.Account_Name__r.Branch__r.State__c) , 0.09,0),0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SGST/UTGST Rate for Invoice Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

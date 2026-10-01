@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Chairman</fullName>
+        <default>false</default>
+        <label>Chairman</label>
+    </customValue>
+    <customValue>
+        <fullName>CMD</fullName>
+        <default>false</default>
+        <label>CMD</label>
+    </customValue>
+    <customValue>
+        <fullName>MD</fullName>
+        <default>false</default>
+        <label>MD</label>
+    </customValue>
+    <customValue>
+        <fullName>CEO</fullName>
+        <default>false</default>
+        <label>CEO</label>
+    </customValue>
+    <customValue>
+        <fullName>Secretary to Govt</fullName>
+        <default>false</default>
+        <label>Secretary to Govt</label>
+    </customValue>
+    <customValue>
+        <fullName>Commissioner</fullName>
+        <default>false</default>
+        <label>Commissioner</label>
+    </customValue>
+    <customValue>
+        <fullName>Director</fullName>
+        <default>false</default>
+        <label>Director</label>
+    </customValue>
+    <customValue>
+        <fullName>Director Finance</fullName>
+        <default>false</default>
+        <label>Director Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>CFO</fullName>
+        <default>false</default>
+        <label>CFO</label>
+    </customValue>
+    <customValue>
+        <fullName>CAO/JAO</fullName>
+        <default>false</default>
+        <label>CAO/JAO</label>
+    </customValue>
+    <customValue>
+        <fullName>VP/GM Finance</fullName>
+        <default>false</default>
+        <label>VP/GM Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>Treasury Head</fullName>
+        <default>false</default>
+        <label>Treasury Head</label>
+    </customValue>
+    <customValue>
+        <fullName>AVP/DGM/AGM Finance</fullName>
+        <default>false</default>
+        <label>AVP/DGM/AGM Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>Rating Coordinator</fullName>
+        <default>false</default>
+        <label>Rating Coordinator</label>
+    </customValue>
+    <customValue>
+        <fullName>PE Investor</fullName>
+        <default>false</default>
+        <label>PE Investor</label>
+    </customValue>
+    <customValue>
+        <fullName>CTO</fullName>
+        <default>false</default>
+        <label>CTO</label>
+    </customValue>
+    <masterLabel>Level</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_State_Mandatory_for_India</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+				ISPICKVAL(BillingCountry__c, &apos;India&apos;),
+				ISPICKVAL(BillingState__c, &apos;&apos;))</errorConditionFormula>
+    <errorDisplayField>BillingState__c</errorDisplayField>
+    <errorMessage>Billing State is mandatory if the billing country is India</errorMessage>
+</ValidationRule>

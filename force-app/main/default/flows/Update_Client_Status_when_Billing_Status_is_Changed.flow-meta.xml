@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_for_Billing_Status</name>
+        <label>Check for Billing Status</label>
+        <locationX>446</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Exit_Case</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Defer_Billing_or_Exit_Case__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Exit Case</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Client_Status_to_Withdrawn</targetReference>
+            </connector>
+            <label>Exit Case</label>
+        </rules>
+        <rules>
+            <name>Issuer_Not_Cooperating</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Defer_Billing_or_Exit_Case__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Issuer Not Cooperating</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Client_Status_to_INC</targetReference>
+            </connector>
+            <label>Issuer Not Cooperating</label>
+        </rules>
+        <rules>
+            <name>Others</name>
+            <conditionLogic>(1 OR 2 OR 3) AND (4 OR 5)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Defer_Billing_or_Exit_Case__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>To Be Billed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Defer_Billing_or_Exit_Case__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Hold (Uncertain)</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Defer_Billing_or_Exit_Case__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Deferred (Unbilled)</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Defer_Billing_or_Exit_Case__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Exit Case</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Defer_Billing_or_Exit_Case__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Issuer Not Cooperating</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Client_Status_to_Live</targetReference>
+            </connector>
+            <label>Others</label>
+        </rules>
+    </decisions>
+    <description>Only for Surveillance Opportunities</description>
+    <environments>Default</environments>
+    <interviewLabel>Update Client Status when Billing Status is Changed {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Client Status when Billing Status is Changed</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Client_Status_to_INC</name>
+        <label>Update Client Status to INC</label>
+        <locationX>314</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>Client_Status__c</field>
+            <value>
+                <stringValue>Issuer Not Cooperating</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Client_Status_to_Live</name>
+        <label>Update Client Status to Live</label>
+        <locationX>578</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>Client_Status__c</field>
+            <value>
+                <stringValue>Live</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Client_Status_to_Withdrawn</name>
+        <label>Update Client Status to Withdrawn</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>Client_Status__c</field>
+            <value>
+                <stringValue>Withdrawn</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>320</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_for_Billing_Status</targetReference>
+        </connector>
+        <filterFormula>AND({!$Record.RecordType.Name}=&apos;Surveillance&apos;,
+	ISCHANGED({!$Record.Defer_Billing_or_Exit_Case__c}),
+       NOT(ISPICKVAL({!$Record.Defer_Billing_or_Exit_Case__c}, &apos;&apos;))
+)</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

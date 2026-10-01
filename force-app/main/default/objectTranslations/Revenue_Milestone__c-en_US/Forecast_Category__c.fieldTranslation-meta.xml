@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Forecast Category --></label>
+    <name>Forecast_Category__c</name>
+    <picklistValues>
+        <masterLabel>Deferred (Unbilled)</masterLabel>
+        <translation><!-- Deferred (Unbilled) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deferred (Unbilled) - To Be Billed</masterLabel>
+        <translation><!-- Deferred (Unbilled) - To Be Billed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hold (Uncertain)</masterLabel>
+        <translation><!-- Hold (Uncertain) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hold (Uncertain) -  To Be Billed</masterLabel>
+        <translation><!-- Hold (Uncertain) -  To Be Billed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shift of Unbilled to Billed</masterLabel>
+        <translation><!-- Shift of Unbilled to Billed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>To Be Billed</masterLabel>
+        <translation><!-- To Be Billed --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

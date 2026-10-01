@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IGST_Rate__c</fullName>
+    <formula>IF( Account_Classification__c == &apos;Non-SEZ&apos;,
+IF( Opportunity__r.Account.RecordType.Name ==&apos;Issuer&apos;,
+IF(TEXT(Opportunity__r.BillingAddress__r.BillingState__c) &lt;&gt; TEXT(Opportunity__r.Account.Branch__r.State__c),
+0.18,
+0),
+IF(Opportunity__r.Account.RecordType.Name ==&apos;Investors &amp; Intermediary&apos;,
+IF(Opportunity__r.Account.ShippingState &lt;&gt; TEXT(Opportunity__r.Account.Branch__r.State__c),
+0.18,
+0),
+0)),
+IF(Account_Classification__c == &apos;SEZ&apos;,0.18,0))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>IGST Rate</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

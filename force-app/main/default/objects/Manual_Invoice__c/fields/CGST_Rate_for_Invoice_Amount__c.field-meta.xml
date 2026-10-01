@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CGST_Rate_for_Invoice_Amount__c</fullName>
+    <formula>IF(  Account_Name__r.RecordType.Name  ==&apos;Issuer&apos;,
+IF(TEXT(Account_Name__r.Primary_State__c)== TEXT(Account_Name__r.Branch__r.State__c),
+0.09,
+0),
+IF(Account_Name__r.RecordType.Name ==&apos;Investors &amp; Intermediary&apos;,
+IF(Account_Name__r.ShippingState == TEXT(Account_Name__r.Branch__r.State__c),
+0.09,
+0),
+0))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>CGST Rate for Invoice Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

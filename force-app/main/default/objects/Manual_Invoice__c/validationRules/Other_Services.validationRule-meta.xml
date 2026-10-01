@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Services</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF(AND(Account_Name__c != NULL,Account_Name__r.RecordType.Name !=&apos;OT Related Accounts&apos;, RecordType.Name ==&apos;Other Services&apos;),true,false)</errorConditionFormula>
+    <errorDisplayField>Account_Name__c</errorDisplayField>
+    <errorMessage>Please select OT Related Account</errorMessage>
+</ValidationRule>

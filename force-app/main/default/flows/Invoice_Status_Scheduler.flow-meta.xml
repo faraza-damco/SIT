@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Invokebatch_ICRA_Invoice_Status_Update_Batch</name>
+        <label>Invokebatch - ICRA_Invoice_Status_Update_Batch</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>invokeBatch_Invoice_Status_Update</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <nameSegment>invokeBatch_Invoice_Status_Update</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <environments>Default</environments>
+    <formulas>
+        <description>Initiate Tax Invoice Date</description>
+        <name>ITI_Date</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()+Value({!$Label.Tax_Invoice_Generation})</expression>
+    </formulas>
+    <interviewLabel>Invoice Status Scheduler {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Invoice Status Scheduler</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Invokebatch_ICRA_Invoice_Status_Update_Batch</targetReference>
+        </connector>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2026-02-06</startDate>
+            <startTime>21:30:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Obsolete</status>
+    <variables>
+        <name>Operation</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>Invoice Status Update Failed: Proforma Invoice Status to Initiate Tax Invoice</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>oppList</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

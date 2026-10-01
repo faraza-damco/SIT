@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Invoice</fullName>
+    <columns>NAME</columns>
+    <columns>Opportunity_Name__c</columns>
+    <columns>Bill_No__c</columns>
+    <columns>Instrument__c</columns>
+    <columns>IRN_Number__c</columns>
+    <columns>Total_Invoice_Amount__c</columns>
+    <columns>Credit_Note_Date__c</columns>
+    <columns>Credit_Note_No__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATEDBY_USER</field>
+        <operation>equals</operation>
+        <value>Muktikanta Das</value>
+    </filters>
+    <label>My Invoice</label>
+</ListView>

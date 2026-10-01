@@ -1,0 +1,40 @@
+<apex:page standardController="Invoice__c" extensions="IRN_Post_on_Generating" showHeader="false" sidebar="false" standardStylesheets="false"  lightningStylesheets="true" applyBodyTag="false">
+    <apex:form id="form">
+        <apex:actionFunction name="callSpinner" action="{!loadSpinner}" reRender="loadingPanel" oncomplete="invokeIRN()"/>
+        <apex:actionFunction name="callIRN" action="{!InvokeIRN}" reRender="form"/>
+        <apex:outputText >
+            <p  style="text-align: center;  font-size: 16pt">
+                <apex:outputLabel style="color:red"  rendered="{!AND(NOT(ISBLANK(errorMsgDisplay)), errorMsgDisplay!='Success',errorMsgDisplay!='Already generated')}">{!errorMsgDisplay} </apex:outputLabel>
+                <apex:outputLabel style="color:#31A608"  rendered="{!AND(NOT(ISBLANK(errorMsgDisplay)), errorMsgDisplay!='Success',errorMsgDisplay=='Already generated')}"> <b>Process already completed for {!Invoice.Invoice.Name} </b><br/> Please do not press browser's back button </apex:outputLabel>
+                <apex:outputLabel style="color:#31A608" rendered="{!errorMsgDisplay=='Success'}"> <b> {!Invoice.Invoice.Name} Initiation successfull, for IRN Generation.</b> 
+                    <script>                   
+                    setTimeout(function() {
+                        let recordId = '{!Invoice__c.Id}'; 
+                        window.top.location.href = '/lightning/r/Invoice__c/' + recordId + '/view';  
+                    }, 1000);
+                    </script>
+                </apex:outputLabel>
+            </p>
+        </apex:outputText>
+        <apex:outputPanel id="loadingPanel" rendered="{!showSpinner}" >
+            <div style="text-align:center; padding:20px;">
+                <img src="/img/loading.gif" alt="Loading..." />
+                <p>Processing, please wait...</p>
+            </div>
+        </apex:outputPanel>
+        
+    </apex:form>
+    <script>
+    window.onload = function() {
+        console.log('called')
+        
+        callSpinner();
+    };
+    
+    function invokeIRN(){
+        callIRN();
+        
+    }
+    </script>
+</apex:page>
+<!-- action="{!InvokeIRN}" -->

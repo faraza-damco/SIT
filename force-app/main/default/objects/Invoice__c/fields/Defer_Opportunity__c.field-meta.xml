@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Defer_Opportunity__c</fullName>
+    <formula>IF(Opportunity_Name__r.RecordType.Name ==&apos;New Business&apos;,false,
+IF(ISPICKVAL(Opportunity_Name__r.Defer_Billing_or_Exit_Case__c,&apos;To Be Billed&apos;),false,
+IF(ISPICKVAL(Opportunity_Name__r.Defer_Billing_or_Exit_Case__c,&apos;Already Billed&apos;),false,true)))</formula>
+    <label>Deferred Opportunity</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

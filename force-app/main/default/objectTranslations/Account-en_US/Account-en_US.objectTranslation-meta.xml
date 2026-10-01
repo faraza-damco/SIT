@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Issuer</layout>
+        <sections>
+            <label><!-- Annual Account Financials --></label>
+            <section>Annual Account Financials</section>
+        </sections>
+        <sections>
+            <label><!-- Auditor Details --></label>
+            <section>Auditor Details</section>
+        </sections>
+        <sections>
+            <label><!-- Company Documents --></label>
+            <section>Company Documents</section>
+        </sections>
+        <sections>
+            <label><!-- Company Key Members --></label>
+            <section>Company Key Members</section>
+        </sections>
+        <sections>
+            <label><!-- Current Vendor Details --></label>
+            <section>Current Vendor Details</section>
+        </sections>
+        <sections>
+            <label><!-- Line Of Business --></label>
+            <section>Line Of Business</section>
+        </sections>
+        <sections>
+            <label><!-- OFAC Details --></label>
+            <section>OFAC Details</section>
+        </sections>
+        <sections>
+            <label><!-- Private Equity Details --></label>
+            <section>Private Equity Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>OT Related Account Page Layout</layout>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- Company Documents --></label>
+            <section>Company Documents</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Child Account --></label>
+        <name>Child_Account</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create Invoice --></label>
+        <name>Create_Invoice</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Recall Surveillance Opportunity(s) --></label>
+        <name>Recall_Surveillance_Opportunity_s</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Send for Approval --></label>
+        <name>Send_for_Approval</name>
+    </quickActions>
+</CustomObjectTranslation>

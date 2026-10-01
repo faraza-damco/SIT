@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>Account</field>
+        <field>Instrument_type_1__c</field>
+        <field>Instrument_type_2__c</field>
+        <field>Instrument_type_3__c</field>
+        <field>Instrument_type_4__c</field>
+        <field>Instrument_Type_5__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Approved_By_President_Rating</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>damcoicra@damcogroup.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>If IRF and Final amount is same, it is Standard pricing</description>
+        <label>If Non standard pricing</label>
+        <name>If_Non_standard_pricing</name>
+        <rejectionActions>
+            <action>
+                <name>Reset_the_Final_amount_value</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <description>Approval for discounts and pricing for BLR       
+(new clients for rating industry - not rated earlier by anyone) FFF and should go to Rating President</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>Opportunity.Mandate_Type__c</field>
+            <operation>equals</operation>
+            <value>Fresh From Fresh</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Business_Segment__c</field>
+            <operation>equals</operation>
+            <value>Rating</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.IRF_Final_Amount__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>Discount for rating industry new client</label>
+    <processOrder>0</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

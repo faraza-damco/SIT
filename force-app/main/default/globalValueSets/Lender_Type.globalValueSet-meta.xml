@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>PSU Bank</fullName>
+        <default>false</default>
+        <label>PSU Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Private Bank</fullName>
+        <default>false</default>
+        <label>Private Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Foreign Bank</fullName>
+        <default>false</default>
+        <label>Foreign Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Small Finance Bank</fullName>
+        <default>false</default>
+        <label>Small Finance Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>NBFC</fullName>
+        <default>false</default>
+        <label>NBFC</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <masterLabel>Lender Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,97 @@
+<template>
+    <template if:true={isShowSpinner}>
+        <lightning-spinner template="brand"></lightning-spinner>
+    </template>
+
+    <lightning-card title="Contract Initiation via Volody">
+        <div class="slds-p-around_medium">
+
+            <!-- Error / Warning Section -->
+            <template if:true={isShowError}>
+                <div class="slds-box  slds-m-bottom_medium" style="background-color:#FEA357">
+                    <p class="slds-text-heading_small slds-m-bottom_x-small">
+                        Incomplete Information Detected
+                    </p>
+                    <p class="slds-m-bottom_small">
+                        You are about to send this Opportunity to the 
+                        <strong> Volody Contract Management System</strong>; however, the following mandatory agreement details are missing or incomplete:
+                    </p>
+
+                    <ul class="slds-list_dotted slds-m-left_medium slds-m-bottom_small">
+                        <li><strong>{NotInputedFields}</strong></li>
+                    </ul>
+
+                    <p class="slds-text-body_regular">
+                       You may proceed without updating these details, 
+                       but it is recommended to complete them to avoid delays or rework during contract creation in Volody.
+                    </p>
+                </div>
+                   <div class="slds-m-bottom_medium">
+    <label class="slds-form-element__label slds-text-title_bold">
+        Select Agreement Type
+    </label>
+
+    <lightning-combobox
+        name="agreement"
+        value={selectedAgreement}
+        options={myMap}
+        onchange={handleAgreement}
+        >
+    </lightning-combobox>
+</div>
+
+                <p class="slds-text-title_bold slds-m-bottom_small">
+                    Do you want to continue?
+                </p>
+            </template>
+
+            <!-- Normal Info Section -->
+            <template if:false={isShowError}>
+                <div class="slds-box slds-theme_default slds-m-bottom_medium">
+                    <p>
+                        You are about to send this Opportunity to the 
+                        <strong> Volody Contract Management System</strong> for agreement creation and execution.
+                    </p>
+                    <p class="slds-m-top_small">
+                        Please ensure all agreement-related details in Salesforce are accurate and complete before proceeding.
+                    </p>
+                </div>
+                
+     <div class="slds-m-bottom_medium">
+    <label class="slds-form-element__label slds-text-title_bold">
+        Select Agreement Type
+    </label>
+
+    <lightning-combobox
+        name="agreement"
+        value={selectedAgreement}
+        options={myMap}
+        onchange={handleAgreement}
+        >
+    </lightning-combobox>
+</div>
+                <p class="slds-text-title_bold slds-m-bottom_small">
+                    Do you want to continue?
+                </p>
+            </template>
+
+            <!-- Action Buttons -->
+            <div class="slds-m-top_medium slds-text-align_right">
+                <lightning-button 
+                    label="Cancel" 
+                    variant="neutral" 
+                    onclick={closeModal}
+                    class="slds-m-right_small">
+                </lightning-button>
+
+                <lightning-button 
+                    label="Initiate Contract" 
+                    variant="brand"
+                    onclick={initiateContract}
+                    disabled={isDisButton}>
+                </lightning-button>
+            </div>
+
+        </div>
+    </lightning-card>
+</template>

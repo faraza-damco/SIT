@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Updated GST Credit Note Sequence --></label>
+    <name>Updated_GST_Credit_Note_Sequence__c</name>
+</CustomFieldTranslation>

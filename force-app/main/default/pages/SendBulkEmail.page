@@ -1,0 +1,20 @@
+<apex:page lightningStylesheets="true" controller="SendBulkEmail"  >
+    <apex:slds />
+    <apex:sectionHeader title="Send Bulk Email"/>
+    <apex:form >
+        <apex:pageMessages id="jserror"/>
+        <div align="center">
+          
+            <h1 id="ErrorMsg" class="slds-text-body_regular" style=" display: block;font-size: 2em;font-weight: bold;margin-block-start: .67em;margin-block-end: .67em;">Send Bulk Email</h1><br/>
+            <b>Filter Criteria for Contact to send Email:  </b>   <apex:inputTextarea style="font-size: 15px;" cols="100" rows="10"  required="true" value="{!selectedConactList}" />
+            
+            <br/>
+            <apex:commandButton action="{!sendMailNew}" reRender="jserror"   value="Send" oncomplete="Window.close();" styleClass="slds-button slds-button_brand"/>
+           
+        </div>
+        
+       
+    </apex:form>
+    
+    
+</apex:page>

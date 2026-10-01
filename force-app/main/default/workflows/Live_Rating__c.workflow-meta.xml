@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Update_Total_Volume_of_Debt_Rated</fullName>
+        <field>Total_Volume_of_Debt_Rated__c</field>
+        <formula>IF(ISBLANK(Volume_of_Debt_Outstanding__c), 0, Volume_of_Debt_Outstanding__c)   + 
+
+ IF(ISBLANK(Volume_of_Debt_New_Assigned_Reduced__c), 0, Volume_of_Debt_New_Assigned_Reduced__c)</formula>
+        <name>Update Total Volume of Debt Rated</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Update Total Volume of Debt Rated</fullName>
+        <actions>
+            <name>Update_Total_Volume_of_Debt_Rated</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Live_Rating__c.Name</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

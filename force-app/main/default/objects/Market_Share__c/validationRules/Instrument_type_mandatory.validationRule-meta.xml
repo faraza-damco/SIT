@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Instrument_type_mandatory</fullName>
+    <active>true</active>
+    <description>For Instrument 1 : SF/Non-SF , Instrument 2,3,4 is mandatory</description>
+    <errorConditionFormula>IF(AND(OR(ISPICKVAL(Instrument_type_1__c, &apos;SF&apos;),ISPICKVAL(Instrument_type_1__c, &apos;Non-SF&apos;)),
+OR(ISPICKVAL(Instrument_type_2__c, &apos;&apos;),ISPICKVAL(Instrument_type_3__c, &apos;&apos;),
+ISPICKVAL(Instrument_type_4__c, &apos;&apos;))
+),true ,false )</errorConditionFormula>
+    <errorMessage>If SF or Non SF in type 1. then mandatory 2,3,4</errorMessage>
+</ValidationRule>

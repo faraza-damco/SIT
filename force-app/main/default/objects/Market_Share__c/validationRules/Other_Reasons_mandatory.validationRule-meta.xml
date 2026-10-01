@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Reasons_mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+TEXT( Loss_Reason__c) = &apos;Fresh Issuers - Other Reasons&apos;,
+ISBLANK(TEXT( Others_Reasons_Only_for_Fresh_Other__c )))</errorConditionFormula>
+    <errorDisplayField>Others_Reasons_Only_for_Fresh_Other__c</errorDisplayField>
+    <errorMessage>Please select Others Reasons (Only for Fresh - Other)</errorMessage>
+</ValidationRule>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Initiate Tax Invoice Status --></label>
+    <name>Initiate_Tax_Invoice_Status__c</name>
+    <picklistValues>
+        <masterLabel>ITI Approved</masterLabel>
+        <translation><!-- ITI Approved --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ITI Pending with Finance</masterLabel>
+        <translation><!-- ITI Pending with Finance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ITI Rejected</masterLabel>
+        <translation><!-- ITI Rejected --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

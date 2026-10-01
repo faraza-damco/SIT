@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InterBranch_Destination_is_mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  RecordType.Name = &quot;Inter-Branch Invoice&quot;,
+  ISBLANK(Destination_Branch__c)
+)</errorConditionFormula>
+    <errorDisplayField>Destination_Branch__c</errorDisplayField>
+    <errorMessage>Destination Branch is Mandatory. Kindly input the same.</errorMessage>
+</ValidationRule>

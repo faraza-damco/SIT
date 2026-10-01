@@ -1,0 +1,1560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Alert_Opportunity_Hold_Approved</fullName>
+        <description>Alert - Opportunity Hold Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ICRA/Hold_Opportunity_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Checker_Approval_Email_to_team_members</fullName>
+        <ccEmails>icra.bdmis@icraindia.com</ccEmails>
+        <description>Checker Approval Email to team members</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>prashantk@icraindia.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Checker_Approval_II</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_that_opp_is_lost</fullName>
+        <description>Email that opp is lost</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Commercial_Head__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>Team_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ICRA/Opp_Lost_after_OFAC_rejection</template>
+    </alerts>
+    <alerts>
+        <fullName>Hold_Opp_Email_Alert</fullName>
+        <description>Hold Opp Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ICRA/Opportunity_Hold_Approval_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>Non_Cooperation_Reason_Approved</fullName>
+        <description>Non Cooperation Reason Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ICRA/Non_Cooperation_Reason_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Non_Cooperation_Reason_Recalled</fullName>
+        <description>Non Cooperation Reason Recalled</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ICRA/Non_Cooperation_Reason_Recalled</template>
+    </alerts>
+    <alerts>
+        <fullName>Non_Cooperation_Reason_Rejected</fullName>
+        <description>Non Cooperation Reason Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ICRA/Non_Cooperation_Reason_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>OFAC_Post_Approval_Notification</fullName>
+        <description>OFAC Post Approval Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ICRA/OFAC_post_approval_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>OFAC_Post_Reject_Notification</fullName>
+        <description>OFAC Post Reject Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/OFAC_Post_Reject_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Opp_Hold_Rejected</fullName>
+        <description>Opp Hold Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ICRA/Hold_Opp_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Opportunity_Approval_Request_to_Opportunity_Checker</fullName>
+        <description>Opportunity Approval Request to Opportunity Checker</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Opportunity_Checker__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Checker_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Opportunity_is_Approved</fullName>
+        <ccEmails>prashantk@icraindia.com, icra.bdmis@icraindia.com</ccEmails>
+        <description>Opportunity is Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Checker_Approval_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Opportunity_is_Rejected</fullName>
+        <ccEmails>prashantk@icraindia.com, icra.bdmis@icraindia.com</ccEmails>
+        <description>Opportunity is Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Checker_Approval_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Pricing_Auto_Approved_Alert</fullName>
+        <description>Pricing Auto Approved Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Commercial_Head__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Pricing_Auto_Approved_Mandates</template>
+    </alerts>
+    <alerts>
+        <fullName>Pricing_approval_rejection_alert</fullName>
+        <description>Pricing approval rejection alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Pricing_Approval_Rejection</template>
+    </alerts>
+    <alerts>
+        <fullName>Revised_Billing_End_Date_Approval</fullName>
+        <description>Revised Billing End Date Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ICRA/Revised_Billing_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Revised_Billing_End_Date_Rejection</fullName>
+        <description>Revised Billing End Date Rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ICRA/Revised_Billing_Rejection</template>
+    </alerts>
+    <alerts>
+        <fullName>Revised_Rating_VoD_Approved</fullName>
+        <description>Revised Rating VoD Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ICRA/Revised_Rating_VoD_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Revised_Rating_VoD_Rejected</fullName>
+        <description>Revised Rating VoD Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ICRA/Revised_Rating_VoD_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Upload_OFAC_Document_for_Approval_Process</fullName>
+        <description>Upload OFAC Document for Approval Process</description>
+        <protected>false</protected>
+        <recipients>
+            <field>OFAC_Approver__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ICRA/Upload_OFAC_Document</template>
+    </alerts>
+    <alerts>
+        <fullName>Withdrawal_Reason_Approved</fullName>
+        <description>Withdrawal Reason Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ICRA/Withdrawal_Reason_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Withdrawal_Reason_Rejected</fullName>
+        <description>Withdrawal Reason Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ICRA/Withdrawal_Reason_Rejected</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Anuual_Surveillance_as_per_agreement_nul</fullName>
+        <field>ASF_Final_Amount__c</field>
+        <formula>0</formula>
+        <name>Anuual Surveillance as per agreement nul</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Pending</fullName>
+        <field>Revised_VoD_Approval_Status__c</field>
+        <literalValue>Pending</literalValue>
+        <name>Approval Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Status_Approved</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Approval Status Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Status_Pending</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending</literalValue>
+        <name>Approval Status Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Status_Rejected</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Approval Status Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved</fullName>
+        <field>Revised_Billing_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_By_President_Rating</fullName>
+        <description>Set the checkbox as Check</description>
+        <field>Approved_by_MD_CEO_Group__c</field>
+        <literalValue>1</literalValue>
+        <name>Approved By President Rating</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_by_CH</fullName>
+        <field>Approved_by_Commercial_Head__c</field>
+        <literalValue>1</literalValue>
+        <name>Approved by CH</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CH_Approval_Pending</fullName>
+        <field>StageName</field>
+        <literalValue>Commercial Head Approval Pending</literalValue>
+        <name>CH Approval Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_ASF_as_per_Framework</fullName>
+        <field>Annual_Surveillance_Fee_as_per_Framework__c</field>
+        <name>Clear ASF as per Framework</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_BH_Mail_Sent</fullName>
+        <field>BH_Approval_Rejection_Mail_Sent__c</field>
+        <literalValue>0</literalValue>
+        <name>Clear BH Mail Sent</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_BH_Pricing_Rejection</fullName>
+        <field>Pricing_Rejected_by_Business_Head__c</field>
+        <literalValue>0</literalValue>
+        <name>Clear BH Pricing Rejection</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_Business_Head_Approval</fullName>
+        <field>Pricing_Approved_by_Business_Head__c</field>
+        <literalValue>0</literalValue>
+        <name>Clear Business Head Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_CH_Approval</fullName>
+        <field>Pricing_Approved_by_Commercial_Head__c</field>
+        <literalValue>0</literalValue>
+        <name>Clear CH Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_CH_Mail_Sent</fullName>
+        <field>CH_Approval_Reject_Email_sent__c</field>
+        <literalValue>0</literalValue>
+        <name>Clear CH Mail Sent</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_CH_Pricing_Rejection</fullName>
+        <field>Pricing_Rejected_by_Commercial_Head__c</field>
+        <literalValue>0</literalValue>
+        <name>Clear CH Pricing Rejection</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_Deviation_ASF</fullName>
+        <field>Deviation_ASF_Percent__c</field>
+        <name>Clear Deviation ASF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_Deviation_IRF</fullName>
+        <field>Deviation_IRF_Percent__c</field>
+        <name>Clear Deviation IRF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_Initial_Rating_as_per_Framework</fullName>
+        <field>Target_Fee_IRF__c</field>
+        <name>Clear Initial Rating as per Framework</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_MD_Mail_Sent</fullName>
+        <field>MD_Approval_Reject_Email_sent__c</field>
+        <literalValue>0</literalValue>
+        <name>Clear MD Mail Sent</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_MD_Pricing_Rejection</fullName>
+        <field>Pricing_Rejected_by_CEO__c</field>
+        <literalValue>0</literalValue>
+        <name>Clear MD Pricing Rejection</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_Pricing_Not_Auto_Approved</fullName>
+        <field>Pricing_Not_Auto_Approved__c</field>
+        <literalValue>0</literalValue>
+        <name>Clear Pricing Not Auto Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_Proposed_RF</fullName>
+        <field>Proposed_Rating_Fee__c</field>
+        <name>Clear Proposed RF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_Proposed_SF</fullName>
+        <field>Proposed_Surveillance_Fee__c</field>
+        <name>Clear Proposed SF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Deferred_Date_Changed</fullName>
+        <field>Expected_Deferred_Date__c</field>
+        <name>Deferred Date Changed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Fee_MPRA_SOW_2_3</fullName>
+        <field>Fee_and_Invoice_Point_2_3__c</field>
+        <formula>&quot;Your Company shall also reimburse ICRA all travel and out-of-pocket expenses that it &quot;
++&quot;incurs in connection with the Rating process, both payable initially and during surveillance. Rating &quot;
++&quot;Fee/Surveillance Fee shall be paid by your Company by way of cheque or demand draft or transfer &quot;
++&quot;through electronic medium in favour of “ICRA Limited”. All Fees as mentioned herein shall not be &quot;
++&quot;refundable under any circumstances and payable within 30 (thirty) days from the date of invoice, failing &quot;
++&quot;which, ICRA reserves the right to recover interest on the delayed payment, at the rate of 18% p.a., from &quot;
++&quot;your Company. ICRA reserves the right to revise the Surveillance Fee payable by you under this SOW &quot;
++&quot;subject to maximum of 0.05% of the Bank Facility.&quot;</formula>
+        <name>Fee MPRA SOW 2.3</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>In_Process</fullName>
+        <field>Revised_Billing_Approval_Status__c</field>
+        <literalValue>In Process</literalValue>
+        <name>In Process</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Initial_rating_fee_as_per_Agreement_null</fullName>
+        <field>IRF_Final_Amount__c</field>
+        <formula>0</formula>
+        <name>Initial rating fee as per Agreement null</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Internal_Control_Approval</fullName>
+        <field>Internal_Control_Approval__c</field>
+        <literalValue>1</literalValue>
+        <name>Internal Control Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Legal_Approved</fullName>
+        <field>Legal_Compliance_Approval__c</field>
+        <literalValue>1</literalValue>
+        <name>Legal Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lock_Account_on_Closed_Won</fullName>
+        <field>Record_Lock__c</field>
+        <literalValue>1</literalValue>
+        <name>Lock Account on Closed Won</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>AccountId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Make_annual_surveillance_fee_as_per_sche</fullName>
+        <field>ASF__c</field>
+        <name>Make annual surveillance fee as per sche</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Make_initial_rating_fee_as_per_schedule</fullName>
+        <field>IRF1__c</field>
+        <name>Make initial rating fee as per schedule</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Non_Corporation_Reason_Reset</fullName>
+        <field>Non_Cooperation_Reason__c</field>
+        <name>Non Corporation Reason Reset</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>OFAC_Approved</fullName>
+        <field>OFAC_Approved__c</field>
+        <literalValue>1</literalValue>
+        <name>OFAC Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>OFAC_Approved_checkbox</fullName>
+        <field>OFAC_Approved__c</field>
+        <literalValue>1</literalValue>
+        <name>OFAC Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>OFAC_Initiated</fullName>
+        <description>Set Opp stage to OFAC Initiated</description>
+        <field>StageName</field>
+        <literalValue>OFAC Initiation</literalValue>
+        <name>OFAC Initiated</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opp_Approved_by_CH</fullName>
+        <field>StageName</field>
+        <literalValue>CH Approved</literalValue>
+        <name>Opp Approved by CH</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opp_Approved_by_OFAC</fullName>
+        <description>Set stage to OFAC Approved</description>
+        <field>StageName</field>
+        <literalValue>OFAC Approved</literalValue>
+        <name>Opp Approved by OFAC</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opp_Lost_after_OFAC_rejection</fullName>
+        <field>StageName</field>
+        <literalValue>Closed Lost</literalValue>
+        <name>Opp Lost after OFAC rejection</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opp_Rejected_by_CH</fullName>
+        <description>Opp rejected by CH and Stage is updated to L1 meeting</description>
+        <field>StageName</field>
+        <literalValue>Executive Meeting</literalValue>
+        <name>Opp Rejected by CH</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pricing_Approved_By_Business_Head</fullName>
+        <field>Pricing_Approved_by_Business_Head__c</field>
+        <literalValue>1</literalValue>
+        <name>Pricing Approved By Business Head</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pricing_Approved_by_CEO</fullName>
+        <field>Pricing_Approved_by_CEO__c</field>
+        <literalValue>1</literalValue>
+        <name>Pricing Approved by CEO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pricing_Approved_by_CH</fullName>
+        <field>Pricing_Approved_by_Commercial_Head__c</field>
+        <literalValue>1</literalValue>
+        <name>Pricing Approved by CH</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pricing_Rejected_By_Business_Head</fullName>
+        <field>Pricing_Rejected_by_Business_Head__c</field>
+        <literalValue>1</literalValue>
+        <name>Pricing Rejected By Business Head</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pricing_Rejected_By_CEO</fullName>
+        <field>Pricing_Rejected_by_CEO__c</field>
+        <literalValue>1</literalValue>
+        <name>Pricing Rejected By CEO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pricing_Rejected_By_CEO_2</fullName>
+        <field>Pricing_Rejected_by_CEO__c</field>
+        <literalValue>1</literalValue>
+        <name>Pricing Rejected By CEO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pricing_Rejected_by_CH</fullName>
+        <field>Pricing_Rejected_by_Commercial_Head__c</field>
+        <literalValue>1</literalValue>
+        <name>Pricing Rejected by CH</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RSF_Approved</fullName>
+        <field>Revised_Surveillance_Fee_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>RSF Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RSF_Pending</fullName>
+        <field>Revised_Surveillance_Fee_Approval_Status__c</field>
+        <literalValue>Pending</literalValue>
+        <name>RSF Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RSF_Recalled</fullName>
+        <field>Revised_Surveillance_Fee_Approval_Status__c</field>
+        <literalValue>Recalled</literalValue>
+        <name>RSF Recalled</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RSF_Rejected</fullName>
+        <field>Revised_Surveillance_Fee_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>RSF Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reason_Update</fullName>
+        <field>Reason__c</field>
+        <literalValue>Exit</literalValue>
+        <name>Reason Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Recalled</fullName>
+        <field>Revised_Billing_Approval_Status__c</field>
+        <literalValue>Recalled</literalValue>
+        <name>Recalled</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected</fullName>
+        <field>Pricing_Rejected_by_Commercial_Head__c</field>
+        <literalValue>1</literalValue>
+        <name>Pricing Rejected by CH</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_1</fullName>
+        <field>Revised_Billing_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Remove_conversion_probability_in_case_of</fullName>
+        <field>Conversion_Probability__c</field>
+        <name>Remove conversion probability in case of</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reset_Approval_Process_Value</fullName>
+        <description>to Reset Approval Process Value</description>
+        <field>Approval_Process__c</field>
+        <name>Reset Approval Process Value</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reset_Chechbox</fullName>
+        <description>This checkbox initiates an automation that resets the fields on opportunity</description>
+        <field>Reset_on_Rejection__c</field>
+        <literalValue>1</literalValue>
+        <name>Reset Chechbox</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reset_Date_of_Hold_till</fullName>
+        <description>to reset the value of &apos;Date of hold till&apos; when Hold approval is rejected/recalled</description>
+        <field>Hold_Up_Untill__c</field>
+        <name>Reset Date of Hold till</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reset_Hold_Reason</fullName>
+        <description>to reset the value of &apos;Reason&apos; on rejection/recall</description>
+        <field>Reason__c</field>
+        <name>Reset Hold Reason</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reset_RSF</fullName>
+        <field>Requested_Fee__c</field>
+        <name>Reset RSF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reset_Revised_Rating_VoD</fullName>
+        <description>Reset Revised Rating VoD to previous value</description>
+        <field>Size_to_be_rated_this_year_in_Cr_M__c</field>
+        <formula>Revised_Rating_VoD_Prior__c</formula>
+        <name>Reset Revised Rating VoD</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reset_Revised_Surveillance_Fee</fullName>
+        <description>to reset the field values on rejection/recall</description>
+        <field>Requested_Fee__c</field>
+        <formula>Revised_Surveillance_Fee_Prior__c</formula>
+        <name>Reset Revised Surveillance Fee</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reset_the_Final_amount_value</fullName>
+        <field>IRF_Final_Amount__c</field>
+        <name>Reset the Final amount value</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reset_the_Ready_for_Approval_Value</fullName>
+        <description>Reset the Ready for Approval Value</description>
+        <field>Ready_for_Approval__c</field>
+        <literalValue>0</literalValue>
+        <name>Reset the Ready for Approval Value</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Revised_Rating_VoD_Approved</fullName>
+        <field>Revised_VoD_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Revised Rating VoD Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Revised_Rating_VoD_Recalled</fullName>
+        <field>Revised_VoD_Approval_Status__c</field>
+        <literalValue>Recalled</literalValue>
+        <name>Revised_Rating_VoD_Recalled</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Revised_Rating_VoD_Rejected</fullName>
+        <field>Revised_VoD_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Revised_Rating_VoD_Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Revised_Billing_End_Date_to_Null</fullName>
+        <description>when the user recall the approval then the value of the field &apos;Revised Billing End Date&apos; is set as null</description>
+        <field>Revised_Billing_End_Date__c</field>
+        <name>Set Revised Billing End Date to Null</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_update_to_INC</fullName>
+        <field>Defer_Billing_or_Exit_Case__c</field>
+        <literalValue>Issuer Not Cooperating</literalValue>
+        <name>Status update to INC</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status_As_Pending</fullName>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Pending</literalValue>
+        <name>Update Approval Status As Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Bill_Approval_Status</fullName>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update Bill Approval Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Bill_Approve_Status</fullName>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update Bill Approve Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Bill_Reject_Status</fullName>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Bill Reject Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Bill_Status_as_pending</fullName>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Pending</literalValue>
+        <name>Update Bill Status as pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Billing_Approval_Reject</fullName>
+        <field>Billing_Approval__c</field>
+        <literalValue>Reject</literalValue>
+        <name>Update Billing Approval - Reject</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Billing_Approval_Status</fullName>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Billing Approval Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Billing_Status_Accept</fullName>
+        <field>Billing_Approval__c</field>
+        <literalValue>Accept</literalValue>
+        <name>Update Billing Status - Accept</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Branch_Formula_Field</fullName>
+        <field>BranchFormula__c</field>
+        <formula>Branch__c</formula>
+        <name>Update Branch Formula Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_CH_Approval_Status_Approved</fullName>
+        <field>Comm_Legal_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update CH Approval Status Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_CH_Approval_Status_Recalled</fullName>
+        <field>Comm_Legal_Approval_Status__c</field>
+        <literalValue>Recalled</literalValue>
+        <name>Update CH Approval Status Recalled</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_CH_Approval_Status_Rejected</fullName>
+        <field>Comm_Legal_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update CH Approval Status Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Delayed_Payment_on_Rejection</fullName>
+        <field>Delayed_Payment_Interest_Rate__c</field>
+        <formula>0.18</formula>
+        <name>Update Delayed Payment on Rejection</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_IC_Approved_Field</fullName>
+        <field>Internal_Control_Approval__c</field>
+        <literalValue>1</literalValue>
+        <name>Update IC Approved Field on Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_IC_Approved_Field_on_Reject</fullName>
+        <field>Internal_Control_Approval__c</field>
+        <literalValue>0</literalValue>
+        <name>Update IC Approved Field on Reject</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Last_Invoice_Date_Account</fullName>
+        <description>Update Last Invoice Date on account</description>
+        <field>Last_Invoiced_Date__c</field>
+        <formula>Last_Invoice_Date__c</formula>
+        <name>Update Last Invoice Date Account</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>AccountId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Last_Payment_Date</fullName>
+        <field>Last_Payment_Received_Date__c</field>
+        <formula>Last_Payment_Date__c</formula>
+        <name>Update Last Payment Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>AccountId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Last_Submitted_for_Approval</fullName>
+        <field>Last_Submitted_For_Approval__c</field>
+        <formula>NOW()</formula>
+        <name>Update Last Submitted for Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Legal_Approved</fullName>
+        <field>StageName</field>
+        <literalValue>Legal Approved</literalValue>
+        <name>Update Legal  Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Legal_and_Com_Approved</fullName>
+        <field>StageName</field>
+        <literalValue>Commercial Head Approved</literalValue>
+        <name>Update Legal and Com Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Opp_stage</fullName>
+        <field>StageName</field>
+        <literalValue>Closed Won</literalValue>
+        <name>Update Opp stage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Opp_stage_for_reject</fullName>
+        <field>StageName</field>
+        <literalValue>MPRA &amp; SoW /  Subscription Form Received</literalValue>
+        <name>Update Opp stage for reject</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Opportunity_Stage</fullName>
+        <field>StageName</field>
+        <literalValue>Discount Approved</literalValue>
+        <name>Update Opportunity Stage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Other_Value_on_Rejection</fullName>
+        <field>Other__c</field>
+        <name>Update Other Value on Rejection</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Payment_Terms_on_Rejection</fullName>
+        <field>Payment_Terms__c</field>
+        <formula>30</formula>
+        <name>Update Payment Terms on Rejection</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Reason_To_Null</fullName>
+        <field>Non_Cooperation_Withdrawal_Reason__c</field>
+        <name>Update Reason To Null</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Revenue_Loss_To_Null</fullName>
+        <field>Revenue_Loss_in_Rs__c</field>
+        <name>Update Revenue Loss To Null</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Revised_Surveillance_fee</fullName>
+        <field>Requested_Fee__c</field>
+        <formula>Size_to_be_rated_this_year_in_Cr_M__c</formula>
+        <name>Update Revised Surveillance fee</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Stage_to_Closed_Won</fullName>
+        <field>StageName</field>
+        <literalValue>Closed Won</literalValue>
+        <name>Update Stage to Closed Won</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Stage_to_Commercial_Head_Approved</fullName>
+        <field>StageName</field>
+        <literalValue>Commercial Head Approved</literalValue>
+        <name>Update Stage to Commercial Head Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Stage_to_Executive_Meeting</fullName>
+        <field>StageName</field>
+        <literalValue>Executive Meeting</literalValue>
+        <name>Update Stage to Executive Meeting</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Stage_to_MPRA_SoW_Subscription</fullName>
+        <field>StageName</field>
+        <literalValue>MPRA &amp; SoW /  Subscription Form Received</literalValue>
+        <name>Update Stage to MPRA &amp; SoW/Subscription</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_of_Opp</fullName>
+        <field>Defer_Billing_or_Exit_Case__c</field>
+        <literalValue>Exit Case</literalValue>
+        <name>Update Status of Opp</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_to_accept</fullName>
+        <field>Provision_Approval__c</field>
+        <literalValue>Accept</literalValue>
+        <name>Update Status to accept</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Surveillance_Fee_on_Rejection</fullName>
+        <field>Surveillance_Fee_Revision_Maximum_new__c</field>
+        <literalValue>5%</literalValue>
+        <name>Update Surveillance Fee on Rejection</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_approval_fields</fullName>
+        <field>Changes_Fee_Approval__c</field>
+        <literalValue>Reject</literalValue>
+        <name>Update approval fields</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_change_fee_approval_accept</fullName>
+        <field>Changes_Fee_Approval__c</field>
+        <literalValue>Accept</literalValue>
+        <name>Update change fee approval : accept</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_current_year</fullName>
+        <field>Check_Current_Year_Reference__c</field>
+        <formula>Check_Opportunity_Current_Year__c</formula>
+        <name>Update current year</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_status_to_reject</fullName>
+        <field>Provision_Approval__c</field>
+        <literalValue>Reject</literalValue>
+        <name>Update status to reject</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_the_Stage_to_Closed_Won</fullName>
+        <field>StageName</field>
+        <literalValue>Closed Won</literalValue>
+        <name>Update the Stage to Closed Won</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_the_Stage_to_MPRA_Form_Re</fullName>
+        <field>StageName</field>
+        <literalValue>MPRA &amp; SoW /  Subscription Form Received</literalValue>
+        <name>Update the Stage to MPRA Form Re</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_to_Hold</fullName>
+        <field>Defer_Billing_or_Exit_Case__c</field>
+        <literalValue>Hold (Uncertain)</literalValue>
+        <name>Update to Hold</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_write_off_approval_Status_Reject</fullName>
+        <field>Write_off_Approval__c</field>
+        <literalValue>Reject</literalValue>
+        <name>Update write off approval Status :Reject</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_write_off_approval_status</fullName>
+        <field>Write_off_Approval__c</field>
+        <literalValue>Accept</literalValue>
+        <name>Update write off approval status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Withdrawal_Reason_Reset</fullName>
+        <field>Non_Cooperation_Withdrawal_Reason__c</field>
+        <name>Withdrawal Reason Reset</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_BD_Team_Classification_Formula</fullName>
+        <field>BD_Team_Classification_Formula__c</field>
+        <formula>TEXT(Account.Classification__c)</formula>
+        <name>update BD Team Classification Formula</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Initial rating fee and annual surveillance fee null</fullName>
+        <actions>
+            <name>Anuual_Surveillance_as_per_agreement_nul</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Initial_rating_fee_as_per_Agreement_null</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Customer_Fee_Type__c</field>
+            <operation>equals</operation>
+            <value>Cap</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Lock Account on Closed Won</fullName>
+        <actions>
+            <name>Lock_Account_on_Closed_Won</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>New Business</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Remove conversion probability in case of stage  Lost</fullName>
+        <actions>
+            <name>Remove_conversion_probability_in_case_of</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed Lost</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Branch Formula Field</fullName>
+        <actions>
+            <name>Update_Branch_Formula_Field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Branch__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Check Current Year on Opportunity</fullName>
+        <actions>
+            <name>Update_current_year</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Name</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Last Invoice Date Account</fullName>
+        <actions>
+            <name>Update_Last_Invoice_Date_Account</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Last_Invoice_Date__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Update Last Invoice Date on account</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Last Payment Date on Account</fullName>
+        <actions>
+            <name>Update_Last_Payment_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Last_Payment_Date__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>When Exit Deferred Date be Blank</fullName>
+        <actions>
+            <name>Deferred_Date_Changed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Defer_Billing_or_Exit_Case__c</field>
+            <operation>notEqual</operation>
+            <value>Deferred (Unbilled)</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>update BD Team Classification Formula</fullName>
+        <actions>
+            <name>update_BD_Team_Classification_Formula</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Classification__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

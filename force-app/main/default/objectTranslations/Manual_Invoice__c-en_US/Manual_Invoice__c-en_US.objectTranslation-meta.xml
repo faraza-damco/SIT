@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Manual Invoice</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Manual Invoices</value>
+    </caseValues>
+    <layouts>
+        <layout>ISD Manual Invoice Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Details --></label>
+            <section>Customer Details</section>
+        </sections>
+        <sections>
+            <label><!-- GST Details --></label>
+            <section>GST Details</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Inter Branch Manual Invoice Layout</layout>
+        <sections>
+            <label><!-- Advance Amount Received --></label>
+            <section>Advance Amount Received</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- GST Details --></label>
+            <section>GST Details</section>
+        </sections>
+        <sections>
+            <label><!-- Inter-Branch Details --></label>
+            <section>Inter-Branch Details</section>
+        </sections>
+        <sections>
+            <label><!-- Invoice Amount --></label>
+            <section>Invoice Amount</section>
+        </sections>
+        <sections>
+            <label><!-- System Informations --></label>
+            <section>System Informations</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Manual Invoice Layout</layout>
+        <sections>
+            <label><!-- Advance Amount Received --></label>
+            <section>Advance Amount Received</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Details --></label>
+            <section>Customer Details</section>
+        </sections>
+        <sections>
+            <label><!-- GST Details --></label>
+            <section>GST Details</section>
+        </sections>
+        <sections>
+            <label><!-- Invoice Amount --></label>
+            <section>Invoice Amount</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>OT Manual Invoice Page Layout</layout>
+        <sections>
+            <label><!-- Advance Amount Received --></label>
+            <section>Advance Amount Received</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Details --></label>
+            <section>Customer Details</section>
+        </sections>
+        <sections>
+            <label><!-- GST Details --></label>
+            <section>GST Details</section>
+        </sections>
+        <sections>
+            <label><!-- Invoice Amount --></label>
+            <section>Invoice Amount</section>
+        </sections>
+        <sections>
+            <label><!-- system Information --></label>
+            <section>system Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Cancel IRN --></label>
+        <name>Cancel_IRN</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Generate IRN Number --></label>
+        <name>Generate_IRN_Number</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Generate Inter Branch Invoice --></label>
+        <name>Generate_Inter_Branch_Invoice</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Generate Manual ISD Invoice --></label>
+        <name>Generate_Manual_ISD_Invoice</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Generate Manual Invoice --></label>
+        <name>Generate_Manual_Invoice</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Get Signature --></label>
+        <name>Get_Signature</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- ISD --></label>
+        <name>ISD</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Inter-Branch Invoice --></label>
+        <name>Inter_Branch_Invoice</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- OPE --></label>
+        <name>OPE</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Other Services --></label>
+        <name>Other_Services</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Description of Service is a Mandatory field. Kindly input the same. --></errorMessage>
+        <name>IB_Description_of_Service_is_a_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Amount is Mandatory. Kindly input the same. --></errorMessage>
+        <name>InterBranch_Amount_is_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Currency is Mandatory. Kindly input the same. --></errorMessage>
+        <name>InterBranch_Currency_is_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Destination Branch is Mandatory. Kindly input the same. --></errorMessage>
+        <name>InterBranch_Destination_is_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invoice Date is Mandatory. Kindly input the same. --></errorMessage>
+        <name>InterBranch_InvoiceDate_is_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Particulars is a Mandatory field. Kindly input the same. --></errorMessage>
+        <name>InterBranch_Particulars_is_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- SAC/HSN is a Mandatory field. Kindly input the same. --></errorMessage>
+        <name>InterBranch_SACHSN_is_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Source Branch is Mandatory. Kindly input the same. --></errorMessage>
+        <name>InterBranch_SourceB_is_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You have Selected OT Related Account --></errorMessage>
+        <name>OPE_Account_Name</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select OT Related Account --></errorMessage>
+        <name>Other_Services</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Generate_Inter_Branch_Invoices --></label>
+        <name>Generate_Inter_Branch_Invoices</name>
+    </webLinks>
+</CustomObjectTranslation>

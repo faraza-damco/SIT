@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mark_in_case_of_SO_CE__c</fullName>
+    <label>Mark in case of SO/CE</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SO</fullName>
+                <default>false</default>
+                <label>SO</label>
+            </value>
+            <value>
+                <fullName>CE</fullName>
+                <default>false</default>
+                <label>CE</label>
+            </value>
+            <value>
+                <fullName>Provisional</fullName>
+                <default>false</default>
+                <label>Provisional</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Notification_of_Rejection_of_Initiate_Tax_Invoice</fullName>
+        <description>Notification of Rejection of Initiate Tax Invoice</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ICRA/Rejection_of_Initiate_Tax_Invoice</template>
+    </alerts>
+    <alerts>
+        <fullName>Notification_of_Rejection_of_Proforma_Invoice</fullName>
+        <description>Notification of Rejection of Proforma Invoice</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales@icraindia.info</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ICRA/Rejection_of_Proforma_Invoice</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Check_Current_Year</fullName>
+        <field>Check_Current_Year_Reference__c</field>
+        <formula>Check_Current_Year__c</formula>
+        <name>Check Current Year</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Copy_Update_Credit_Note_Amount</fullName>
+        <field>Total_Credit_Amount_Copy__c</field>
+        <formula>Total_Credit_Amount__c</formula>
+        <name>Copy Update Credit Note Amount</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>ITI_Status_Approved</fullName>
+        <field>Initiate_Tax_Invoice_Status__c</field>
+        <literalValue>ITI Approved</literalValue>
+        <name>ITI Status Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>ITI_Status_Pending</fullName>
+        <field>Initiate_Tax_Invoice_Status__c</field>
+        <literalValue>ITI Pending with Finance</literalValue>
+        <name>ITI Status Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>ITI_Status_Rejected</fullName>
+        <field>Initiate_Tax_Invoice_Status__c</field>
+        <literalValue>ITI Rejected</literalValue>
+        <name>ITI Status Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PI_Status_Approved</fullName>
+        <field>Proforma_Invoice_Status__c</field>
+        <literalValue>PI Approved</literalValue>
+        <name>PI Status Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PI_Status_Pending</fullName>
+        <field>Proforma_Invoice_Status__c</field>
+        <literalValue>PI Pending with Finance</literalValue>
+        <name>PI Status Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PI_Status_Rejected</fullName>
+        <field>Proforma_Invoice_Status__c</field>
+        <literalValue>PI Rejected</literalValue>
+        <name>PI Status Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Financial_Year_field</fullName>
+        <field>Financial_Year__c</field>
+        <formula>IF(AND(Created_Date__c &gt; DATE( YEAR( TODAY())-1 ,04,01), Created_Date__c &lt; DATE( YEAR( TODAY()) ,03,31) ), &apos;Current Year&apos;, &apos;FY &apos;+Text( YEAR( TODAY()-1))+&apos;-&apos;+TEXT(YEAR( TODAY()) ))</formula>
+        <name>Update Financial Year field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Last_Invoice_Date</fullName>
+        <description>Update Last Invoice Date on Opportunity</description>
+        <field>Last_Invoice_Date__c</field>
+        <formula>Invoice_Created_Date__c</formula>
+        <name>Update Last Invoice Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>Opportunity_Name__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Total_Invoice_Amount</fullName>
+        <field>Total_Invoice_Amount_1__c</field>
+        <formula>0</formula>
+        <name>Update Total Invoice Amount</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>Opportunity_Name__c</targetObject>
+    </fieldUpdates>
+    <rules>
+        <fullName>Update Check Current Year field on Invoice</fullName>
+        <actions>
+            <name>Check_Current_Year</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Name</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Invoice Credit Note Amount</fullName>
+        <actions>
+            <name>Copy_Update_Credit_Note_Amount</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Invoice__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Credit Note</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Last Invoice Date</fullName>
+        <actions>
+            <name>Update_Financial_Year_field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Last_Invoice_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Total_Invoice_Amount__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Update Last Invoice Date on Opportunity object</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

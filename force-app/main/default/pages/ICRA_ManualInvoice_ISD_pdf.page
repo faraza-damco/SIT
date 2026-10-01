@@ -1,0 +1,487 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 05-27-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                               Modification
+  1.0   04-02-2021   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+-->
+
+
+<apex:page renderAs="PDF" standardController="Manual_Invoice__c" extensions="ICRA_Controller_ManualInvoice_ISD" showHeader="false"
+    sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false" docType="html-5.0">
+    <html>
+
+    <head>
+        <style type="text/css" media="print">
+            @font-face {
+                font-family: 'myarial';
+                src: url("{!$Resource.ICRA}");
+
+            }
+
+
+
+            body {
+                font-family: 'myarial';
+                font-size: 8.5pt;
+                word-wrap: break-word;
+                padding: 0px;
+                margin: 0px;
+            }
+
+            table {
+                word-wrap: break-word;
+                font-family: 'myarial';
+                border-collapse: collapse;
+                table-layout: auto;
+                width: 100%;
+            }
+
+            td,
+            tr {
+                word-wrap: break-word;
+                padding: 0px 3px 0px 3px;
+            }
+
+            .text-label {
+                font-weight: bolder !important;
+            }
+
+            p {
+                padding: 0px;
+                margin: 0px;
+                line-height: 1.5;
+            }
+
+            .custom-border td {
+                border: 0.2px solid #aaa9a9;
+
+            }
+
+            .a {
+                word-break: break-all;
+            }
+
+            .text-align {
+                text-align: center;
+            }
+
+            @page {
+                size: 8.5in 12.5in;
+                margin-top: 3.5cm;
+                margin-bottom: 4.5cm;
+
+                @top-center {
+                    content: element(header);
+                }
+                @bottom-left {
+                    content: element(footer);
+                }
+            }
+
+            div.header {
+                position: running(header);
+                margin: 30px 0px 20px 0px;
+                height: 130px;
+                width: 720px;
+                text-align: right;
+            }
+
+            div.footer {
+                display: block;
+                position: running(footer);
+                margin: 0px 0px 20px 0px;
+                width: 720px;
+                text-align: left;
+                border-top: 2px solid #0027A0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="header">
+            <apex:image value="{!$Resource.ICRA}" width="210px" height="85px" style="float: left;" />
+            <!--<p style="text-align: left; color:#0060AA; font-size: 24pt; width: 150px; float: left; margin: 21px 0px 0px 10px;font-weight: 500">
+                ICRA
+            </p>-->
+            <p style="text-align: right; color:#0060AA; font-size: 24pt; width: 350px; float: right; margin: 21px 0px 0px 0px;font-weight: 500">
+                ICRA Limited
+            </p>
+
+        </div>
+        <div class="footer">
+            <table cellspacing="0" cellpadding="0" style=" table-layout: fixed;">
+                <tr>
+                    <td style="text-align: left;color:#0060AA;font-size:10pt;font-weight: 500;vertical-align:top;">
+                        <p style="width: 80%; text-overflow: hidden !important; height: 100px  !important;">
+                            {!invoicePage.manualInvoiceRecord.Source_Branch_Street__c}, {!invoicePage.manualInvoiceRecord.Source_Branch_City__c} {!invoicePage.manualInvoiceRecord.Source_Branch_State__c}
+                            - {!invoicePage.manualInvoiceRecord.Source_Branch_Zip_Postal_Code__c}, {!invoicePage.manualInvoiceRecord.Source_Branch_Country__c}
+
+                        </p>
+                    </td>
+                    <td style="text-align: left;color:#0060AA;font-size:10pt;font-weight: 500;vertical-align:top;">
+                        <p style="width: 80%;">Tel : {!invoicePage.invoiceFooter.Telephone__c}</p>
+                        <p style="width: 80%;">CIN : {!invoicePage.invoiceFooter.CIN__c}</p>
+                    </td>
+                    <td style="text-align: left;color:#0060AA;font-size:10pt;font-weight: 500;vertical-align:top;">
+
+                        <p style="width: 80%; float: right">Website : {!invoicePage.invoiceFooter.Website__c}</p>
+                        <p style="width: 80%;float: right">Email : {!invoicePage.invoiceFooter.Email__c}</p>
+                        <p style="width: 80%;float: right">Helpdesk : {!invoicePage.invoiceFooter.HelpDesk__c}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: left;color:#0060AA;font-size:10pt;font-weight: 500;">
+                        <p> Registered Office:
+                            <apex:outputText value="{!invoicePage.invoiceFooter.Registered_Office__c}" />
+                        </p>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: center;color:#0060AA;font-size:18pt;font-weight: 800 !important; letter-spacing: 5px; !important!">
+                        <p> RATING &nbsp;&nbsp;&#8226;&nbsp;&nbsp; RESEARCH &nbsp;&nbsp;&#8226;&nbsp;&nbsp; INFORMATION</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="content">
+            <apex:outputPanel rendered="{!IF(isError == false, true,false)}">
+                <table cellspacing="0" cellpadding="0" style="IF(invoicePage.nextPgae,'table-layout: fixed; width: 960px;','table-layout: fixed; width: 960px;')">
+                    <tbody>
+                        <tr>
+                            <td colspan="3" style="text-align: right; padding: 0px;margin:0px;">Original for Recipient</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="text-align: center;font-size: 20pt;font-weight: 600">Tax Invoice</td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top; width:220px;">
+                                <table cellspacing="0" cellpadding="0" class="text-label">
+                                    <tr>
+                                        <td colspan="2" class="text-label" style="word-wrap:break-word;">
+                                            <!--p style="width:260px;"-->
+                                            <p style="padding:0px;margin:0px;">
+                                                ICRA Limited
+                                            </p>
+                                            <!-- {!invoicePage.manualInvoiceRecord.Branch__r.Name}-->
+                                            
+                                            <apex:outputField value="{!invoicePage.manualInvoiceRecord.Address_ISD__c}" />
+                                            <br/>
+                                            <!--/p-->
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-label" style="width:80px; vertical-align:top;">
+                                            <p style="padding:0px;margin:0px;">State</p>
+                                        </td>
+                                        <td class="text-label">
+                                            <p style="float: left; ">:&nbsp;</p>
+                                            <p style="float: left; width: 70%; padding: 0px; margin: 0px;"> {!invoicePage.manualInvoiceRecord.Branch_State_ISD__c}
+
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-label">
+                                            <p style="padding:0px;margin:0px;">State Code </p>
+                                        </td>
+                                        <td class="text-label">:&nbsp;{!IF(invoicePage.manualInvoiceRecord.Branch_State_Code_ISD__c
+                                            <=0 , '-',invoicePage.manualInvoiceRecord.Branch_State_Code_ISD__c)}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-label">
+                                            <p style="padding:0px;margin:0px;">GSTIN</p>
+                                        </td>
+                                        <td class="text-label" style="text-transform: uppercase;">:&nbsp;{!invoicePage.manualInvoiceRecord.Branch_GSTIN_ISD__c}</td>
+                                    </tr>
+                                    <!--tr>
+                                        <td class="text-label">
+                                            <p style="padding:0px;margin:0px;">Kind Attn.&nbsp;:- </p>
+                                        </td>
+                                        <td class="text-label">
+                                            <p>
+                                                &nbsp;{!invoicePage.manualInvoiceRecord.Contact_Name__r.Name}
+                                            </p>
+                                        </td>
+                                    </tr-->
+                                    <!--tr>
+                                        <td class="text-label">
+                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                                        </td>
+                                        <td class="text-label">
+                                            <p>
+                                                &nbsp;{!invoicePage.manualInvoiceRecord.Contact_Designation__c}
+                                            </p>
+                                        </td>
+                                    </tr-->
+                                </table>
+                                </td>
+                                <td style="text-align: left; text-align: center;width: 200px;" cellspacing="0" cellpadding="0">
+
+                                </td>
+
+
+                                <td style="vertical-align: top;">
+                                    <table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed;">
+
+                                        <tr>
+                                            <td class="text-label" style="vertical-align: text-top; width:115px !important;">
+                                                <p style="padding:0px;margin:0px;">Bill No</p>
+                                            </td>
+                                            <td class="text-label">:&nbsp;{!invoicePage.manualInvoiceRecord.Bill_No__c}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-label">
+                                                <p style="padding:0px;margin:0px;">Dated</p>
+                                            </td>
+                                            <td class="text-label">:&nbsp;
+                                                <apex:outputField value="{!invoicePage.manualInvoiceRecord.Created_Date__c}" />
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="text-label">
+                                                <p style="padding:0px;margin:0px;">Location of supplier</p>
+                                            </td>
+                                            <td class="text-label">:&nbsp;{!invoicePage.manualInvoiceRecord.Source_Branch_City__c}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-label">
+                                                <p style="padding:0px;margin:0px;">State</p>
+                                            </td>
+                                            <td class="text-label" style="vertical-align:top;">:&nbsp;{!invoicePage.manualInvoiceRecord.Source_Branch_State__c}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-label">
+                                                <p style="padding:0px;margin:0px;"> State Code</p>
+                                            </td>
+                                            <td class="text-label">:&nbsp;{!invoicePage.manualInvoiceRecord.Source_Branch_State_Code__c }</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-label">
+                                                <p style="padding:0px;margin:0px;">GSTIN</p>
+                                            </td>
+                                            <td class="text-label" style="text-transform: uppercase;">:&nbsp;{!invoicePage.manualInvoiceRecord.Supplier_GSTIN_ISD__c}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-label" style="vertical-align:top;">
+                                                <p style="padding:0px;margin:0px;">Description</p>
+                                            </td>
+                                            <td class="text-label" style="vertical-align:top; ">
+                                                <p style="float: left; ">:&nbsp;</p>
+                                                <p style="float: left; width: 90%; ">
+                                                    {!invoicePage.manualInvoiceRecord.Description_of_Service_ISD__c }
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-label">
+                                                <p style="padding:0px;margin:0px;">SAC/HSN</p>
+                                            </td>
+                                            <td class="text-label">:&nbsp;{!invoicePage.manualInvoiceRecord.SAC_HSN_ISD__c}</td>
+                                        </tr>
+                                        <!--tr>
+                                            <td class="text-label" style="vertical-align:top;">
+                                                <p style="padding:0px;margin:0px;">Tax Subject Reverse Charge </p>
+                                            </td>
+                                            <td class="text-label" style="vertical-align:top;">
+                                                <p style="float: left; ">:&nbsp;</p>
+                                                <p style="float: left; width: 90%; ">No</p>
+                                            </td>
+                                        </tr-->
+                                        <tr>
+                                            <td class="text-label">
+                                                <p style="padding:0px;margin:0px;text-transform: uppercase;">Pan</p>
+                                            </td>
+                                            <td class="text-label" style="text-transform: uppercase;">:&nbsp;{!invoicePage.manualInvoiceRecord.Supplier_PAN_ISD__c} </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                        </tr>
+                        <!--tr>
+                            <td colspan="3">
+                                <span style="margin-right:60px;font-weight:bolder;">&nbsp;IRN</span>
+                                <b>:</b>&nbsp;{!invoicePage.manualInvoiceRecord.IRN_Number__c}
+                            </td>
+                        </tr-->
+                        <!--tr>
+                            <td colspan="3">
+                                &nbsp;
+                                <br/>{!invoicePage.invoiceStaticTextMap[invoicePage.manualInvoiceRecord.RecordType.Name].Description_A__c}
+                            </td>
+                        </tr-->
+                        <tr>
+                            <td> &nbsp;
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <table cellspacing="0" cellpadding="0" class="custom-border" style=" table-layout: auto;">
+                                    <tr class="custom-border">
+                                        <td colspan="8" style="text-align: center;" class="text-label">PARTICULARS</td>
+                                        <td style="text-align: center;" class="text-label">Amount (Rs.)</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="8" style="border-bottom: none;">
+                                            &nbsp;
+                                            <br/> Amount of GST credit distributed as:
+
+                                            <br/> &nbsp;
+                                        </td>
+                                        <td style="border-bottom: none; border-top: none;">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="border-bottom: none; border-top: none; border-right: none;">CGST</td>
+                                        <td style="border-bottom: none; border-top: none;border-left: none; border-right: none;">
+                                        </td>
+                                        <td style="border:none;" colspan="5">&nbsp;</td>
+                                        <td class="text-align" style="border-bottom: none; border-top: none;">
+                                            <p style="{! IF(invoicePage.manualInvoiceRecord.CGST__c > 0 ,'display: block;','display: none;')}">
+                                                <apex:outputText value="{0, number, integer}">
+                                                    <apex:param value="{!invoicePage.manualInvoiceRecord.CGST__c}" />
+                                                </apex:outputText>
+                                            </p>
+                                            <p style="{! IF(invoicePage.manualInvoiceRecord.CGST__c <= 0 ,'display: block;','display: none;')}">-</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="border-bottom: none; border-top: none; border-right: none;">SGST</td>
+                                        <td style="border: none;">
+                                        </td>
+                                        <td style="border:none;" colspan="5">&nbsp;</td>
+                                        <td class="text-align" style="border-bottom: none; border-top: none;">
+                                            <p style="{! IF(invoicePage.manualInvoiceRecord.SGST__c > 0 ,'display: block;','display: none;')}">
+                                                <apex:outputText value="{0, number, integer}">
+                                                    <apex:param value="{!invoicePage.manualInvoiceRecord.SGST__c}" />
+                                                </apex:outputText>
+                                            </p>
+                                            <p style="{! IF(invoicePage.manualInvoiceRecord.SGST__c <= 0 ,'display: block;','display: none;')}">-</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="border-top: none; border-right: none;">IGST</td>
+                                        <td style="border-left:none;border-top: none; border-right: none;">
+                                        </td>
+                                        <td style="border-left:none;border-top: none; border-right: none;" colspan="5">&nbsp;</td>
+                                        <td class="text-align" style="border-top: none;">
+                                            <p style="{! IF(invoicePage.manualInvoiceRecord.IGST__c > 0 && invoicePage.manualInvoiceRecord.SGST__c = 0 && invoicePage.manualInvoiceRecord.CGST__c = 0 ,'display: block;','display: none;')}">
+                                                <apex:outputText value="{0, number, integer}">
+                                                    <apex:param value="{!invoicePage.manualInvoiceRecord.IGST__c}" />
+                                                </apex:outputText>
+                                            </p>
+                                            <p style="{! IF(invoicePage.manualInvoiceRecord.IGST__c <= 0 && invoicePage.manualInvoiceRecord.SGST__c != 0 && invoicePage.manualInvoiceRecord.CGST__c != 0 ,'display: block;','display: none;')}">-</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+
+
+
+
+
+                        <!--tr>
+                            <td colspan="3">
+                                &nbsp;
+                                <br/> {!invoicePage.invoiceStaticTextMap[invoicePage.manualInvoiceRecord.RecordType.Name].Description_C__c}
+
+                            </td>
+                        </tr-->
+                        <!--tr>
+                                <td colspan="3">
+                                    <p style="{! IF(OR(invoicePage.manualInvoiceRecord.Account_Classification__c == 'SEZ Without Tax',invoicePage.manualInvoiceRecord.Account_Classification__c == 'Export') ,'display: block;margin-top:5px;','display:none;')}">
+                                        {!$Label.Sez_and_Non_Sez_Static_text}
+                                    </p>
+                                </td>
+                            </tr-->
+                        <tr>
+                            <td class="text-label">
+                                &nbsp;
+                            </td>
+                            <td colspan="3">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <!--tr>
+                            <td class="text-label">
+                                <p style="text-decoration:underline; line-height: 1.5"> Bank Account Details :-</p>
+                            </td>
+                            <td colspan="3">
+                                &nbsp;
+                            </td>
+                        </tr-->
+                        <tr>
+                            <td class="text-label">
+                                &nbsp;
+                            </td>
+                            <td colspan="3">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <table cellspacing="0" cellpadding="0" width="100%" style="IF(invoicePage.nextPgae,'table-layout: fixed; width: 960px;','table-layout: fixed; width: 960px;')">
+                                    <!--tr class="text-label">
+                                        <td style="width: 120px;">Account Name </td>
+                                        <td> :&nbsp;{!invoicePage.bankAccountDetails[0].Account_Name__c}</td>
+                                    </tr-->
+                                    <!--apex:repeat value="{!invoicePage.bankAccountDetails}" var="bank"-->
+                                    <!--tr class="text-label">
+
+                                            <td> Current Account No. </td>
+                                            <td>:&nbsp;{!bank.Current_Account_No__c}</td>
+                                        </tr-->
+                                    <!--tr class="text-label" style="vertical-align:top;padding:0px;margin:0px;">
+                                            <td>Bank Name &amp; Address </td>
+                                            <td>
+                                                <p style="float: left; ">:&nbsp;</p>
+                                                <p style="float: left; width: 90%; padding: 0px; margin: 0px;">{!bank.Bank_Name__c}&nbsp;{!bank.Bank_Address__c}</p>
+
+                                            </td>
+
+                                        </tr-->
+                                    <!--tr class="text-label">
+                                            <td>RTGS/IFSC </td>
+                                            <td>:&nbsp;{!bank.RTGS_IFSC__c}</td>
+                                        </tr-->
+                                    <tr class="text-label">
+                                        <td colspan="2" class="text-label">&nbsp;</td>
+                                    </tr>
+
+                                    <!--/apex:repeat-->
+
+
+
+                                </table>
+                            </td>
+                            <td style="text-align: center">
+                                for and on behalf of ICRA Limited
+                                <br/>&nbsp;
+                                <br/>&nbsp;
+                                <br/>&nbsp;
+                                <br/>&nbsp;
+                                <br/>&nbsp;
+                                <br/>&nbsp;
+                                <br/>(Authorised Signatory)
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!IF(isError == true, true,false)}">
+                {! $Label.PDF_Error_Message}
+            </apex:outputPanel>
+        </div>
+    </body>
+
+    </html>
+</apex:page>

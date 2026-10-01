@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Existing Relationship - Group Rated Higher</fullName>
+        <default>false</default>
+        <label>Existing Relationship - Group Rated Higher</label>
+    </customValue>
+    <customValue>
+        <fullName>Existing Relationship - Higher Rating</fullName>
+        <default>false</default>
+        <label>Existing Relationship - Higher Rating</label>
+    </customValue>
+    <customValue>
+        <fullName>Existing Relationship - Lower Fees</fullName>
+        <default>false</default>
+        <label>Existing Relationship - Lower Fees</label>
+    </customValue>
+    <customValue>
+        <fullName>Existing Relationship - Other reasons</fullName>
+        <default>false</default>
+        <label>Existing Relationship - Other reasons</label>
+    </customValue>
+    <customValue>
+        <fullName>Existing Relationship - Prefers competitor/ICRA</fullName>
+        <default>false</default>
+        <label>Existing Relationship - Prefers competitor/ICRA</label>
+    </customValue>
+    <customValue>
+        <fullName>Fresh Issuers - Group Relationship</fullName>
+        <default>false</default>
+        <label>Fresh Issuers - Group Relationship</label>
+    </customValue>
+    <customValue>
+        <fullName>Fresh Issuers - ICRA Group related relationship Issues</fullName>
+        <default>false</default>
+        <label>Fresh Issuers - ICRA Group related relationship Issues</label>
+    </customValue>
+    <customValue>
+        <fullName>Fresh Issuers - No Contact</fullName>
+        <default>false</default>
+        <label>Fresh Issuers - No Contact</label>
+    </customValue>
+    <customValue>
+        <fullName>Fresh Issuers - Other Reasons</fullName>
+        <default>false</default>
+        <label>Fresh Issuers - Other Reasons</label>
+    </customValue>
+    <customValue>
+        <fullName>Fresh Issuers - Rating related difference/perception</fullName>
+        <default>false</default>
+        <label>Fresh Issuers - Rating related difference/perception</label>
+    </customValue>
+    <customValue>
+        <fullName>Fresh Issuers - Very Low Fees</fullName>
+        <default>false</default>
+        <label>Fresh Issuers - Very Low Fees</label>
+    </customValue>
+    <customValue>
+        <fullName>Poached from Others - Higher Rating</fullName>
+        <default>false</default>
+        <label>Poached from Others - Higher Rating</label>
+    </customValue>
+    <customValue>
+        <fullName>Poached from Others - Lower Fees</fullName>
+        <default>false</default>
+        <label>Poached from Others - Lower Fees</label>
+    </customValue>
+    <customValue>
+        <fullName>Poached from others - Same Rating - Multiple/Dual Rating</fullName>
+        <default>false</default>
+        <label>Poached from others - Same Rating - Multiple/Dual Rating</label>
+    </customValue>
+    <customValue>
+        <fullName>Mandate Cancelled</fullName>
+        <default>false</default>
+        <label>Mandate Cancelled</label>
+    </customValue>
+    <masterLabel>Loss Reason</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

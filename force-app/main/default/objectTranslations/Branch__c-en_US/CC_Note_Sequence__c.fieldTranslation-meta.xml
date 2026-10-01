@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Commercial Credit note --></help>
+    <label><!-- CC Note Sequence --></label>
+    <name>CC_Note_Sequence__c</name>
+</CustomFieldTranslation>

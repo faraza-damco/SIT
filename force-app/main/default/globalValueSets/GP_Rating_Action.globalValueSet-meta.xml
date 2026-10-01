@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Upgrade</fullName>
+        <default>false</default>
+        <label>Upgrade</label>
+    </customValue>
+    <customValue>
+        <fullName>Downgrade</fullName>
+        <default>false</default>
+        <label>Downgrade</label>
+    </customValue>
+    <customValue>
+        <fullName>Reaffirmed</fullName>
+        <default>false</default>
+        <label>Reaffirmed</label>
+    </customValue>
+    <customValue>
+        <fullName>Rating Watch</fullName>
+        <default>false</default>
+        <label>Rating Watch</label>
+    </customValue>
+    <customValue>
+        <fullName>Outlook Changed</fullName>
+        <default>false</default>
+        <label>Outlook Changed</label>
+    </customValue>
+    <customValue>
+        <fullName>Assigned-Enhancement</fullName>
+        <default>false</default>
+        <label>Assigned-Enhancement</label>
+    </customValue>
+    <customValue>
+        <fullName>Non Cooperation</fullName>
+        <default>false</default>
+        <label>Non Cooperation</label>
+    </customValue>
+    <customValue>
+        <fullName>Assigned</fullName>
+        <default>false</default>
+        <label>Assigned</label>
+    </customValue>
+    <customValue>
+        <fullName>Withdrawn</fullName>
+        <default>false</default>
+        <label>Withdrawn</label>
+    </customValue>
+    <customValue>
+        <fullName>Reaffirmed-Enhancement</fullName>
+        <default>false</default>
+        <label>Reaffirmed-Enhancement</label>
+    </customValue>
+    <customValue>
+        <fullName>NDS-Non Cooperation</fullName>
+        <default>false</default>
+        <label>NDS-Non Cooperation</label>
+    </customValue>
+    <customValue>
+        <fullName>Review in Process</fullName>
+        <default>false</default>
+        <label>Review in Process</label>
+    </customValue>
+    <customValue>
+        <fullName>Periodic Review-Issuer Not Cooperating</fullName>
+        <default>false</default>
+        <label>Periodic Review-Issuer Not Cooperating</label>
+    </customValue>
+    <customValue>
+        <fullName>Notice of Withdrawal</fullName>
+        <default>false</default>
+        <label>Notice of Withdrawal</label>
+    </customValue>
+    <customValue>
+        <fullName>Downgrade-Withdrawn</fullName>
+        <default>false</default>
+        <label>Downgrade-Withdrawn</label>
+    </customValue>
+    <customValue>
+        <fullName>Downgrade-Issuer Not Cooperating</fullName>
+        <default>false</default>
+        <label>Downgrade-Issuer Not Cooperating</label>
+    </customValue>
+    <customValue>
+        <fullName>Upgrade-Enhancement</fullName>
+        <default>false</default>
+        <label>Upgrade-Enhancement</label>
+    </customValue>
+    <customValue>
+        <fullName>Entities Opting for Moratorium on Loan Servicing</fullName>
+        <default>false</default>
+        <label>Entities Opting for Moratorium on Loan Servicing</label>
+    </customValue>
+    <customValue>
+        <fullName>Downgrade-Enhancement</fullName>
+        <default>false</default>
+        <label>Downgrade-Enhancement</label>
+    </customValue>
+    <customValue>
+        <fullName>Unaccepted</fullName>
+        <default>false</default>
+        <label>Unaccepted</label>
+    </customValue>
+    <masterLabel>Rating Action</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

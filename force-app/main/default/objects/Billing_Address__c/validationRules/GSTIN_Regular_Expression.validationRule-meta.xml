@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GSTIN_Regular_Expression</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(REGEX(GSTN__c,&quot;\\d{2}[A-Z]{5}\\d{4}[A-Z]{1}[A-Z\\d]{1}[ZD]{1}[A-Z\\d]{1}&quot;)),NOT(ISBLANK(GSTN__c)))</errorConditionFormula>
+    <errorDisplayField>GSTN__c</errorDisplayField>
+    <errorMessage>Please Enter The Correct GST As Per Regular Expression.</errorMessage>
+</ValidationRule>

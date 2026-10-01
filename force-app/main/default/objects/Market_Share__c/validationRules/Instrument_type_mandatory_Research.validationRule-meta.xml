@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Instrument_type_mandatory_Research</fullName>
+    <active>false</active>
+    <description>If Research in type 1. then 2,3,5 is mandatory. And no values in 4</description>
+    <errorConditionFormula>IF(AND(ISPICKVAL(Instrument_type_1__c, &apos;Research&apos;),
+OR(ISPICKVAL(Instrument_type_2__c, &apos;&apos;),ISPICKVAL(Instrument_type_3__c, &apos;&apos;),NOT(ISPICKVAL(Instrument_type_4__c, &apos;&apos;)))
+),true ,false )</errorConditionFormula>
+    <errorMessage>For Instrument 1 : Research, Instrument 2,3,5 is mandatory and No values in Instrument 4</errorMessage>
+</ValidationRule>

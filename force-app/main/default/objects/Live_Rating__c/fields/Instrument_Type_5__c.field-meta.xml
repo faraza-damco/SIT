@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Instrument_Type_5__c</fullName>
+    <label>Instrument Type 5</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Instrument_Type_3__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Airlines</fullName>
+                <default>false</default>
+                <label>Airlines</label>
+            </value>
+            <value>
+                <fullName>Airport Infrastructure</fullName>
+                <default>false</default>
+                <label>Airport Infrastructure</label>
+            </value>
+            <value>
+                <fullName>Apparel &amp; Fabric</fullName>
+                <default>false</default>
+                <label>Apparel &amp; Fabric</label>
+            </value>
+            <value>
+                <fullName>Auto Components</fullName>
+                <default>false</default>
+                <label>Auto Components</label>
+            </value>
+            <value>
+                <fullName>Automobile</fullName>
+                <default>false</default>
+                <label>Automobile</label>
+            </value>
+            <value>
+                <fullName>Basmati Rice</fullName>
+                <default>false</default>
+                <label>Basmati Rice</label>
+            </value>
+            <value>
+                <fullName>Bearing</fullName>
+                <default>false</default>
+                <label>Bearing</label>
+            </value>
+            <value>
+                <fullName>Buffalo Meat</fullName>
+                <default>false</default>
+                <label>Buffalo Meat</label>
+            </value>
+            <value>
+                <fullName>Bulk Tea</fullName>
+                <default>false</default>
+                <label>Bulk Tea</label>
+            </value>
+            <value>
+                <fullName>Cashew</fullName>
+                <default>false</default>
+                <label>Cashew</label>
+            </value>
+            <value>
+                <fullName>Cement</fullName>
+                <default>false</default>
+                <label>Cement</label>
+            </value>
+            <value>
+                <fullName>Chemicals - Basic Chemicals</fullName>
+                <default>false</default>
+                <label>Chemicals - Basic Chemicals</label>
+            </value>
+            <value>
+                <fullName>Chemicals - Petrochemicals</fullName>
+                <default>false</default>
+                <label>Chemicals - Petrochemicals</label>
+            </value>
+            <value>
+                <fullName>Chemicals - Speciality Chemicals</fullName>
+                <default>false</default>
+                <label>Chemicals - Speciality Chemicals</label>
+            </value>
+            <value>
+                <fullName>Commercial Vehicles</fullName>
+                <default>false</default>
+                <label>Commercial Vehicles</label>
+            </value>
+            <value>
+                <fullName>Construction</fullName>
+                <default>false</default>
+                <label>Construction</label>
+            </value>
+            <value>
+                <fullName>Construction Equipment</fullName>
+                <default>false</default>
+                <label>Construction Equipment</label>
+            </value>
+            <value>
+                <fullName>Corporate Sector</fullName>
+                <default>false</default>
+                <label>Corporate Sector</label>
+            </value>
+            <value>
+                <fullName>Cotton &amp; Manmade Yarns</fullName>
+                <default>false</default>
+                <label>Cotton &amp; Manmade Yarns</label>
+            </value>
+            <value>
+                <fullName>Dairy</fullName>
+                <default>false</default>
+                <label>Dairy</label>
+            </value>
+            <value>
+                <fullName>Ferrous Metals</fullName>
+                <default>false</default>
+                <label>Ferrous Metals</label>
+            </value>
+            <value>
+                <fullName>Fertilizers</fullName>
+                <default>false</default>
+                <label>Fertilizers</label>
+            </value>
+            <value>
+                <fullName>Footwear</fullName>
+                <default>false</default>
+                <label>Footwear</label>
+            </value>
+            <value>
+                <fullName>Gas Utilities</fullName>
+                <default>false</default>
+                <label>Gas Utilities</label>
+            </value>
+            <value>
+                <fullName>Hospitals</fullName>
+                <default>false</default>
+                <label>Hospitals</label>
+            </value>
+            <value>
+                <fullName>Hotels</fullName>
+                <default>false</default>
+                <label>Hotels</label>
+            </value>
+            <value>
+                <fullName>Indian Retail Industry</fullName>
+                <default>false</default>
+                <label>Indian Retail Industry</label>
+            </value>
+            <value>
+                <fullName>IT Services</fullName>
+                <default>false</default>
+                <label>IT Services</label>
+            </value>
+            <value>
+                <fullName>Jewellery</fullName>
+                <default>false</default>
+                <label>Jewellery</label>
+            </value>
+            <value>
+                <fullName>Logistics - Road</fullName>
+                <default>false</default>
+                <label>Logistics - Road</label>
+            </value>
+            <value>
+                <fullName>Multiplex Industry</fullName>
+                <default>false</default>
+                <label>Multiplex Industry</label>
+            </value>
+            <value>
+                <fullName>Non-Basmati Rice</fullName>
+                <default>false</default>
+                <label>Non-Basmati Rice</label>
+            </value>
+            <value>
+                <fullName>Non- Ferrous Metals</fullName>
+                <default>false</default>
+                <label>Non- Ferrous Metals</label>
+            </value>
+            <value>
+                <fullName>Oil &amp; Gas</fullName>
+                <default>false</default>
+                <label>Oil &amp; Gas</label>
+            </value>
+            <value>
+                <fullName>Passenger Vehicles</fullName>
+                <default>false</default>
+                <label>Passenger Vehicles</label>
+            </value>
+            <value>
+                <fullName>Pharmaceuticals</fullName>
+                <default>false</default>
+                <label>Pharmaceuticals</label>
+            </value>
+            <value>
+                <fullName>Port Logistics</fullName>
+                <default>false</default>
+                <label>Port Logistics</label>
+            </value>
+            <value>
+                <fullName>Ports</fullName>
+                <default>false</default>
+                <label>Ports</label>
+            </value>
+            <value>
+                <fullName>Poultry</fullName>
+                <default>false</default>
+                <label>Poultry</label>
+            </value>
+            <value>
+                <fullName>Power</fullName>
+                <default>false</default>
+                <label>Power</label>
+            </value>
+            <value>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+                <label>Real Estate</label>
+            </value>
+            <value>
+                <fullName>Refining &amp; Marketing</fullName>
+                <default>false</default>
+                <label>Refining &amp; Marketing</label>
+            </value>
+            <value>
+                <fullName>Renewable Energy</fullName>
+                <default>false</default>
+                <label>Renewable Energy</label>
+            </value>
+            <value>
+                <fullName>Roads &amp; Highways</fullName>
+                <default>false</default>
+                <label>Roads &amp; Highways</label>
+            </value>
+            <value>
+                <fullName>Seeds</fullName>
+                <default>false</default>
+                <label>Seeds</label>
+            </value>
+            <value>
+                <fullName>Ship Breaking</fullName>
+                <default>false</default>
+                <label>Ship Breaking</label>
+            </value>
+            <value>
+                <fullName>Sugar</fullName>
+                <default>false</default>
+                <label>Sugar</label>
+            </value>
+            <value>
+                <fullName>Telecom Services</fullName>
+                <default>false</default>
+                <label>Telecom Services</label>
+            </value>
+            <value>
+                <fullName>Telecom Tower</fullName>
+                <default>false</default>
+                <label>Telecom Tower</label>
+            </value>
+            <value>
+                <fullName>Tiles</fullName>
+                <default>false</default>
+                <label>Tiles</label>
+            </value>
+            <value>
+                <fullName>Tractors</fullName>
+                <default>false</default>
+                <label>Tractors</label>
+            </value>
+            <value>
+                <fullName>Two Wheelers</fullName>
+                <default>false</default>
+                <label>Two Wheelers</label>
+            </value>
+            <value>
+                <fullName>Tyres</fullName>
+                <default>false</default>
+                <label>Tyres</label>
+            </value>
+            <value>
+                <fullName>Wind Energy</fullName>
+                <default>false</default>
+                <label>Wind Energy</label>
+            </value>
+            <value>
+                <fullName>Affordable Housing Finance</fullName>
+                <default>false</default>
+                <label>Affordable Housing Finance</label>
+            </value>
+            <value>
+                <fullName>Banking</fullName>
+                <default>false</default>
+                <label>Banking</label>
+            </value>
+            <value>
+                <fullName>Banking Statistics</fullName>
+                <default>false</default>
+                <label>Banking Statistics</label>
+            </value>
+            <value>
+                <fullName>Brokerages</fullName>
+                <default>false</default>
+                <label>Brokerages</label>
+            </value>
+            <value>
+                <fullName>Financial Markets &amp; Banking Update</fullName>
+                <default>false</default>
+                <label>Financial Markets &amp; Banking Update</label>
+            </value>
+            <value>
+                <fullName>General Insurance</fullName>
+                <default>false</default>
+                <label>General Insurance</label>
+            </value>
+            <value>
+                <fullName>Housing Finance Companies</fullName>
+                <default>false</default>
+                <label>Housing Finance Companies</label>
+            </value>
+            <value>
+                <fullName>Housing Finance Statistics</fullName>
+                <default>false</default>
+                <label>Housing Finance Statistics</label>
+            </value>
+            <value>
+                <fullName>Life Insurance</fullName>
+                <default>false</default>
+                <label>Life Insurance</label>
+            </value>
+            <value>
+                <fullName>Micro Finance Institutions</fullName>
+                <default>false</default>
+                <label>Micro Finance Institutions</label>
+            </value>
+            <value>
+                <fullName>NBFC - Infrastructure</fullName>
+                <default>false</default>
+                <label>NBFC - Infrastructure</label>
+            </value>
+            <value>
+                <fullName>NBFC - Retail &amp; Commercial Finance</fullName>
+                <default>false</default>
+                <label>NBFC - Retail &amp; Commercial Finance</label>
+            </value>
+            <value>
+                <fullName>Small Finance Banks</fullName>
+                <default>false</default>
+                <label>Small Finance Banks</label>
+            </value>
+            <value>
+                <fullName>Asset Backed Security</fullName>
+                <default>false</default>
+                <label>Asset Backed Security</label>
+            </value>
+            <value>
+                <fullName>Credit Quality Trends</fullName>
+                <default>false</default>
+                <label>Credit Quality Trends</label>
+            </value>
+            <value>
+                <fullName>Market Update</fullName>
+                <default>false</default>
+                <label>Market Update</label>
+            </value>
+            <value>
+                <fullName>Mortgage Backed Security</fullName>
+                <default>false</default>
+                <label>Mortgage Backed Security</label>
+            </value>
+            <value>
+                <fullName>Economic Outlook &amp; Macro Trends</fullName>
+                <default>false</default>
+                <label>Economic Outlook &amp; Macro Trends</label>
+            </value>
+            <value>
+                <fullName>Key Economic Indicators</fullName>
+                <default>false</default>
+                <label>Key Economic Indicators</label>
+            </value>
+            <value>
+                <fullName>State Government Finance</fullName>
+                <default>false</default>
+                <label>State Government Finance</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Airlines</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Airport Infrastructure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Apparel &amp; Fabric</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Auto Components</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Automobile</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Basmati Rice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Bearing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Buffalo Meat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Bulk Tea</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Cashew</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Cement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Chemicals - Basic Chemicals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Chemicals - Petrochemicals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Chemicals - Speciality Chemicals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Commercial Vehicles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Construction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Construction Equipment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Corporate Sector</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Cotton &amp; Manmade Yarns</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Dairy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Ferrous Metals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Fertilizers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Footwear</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Gas Utilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Hospitals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Hotels</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Indian Retail Industry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>IT Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Jewellery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Logistics - Road</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Multiplex Industry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Non-Basmati Rice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Non- Ferrous Metals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Oil &amp; Gas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Passenger Vehicles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Pharmaceuticals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Port Logistics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Ports</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Poultry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Power</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Real Estate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Refining &amp; Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Renewable Energy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Roads &amp; Highways</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Seeds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Ship Breaking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Sugar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Telecom Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Telecom Tower</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Tiles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Tractors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Two Wheelers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Tyres</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Wind Energy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Affordable Housing Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Banking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Banking Statistics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Brokerages</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Financial Markets &amp; Banking Update</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>General Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Housing Finance Companies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Housing Finance Statistics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Life Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Micro Finance Institutions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>NBFC - Infrastructure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>NBFC - Retail &amp; Commercial Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Small Finance Banks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Asset Backed Security</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Credit Quality Trends</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Market Update</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Mortgage Backed Security</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Economic Outlook &amp; Macro Trends</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>Key Economic Indicators</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>One-Time Royalty</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <valueName>State Government Finance</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

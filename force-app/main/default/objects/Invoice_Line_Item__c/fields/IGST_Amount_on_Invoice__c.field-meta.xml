@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IGST_Amount_on_Invoice__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( OR(
+    Account_Classification__c == &apos;SEZ Without Tax&apos;,
+    Account_Classification__c == &apos;Export&apos;
+  ),0,ROUND((Invoice_Taxable_Amount__c * IGST_Rate_for_Invoice_Amount__c),0))</formula>
+    <label>IGST Amount on Invoice</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

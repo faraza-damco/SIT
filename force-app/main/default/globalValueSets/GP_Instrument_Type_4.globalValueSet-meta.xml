@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Assignee Payout</fullName>
+        <default>false</default>
+        <label>Assignee Payout</label>
+    </customValue>
+    <customValue>
+        <fullName>AT1 Bonds</fullName>
+        <default>false</default>
+        <label>AT1 Bonds</label>
+    </customValue>
+    <customValue>
+        <fullName>Bank Loan Rating</fullName>
+        <default>false</default>
+        <label>Bank Loan Rating</label>
+    </customValue>
+    <customValue>
+        <fullName>Bank Loan Rating Enhancement</fullName>
+        <default>false</default>
+        <label>Bank Loan Rating Enhancement</label>
+    </customValue>
+    <customValue>
+        <fullName>Bank Loan Rating Fresh</fullName>
+        <default>false</default>
+        <label>Bank Loan Rating Fresh</label>
+    </customValue>
+    <customValue>
+        <fullName>Bonds</fullName>
+        <default>false</default>
+        <label>Bonds</label>
+    </customValue>
+    <customValue>
+        <fullName>Certificate of Deposit</fullName>
+        <default>false</default>
+        <label>Certificate of Deposit</label>
+    </customValue>
+    <customValue>
+        <fullName>Commercial Paper</fullName>
+        <default>false</default>
+        <label>Commercial Paper</label>
+    </customValue>
+    <customValue>
+        <fullName>Fixed Deposits</fullName>
+        <default>false</default>
+        <label>Fixed Deposits</label>
+    </customValue>
+    <customValue>
+        <fullName>Hybrid Debt</fullName>
+        <default>false</default>
+        <label>Hybrid Debt</label>
+    </customValue>
+    <customValue>
+        <fullName>Infrastructure Expected Loss Ratings</fullName>
+        <default>false</default>
+        <label>Infrastructure Expected Loss Ratings</label>
+    </customValue>
+    <customValue>
+        <fullName>Issuer Rating</fullName>
+        <default>false</default>
+        <label>Issuer Rating</label>
+    </customValue>
+    <customValue>
+        <fullName>Long Term Borrowing Programme</fullName>
+        <default>false</default>
+        <label>Long Term Borrowing Programme</label>
+    </customValue>
+    <customValue>
+        <fullName>Loss Estimation/Direct Assignment</fullName>
+        <default>false</default>
+        <label>Loss Estimation/Direct Assignment</label>
+    </customValue>
+    <customValue>
+        <fullName>Mutual Fund Rating</fullName>
+        <default>false</default>
+        <label>Mutual Fund Rating</label>
+    </customValue>
+    <customValue>
+        <fullName>Non-Convertible Debenture</fullName>
+        <default>false</default>
+        <label>Non-Convertible Debenture</label>
+    </customValue>
+    <customValue>
+        <fullName>Others</fullName>
+        <default>false</default>
+        <label>Others</label>
+    </customValue>
+    <customValue>
+        <fullName>Pass Through Certificates</fullName>
+        <default>false</default>
+        <label>Pass Through Certificates</label>
+    </customValue>
+    <customValue>
+        <fullName>PP- Market Linked Debenture</fullName>
+        <default>false</default>
+        <label>PP- Market Linked Debenture</label>
+    </customValue>
+    <customValue>
+        <fullName>Preference Shares</fullName>
+        <default>false</default>
+        <label>Preference Shares</label>
+    </customValue>
+    <customValue>
+        <fullName>Project Finance Rating</fullName>
+        <default>false</default>
+        <label>Project Finance Rating</label>
+    </customValue>
+    <customValue>
+        <fullName>Resolution Plan - Independent Credit Evaluation (ICE)</fullName>
+        <default>false</default>
+        <label>Resolution Plan - Independent Credit Evaluation (ICE)</label>
+    </customValue>
+    <customValue>
+        <fullName>Security Receipts</fullName>
+        <default>false</default>
+        <label>Security Receipts</label>
+    </customValue>
+    <customValue>
+        <fullName>Short Term Borrowing Programme</fullName>
+        <default>false</default>
+        <label>Short Term Borrowing Programme</label>
+    </customValue>
+    <customValue>
+        <fullName>Structured Finance Rating</fullName>
+        <default>false</default>
+        <label>Structured Finance Rating</label>
+    </customValue>
+    <customValue>
+        <fullName>Sub Debt</fullName>
+        <default>false</default>
+        <label>Sub Debt</label>
+    </customValue>
+    <customValue>
+        <fullName>Tier II Bonds</fullName>
+        <default>false</default>
+        <label>Tier II Bonds</label>
+    </customValue>
+    <customValue>
+        <fullName>Various Debt Instruments</fullName>
+        <default>false</default>
+        <label>Various Debt Instruments</label>
+    </customValue>
+    <customValue>
+        <fullName>Monitoring Activity</fullName>
+        <default>false</default>
+        <label>Monitoring Activity</label>
+    </customValue>
+    <customValue>
+        <fullName>AIF</fullName>
+        <default>false</default>
+        <label>AIF</label>
+    </customValue>
+    <customValue>
+        <fullName>Perpetual Debt</fullName>
+        <default>false</default>
+        <label>Perpetual Debt</label>
+    </customValue>
+    <customValue>
+        <fullName>CP/CD/STD (interchangeable)</fullName>
+        <default>false</default>
+        <label>CP/CD/STD (interchangeable)</label>
+    </customValue>
+    <customValue>
+        <fullName>Long-term/Short-term borrowing programme</fullName>
+        <default>false</default>
+        <label>Long-term/Short-term borrowing programme</label>
+    </customValue>
+    <customValue>
+        <fullName>BLR/CP</fullName>
+        <default>false</default>
+        <label>BLR/CP</label>
+    </customValue>
+    <customValue>
+        <fullName>Short-term debt</fullName>
+        <default>false</default>
+        <label>Short-term debt</label>
+    </customValue>
+    <customValue>
+        <fullName>Optionally convertible debentures</fullName>
+        <default>false</default>
+        <label>Optionally convertible debentures</label>
+    </customValue>
+    <customValue>
+        <fullName>Convertible debentures</fullName>
+        <default>false</default>
+        <label>Convertible debentures</label>
+    </customValue>
+    <customValue>
+        <fullName>Equity linked debenture</fullName>
+        <default>false</default>
+        <label>Equity linked debenture</label>
+    </customValue>
+    <customValue>
+        <fullName>Borrowing programme</fullName>
+        <default>false</default>
+        <label>Borrowing programme</label>
+    </customValue>
+    <customValue>
+        <fullName>Expected Loss Rating</fullName>
+        <default>false</default>
+        <label>Expected Loss Rating</label>
+    </customValue>
+    <customValue>
+        <fullName>Non-Convertible Debenture - Non Listed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Non-Convertible Debenture - Non Listed</label>
+    </customValue>
+    <customValue>
+        <fullName>Real Estate Investment Trust</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Real Estate Investment Trust</label>
+    </customValue>
+    <customValue>
+        <fullName>Infrastructure Investment Trusts-InvITs</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Infrastructure Investment Trusts-InvITs</label>
+    </customValue>
+    <masterLabel>Instrument Type 4</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

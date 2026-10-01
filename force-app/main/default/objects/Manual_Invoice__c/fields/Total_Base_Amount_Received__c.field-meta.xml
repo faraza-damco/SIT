@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Base_Amount_Received__c</fullName>
+    <label>Total Base Amount Received</label>
+    <summarizedField>Manual_Invoice_Line_Item__c.Total_Amount_Invoiced_WF__c</summarizedField>
+    <summaryForeignKey>Manual_Invoice_Line_Item__c.Invoice_No__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

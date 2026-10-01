@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- OFAC Approver --></label>
+    <name>OFAC_Approver__c</name>
+    <relationshipLabel><!-- Branches (OFAC Approver) --></relationshipLabel>
+</CustomFieldTranslation>

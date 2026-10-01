@@ -1,0 +1,3 @@
+<apex:page renderAs="pdf" standardController="Manual_Invoice__c" extensions="ICRA_Interbranch_InvoiceController" showHeader="false" sidebar="false"
+    standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false" docType="html-5.0" action="{!savePDF}">
+</apex:page>

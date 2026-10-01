@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_for_the_Opportunity_RecordType</name>
+        <label>Check for the Opportunity RecordType</label>
+        <locationX>534</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Surveillance</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Opportunity_Name__r.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Surveillance</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Opportunity_Fields</targetReference>
+            </connector>
+            <label>Surveillance</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Invoice_Status</name>
+        <label>Check Invoice Status</label>
+        <locationX>314</locationX>
+        <locationY>503</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Proforma_Invoice</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Invoice_No__r.Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Proforma Invoice</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Opportunity</targetReference>
+            </connector>
+            <label>Proforma Invoice</label>
+        </rules>
+        <rules>
+            <name>Initiate_Tax_Invoice</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Invoice_No__r.Invoice_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Initiate Tax Invoice</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Opportunity1</targetReference>
+            </connector>
+            <label>Initiate Tax Invoice</label>
+        </rules>
+    </decisions>
+    <description>To remove the values on Surveillance Opportunities once the associated INVLI is deleted</description>
+    <environments>Default</environments>
+    <interviewLabel>After Delete on INVLI {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>After Delete on INVLI</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>-Update &apos;Proforma Invoice Generated&apos; checkbox</description>
+        <name>Update_Opportunity</name>
+        <label>Update Opportunity</label>
+        <locationX>50</locationX>
+        <locationY>611</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Proforma_Invoice_Generated__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Proforma_Invoice_Generated__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Opportunity_Name__r</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>-Update &apos;Initiate Tax Invoice Generated&apos; checkbox</description>
+        <name>Update_Opportunity1</name>
+        <label>Update Opportunity</label>
+        <locationX>314</locationX>
+        <locationY>611</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Initiate_Tax_Invoice_Generated__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Initiate_Tax_Invoice_Generated__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Opportunity_Name__r</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Opportunity_Fields</name>
+        <label>Update Opportunity Fields</label>
+        <locationX>314</locationX>
+        <locationY>395</locationY>
+        <connector>
+            <targetReference>Check_Invoice_Status</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Opportunity_Name__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Bill_No__c</field>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Credit_Note_No__c</field>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Invoice_Line_Item_No__c</field>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Invoice_No__c</field>
+        </inputAssignments>
+        <inputReference>$Record.Opportunity_Name__r</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>408</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_for_the_Opportunity_RecordType</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Invoice_No__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Opportunity_Name__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Invoice_Line_Item__c</object>
+        <recordTriggerType>Delete</recordTriggerType>
+        <triggerType>RecordBeforeDelete</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

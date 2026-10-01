@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Payment Method --></label>
+    <name>Payment_Method__c</name>
+    <picklistValues>
+        <masterLabel>CLG</masterLabel>
+        <translation><!-- CLG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CMS</masterLabel>
+        <translation><!-- CMS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INFT</masterLabel>
+        <translation><!-- INFT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NEFT</masterLabel>
+        <translation><!-- NEFT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RTGS</masterLabel>
+        <translation><!-- RTGS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TRF</masterLabel>
+        <translation><!-- TRF --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

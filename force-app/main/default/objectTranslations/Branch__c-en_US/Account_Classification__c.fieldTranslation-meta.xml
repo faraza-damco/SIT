@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Account Classification --></label>
+    <name>Account_Classification__c</name>
+    <picklistValues>
+        <masterLabel>Export</masterLabel>
+        <translation><!-- Export --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Non - SEZ</masterLabel>
+        <translation><!-- Non - SEZ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEZ With Tax</masterLabel>
+        <translation><!-- SEZ With Tax --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEZ Without Tax</masterLabel>
+        <translation><!-- SEZ Without Tax --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

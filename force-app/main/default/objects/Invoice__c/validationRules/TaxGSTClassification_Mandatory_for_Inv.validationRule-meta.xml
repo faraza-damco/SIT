@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TaxGSTClassification_Mandatory_for_Inv</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ ISPICKVAL(Invoice_Status__c ,&apos;Initiate Tax Invoice&apos;), Opportunity_Name__r.BillingAddress__r.Is_Primary_Billing_Address__c =true,
+ISBLANK(TEXT(Opportunity_Name__r.BillingAddress__r.Tax_GST_Classification__c ) 
+) 
+)</errorConditionFormula>
+    <errorMessage>Please update Tax /GST Classification in Billing Address</errorMessage>
+</ValidationRule>

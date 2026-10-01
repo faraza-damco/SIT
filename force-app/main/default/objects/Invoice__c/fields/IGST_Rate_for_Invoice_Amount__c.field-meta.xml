@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IGST_Rate_for_Invoice_Amount__c</fullName>
+    <formula>IF(OR((Account_Classification__c==&apos;SEZ Without Tax&apos;),(Account_Classification__c==&apos;Export&apos;)),0.18,
+IF(Opportunity_Name__r.Account.RecordType.Name ==&apos;Issuer&apos;,
+IF(TEXT(Opportunity_Name__r.BillingAddress__r.BillingState__c) &lt;&gt; TEXT(Opportunity_Name__r.Opp_ICRA_Branch__r.State__c),
+0.18,
+0),
+IF(Opportunity_Name__r.Account.RecordType.Name ==&apos;Investors &amp; Intermediary&apos;,
+IF(Opportunity_Name__r.Account.ShippingState &lt;&gt; TEXT(Opportunity_Name__r.Opp_ICRA_Branch__r.State__c),
+0.18,
+0),
+0)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>IGST Rate for Invoice Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

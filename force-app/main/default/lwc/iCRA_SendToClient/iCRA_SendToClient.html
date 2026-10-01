@@ -1,0 +1,28 @@
+<template> 
+    <template if:true={showModal}>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium">
+            <div class="slds-modal__container custom-modal-size">
+
+                <lightning-modal-header label="Review/Send Invoice">
+                </lightning-modal-header>
+
+                <lightning-modal-body>
+                     <lightning-formatted-rich-text value={formattedText}></lightning-formatted-rich-text>
+                     <br/>
+                    <div class="slds-p-around_medium slds-grid slds-grid_align-center slds-gutters">
+                        <lightning-button variant="brand" label="Review" onclick={handleReview}></lightning-button>&nbsp;&nbsp;
+                        <lightning-button variant="neutral" label="Send to Client" onclick={handleSend}></lightning-button>&nbsp;&nbsp;
+                        <lightning-button variant="destructive" label="Close" onclick={close}></lightning-button>
+                    </div>
+                    
+                    <div class="slds-modal__content slds-p-around_medium custom-modal-content">
+                        <template if:true={isSending}>
+                            <lightning-spinner alternative-text="Sending..."></lightning-spinner>
+                        </template>
+                    </div>
+                </lightning-modal-body>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

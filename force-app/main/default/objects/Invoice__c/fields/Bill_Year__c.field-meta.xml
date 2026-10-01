@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bill_Year__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+AND(Created_Date__c &gt;= DATE(YEAR(Created_Date__c),04,01),
+Created_Date__c &lt;= DATE(YEAR(Created_Date__c)+1 ,03,31)),
+RIGHT(Text(YEAR( Created_Date__c)), 2) + RIGHT(Text(YEAR( Created_Date__c)+1), 2) , RIGHT(Text(YEAR( Created_Date__c)-1), 2) + RIGHT(Text(YEAR( Created_Date__c)), 2))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Bill Year</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

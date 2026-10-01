@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Positive</fullName>
+        <default>false</default>
+        <label>Positive</label>
+    </customValue>
+    <customValue>
+        <fullName>Stable</fullName>
+        <default>false</default>
+        <label>Stable</label>
+    </customValue>
+    <customValue>
+        <fullName>Negative</fullName>
+        <default>false</default>
+        <label>Negative</label>
+    </customValue>
+    <customValue>
+        <fullName>Not Applicable</fullName>
+        <default>false</default>
+        <label>Not Applicable</label>
+    </customValue>
+    <masterLabel>Outlook</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

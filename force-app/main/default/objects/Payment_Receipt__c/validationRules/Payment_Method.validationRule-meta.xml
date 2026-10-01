@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Method</fullName>
+    <active>true</active>
+    <description>If Payment Method = Cheque/DD , Date of Cheque/DD should be mandatory</description>
+    <errorConditionFormula>IF(OR(ISPICKVAL(Payment_Method__c,&apos;DD&apos;),ISPICKVAL(Payment_Method__c,&apos;Cheque&apos;)),ISNULL(Date_of_Cheque_DD__c),false )</errorConditionFormula>
+    <errorDisplayField>Date_of_Cheque_DD__c</errorDisplayField>
+    <errorMessage>Please Select a Date</errorMessage>
+</ValidationRule>

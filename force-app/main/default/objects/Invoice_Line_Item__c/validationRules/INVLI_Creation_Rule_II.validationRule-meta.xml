@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>INVLI_Creation_Rule_II</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISNEW(),
+Invoice_No__r.RecordType.DeveloperName=&apos;Invoice&apos;,
+Bypass_Validation__c=false,
+OR(
+AND( NOT(ISPICKVAL(Opportunity_Name__r.Defer_Billing_or_Exit_Case__c, &apos;To Be Billed&apos;))),
+NOT(ISPICKVAL(Opportunity_Name__r.StageName , &apos;Closed Won&apos;))
+)
+)</errorConditionFormula>
+    <errorMessage>A line item can only be generated when the opportunity is &apos;Closed Won&apos; and the Billing Status of the opportunity is &apos;To Be Billed&apos;</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Group_SECG_Full_View_Acess</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Group: SECG Full View Acess</label>
+        <sharedTo>
+            <group>Full_View_Acess</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Full_View_Acess</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

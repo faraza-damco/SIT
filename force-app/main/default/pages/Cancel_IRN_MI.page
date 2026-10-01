@@ -1,0 +1,43 @@
+<apex:page standardController="Manual_Invoice__c" extensions="IRN_Post_on_Generating" showHeader="false" sidebar="false" standardStylesheets="false" lightningStylesheets="true" applyBodyTag="false"  >
+    <apex:slds />
+    <c:LoadingIcon />
+     <apex:form id="form">
+        <apex:actionFunction name="callSpinner" action="{!loadSpinner}" reRender="loadingPanel" oncomplete="invokeIRN()"/>
+        <apex:actionFunction name="callIRN" action="{!CanecelIRN}" reRender="form"/>
+        
+        <apex:outputText >
+            <p  style="text-align: center;  font-size: 16pt">
+               <apex:outputLabel style="color:red"  rendered="{!AND(NOT(ISBLANK(errorMsgDisplay)), errorMsgDisplay!='Success',errorMsgDisplay!='Already generated')}">{!errorMsgDisplay} </apex:outputLabel>
+                <apex:outputLabel style="color:#31A608"  rendered="{!AND(NOT(ISBLANK(errorMsgDisplay)), errorMsgDisplay!='Success',errorMsgDisplay=='Already generated')}"> <b>Process Already completed for {!ManualInvoice.Invoice.Name} </b><br/> Please do not press browser's back button </apex:outputLabel>
+                <apex:outputLabel style="color:#31A608" rendered="{!errorMsgDisplay=='Success'}"> <b> {!ManualInvoice.Invoice.Name}  IRN Canceled. </b> <br/> Please do not press browser's back button
+  </apex:outputLabel>
+                
+            </p>
+        </apex:outputText>
+        <apex:outputPanel id="loadingPanel" rendered="{!showSpinner}" >
+            <div style="text-align:center; padding:20px;">
+                <img src="/img/loading.gif" alt="Loading..." />
+                <p>Processing, please wait...</p>
+            </div>
+        </apex:outputPanel>
+        
+    </apex:form>
+    <script>
+    window.onload = function() {
+        
+        callSpinner();
+    };
+    
+    function invokeIRN(){
+        callIRN();
+    }   
+    </script>   
+ <!--   <apex:outputText >
+        <p  style="text-align: center;  font-size: 16pt">
+            <apex:outputLabel style="color:red"  rendered="{!errorMsgDisplay!=''}">{!errorMsgDisplay} </apex:outputLabel>
+             <apex:outputLabel style="color:#31A608" rendered="{!errorMsgDisplay==''}"> <b> {!Invoice.Invoice.Name}  IRN Canceled .</b> </apex:outputLabel>
+        </p>
+    </apex:outputText>
+-->
+</apex:page>
+<!-- -->

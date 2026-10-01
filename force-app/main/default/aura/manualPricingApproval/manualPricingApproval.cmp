@@ -1,0 +1,66 @@
+<aura:component controller="ManualPricingApprovalController" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="displayMessgae" type="String" />
+    <aura:attribute name="displayError" type="String" default =''/>
+    <aura:attribute name="submitted" type="Boolean" />
+    <aura:attribute name="showModal" type="Boolean" default = 'false' />
+    <aura:attribute name="showSpinner" type="Boolean" default = 'false'/>
+    <aura:attribute name="showComment" type="Boolean" default = 'true'/>
+    <!-- To listen to when the Opportunity changes -->
+    <force:recordData aura:id="forceRecord"
+                      recordId="{!v.recordId}" 
+                      fields="Pricing_Not_Auto_Approved__c,Proposed_Rating_Fee__c,Proposed_Surveillance_Fee__c,VoD_in_crore__c"
+                      recordUpdated="{!c.doInit}" />                 
+        <aura:If isTrue="{!v.showModal}">
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <!-- Modal/Popup Box Header Starts here-->
+                    <header class="slds-modal__header">
+                        <aura:If isTrue="{!!v.submitted}">
+                            <lightning:buttonIcon iconName="utility:close"
+                                            onclick="{! c.closeModel }"
+                                            alternativeText="close"
+                                            variant="bare-inverse"
+                                            class="slds-modal__close"/>
+                        </aura:If>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Discount Approval is Required!</h2>
+                    </header>
+                    <!--Modal/Popup Box Body Starts here-->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <aura:If isTrue="{!v.showSpinner}">
+                                <lightning:spinner style="Position:static;" alternativeText="Loading" size="medium" />
+                            <aura:set attribute="else">
+                                <aura:if isTrue="{!v.showComment}">
+                                    <p style="text-align: center;color: red"><aura:unescapedHtml value="{!v.displayError}" /></p>
+                                    <lightning:recordEditForm objectApiName="Opportunity" recordId="{!v.recordId}" onsuccess="{!c.submitDetails}" aura:id="opForm">
+                                        <lightning:messages />
+                                        <lightning:inputField fieldName="Reason_for_Discount__c" required='true' aura:id='reason'/>
+                                        <lightning:inputField fieldName="Detailed_Comment__c" required='true' aura:id='comment'/>
+                                    </lightning:recordEditForm>
+                                </aura:if>
+                                <p style="text-align: center;"><aura:unescapedHtml value="{!v.displayMessgae}" /></p>
+                            </aura:set>
+                        </aura:If>
+                    </div>
+                    <!--Modal/Popup Box Footer Starts here-->
+                    <footer class="slds-modal__footer">
+                        <aura:If isTrue="{!!v.submitted}">
+                        <lightning:button variant="neutral"
+                                        label="Cancel"
+                                        title="Cancel"
+                                        disabled = "{!v.showSpinner}"
+                                        onclick="{!c.closeModel }"/>                        
+                        </aura:If>
+                        <lightning:button variant="brand"
+                                        label="OK"
+                                        title="OK"
+                                        type="submit"
+                                        disabled = "{!v.showSpinner}"
+                                        onclick="{!c.saveOpty}"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </aura:If>
+</aura:component>
